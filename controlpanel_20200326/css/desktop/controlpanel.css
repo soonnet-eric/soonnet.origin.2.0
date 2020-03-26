@@ -1,0 +1,142 @@
+.main-header .navbar-nav .user-image {
+  height: auto;
+  width: 32px;
+  padding: 0;
+}
+.nav-sidebar .nav-treeview .nav-item a {
+  padding-left: 2.5625rem;
+}
+/* 【影音】Soonnet TV 列表
+   ========================================================================== */
+table.table-bordered.dataTable tbody th:first-child, table.table-bordered.dataTable tbody td:first-child {
+  min-width: 300px;
+  max-width: 500px;
+}
+#programme .category {
+  display: block;
+  position: relative;
+  padding-bottom: 0.9375rem;
+}
+#programme .category a {
+  padding: 6px 10px;
+  margin-right: 10px;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+#programme .category .current {
+  background-color: #2e3e4a;
+  color: #fff;
+  font-weight: bold;
+}
+#programme .video-block {
+  display: block;
+  position: relative;
+  border-radius: inherit;
+  float: left;
+}
+#programme .video-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  border-radius: 4px;
+  width: 120px;
+}
+#programme .video-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+  border-radius: 4px;
+}
+#programme .video-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 56.25%;
+}
+#programme .video-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#programme .video-duration {
+  position: absolute;
+  background-color: rgba(0, 0, 0, .8);
+  color: #fff;
+  border-radius: 2px;
+  bottom: 4px;
+  right: 4px;
+  padding: 2px 4px;
+  line-height: 14px;
+  font-size: 0.75rem;
+}
+#programme .video-title {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+  vertical-align: top;
+}
+#programme .video-tag {
+  position: relative;
+  display: block;
+  font-size: 12px;
+  bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#programme .tag {
+  display: inline-flex;
+  margin-right: 8px;
+  padding: 2px 6px;
+  background-color: #eee;
+  color: #424242 !important;
+  border-radius: 2px;
+  margin-top: 0.25rem;
+}
+#programme .status {
+  display: block;
+  font-size: 0.8125rem;
+  color: #666;
+}
+#programme .video-resolution, #programme .video-file-size {
+  display: block;
+}
+#programme .published::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #28a745;
+}
+#programme .unpublished::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #dc3545;
+}
+#programme .operate-btn {
+  display: block;
+}
