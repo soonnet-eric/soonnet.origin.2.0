@@ -230,12 +230,16 @@
     <!-- Main content -->
     <div id="video" class="content">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row mb-3">
           <div class="col-12">
-            <div class="category"><a hreff="" class="current"> 全部 </a><a href=""> 運動 </a><a href=""> 賽事 </a><a href=""> 重機 </a><a href=""> 生活 </a><a href=""> 其他 </a></div>
+            <div class="filter"><a hreff="" class="current">全部</a><a href="">運動</a><a href="">賽事</a><a href="">重機</a><a href="">生活</a><a href="">其他</a></div>
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-hover">
+                <table id="video-list" class="table table-bordered table-hover">
                   <thead>
                     <tr>
                       <th> 一般影片 </th>
@@ -243,16 +247,17 @@
                       <th> 上傳日期 / 隱私度</th>
                       <th> 上傳者 </th>
                       <th> 尺寸 / 大小 </th>
-                      <th> 瀏覽量 </th>
-                      <th> 留言數 </th>
-                      <th> 收藏數 </th>
-                      <th> 分享數 </th>
+                      <th> 瀏覽 </th>
+                      <th> 讚好 </th>
+                      <th> 留言 </th>
+                      <th> 收藏 </th>
+                      <th> 分享 </th>
                       <th> 操作 </th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td><div class="video-block mr-2 clearfix">
+                      <td class="video-head"><div class="video-block mr-2 clearfix">
                           <div class="video-thumbnail">
                             <div class="video-responsive">
                               <div class="video-sizer">
@@ -263,18 +268,19 @@
                           </div>
                         </div>
                         <span class="video-title"><a href=""> 2016-03-13 捷安-尋寶5K長跑樂. </a></span> <span class="video-tag"> <a class="tag"> 捷安 </a><a class="tag"> 尋寶5K長跑樂 </a><a class="tag"> 大帽山 </a><a class="tag"> 尋寶網 </a><a class="tag"> 香港 </a></span></td>
-                      <td class="video-catrgory"><a href=""> 賽事 </a></td>
-                      <td class="video-date"> 2016年03月17日 17:09 <span class="status public"> 公開 </span></td>
+                      <td class="video-category"><a href=""> 賽事 </a></td>
+                      <td class="video-date"> 2016年03月17日 17:09 <span class="video-status public"> 公開 </span></td>
                       <td class="video-uploader"><a href=""> JOEYLEE </a></td>
                       <td class="video-details"><span class="video-resolution"> 1920x1080 </span> <span class="video-file-size"> 45.99 MB </span></td>
                       <td class="video-view"> 1,266 </td>
+                      <td class="video-like"> 2 </td>
                       <td class="video-comment"> 0 </td>
                       <td class="video-bookmark"> 4</td>
                       <td class="video-share"> 2 </td>
-                      <td><span class="operate-btn edit"><a href=""> 設為精選 </a></span><span class="operate-btn edit"><a href=""> 編輯 </a></span><span class="operate-btn delete"><a href=""> 刪除 </a></span></td>
+                      <td><span class="operate-btn featured"><a href=""> 設為精選 </a></span><span class="operate-btn edit"><a href=""> 編輯 </a></span><span class="operate-btn delete"><a href=""> 刪除 </a></span></td>
                     </tr>
                     <tr>
-                      <td><div class="video-block mr-2 clearfix">
+                      <td class="video-head"><div class="video-block mr-2 clearfix">
                           <div class="video-thumbnail">
                             <div class="video-responsive">
                               <div class="video-sizer">
@@ -287,17 +293,18 @@
                         <span class="video-title"><a href=""> 惠州飄移 </a></span>
                         <div class="video-tag"> <a class="tag"> 惠州 </a><a class="tag"> 飄移 </a></div></td>
                       <td class="video-programme"><a href=""> 重機 </a></td>
-                      <td class="video-date"> 2016年03月11日 11:58 <span class="status unlisted"> 非公開 </span></td>
+                      <td class="video-date"> 2016年03月11日 11:58 <span class="video-status unlisted"> 非公開 </span></td>
                       <td class="video-uploader"><a href=""> JOEYLEE </a></td>
                       <td class="video-details"><span class="video-resolution"> 1920x1080 </span> <span class="video-file-size"> 526 MB </span></td>
                       <td class="video-view"> 24 </td>
+                      <td class="video-like"> 5 </td>
                       <td class="video-comment"> 0 </td>
                       <td class="video-bookmark"> 1 </td>
                       <td class="video-share"> 0 </td>
-                      <td><span class="operate-btn edit"><a href=""> 設為精選 </a></span><span class="operate-btn edit"><a href=""> 編輯 </a></span><span class="operate-btn delete"><a href=""> 刪除 </a></span></td>
+                      <td><span class="operate-btn featured"><a href=""> 設為精選 </a></span><span class="operate-btn edit"><a href=""> 編輯 </a></span><span class="operate-btn delete"><a href=""> 刪除 </a></span></td>
                     </tr>
                     <tr>
-                      <td><div class="video-block mr-2 clearfix">
+                      <td class="video-head"><div class="video-block mr-2 clearfix">
                           <div class="video-thumbnail">
                             <div class="video-responsive">
                               <div class="video-sizer">
@@ -308,11 +315,12 @@
                           </div>
                         </div>
                         <span class="video-title"><a href=""> 2016.03.04 捷迅股份有限公司 上櫃掛牌典禮 - 1 </a></span></td>
-                      <td class="video-catrgory"><a href=""> 生活 </a></td>
-                      <td class="video-date"> 2016年03月09日 16:27 <span class="status private"> 私人 </span></td>
+                      <td class="video-category"><a href=""> 生活 </a></td>
+                      <td class="video-date"> 2016年03月09日 16:27 <span class="video-status private"> 私人 </span></td>
                       <td class="video-uploader"><a href=""> soonnet </a></td>
                       <td class="video-details"><span class="video-resolution"> 1920x1080 </span> <span class="video-file-size"> 45.99 MB </span></td>
                       <td class="video-view"> 3 </td>
+                      <td class="video-like"> 6 </td>
                       <td class="video-comment"> 0 </td>
                       <td class="video-bookmark"> 0 </td>
                       <td class="video-share"> 2 </td>
@@ -326,10 +334,11 @@
                       <th> 上傳日期 / 隱私度</th>
                       <th> 上傳者 </th>
                       <th> 尺寸 / 大小 </th>
-                      <th> 瀏覽量 </th>
-                      <th> 留言數 </th>
-                      <th> 收藏數 </th>
-                      <th> 分享數 </th>
+                      <th> 瀏覽 </th>
+                      <th> 讚好 </th>
+                      <th> 留言 </th>
+                      <th> 收藏 </th>
+                      <th> 分享 </th>
                       <th> 操作 </th>
                     </tr>
                   </tfoot>
@@ -359,11 +368,10 @@
 <!-- page script --> 
 <script>
   $(function () {
-    $("#example1").DataTable();
-    $('#example2').DataTable({
+    $('#video-list').DataTable({
       "paging": true,
-      "lengthChange": false,
-      "searching": false,
+      "lengthChange": true,
+      "searching": true,
       "ordering": true,
       "info": true,
       "autoWidth": false,

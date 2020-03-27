@@ -7,7 +7,7 @@
 <meta content="yes" name="apple-mobile-web-app-capable">
 <meta content="black" name="apple-mobile-web-app-status-bar-style">
 <meta content="telephone=no" name="format-detection">
-<title> Soonnet TV 列表 - 尋寶網管理後臺 </title>
+<title> 節目列表 - 尋寶網管理後臺 </title>
 <!-- External CSS -->
 <link rel="stylesheet" href="../../css/font-awesome/all.min.css">
 <link rel="stylesheet" href="../../css/adminlte/adminlte.css">
@@ -81,13 +81,13 @@
             <p> 影音 <i class="right fas fa-caret-up"></i> </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item"> <a href="soonnettv.html" class="nav-link active">
+              <li class="nav-item"> <a href="soonnettv.html" class="nav-link">
                 <p>Soonnet TV 列表</p>
                 </a> </li>
               <li class="nav-item"> <a href="video.html" class="nav-link">
                 <p>一般影片列表</p>
                 </a> </li>
-              <li class="nav-item"> <a href="programme.html" class="nav-link">
+              <li class="nav-item"> <a href="#" class="nav-link active">
                 <p>節目列表</p>
                 </a> </li>
               <li class="nav-item"> <a href="#" class="nav-link">
@@ -210,13 +210,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark"> Soonnet TV 列表 </h1>
+            <h1 class="m-0 text-dark"> 節目列表 </h1>
           </div>
           <!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item">影音</li>
-              <li class="breadcrumb-item active">Soonnet TV 列表</li>
+              <li class="breadcrumb-item active">節目列表</li>
             </ol>
           </div>
           <!-- /.col --> 
@@ -230,97 +230,110 @@
     <!-- Main content -->
     <div id="programme" class="content">
       <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-10">
-            <div class="category"><a hreff="" class="current"> 全部 </a><a href=""> 動見人物 </a><a href=""> 心跳動學堂 </a><a href=""> 燒貨搜查線 </a><a href=""> 一分鐘爆賽事 </a><a href=""> 全民亂跑中 </a><a href=""> 尋寶電台 </a><a href=""> 每週報報 </a><a href=""> 未分類 </a></div>
-          </div>
+        <div class="row mb-3">
+          <div class="col-sm-10"> 列表之排序方式與「<a href="">影音主頁 (我們的節目橫向捲軸)</a>」及「<a href="">我們的節目 (按熱門程度排序)</a>」關聯 </div>
           <div class="col-sm-2">
-            <button type="button" class="btn btn-block btn-primary btn-sm"><i class="nav-icon fas fa-cloud-upload-alt mr-1"></i> 上傳 Soonnet TV</button>
+            <button type="button" class="btn btn-block btn-primary btn-sm"><i class="nav-icon fas fa-plus fa-sm mr-1"></i> 新增節目 </button>
           </div>
         </div>
         <div class="row">
           <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-hover">
+                <table id="programme-list" class="table table-bordered">
                   <thead>
                     <tr>
-                      <th> Soonnet TV </th>
+                      <th> </th>
                       <th> 節目 </th>
-                      <th> 上傳日期 / 狀態</th>
-                      <th> 上傳者 </th>
-                      <th> 尺寸 / 大小 </th>
-                      <th> 瀏覽量 </th>
-                      <th> 留言數 </th>
-                      <th> 收藏數 </th>
-                      <th> 分享數 </th>
+                      <th> 類型 </th>
+                      <th> 最後更新時間 </th>
+                      <th> 總瀏覽 </th>
+                      <th> 總讚好 </th>
+                      <th> 總收藏 </th>
+                      <th> 總分享 </th>
                       <th> 操作 </th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
-                      <td><div class="video-block mr-2 clearfix">
-                          <div class="video-thumbnail">
-                            <div class="video-responsive">
-                              <div class="video-sizer">
-                                <div class="video-image" style="background-image: url('../../images/programme-2.jpg');"></div>
+                  <tbody id="programme-items" class="list-group">
+                    <tr class="list-group-item">
+                      <td><i class="fas fa-arrows-alt-v mr-3 handle"></i></td>
+                      <td class="programme-head"><div class="programme-block mr-2 clearfix">
+                          <div class="programme-thumbnail">
+                            <div class="programme-responsive">
+                              <div class="programme-sizer">
+                                <div class="programme-image" style="background-image: url('../../images/programme/programme-1.jpg');"></div>
                               </div>
                             </div>
-                            <div class="video-duration"> <span>36:28</span> </div>
+                            <div class="programme-episode"> <span>共 26 集</span> </div>
                           </div>
                         </div>
-                        <span class="video-title"><a href=""> 深蹲救台灣! 下肢訓練 始壯課 Ft.陳奕魁【心跳動學堂EP3】深蹲救台灣! 下肢訓練 始壯課 Ft.陳奕魁【心跳動學堂EP3】深蹲救台灣! 下肢訓練 始壯課 Ft.陳奕魁【心跳動學堂EP3】深蹲救台灣! 下肢訓練 始壯課 Ft.陳奕魁【心跳動學堂EP3】 </a></span> <span class="video-tag"> <a class="tag">心跳動學堂</a><a class="tag">運動</a><a class="tag">HIIT</a></span></td>
-                      <td class="video-programme"><a href=""> 心跳動學堂 </a><span class="episode"> #32 </span></td>
-                      <td class="video-date"> 2020年03月26日 17:02 <span class="status unpublished"> 未發佈 </span></td>
-                      <td class="video-uploader"><a href=""> Eric Chong </a></td>
-                      <td class="video-details"><span class="video-resolution"> 1920x1080 </span> <span class="video-file-size"> 526 MB </span></td>
-                      <td class="video-view"> 1,266 </td>
-                      <td class="video-comment"> 0 </td>
-                      <td class="video-bookmark"> 4</td>
-                      <td class="video-share"> 2 </td>
-                      <td><span class="operate-btn edit"><a href=""> 設為精選 </a></span><span class="operate-btn edit"><a href=""> 關聯賽事 </a></span><span class="operate-btn edit"><a href=""> 編輯 </a></span><span class="operate-btn delete"><a href=""> 刪除 </a></span></td>
+                        <span class="programme-title"><a href=""> 動見人物 </a></span><span class="programme-intro"> 精彩人物故事，傳遞分秒動人片刻 </span></td>
+                      <td class="programme-category"><span><a href=""> 運動 </a></span><span><a href=""> 人物專訪 </a></span></td>
+                      <td class="programme-last-updated"> 2020年03月22日 01:49 </td>
+                      <td class="programme-view"> 350 </td>
+                      <td class="programme-like"> 10 </td>
+                      <td class="programme-bookmark"> 3 </td>
+                      <td class="programme-share"> 5 </td>
+                      <td><span class="operate-btn edit"><a href=""> 編輯 </a></span><span class="operate-btn delete"><a href=""> 刪除 </a></span></td>
                     </tr>
-                    <tr>
-                      <td><div class="video-block mr-2 clearfix">
-                          <div class="video-thumbnail">
-                            <div class="video-responsive">
-                              <div class="video-sizer">
-                                <div class="video-image" style="background-image: url('../../images/programme-1.jpg');"></div>
+                    <tr class="list-group-item">
+                      <td><i class="fas fa-arrows-alt-v mr-3 handle"></i></td>
+                      <td class="programme-head"><div class="programme-block mr-2 clearfix">
+                          <div class="programme-thumbnail">
+                            <div class="programme-responsive">
+                              <div class="programme-sizer">
+                                <div class="programme-image" style="background-image: url('../../images/programme/programme-2.jpg');"></div>
                               </div>
                             </div>
-                            <div class="video-duration"> <span>36:28</span> </div>
+                            <div class="programme-episode"> <span>共 29 集</span> </div>
                           </div>
                         </div>
-                        <span class="video-title"><a href=""> 拚自己的賽道 陳秉豐 【動見人物】 </a></span>
-                        <div class="video-tag"> <a class="tag"> 動見人物 </a><a class="tag"> 運動 </a><a class="tag"> 陳秉豐 </a><a class="tag"> 動見人物 </a><a class="tag"> 運動 </a><a class="tag"> 陳秉豐 </a><a class="tag"> 動見人物 </a><a class="tag"> 運動 </a><a class="tag"> 陳秉豐 </a><a class="tag"> 陳秉豐 </a><a class="tag"> 陳秉豐 </a><a class="tag"> 陳秉豐 </a></div></td>
-                      <td class="video-programme"><a href=""> 動見人物 </a><span class="episode"> #7 </span></td>
-                      <td class="video-date"> 2020年03月22日 01:49 <span class="status published"> 已發佈 </span></td>
-                      <td class="video-uploader"><a href=""> Devin Liu </a></td>
-                      <td class="video-details"><span class="video-resolution"> 1920x1080 </span> <span class="video-file-size"> 526 MB </span></td>
-                      <td class="video-view"> 350 </td>
-                      <td class="video-comment"> 1 </td>
-                      <td class="video-bookmark"> 3 </td>
-                      <td class="video-share"> 0 </td>
-                      <td><span class="operate-btn edit"><a href=""> 設為精選 </a></span><span class="operate-btn edit"><a href=""> 關聯賽事 </a></span><span class="operate-btn edit"><a href=""> 編輯 </a></span><span class="operate-btn delete"><a href=""> 刪除 </a></span></td>
+                        <span class="programme-title"><a href=""> 心跳動學堂 </a></span><span class="programme-intro"> 同學們，心跳動學堂開課囉 </span></td>
+                      <td class="programme-category"><span><a href=""> 運動 </a></span><span><a href=""> 生活 </a></span></td>
+                      <td class="programme-last-updated"> 2020年03月17日 17:55 </td>
+                      <td class="programme-view"> 770 </td>
+                      <td class="programme-like"> 2 </td>
+                      <td class="programme-bookmark"> 5 </td>
+                      <td class="programme-share"> 0 </td>
+                      <td><span class="operate-btn edit"><a href=""> 編輯 </a></span><span class="operate-btn delete"><a href=""> 刪除 </a></span></td>
+                    </tr>
+                    <tr class="list-group-item">
+                      <td><i class="fas fa-arrows-alt-v mr-3 handle"></i></td>
+                      <td class="programme-head"><div class="programme-block mr-2 clearfix">
+                          <div class="programme-thumbnail">
+                            <div class="programme-responsive">
+                              <div class="programme-sizer">
+                                <div class="programme-image" style="background-image: url('../../images/programme/programme-3.jpg');"></div>
+                              </div>
+                            </div>
+                            <div class="programme-episode"> <span>共 68 集</span> </div>
+                          </div>
+                        </div>
+                        <span class="programme-title"><a href=""> 燒貨搜查線 </a></span><span class="programme-intro"> 精彩人物故事，傳遞分秒動人片刻</span></td>
+                      <td class="programme-category"><span><a href=""> 休閒娛樂 </a></span></td>
+                      <td class="programme-last-updated"> 2020年03月22日 01:49 </td>
+                      <td class="programme-view"> 350 </td>
+                      <td class="programme-like"> 5 </td>
+                      <td class="programme-bookmark"> 3 </td>
+                      <td class="programme-share"> 1 </td>
+                      <td><span class="operate-btn edit"><a href=""> 編輯 </a></span><span class="operate-btn delete"><a href=""> 刪除 </a></span></td>
                     </tr>
                   </tbody>
                   <tfoot>
                     <tr>
-                      <th> Soonnet TV </th>
+                      <th> </th>
                       <th> 節目 </th>
-                      <th> 上傳日期 / 狀態</th>
-                      <th> 上傳者 </th>
-                      <th> 尺寸 / 大小 </th>
-                      <th> 瀏覽量 </th>
-                      <th> 留言數 </th>
-                      <th> 收藏數 </th>
-                      <th> 分享數 </th>
+                      <th> 類型 </th>
+                      <th> 最後更新時間 </th>
+                      <th> 總瀏覽 </th>
+                      <th> 總讚好 </th>
+                      <th> 總收藏 </th>
+                      <th> 總分享 </th>
                       <th> 操作 </th>
                     </tr>
                   </tfoot>
                 </table>
               </div>
-              <!-- /.card-body --> 
             </div>
           </div>
           <!-- /.col-12 --> 
@@ -341,19 +354,21 @@
 <!-- DataTables --> 
 <script src="../../plugins/datatables/jquery.dataTables.js"></script> 
 <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script> 
-<!-- page script --> 
+<!-- Sortable --> 
+<script src="../../plugins/sortable/Sortable.js"></script> 
 <script>
-  $(function () {
-    $("#example1").DataTable();
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-    });
-  });
-</script>
+  	var el = document.getElementById( "programme-items" );
+  	Sortable.create(el, {
+  		disabled: false, // 關閉 Sortable
+  		animation: 150,  // 物件移動時間
+  		handle: ".handle",  // 可拖曳的區域
+  		filter: ".ignore",  // 過濾器，不能拖曳的物件
+  		preventOnFilter: true, // 當過濾器啟動的時候，觸發 event.preventDefault()
+  		draggable: ".list-group-item",  // 可拖曳的物件
+  		ghostClass: "sortable-ghost",  // 拖曳時，給予物件的類別
+  		chosenClass: "sortable-chosen",  // 選定時，給予物件的類別
+  		forceFallback: false  // 忽略 HTML5 DnD
+  	});
+  </script>
 </body>
 </html>

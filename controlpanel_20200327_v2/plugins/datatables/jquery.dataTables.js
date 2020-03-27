@@ -5096,7 +5096,7 @@
 					.append(
 						$(_div, { 'class': classes.sScrollHeadInner } )
 							.css( {
-								'box-sizing': 'content-box',
+								'box-sizing': 'border-box',
 								width: scroll.sXInner || '100%'
 							} )
 							.append(

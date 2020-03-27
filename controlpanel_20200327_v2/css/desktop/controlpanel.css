@@ -1,6 +1,11 @@
 thead, tfoot {
   background-color: #f5f5f5;
 }
+.disable {
+  opacity: 0.4 !important;
+}
+/* Header
+   ========================================================================== */
 .main-header .navbar-nav .user-image {
   height: auto;
   width: 32px;
@@ -9,31 +14,26 @@ thead, tfoot {
 .nav-sidebar .nav-treeview .nav-item a {
   padding-left: 2.5625rem;
 }
-/* Disable Menu */
-.disable {
-  opacity: 0.4 !important;
-}
 /* 【影音】Soonnet TV 列表 + 一般影片列表
    ========================================================================== */
-table.table-bordered.dataTable tbody th:first-child, table.table-bordered.dataTable tbody td:first-child {
-  min-width: 300px;
-  max-width: 500px;
-}
-.category {
+.filter {
   display: block;
   position: relative;
-  padding-bottom: 0.9375rem;
 }
-.category a {
+.filter a {
   padding: 6px 10px;
   margin-right: 10px;
   background-color: #fff;
   border-radius: 0.25rem;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
 }
-.category .current {
+.filter .current {
   background-color: #2e3e4a;
   color: #fff !important;
+}
+.video-head {
+  min-width: 20rem;
+  max-width: 30rem;
 }
 .video-block {
   display: block;
@@ -72,8 +72,6 @@ table.table-bordered.dataTable tbody th:first-child, table.table-bordered.dataTa
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
 }
 .video-duration {
   position: absolute;
@@ -115,16 +113,10 @@ table.table-bordered.dataTable tbody th:first-child, table.table-bordered.dataTa
   border-radius: 2px;
   margin-top: 0.25rem;
 }
-.episode, .status {
+.video-episode, .video-status {
   display: block;
   font-size: 0.8125rem;
   color: #757575;
-}
-.video-resolution, #programme .video-file-size {
-  display: block;
-}
-.operate-btn {
-  display: block;
 }
 .published::before {
   content: '';
@@ -164,11 +156,88 @@ table.table-bordered.dataTable tbody th:first-child, table.table-bordered.dataTa
   font-weight: 900;
   opacity: .65;
 }
+.video-resolution, .video-file-size {
+  display: block;
+}
+.operate-btn {
+  display: block;
+}
 /* 【影音】節目列表
    ========================================================================== */
-#programme .list-group i {
+#programme .list-group {
+  display: table-row-group !important;
+}
+#programme .list-group-item {
+  display: table-row !important;
+}
+.handle {
   cursor: grab;
 }
-#programme .list-group i:active {
+.handle:active {
   cursor: grabbing;
+}
+#programme .programme-head {
+  min-width: 20rem;
+  max-width: 40rem;
+}
+#programme .programme-block {
+  display: block;
+  position: relative;
+  border-radius: inherit;
+  float: left;
+}
+#programme .programme-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  border-radius: 4px;
+  width: 150px;
+}
+#programme .programme-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+  border-radius: 4px;
+}
+#programme .programme-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 56.25%;
+}
+#programme .programme-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#programme .programme-episode {
+  position: absolute;
+  background-color: rgba(0, 0, 0, .8);
+  color: #fff;
+  border-radius: 2px;
+  bottom: 4px;
+  right: 4px;
+  padding: 2px 4px;
+  line-height: 14px;
+  font-size: 0.75rem;
+}
+#programme .programme-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+}
+#programme .programme-intro {
+  display: block;
+  color: #757575;
+}
+#programme .programme-category span {
+  display: block;
 }
