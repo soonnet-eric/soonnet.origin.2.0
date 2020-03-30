@@ -1,0 +1,264 @@
+thead, tfoot {
+  background-color: #f5f5f5;
+}
+.disable {
+  opacity: 0.4 !important;
+}
+.cell-xs {
+  width: 3rem;
+}
+.cell-sm {
+  width: 6rem;
+}
+.cell-md {
+  width: 12rem;
+}
+.cell-lg {
+  width: 18rem;
+}
+.cell-xl {
+  max-width: 30rem;
+}
+.handle {
+  opacity: 0.6;
+}
+/* Header
+   ========================================================================== */
+.main-header .navbar-nav .user-image {
+  height: auto;
+  width: 32px;
+  padding: 0;
+}
+.nav-sidebar .nav-treeview .nav-item a {
+  padding-left: 2.5625rem;
+}
+.brand-image {
+	opacity: .9;
+}
+/* 【影音】Soonnet TV 列表 + 一般影片列表
+   ========================================================================== */
+.filter {
+  display: block;
+  position: relative;
+}
+.filter a {
+  padding: 6px 10px;
+  margin-right: 10px;
+  background-color: #fff;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
+}
+.filter .current {
+  background-color: #2e3e4a;
+  color: #fff !important;
+}
+.video-head {
+  min-width: 20rem;
+  max-width: 30rem;
+}
+.video-block {
+  display: block;
+  position: relative;
+  border-radius: inherit;
+  float: left;
+}
+.video-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  border-radius: 4px;
+  width: 120px;
+}
+.video-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+  border-radius: 4px;
+}
+.video-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 56.25%;
+}
+.video-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.video-duration {
+  position: absolute;
+  background-color: rgba(0, 0, 0, .8);
+  color: #fff;
+  border-radius: 2px;
+  bottom: 4px;
+  right: 4px;
+  padding: 2px 4px;
+  line-height: 14px;
+  font-size: 0.75rem;
+}
+.video-title {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+  vertical-align: top;
+}
+.video-tag {
+  position: relative;
+  display: block;
+  font-size: 12px;
+  bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tag {
+  display: inline-flex;
+  margin-right: 8px;
+  padding: 2px 6px;
+  background-color: #eee;
+  color: #424242 !important;
+  border-radius: 2px;
+  margin-top: 0.25rem;
+}
+.video-episode, .video-status {
+  display: block;
+  font-size: 0.8125rem;
+  color: #757575;
+}
+.published::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #28a745;
+}
+.unpublished::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #dc3545;
+}
+.public::before {
+  content: '\f06e';
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  color: #28a745;
+}
+.unlisted::before {
+  content: '\f070';
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  opacity: .65;
+}
+.private::before {
+  content: '\f023';
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  opacity: .65;
+}
+.video-resolution, .video-file-size {
+  display: block;
+}
+.operate-btn {
+  display: block;
+}
+/* 【影音】節目列表
+   ========================================================================== */
+#programme .list-group {
+  display: table-row-group !important;
+}
+#programme .list-group-item {
+  display: table-row !important;
+}
+.handle {
+  cursor: grab;
+}
+.handle:active {
+  cursor: grabbing;
+}
+#programme .programme-head {
+  min-width: 20rem;
+  max-width: 40rem;
+}
+#programme .programme-block {
+  display: block;
+  position: relative;
+  border-radius: inherit;
+  float: left;
+}
+#programme .programme-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  border-radius: 4px;
+  width: 150px;
+}
+#programme .programme-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+  border-radius: 4px;
+}
+#programme .programme-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 56.25%;
+}
+#programme .programme-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#programme .programme-episode {
+  position: absolute;
+  background-color: rgba(0, 0, 0, .8);
+  color: #fff;
+  border-radius: 2px;
+  bottom: 4px;
+  right: 4px;
+  padding: 2px 4px;
+  line-height: 14px;
+  font-size: 0.75rem;
+}
+#programme .programme-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+}
+#programme .programme-intro {
+  display: block;
+  color: #757575;
+}
+#programme .programme-category span {
+  display: block;
+}
