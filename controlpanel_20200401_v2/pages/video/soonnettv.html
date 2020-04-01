@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="../../css/font-awesome/all.min.css">
 <!-- DataTables -->
 <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+<!-- Toastr -->
+<link rel="stylesheet" href="../../plugins/toastr/toastr.min.css">
 <!-- Theme Style -->
 <link rel="stylesheet" href="../../css/adminlte/adminlte.css">
 <!-- Normalize -->
@@ -282,7 +284,7 @@
                       <td class="cell-sm comment-count"> 0 </td>
                       <td class="cell-sm bookmark-count"> 4</td>
                       <td class="cell-sm share-count"> 2 </td>
-                      <td class="cell-sm operate"><span class="operate-btn featured"><a href=""> 從精選移除 </a></span><span class="operate-btn related"><a href=""> 關聯賽事 </a></span><span class="operate-btn edit"><a href=""> 編輯 </a></span><span class="operate-btn danger"><a href=""> 刪除 </a></span></td>
+                      <td class="cell-sm operate"><span type="button" class="operate-btn featured" data-toggle="modal" data-target="#modal-featured--remove"> 從精選移除 </span><span class="operate-btn related disable"> 關聯賽事 </span><span class="operate-btn edit"><a href=""> 編輯 </a></span><span type="button" class="operate-btn danger" data-toggle="modal" data-target="#modal-video--remove"> 刪除 </span></td>
                     </tr>
                     <tr>
                       <td class="video-head"><div class="video-block mr-2 clearfix">
@@ -306,7 +308,7 @@
                       <td class="cell-sm comment-count"> 1 </td>
                       <td class="cell-sm bookmark-count"> 3 </td>
                       <td class="cell-sm share-count"> 0 </td>
-                      <td class="cell-sm operate"><span class="operate-btn featured"><a href=""> 設為精選 </a></span><span class="operate-btn related"><a href=""> 關聯賽事 </a></span><span class="operate-btn edit"><a href=""> 編輯 </a></span><span class="operate-btn danger"><a href=""> 刪除 </a></span></td>
+                      <td class="cell-sm operate"><span type="button" class="operate-btn featured" data-toggle="modal" data-target="#modal-featured--add"> 設為精選 </span><span class="operate-btn related disable"> 關聯賽事 </span><span type="button" class="operate-btn edit"><a href=""> 編輯 </a></span><span type="button" class="operate-btn danger" data-toggle="modal" data-target="#modal-video--remove"> 刪除 </span></td>
                     </tr>
                   </tbody>
                   <tfoot>
@@ -334,6 +336,58 @@
         <!-- /.row --> 
       </div>
       <!-- /.Container Fluid --> 
+      <!-- Modal: 設為精選影音 -->
+      <div class="modal fade" id="modal-featured--add">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <p>將影片<b>「影片名稱」</b>設為影音精選？</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary featured--add---success" data-dismiss="modal">設為精選</button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal: 設為精選影音 --> 
+      <!-- Modal: 從精選影音中移除 -->
+      <div class="modal fade" id="modal-featured--remove">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <p>將影片<b>「影片名稱」</b>從影音精選中移除？</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary featured--remove---success" data-dismiss="modal">從精選中移除</button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal: 從精選影音中移除 --> 
+      <!-- Modal: 刪除一般影片 -->
+      <div class="modal fade" id="modal-video--remove">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <p>確認刪除影片<b>「影片名稱」</b>？<br />
+                <b>影片一旦刪除，將無法復原。</b></p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-danger video--remove---success" data-dismiss="modal">是，刪除</button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal: 刪除節目類型 --> 
     </div>
     <!-- /.Content --> 
   </div>
@@ -343,17 +397,20 @@
 <!-- jQuery --> 
 <script src="../../js/jquery-3.4.1.min.js"></script> 
 <!-- Bootstrap 4 --> 
-<script src="../../js/bootstrap.bundle.min.js"></script>
+<script src="../../js/bootstrap.bundle.min.js"></script> 
 <!-- Toastr --> 
 <script src="../../plugins/toastr/toastr.min.js"></script> 
+<!-- bs-custom-file-input --> 
+<script src="../../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script> 
 <!-- Adminlte --> 
 <script src="../../js/adminlte.min.js"></script> 
 <!-- DataTables --> 
 <script src="../../plugins/datatables/jquery.dataTables.js"></script> 
 <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script> 
 <!-- Page Script --> 
-<script>
+<script type="text/javascript">
   $(function () {
+	  
     $('#soonnettv-list').DataTable({
       "paging": true,
       "lengthChange": true,
@@ -362,6 +419,39 @@
       "info": true,
       "autoWidth": false,
     });
+	  
+	//Toastr
+	toastr.options = {
+	  "debug": false,
+	  "positionClass": "toast-bottom-right",
+	  "onclick": null,
+	  "fadeIn": 300,
+	  "fadeOut": 1000,
+	  "timeOut": 5000,
+	  "extendedTimeOut": 1000
+	}
+	$('.video--upload---success').click(function() {
+      toastr.success('影片<b>「影片名稱」</b>上傳成功')
+    });
+	$('.video--edit---success').click(function() {
+      toastr.success('影片<b>「影片名稱」</b>編輯成功')
+    });
+	$('.video--remove---success').click(function() {
+      toastr.success('影片<b>「影片名稱」</b>已刪除')
+    });
+	$('.featured--add---success').click(function() {
+      toastr.success('影片<b>「影片名稱」</b>已新增至影音精選')
+    });
+    $('.featured--remove---success').click(function() {
+      toastr.success('影片<b>「影片名稱」</b>已從影音精選中移除')
+    });
+	$('.related--add---success').click(function() {
+      toastr.success('影片<b>「影片名稱」</b>與賽事「賽事名稱」關聯成功')
+    });
+	$('.related--remove---success').click(function() {
+      toastr.success('影片<b>「影片名稱」</b>與賽事「賽事名稱」已取消關聯')
+    });
+	  
   });
 </script>
 </body>

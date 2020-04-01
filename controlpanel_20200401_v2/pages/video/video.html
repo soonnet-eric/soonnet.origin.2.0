@@ -7,7 +7,7 @@
 <meta content="yes" name="apple-mobile-web-app-capable">
 <meta content="black" name="apple-mobile-web-app-status-bar-style">
 <meta content="telephone=no" name="format-detection">
-<title> 節目類型 - 尋寶網管理後臺 </title>
+<title> 一般影片列表 - 尋寶網管理後臺 </title>
 <!-- Font Awesome -->
 <link rel="stylesheet" href="../../css/font-awesome/all.min.css">
 <!-- DataTables -->
@@ -88,7 +88,7 @@
               <li class="nav-item"> <a href="soonnettv.html" class="nav-link">
                 <p>Soonnet TV 列表</p>
                 </a> </li>
-              <li class="nav-item"> <a href="video.html" class="nav-link">
+              <li class="nav-item"> <a href="video.html" class="nav-link active">
                 <p>一般影片列表</p>
                 </a> </li>
               <li class="nav-item"> <a href="featured.html" class="nav-link">
@@ -97,7 +97,7 @@
               <li class="nav-item"> <a href="programme.html" class="nav-link">
                 <p>節目列表</p>
                 </a> </li>
-              <li class="nav-item"> <a href="programme-category.html" class="nav-link active">
+              <li class="nav-item"> <a href="programme-category.html" class="nav-link">
                 <p>節目類型</p>
                 </a> </li>
               <li class="nav-item"> <a href="video-category.html" class="nav-link">
@@ -214,13 +214,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark"> 節目類型 </h1>
+            <h1 class="m-0 text-dark"> 一般影片列表 </h1>
           </div>
           <!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item">影音</li>
-              <li class="breadcrumb-item active">節目類型</li>
+              <li class="breadcrumb-item active">一般影片列表</li>
             </ol>
           </div>
           <!-- /.col --> 
@@ -232,72 +232,123 @@
     <!-- /.Content Header --> 
     
     <!-- Main content -->
-    <div id="programme" class="content">
+    <div id="video" class="content">
       <div class="container-fluid">
         <div class="row mb-3">
-          <div class="col-sm-8"> 列表排序方式與頁面「<a href="../../../video/programme.html" target="_blank">我們的節目 — 篩選</a>」關聯 </div>
-          <div class="col-sm-2">
-            <button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#modal-category--set"><i class="nav-icon fas fa-plus fa-sm mr-1"></i> 新增類型 </button>
-          </div>
-          <div class="col-sm-2">
-            <button type="button" class="btn btn-block btn-default btn-sm sort--save---success"><i class="nav-icon fas fa-save fa-sm mr-1"></i> 保存當前排序 </button>
+          <div class="col-12">
+            <div class="filter"><a hreff="" class="current">全部</a><a href="">運動</a><a href="">賽事</a><a href="">重機</a><a href="">生活</a><a href="">其他</a></div>
           </div>
         </div>
-        <div class="row">
+        <div class="row mb-2">
           <div class="col-12">
             <div class="card">
               <div class="card-body">
-                <table id="programme-list" class="table table-bordered">
+                <table id="video-list" class="table table-bordered table-hover">
                   <thead>
                     <tr>
-                      <th> </th>
-                      <th> 節目類型 </th>
-                      <th> URL 重寫名稱 </th>
-                      <th> 影片數量 </th>
+                      <th> 一般影片 </th>
+                      <th> 類型 </th>
+                      <th> 上傳日期 / 狀態</th>
+                      <th> 上傳者 </th>
+                      <th> 尺寸 / 大小 </th>
+                      <th> 瀏覽量 </th>
+                      <th> 讚好 </th>
+                      <th> 留言 </th>
+                      <th> 收藏 </th>
+                      <th> 分享 </th>
                       <th> 操作 </th>
                     </tr>
                   </thead>
-                  <tbody id="programme-items" class="list-group">
-                    <tr class="list-group-item">
-                      <td class="cell-xs"><i class="fas fa-arrows-alt-v mr-3 handle"></i></td>
-                      <td class="programme-category"><a href=""> 運動 </a></td>
-                      <td class="programme-url-rewrite cell-xl"> sport </td>
-                      <td class="programme-count cell-lg"> 36 </td>
-                      <td class="operate cell-sm"><span type="button" class="operate-btn edit" data-toggle="modal" data-target="#modal-category--set"> 編輯 </span><span type="button" class="operate-btn danger" data-toggle="modal" data-target="#modal-category--remove"> 刪除 </span></td>
+                  <tbody>
+                    <tr>
+                      <td class="video-head"><div class="video-block mr-2 clearfix">
+                          <div class="video-thumbnail">
+                            <div class="video-responsive">
+                              <div class="video-sizer">
+                                <div class="video-image" style="background-image: url('../../images/video-1.jpg');"></div>
+                              </div>
+                            </div>
+                            <div class="duration"> <span>01:09:19</span> </div>
+                          </div>
+                        </div>
+                        <span class="title"><a href=""> 2016-03-13 捷安-尋寶5K長跑樂. </a></span> <span class="tag"> <a> 捷安 </a><a> 尋寶5K長跑樂 </a><a> 大帽山 </a><a> 尋寶網 </a><a> 香港 </a></span></td>
+                      <td class="category"><a href=""> 賽事 </a></td>
+                      <td class="date"> 2016年03月17日 17:09 <span class="subtext public"> 公開 </span></td>
+                      <td class="uploader"><a href=""> JOEYLEE </a></td>
+                      <td class="details"><span class="resolution"> 1920x1080 </span> <span class="file-size"> 45.99 MB </span></td>
+                      <td class="cell-sm view-count"> 1,266 </td>
+                      <td class="cell-sm like-count"> 2 </td>
+                      <td class="cell-sm comment-count"> 0 </td>
+                      <td class="cell-sm bookmark-count"> 4</td>
+                      <td class="cell-sm share-count"> 2 </td>
+                      <td class="cell-sm operate"><span type="button" class="operate-btn featured" data-toggle="modal" data-target="#modal-featured--remove"> 從精選移除 </span><span class="operate-btn edit"><a href=""> 編輯 </a></span><span type="button" class="operate-btn danger" data-toggle="modal" data-target="#modal-video--remove"> 刪除 </span></td>
                     </tr>
-                    <tr class="list-group-item">
-                      <td class="cell-xs"><i class="fas fa-arrows-alt-v mr-3 handle"></i></td>
-                      <td class="programme-category"><a href=""> 人物專訪 </a></td>
-                      <td class="programme-url-rewrite cell-xl"> interview </td>
-                      <td class="programme-count cell-lg"> 7 </td>
-                      <td class="operate cell-sm"><span type="button" class="operate-btn edit" data-toggle="modal" data-target="#modal-category--set"> 編輯 </span><span type="button" class="operate-btn danger" data-toggle="modal" data-target="#modal-category--remove"> 刪除 </span></td>
+                    <tr>
+                      <td class="video-head"><div class="video-block mr-2 clearfix">
+                          <div class="video-thumbnail">
+                            <div class="video-responsive">
+                              <div class="video-sizer">
+                                <div class="video-image" style="background-image: url('../../images/video-2.jpg');"></div>
+                              </div>
+                            </div>
+                            <div class="duration"> <span>00:22</span> </div>
+                          </div>
+                        </div>
+                        <span class="title"><a href=""> 惠州飄移 </a></span>
+                        <div class="tag"> <a> 惠州 </a><a> 飄移 </a></div></td>
+                      <td class="category"><a href=""> 重機 </a></td>
+                      <td class="date"> 2016年03月11日 11:58 <span class="subtext unlisted"> 非公開 </span></td>
+                      <td class="uploader"><a href=""> JOEYLEE </a></td>
+                      <td class="details"><span class="resolution"> 1920x1080 </span> <span class="file-size"> 526 MB </span></td>
+                      <td class="cell-sm view-count"> 24 </td>
+                      <td class="cell-sm like-count"> 5 </td>
+                      <td class="cell-sm comment-count"> 0 </td>
+                      <td class="cell-sm bookmark-count"> 1 </td>
+                      <td class="cell-sm share-count"> 0 </td>
+                      <td class="cell-sm operate"><span type="button" class="operate-btn featured" data-toggle="modal" data-target="#modal-featured--add"> 設為精選 </span><span class="operate-btn edit"><a href=""> 編輯 </a></span><span type="button" class="operate-btn danger" data-toggle="modal" data-target="#modal-video--remove"> 刪除 </span></td>
                     </tr>
-                    <tr class="list-group-item">
-                      <td class="cell-xs"><i class="fas fa-arrows-alt-v mr-3 handle"></i></td>
-                      <td class="programme-category"><a href=""> 休閒娛樂 </a></td>
-                      <td class="programme-url-rewrite cell-xl"> entertainment </td>
-                      <td class="programme-count cell-lg"> 42 </td>
-                      <td class="operate cell-sm"><span type="button" class="operate-btn edit" data-toggle="modal" data-target="#modal-category--set"> 編輯 </span><span type="button" class="operate-btn danger" data-toggle="modal" data-target="#modal-category--remove"> 刪除 </span></td>
-                    </tr>
-                    <tr class="list-group-item">
-                      <td class="cell-xs"><i class="fas fa-arrows-alt-v mr-3 handle"></i></td>
-                      <td class="programme-category"><a href=""> 生活 </a></td>
-                      <td class="programme-url-rewrite cell-xl"> lifestyle </td>
-                      <td class="programme-count cell-lg"> 5 </td>
-                      <td class="operate cell-sm"><span type="button" class="operate-btn edit" data-toggle="modal" data-target="#modal-category--set"> 編輯 </span><span type="button" class="operate-btn danger" data-toggle="modal" data-target="#modal-category--remove"> 刪除 </span></td>
+                    <tr>
+                      <td class="video-head"><div class="video-block mr-2 clearfix">
+                          <div class="video-thumbnail">
+                            <div class="video-responsive">
+                              <div class="video-sizer">
+                                <div class="video-image" style="background-image: url('../../images/video-3.jpg');"></div>
+                              </div>
+                            </div>
+                            <div class="duration"> <span>16:46</span> </div>
+                          </div>
+                        </div>
+                        <span class="title"><a href=""> 2016.03.04 捷迅股份有限公司 上櫃掛牌典禮 - 1 </a></span></td>
+                      <td class="category"><a href=""> 生活 </a></td>
+                      <td class="date"> 2016年03月09日 16:27 <span class="subtext private"> 私人 </span></td>
+                      <td class="uploader"><a href=""> soonnet </a></td>
+                      <td class="details"><span class="resolution"> 1920x1080 </span> <span class="file-size"> 45.99 MB </span></td>
+                      <td class="cell-sm view-count"> 3 </td>
+                      <td class="cell-sm like-count"> 6 </td>
+                      <td class="cell-sm comment-count"> 0 </td>
+                      <td class="cell-sm bookmark-count"> 0 </td>
+                      <td class="cell-sm share-count"> 2 </td>
+                      <td class="cell-sm operate"><span type="button" class="operate-btn featured" data-toggle="modal" data-target="#modal-featured--add"> 設為精選 </span><span class="operate-btn edit"><a href=""> 編輯 </a></span><span type="button" class="operate-btn danger" data-toggle="modal" data-target="#modal-video--remove"> 刪除 </span></td>
                     </tr>
                   </tbody>
                   <tfoot>
                     <tr>
-                      <th> </th>
-                      <th> 節目類型 </th>
-                      <th> URL 重寫名稱 </th>
-                      <th> 影片數量 </th>
+                      <th> 一般影片 </th>
+                      <th> 類型 </th>
+                      <th> 上傳日期 / 狀態</th>
+                      <th> 上傳者 </th>
+                      <th> 尺寸 / 大小 </th>
+                      <th> 瀏覽量 </th>
+                      <th> 讚好 </th>
+                      <th> 留言 </th>
+                      <th> 收藏 </th>
+                      <th> 分享 </th>
                       <th> 操作 </th>
                     </tr>
                   </tfoot>
                 </table>
               </div>
+              <!-- /.card-body --> 
             </div>
           </div>
           <!-- /.col-12 --> 
@@ -305,44 +356,51 @@
         <!-- /.row --> 
       </div>
       <!-- /.Container Fluid --> 
-      <!-- Modal: 新增/編輯節目類型 -->
-      <div class="modal fade" id="modal-category--set">
+      <!-- Modal: 設為精選影音 -->
+      <div class="modal fade" id="modal-featured--add">
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">新增/編輯節目類型</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-            </div>
             <div class="modal-body">
-              <div class="form-group">
-                <label for="programme-category">節目類型</label>
-                <input type="text" class="form-control" id="programme-category" placeholder="運動、生活、新聞報導&hellip;">
-              </div>
-              <div class="form-group">
-                <label for="programme-category-url">URL 重寫名稱</label>
-                <input type="text" class="form-control" id="programme-category-url" placeholder="sport、lifestyle (類型網址後綴，如 soonnet.org/programme?c=lifestyle)">
-              </div>
+              <p>將影片<b>「影片名稱」</b>設為影音精選？</p>
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-              <button type="button" class="btn btn-primary category--set---success" data-dismiss="modal">保存</button>
+              <button type="button" class="btn btn-primary featured--add---success" data-dismiss="modal">設為精選</button>
             </div>
           </div>
           <!-- /.modal-content --> 
         </div>
         <!-- /.modal-dialog --> 
       </div>
-      <!-- /.modal: 新增/編輯節目類型 --> 
-      <!-- Modal: 刪除節目類型 -->
-      <div class="modal fade" id="modal-category--remove">
+      <!-- /.modal: 設為精選影音 --> 
+      <!-- Modal: 從精選影音中移除 -->
+      <div class="modal fade" id="modal-featured--remove">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-body">
-              <p>將<b>「節目類型名稱」</b>從節目類型中刪除？</p>
+              <p>將影片<b>「影片名稱」</b>從影音精選中移除？</p>
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-              <button type="button" class="btn btn-danger category--remove---success" data-dismiss="modal">是，刪除</button>
+              <button type="button" class="btn btn-primary featured--remove---success" data-dismiss="modal">從精選中移除</button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal: 從精選影音中移除 --> 
+      <!-- Modal: 刪除一般影片 -->
+      <div class="modal fade" id="modal-video--remove">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <p>確認刪除影片<b>「影片名稱」</b>？<br />
+                <b>影片一旦刪除，將無法復原。</b></p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-danger video--remove---success" data-dismiss="modal">是，刪除</button>
             </div>
           </div>
           <!-- /.modal-content --> 
@@ -367,25 +425,19 @@
 <!-- DataTables --> 
 <script src="../../plugins/datatables/jquery.dataTables.js"></script> 
 <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script> 
-<!-- Sortable --> 
-<script src="../../plugins/sortable/Sortable.js"></script> 
 <!-- Page Script --> 
-<script>
+<script type="text/javascript">
   $(function () {
 	  
-  	var el = document.getElementById( "programme-items" );
-  	Sortable.create(el, {
-  		disabled: false, // 關閉 Sortable
-  		animation: 150,  // 物件移動時間
-  		handle: ".handle",  // 可拖曳的區域
-  		filter: ".ignore",  // 過濾器，不能拖曳的物件
-  		preventOnFilter: true, // 當過濾器啟動的時候，觸發 event.preventDefault()
-  		draggable: ".list-group-item",  // 可拖曳的物件
-  		ghostClass: "sortable-ghost",  // 拖曳時，給予物件的類別
-  		chosenClass: "sortable-chosen",  // 選定時，給予物件的類別
-  		forceFallback: false  // 忽略 HTML5 DnD
-  	});
-		  
+    $('#video-list').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+    });
+	  
 	//Toastr
 	toastr.options = {
 	  "debug": false,
@@ -396,14 +448,14 @@
 	  "timeOut": 5000,
 	  "extendedTimeOut": 1000
 	}
-	$('.category--set---success').click(function() {
-      toastr.success('節目類型<b>「節目類型名稱」</b>新增 &#47; 編輯成功')
+	$('.featured--add---success').click(function() {
+      toastr.success('影片<b>「影片名稱」</b>已新增至影音精選')
     });
-    $('.category--remove---success').click(function() {
-      toastr.success('已刪除節目類型<b>「節目類型名稱」</b>')
+    $('.featured--remove---success').click(function() {
+      toastr.success('影片<b>「影片名稱」</b>已從影音精選中移除')
     });
-	$('.sort--save---success').click(function() {
-      toastr.success('已保存當前排序')
+	$('.video--remove---success').click(function() {
+      toastr.success('影片<b>「影片名稱」</b>已刪除')
     });
 	  
   });

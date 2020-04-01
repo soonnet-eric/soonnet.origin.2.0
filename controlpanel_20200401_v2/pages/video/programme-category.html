@@ -7,7 +7,7 @@
 <meta content="yes" name="apple-mobile-web-app-capable">
 <meta content="black" name="apple-mobile-web-app-status-bar-style">
 <meta content="telephone=no" name="format-detection">
-<title> 影片分類 - 尋寶網管理後臺 </title>
+<title> 節目類型 - 尋寶網管理後臺 </title>
 <!-- Font Awesome -->
 <link rel="stylesheet" href="../../css/font-awesome/all.min.css">
 <!-- DataTables -->
@@ -97,10 +97,10 @@
               <li class="nav-item"> <a href="programme.html" class="nav-link">
                 <p>節目列表</p>
                 </a> </li>
-              <li class="nav-item"> <a href="programme-category.html" class="nav-link">
+              <li class="nav-item"> <a href="programme-category.html" class="nav-link active">
                 <p>節目類型</p>
                 </a> </li>
-              <li class="nav-item"> <a href="video-category.html" class="nav-link active">
+              <li class="nav-item"> <a href="video-category.html" class="nav-link">
                 <p>影片分類</p>
                 </a> </li>
             </ul>
@@ -214,13 +214,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark"> 影片分類 </h1>
+            <h1 class="m-0 text-dark"> 節目類型 </h1>
           </div>
           <!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item">影音</li>
-              <li class="breadcrumb-item active">影片分類</li>
+              <li class="breadcrumb-item active">節目類型</li>
             </ol>
           </div>
           <!-- /.col --> 
@@ -235,9 +235,9 @@
     <div id="programme" class="content">
       <div class="container-fluid">
         <div class="row mb-3">
-          <div class="col-sm-8"> 列表排序方式與頁面「<a href="../../../video/videolist.html" target="_blank">影片一覽 — 篩選</a>」關聯 </div>
+          <div class="col-sm-8"> 列表排序方式與頁面「<a href="../../../video/programme.html" target="_blank">我們的節目 — 篩選</a>」關聯 </div>
           <div class="col-sm-2">
-            <button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#modal-category--set"><i class="nav-icon fas fa-plus fa-sm mr-1"></i> 新增分類 </button>
+            <button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#modal-category--set"><i class="nav-icon fas fa-plus fa-sm mr-1"></i> 新增類型 </button>
           </div>
           <div class="col-sm-2">
             <button type="button" class="btn btn-block btn-default btn-sm sort--save---success"><i class="nav-icon fas fa-save fa-sm mr-1"></i> 保存當前排序 </button>
@@ -251,7 +251,7 @@
                   <thead>
                     <tr>
                       <th> </th>
-                      <th> 影片分類 </th>
+                      <th> 節目類型 </th>
                       <th> URL 重寫名稱 </th>
                       <th> 影片數量 </th>
                       <th> 操作 </th>
@@ -260,22 +260,22 @@
                   <tbody id="programme-items" class="list-group">
                     <tr class="list-group-item">
                       <td class="cell-xs"><i class="fas fa-arrows-alt-v mr-3 handle"></i></td>
-                      <td class="programme-category"><a href=""> 自家製節目 </a></td>
-                      <td class="programme-url-rewrite cell-xl"> soonnettv </td>
+                      <td class="programme-category"><a href=""> 運動 </a></td>
+                      <td class="programme-url-rewrite cell-xl"> sport </td>
                       <td class="programme-count cell-lg"> 36 </td>
                       <td class="operate cell-sm"><span type="button" class="operate-btn edit" data-toggle="modal" data-target="#modal-category--set"> 編輯 </span><span type="button" class="operate-btn danger" data-toggle="modal" data-target="#modal-category--remove"> 刪除 </span></td>
                     </tr>
                     <tr class="list-group-item">
                       <td class="cell-xs"><i class="fas fa-arrows-alt-v mr-3 handle"></i></td>
-                      <td class="programme-category"><a href=""> 路跑 </a></td>
-                      <td class="programme-url-rewrite cell-xl"> running </td>
+                      <td class="programme-category"><a href=""> 人物專訪 </a></td>
+                      <td class="programme-url-rewrite cell-xl"> interview </td>
                       <td class="programme-count cell-lg"> 7 </td>
                       <td class="operate cell-sm"><span type="button" class="operate-btn edit" data-toggle="modal" data-target="#modal-category--set"> 編輯 </span><span type="button" class="operate-btn danger" data-toggle="modal" data-target="#modal-category--remove"> 刪除 </span></td>
                     </tr>
                     <tr class="list-group-item">
                       <td class="cell-xs"><i class="fas fa-arrows-alt-v mr-3 handle"></i></td>
-                      <td class="programme-category"><a href=""> 賽事 </a></td>
-                      <td class="programme-url-rewrite cell-xl"> race </td>
+                      <td class="programme-category"><a href=""> 休閒娛樂 </a></td>
+                      <td class="programme-url-rewrite cell-xl"> entertainment </td>
                       <td class="programme-count cell-lg"> 42 </td>
                       <td class="operate cell-sm"><span type="button" class="operate-btn edit" data-toggle="modal" data-target="#modal-category--set"> 編輯 </span><span type="button" class="operate-btn danger" data-toggle="modal" data-target="#modal-category--remove"> 刪除 </span></td>
                     </tr>
@@ -286,25 +286,11 @@
                       <td class="programme-count cell-lg"> 5 </td>
                       <td class="operate cell-sm"><span type="button" class="operate-btn edit" data-toggle="modal" data-target="#modal-category--set"> 編輯 </span><span type="button" class="operate-btn danger" data-toggle="modal" data-target="#modal-category--remove"> 刪除 </span></td>
                     </tr>
-                    <tr class="list-group-item">
-                      <td class="cell-xs"><i class="fas fa-arrows-alt-v mr-3 handle"></i></td>
-                      <td class="programme-category"><a href=""> 重機 </a></td>
-                      <td class="programme-url-rewrite cell-xl"> moto </td>
-                      <td class="programme-count cell-lg"> 5 </td>
-                      <td class="operate cell-sm"><span type="button" class="operate-btn edit" data-toggle="modal" data-target="#modal-category--set"> 編輯 </span><span type="button" class="operate-btn danger" data-toggle="modal" data-target="#modal-category--remove"> 刪除 </span></td>
-                    </tr>
-                    <tr class="list-group-item">
-                      <td class="cell-xs"><i class="fas fa-arrows-alt-v mr-3 handle"></i></td>
-                      <td class="programme-category"><a href=""> 其他 </a></td>
-                      <td class="programme-url-rewrite cell-xl"> /others </td>
-                      <td class="programme-count cell-lg"> 5 </td>
-                      <td class="operate cell-sm"><span type="button" class="operate-btn edit" data-toggle="modal" data-target="#modal-category--set"> 編輯 </span><span type="button" class="operate-btn danger" data-toggle="modal" data-target="#modal-category--remove"> 刪除 </span></td>
-                    </tr>
                   </tbody>
                   <tfoot>
                     <tr>
                       <th> </th>
-                      <th> 影片分類 </th>
+                      <th> 節目類型 </th>
                       <th> URL 重寫名稱 </th>
                       <th> 影片數量 </th>
                       <th> 操作 </th>
@@ -319,22 +305,22 @@
         <!-- /.row --> 
       </div>
       <!-- /.Container Fluid --> 
-      <!-- Modal: 新增/編輯影片分類 -->
+      <!-- Modal: 新增/編輯節目類型 -->
       <div class="modal fade" id="modal-category--set">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title">新增/編輯影片分類</h4>
+              <h4 class="modal-title">新增/編輯節目類型</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
             </div>
             <div class="modal-body">
               <div class="form-group">
-                <label for="video-category">影片分類</label>
-                <input type="text" class="form-control" id="video-category" placeholder="路跑、重機、休閒&hellip;">
+                <label for="programme-category">節目類型</label>
+                <input type="text" class="form-control" id="programme-category" placeholder="運動、生活、新聞報導&hellip;">
               </div>
               <div class="form-group">
-                <label for="video-category-url">URL 重寫名稱</label>
-                <input type="text" class="form-control" id="video-category-url" placeholder="running、motor (類型網址後綴，如 soonnet.org/video?c=motor)">
+                <label for="programme-category-url">URL 重寫名稱</label>
+                <input type="text" class="form-control" id="programme-category-url" placeholder="sport、lifestyle (類型網址後綴，如 soonnet.org/programme?c=lifestyle)">
               </div>
             </div>
             <div class="modal-footer justify-content-between">
@@ -346,13 +332,13 @@
         </div>
         <!-- /.modal-dialog --> 
       </div>
-      <!-- /.modal: 新增/編輯影片分類 --> 
-      <!-- Modal: 刪除影片分類 -->
+      <!-- /.modal: 新增/編輯節目類型 --> 
+      <!-- Modal: 刪除節目類型 -->
       <div class="modal fade" id="modal-category--remove">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-body">
-              <p>將<b>「影片分類名稱」</b>從影片分類中刪除？</p>
+              <p>將<b>「節目類型名稱」</b>從節目類型中刪除？</p>
             </div>
             <div class="modal-footer justify-content-between">
               <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -384,7 +370,7 @@
 <!-- Sortable --> 
 <script src="../../plugins/sortable/Sortable.js"></script> 
 <!-- Page Script --> 
-<script>
+<script type="text/javascript">
   $(function () {
 	  
   	var el = document.getElementById( "programme-items" );
@@ -399,7 +385,7 @@
   		chosenClass: "sortable-chosen",  // 選定時，給予物件的類別
   		forceFallback: false  // 忽略 HTML5 DnD
   	});
-	  		  
+		  
 	//Toastr
 	toastr.options = {
 	  "debug": false,
@@ -411,10 +397,10 @@
 	  "extendedTimeOut": 1000
 	}
 	$('.category--set---success').click(function() {
-      toastr.success('影片分類<b>「影片分類名稱」</b>新增 &#47; 編輯成功')
+      toastr.success('節目類型<b>「節目類型名稱」</b>新增 &#47; 編輯成功')
     });
     $('.category--remove---success').click(function() {
-      toastr.success('已刪除影片分類<b>「影片分類名稱」</b>')
+      toastr.success('已刪除節目類型<b>「節目類型名稱」</b>')
     });
 	$('.sort--save---success').click(function() {
       toastr.success('已保存當前排序')
