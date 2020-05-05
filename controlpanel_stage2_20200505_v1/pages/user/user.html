@@ -1,0 +1,764 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<title> 會員列表 - 尋寶網管理後臺 </title>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="../../css/font-awesome/all.min.css">
+<!-- daterange picker -->
+<link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker.css">
+<!-- Select2 -->
+<link rel="stylesheet" href="../../plugins/select2/css/select2.min.css">
+<!-- Bootstrap4 Duallistbox -->
+<link rel="stylesheet" href="../../plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+<!-- DataTables -->
+<link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+<!-- Toastr -->
+<link rel="stylesheet" href="../../plugins/toastr/toastr.min.css">
+<!-- Theme Style -->
+<link rel="stylesheet" href="../../css/adminlte/adminlte.css">
+<!-- Normalize -->
+<link rel="stylesheet" href="../../css/desktop/normalize.css">
+<!-- Style -->
+<link rel="stylesheet" href="../../css/desktop/main.css">
+<!-- Favicon -->
+<link rel="shortcut icon" href="../../images/favicon.ico">
+</head>
+<body>
+<div class="wrapper"> 
+  
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light"> 
+    <!-- Left Navbar -->
+    <ul class="navbar-nav">
+      <li class="nav-item"> <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a> </li>
+    </ul>
+    
+    <!-- Right Navbar -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"> <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><img src="../../images/user-image.jpg" class="user-image img-circle" Title="Username" alt="User Image"></a> </li>
+    </ul>
+  </nav>
+  <!-- /.Navbar --> 
+  
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4"> 
+    <!-- Soonnet Logo --> 
+    <a href="../../dashboard.html" class="brand-link clearfix" title="尋寶網管理後臺"> <img src="../../images/soonnet-logo.svg" alt="Soonnet Logo" class="brand-image"> </a> 
+    
+    <!-- Sidebar -->
+    <div class="sidebar"> 
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-header">網站內容</li>
+          <!-- 首頁設定 -->
+          <li class="nav-item has-treeview disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-star"></i>
+            <p> 首頁設定 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="#" class="nav-link">
+                <p>精選設定</p>
+                </a> </li>
+              <li class="nav-item"> <a href="#" class="nav-link">
+                <p>特別企劃</p>
+                </a> </li>
+              <li class="nav-item"> <a href="#" class="nav-link">
+                <p>熱門關鍵字</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- 相簿 -->
+          <li class="nav-item has-treeview disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-images"></i>
+            <p> 相簿 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="#" class="nav-link">
+                <p>相簿列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="#" class="nav-link">
+                <p>相簿合輯列表</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- 影音 -->
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-play-circle"></i>
+            <p> 影音 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="../video/soonnettv.html" class="nav-link">
+                <p>Soonnet TV 列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../video/video.html" class="nav-link">
+                <p>一般影片列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../video/featured.html" class="nav-link">
+                <p>精選影音</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../video/programme.html" class="nav-link">
+                <p>節目列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../video/programme-category.html" class="nav-link">
+                <p>節目類型</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../video/video-category.html" class="nav-link">
+                <p>影片分類</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- 活動 -->
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-calendar"></i>
+            <p> 活動 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="../event/event.html" class="nav-link">
+                <p>活動列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../event/featured.html" class="nav-link">
+                <p>精選活動</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../event/category.html" class="nav-link">
+                <p>活動類型</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../event/country.html" class="nav-link">
+                <p>舉辦城市</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../event/region.html" class="nav-link">
+                <p>舉辦地區</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../event/status.html" class="nav-link">
+                <p>活動狀態</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../event/remark.html" class="nav-link">
+                <p>活動附註</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- 話題 -->
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-fire"></i>
+            <p> 話題 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="../topic/article.html" class="nav-link">
+                <p>文章列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../topic/article-featured.html" class="nav-link">
+                <p>編輯推薦</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../topic/article-category.html" class="nav-link">
+                <p>文章類型</p>
+                </a> </li>
+            </ul>
+          </li>
+		  <!-- Footer -->
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-list"></i>
+            <p> 頁腳 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="../footer/parent.html" class="nav-link">
+                <p>頁腳母層管理</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../footer/child.html" class="nav-link">
+                <p>頁腳子層管理</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../footer/page.html" class="nav-link">
+                <p>頁面管理</p>
+                </a> </li>
+            </ul>
+          </li>
+          <li class="nav-header">其他</li>
+          <!-- 用戶 -->
+          <li class="nav-item has-treeview menu-open"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-user"></i>
+            <p> 用戶 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="../user/user.html" class="nav-link active">
+                <p>會員列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../user/admin.html" class="nav-link">
+                <p>權限人員列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../user/blacklist.html" class="nav-link">
+                <p>禁止訪問列表</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- 留言 -->
+          <li class="nav-item has-treeview disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-comment-dots"></i>
+            <p> 留言 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="#" class="nav-link">
+                <p>留言列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="#" class="nav-link">
+                <p>已刪除留言</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- 廣告 -->
+          <li class="nav-item has-treeview disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-ad"></i>
+            <p> 廣告 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="#" class="nav-link">
+                <p>廣告列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="#" class="nav-link">
+                <p>版位參考</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- 伺服器狀態 -->
+          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-server"></i>
+            <p> 伺服器狀態 </p>
+            </a> </li>
+          <!-- 數據統計 -->
+          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-chart-bar"></i>
+            <p> 數據統計 </p>
+            </a> </li>
+          <!-- 操作日誌 -->
+          <li class="nav-item has-treeview disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-history"></i>
+            <p> 操作日誌 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="#" class="nav-link">
+                <p>管理人員操作日誌</p>
+                </a> </li>
+              <li class="nav-item"> <a href="#" class="nav-link">
+                <p>會員操作日誌</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- 檢舉內容 -->
+          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-ban"></i>
+            <p> 檢舉內容 </p>
+            </a> </li>
+          <!-- 系統設定 -->
+          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-cog"></i>
+            <p> 系統設定 </p>
+            </a> </li>
+        </ul>
+      </nav>
+      <!-- /.Sidebar Menu --> 
+    </div>
+    <!-- /.Sidebar --> 
+  </aside>
+  
+  <!-- Content Wrapper -->
+  <div class="content-wrapper"> 
+    <!-- Content Header -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark"> 會員列表 </h1>
+          </div>
+          <!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item">用戶</li>
+              <li class="breadcrumb-item active">會員列表</li>
+            </ol>
+          </div>
+          <!-- /.col --> 
+        </div>
+        <!-- /.row --> 
+      </div>
+      <!-- /.Container Fluid --> 
+    </div>
+    <!-- /.Content Header --> 
+    
+    <!-- Main content -->
+    <div id="user" class="content">
+      <div class="container-fluid">
+        <div class="row mb-3">
+          <div class="col-sm-10"> </div>
+          <div class="col-sm-2">
+            <button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#modal-user--filter"><i class="nav-icon fas fa-filter fa-sm mr-1"></i> 篩選條件 </button>
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-body">
+                <table id="user-list" class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th> ID </th>
+                      <th> 會員名稱 </th>
+                      <th> 性別 </th>
+                      <th> 出生日期</th>
+                      <th> 所在地區 </th>
+                      <th> 註冊電郵 </th>
+                      <th> 註冊時間 </th>
+                      <th> 最後訪問時間 </th>
+                      <th> 接收宣傳資訊 </th>
+                      <th> 操作 </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="user-id"> 55699 </td>
+                      <td class="user-info cell-lg"><span class="user-icon mr-1"><img src="../../images/user-image.jpg" class="user-image img-circle" alt="User Image"></span> <span class="user-name"> <a href="" target="_blank"> 陳小明 </a> </span></td>
+                      <td class="user-gender"> 男 </td>
+                      <td class="user-dob"> 1990/03/31 </td>
+                      <td class="cell-sm user-region"> 臺南縣 </td>
+                      <td class="user-email"> chansiuming@hotmail.com </td>
+                      <td class="cell-sm user-register-time"> 2020/4/26 16:40 </td>
+                      <td class="cell-sm user-last-visited"> 2020/4/26 16:50 </td>
+                      <td class="cell-sm receive-promote"> 是 </td>
+                      <td class="cell-md operate"><span type="button" class="operate-btn" data-toggle="modal" data-target="#modal-user--edit"> 更改資料 </span><span type="button" class="operate-btn" data-toggle="modal" data-target="#modal-user--role"> 權限設定 </span></td>
+                    </tr>
+                    <tr>
+                      <td class="user-id"> 55698 </td>
+                      <td class="user-info cell-lg"><span class="user-icon mr-1"><img src="../../images/user-image.jpg" class="user-image img-circle" alt="User Image"></span> <span class="user-name"> <a href="" target="_blank"> chanming </a> </span></td>
+                      <td class="user-gender"> - </td>
+                      <td class="user-dob"> - </td>
+                      <td class="cell-sm user-region"> - </td>
+                      <td class="user-email"> abc@hellokitty.com </td>
+                      <td class="cell-sm user-register-time"> 2020/4/26 16:40 </td>
+                      <td class="cell-sm user-last-visited"> 2020/4/26 16:50 </td>
+                      <td class="cell-sm receive-promote"> 是 </td>
+                      <td class="cell-md operate"><span type="button" class="operate-btn" data-toggle="modal" data-target="#modal-user--edit"> 更改資料 </span><span type="button" class="operate-btn" data-toggle="modal" data-target="#modal-user--role"> 權限設定 </span></td>
+                    </tr>
+                    <tr>
+                      <td class="user-id"> 55697 </td>
+                      <td class="user-info cell-lg"><span class="user-icon mr-1"><img src="../../images/user-image.jpg" class="user-image img-circle" alt="User Image"></span> <span class="user-name"> <a href="" target="_blank"> Andrew Yang </a> </span></td>
+                      <td class="user-gender"> 女 </td>
+                      <td class="user-dob"> 1990/03/31 </td>
+                      <td class="cell-sm user-region"> 香港特別行政區 </td>
+                      <td class="user-email"> andrew_yang@soonest.com </td>
+                      <td class="cell-sm user-register-time"> 2020/4/26 16:40 </td>
+                      <td class="cell-sm user-last-visited"> 2020/4/26 16:50 </td>
+                      <td class="cell-sm receive-promote"> 否 </td>
+                      <td class="cell-md operate"><span type="button" class="operate-btn" data-toggle="modal" data-target="#modal-user--edit"> 更改資料 </span><span type="button" class="operate-btn" data-toggle="modal" data-target="#modal-user--role"> 權限設定 </span></td>
+                    </tr>
+                    <tr>
+                      <td class="user-id"> 55696 </td>
+                      <td class="user-info cell-lg"><span class="user-icon mr-1"><img src="../../images/user-image.jpg" class="user-image img-circle" alt="User Image"></span> <span class="user-name"> <a href="" target="_blank"> chan20001006 </a> </span></td>
+                      <td class="user-gender"> 男 </td>
+                      <td class="user-dob"> 1990/03/31 </td>
+                      <td class="cell-sm user-region"> 中國大陸 </td>
+                      <td class="user-email"> chan20001006@hotmail.com </td>
+                      <td class="cell-sm user-register-time"> 2020/4/26 16:40 </td>
+                      <td class="cell-sm user-last-visited"> 2020/4/26 16:50 </td>
+                      <td class="cell-sm receive-promote"> 是 </td>
+                      <td class="cell-md operate"><span type="button" class="operate-btn" data-toggle="modal" data-target="#modal-user--edit"> 更改資料 </span><span type="button" class="operate-btn" data-toggle="modal" data-target="#modal-user--role"> 權限設定 </span></td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th> ID </th>
+                      <th> 會員名稱 </th>
+                      <th> 性別 </th>
+                      <th> 出生日期</th>
+                      <th> 所在地區 </th>
+                      <th> 註冊電郵 </th>
+                      <th> 註冊時間 </th>
+                      <th> 最後訪問時間 </th>
+                      <th> 接收宣傳資訊 </th>
+                      <th> 操作 </th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <!-- /.card-body --> 
+            </div>
+          </div>
+          <!-- /.col-12 --> 
+        </div>
+        <!-- /.row --> 
+      </div>
+      <!-- /.Container Fluid --> 
+      <!-- Modal: 篩選條件 -->
+      <div class="modal fade" id="modal-user--filter">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">篩選條件</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label>會員名稱</label>
+                <div class="input-group mb-3">
+                  <input class="form-control">
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label>性別</label>
+                <div class="form-group">
+                  <select class="form-control custom-select select2-no-search">
+                    <option>所有性別</option>
+                    <option>男</option>
+                    <option>女</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label>出生日期介乎</label>
+                <div class="input-group">
+                  <input type="text" class="form-control float-right date-range-picker">
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label>所在地區（預設為所有地區）</label>
+                <select class="duallistbox" multiple="multiple">
+                  <option>臺灣 - 臺北市</option>
+                  <option>臺灣 - 新北市</option>
+                  <option>臺灣 - 桃園市</option>
+                  <option>臺灣 - 臺中市</option>
+                  <option>臺灣 - 臺南市</option>
+                  <option>臺灣 - 高雄市</option>
+                  <option>臺灣 - 基隆市</option>
+                  <option>臺灣 - 新竹市</option>
+                  <option>臺灣 - 嘉義市</option>
+                  <option>臺灣 - 新竹縣</option>
+                  <option>臺灣 - 苗栗縣</option>
+                  <option>臺灣 - 彰化縣</option>
+                  <option>臺灣 - 南投縣</option>
+                  <option>臺灣 - 雲林縣</option>
+                  <option>臺灣 - 嘉義縣</option>
+                  <option>臺灣 - 屏東縣</option>
+                  <option>臺灣 - 宜蘭縣</option>
+                  <option>臺灣 - 花蓮縣</option>
+                  <option>臺灣 - 臺東縣</option>
+                  <option>臺灣 - 澎湖縣</option>
+                  <option>香港特別行政區</option>
+                  <option>澳門特別行政區</option>
+                  <option>中國大陸</option>
+                  <option>海外地區</option>
+                  <option>未填寫</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>電子郵件</label>
+                <div class="input-group mb-3">
+                  <input class="form-control">
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label>註冊日期介乎</label>
+                <div class="input-group">
+                  <input type="text" class="form-control float-right date-range-picker">
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label>最後上線日期介乎</label>
+                <div class="input-group">
+                  <input type="text" class="form-control float-right date-range-picker">
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label>是否接收宣傳</label>
+                <div class="form-group">
+                  <select class="form-control custom-select select2-no-search">
+                    <option>-</option>
+                    <option>是</option>
+                    <option>否</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal">篩選</button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal: 篩選條件 --> 
+      <!-- Modal: 更改會員資料 -->
+      <div class="modal fade" id="modal-user--edit">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">更改會員「會員名稱」資料</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group mb-3">
+                <label>ID</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" placeholder="55699" disabled>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label>會員名稱</label>
+                <div class="input-group">
+                  <input class="form-control" placeholder="陳小明" disabled>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label>性別</label>
+                <div class="form-group">
+                  <select class="form-control custom-select select2-no-search">
+                    <option selected>-</option>
+                    <option>男</option>
+                    <option>女</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label>出生日期</label>
+                <div class="input-group">
+                  <input type="date" class="form-control" placeholder="出生日期">
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label>所在地區</label>
+                <div class="form-group">
+                  <select class="form-control custom-select select2">
+                    <option selected>-</option>
+                    <option>臺灣 - 臺北市</option>
+                    <option>臺灣 - 新北市</option>
+                    <option>臺灣 - 桃園市</option>
+                    <option>臺灣 - 臺中市</option>
+                    <option>臺灣 - 臺南市</option>
+                    <option>臺灣 - 高雄市</option>
+                    <option>臺灣 - 基隆市</option>
+                    <option>臺灣 - 新竹市</option>
+                    <option>臺灣 - 嘉義市</option>
+                    <option>臺灣 - 新竹縣</option>
+                    <option>臺灣 - 苗栗縣</option>
+                    <option>臺灣 - 彰化縣</option>
+                    <option>臺灣 - 南投縣</option>
+                    <option>臺灣 - 雲林縣</option>
+                    <option>臺灣 - 嘉義縣</option>
+                    <option>臺灣 - 屏東縣</option>
+                    <option>臺灣 - 宜蘭縣</option>
+                    <option>臺灣 - 花蓮縣</option>
+                    <option>臺灣 - 臺東縣</option>
+                    <option>臺灣 - 澎湖縣</option>
+                    <option>香港特別行政區</option>
+                    <option>澳門特別行政區</option>
+                    <option>中國大陸</option>
+                    <option>海外地區</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label>電子郵件</label>
+                <div class="input-group">
+                  <input class="form-control" placeholder="eric@hotmail.com">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#modal-user--edit---warning">保存</button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal: 更改會員資料 --> 
+      <!-- Modal: 確認修改會員資料 -->
+      <div class="modal fade" id="modal-user--edit---warning">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <p class="mb-3"><b>*** 此乃重要資料，請勿隨意修改 ***</b><br>
+                如欲繼續修改，請輸入閣下 (登入帳戶名稱) 之密碼進行安全確認：</p>
+              <div class="row align-center">
+                <div class="col-2">
+                  <label class="mb-0">密碼</label>
+                </div>
+                <div class="col-6">
+                  <div class="input-group">
+                    <input type="password" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary user--edit---success" data-dismiss="modal">確認</button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal: 確認修改會員資料 --> 
+      <!-- Modal: 會員權限設定 -->
+      <div class="modal fade" id="modal-user--role">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">會員「會員名稱」權限設定</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group mb-3">
+                <label>ID</label>
+                <div class="input-group">
+                  <input type="number" class="form-control" placeholder="55699" disabled>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label>會員名稱</label>
+                <div class="input-group">
+                  <input class="form-control" placeholder="陳小明" disabled>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label>權限</label>
+                <div class="form-group">
+                  <select class="form-control custom-select select2-no-search">
+                    <option selected>一般會員（無任何權限）</option>
+                    <option>編輯（具發佈、編輯權限）</option>
+                    <option>高級編輯（具發佈、編輯、觀看統計數據權限）</option>
+                    <option>管理員（具發佈、編輯、觀看統計數據、設定權限）</option>
+                    <option>超級管理員（具所有權限）</option>
+                    <option>禁止訪問</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <label>備註</label>
+                <div class="input-group">
+                  <input class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-dismiss="modal" data-target="#modal-user--role---warning">保存</button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal: 會員權限設定 --> 
+      <!-- Modal: 確認修改會員權限 -->
+      <div class="modal fade" id="modal-user--role---warning">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body">
+              <p class="mb-3"><b>*** 此乃重要資料，請勿隨意修改 ***</b><br>
+                如欲繼續修改，請輸入閣下 (登入帳戶名稱) 之密碼進行安全確認：</p>
+              <div class="row align-center">
+                <div class="col-2">
+                  <label class="mb-0">密碼</label>
+                </div>
+                <div class="col-6">
+                  <div class="input-group">
+                    <input type="password" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+              <button type="button" class="btn btn-primary user--role---success" data-dismiss="modal">確認</button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal: 確認修改會員權限 --> 
+    </div>
+    <!-- /.Content --> 
+  </div>
+  <!-- /.Content Wrapper --> 
+</div>
+
+<!-- jQuery --> 
+<script src="../../js/jquery-3.4.1.min.js"></script> 
+<!-- Bootstrap 4 --> 
+<script src="../../js/bootstrap.bundle.min.js"></script> 
+<!-- Select2 --> 
+<script src="../../plugins/select2/js/select2.full.min.js"></script> 
+<!-- Bootstrap4 Duallistbox --> 
+<script src="../../plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script> 
+<!-- date-range-picker --> 
+<script src="../../plugins/moment/moment.min.js"></script> 
+<script src="../../plugins/daterangepicker/daterangepicker.js"></script> 
+<!-- Toastr --> 
+<script src="../../plugins/toastr/toastr.min.js"></script> 
+<!-- Adminlte --> 
+<script src="../../js/adminlte.min.js"></script> 
+<!-- DataTables --> 
+<script src="../../plugins/datatables/jquery.dataTables.js"></script> 
+<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script> 
+<!-- Page Script --> 
+<script type="text/javascript">
+  $(function () {
+	  
+	//Bootstrap Duallistbox
+    $('.duallistbox').bootstrapDualListbox({
+		nonSelectedListLabel: false,
+  		selectedListLabel: false,
+		filterPlaceHolder: '搜尋',
+  		moveOnSelect: false,
+		infoText: false,
+		moveSelectedLabel: '添加所選',
+		moveAllLabel: '添加所有',
+		removeSelectedLabel: '移除所選',
+		removeAllLabel: '移除所有',
+		showFilterInputs: false
+	})
+	  
+	//Select2
+    $('.select2').select2({
+		width: '100%',
+	});
+
+    $('.select2-no-search').select2({
+      width: '100%',
+		minimumResultsForSearch: Infinity
+    });
+	  
+	//Date range picker
+    $('.date-range-picker').daterangepicker({
+      autoUpdateInput: false
+	});
+	$('.date-range-picker').on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('YYYY-MM-DD') + ' - ' + picker.startDate.format('YYYY-MM-DD'));
+	});
+	  
+    $('#user-list').DataTable({
+      "paging": true,
+      "lengthChange": true,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+    });
+	  
+	//Toastr
+	toastr.options = {
+	  "debug": false,
+	  "positionClass": "toast-bottom-right",
+	  "onclick": null,
+	  "fadeIn": 300,
+	  "fadeOut": 1000,
+	  "timeOut": 5000,
+	  "extendedTimeOut": 1000
+	}
+	$('.user--filter---success').click(function() {
+      toastr.success('會員<b>「會員名稱」</b>資料已保存')
+    });
+	$('.user--edit---success').click(function() {
+      toastr.success('會員<b>「會員名稱」</b>資料已保存')
+    });
+	$('.user--role---success').click(function() {
+      toastr.success('會員<b>「會員名稱」</b>權限修改成功')
+    });
+
+  });
+</script>
+</body>
+</html>
