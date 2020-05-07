@@ -1,0 +1,139 @@
+/* Menu
+   ========================================================================== */
+.upload-menu {
+  position: absolute;
+  top: 110px;
+  right: 0;
+  margin: 0;
+  padding: 15px 0;
+  height: auto;
+  z-index: 700;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 0.25rem;
+  background-color: #fff;
+  box-shadow: 0 3px 5px 0 rgba(173, 173, 173, 0.4);
+  overflow: auto;
+  font-size: 15px;
+  width: 180px;
+  transition: transform 75ms ease-out, opacity 75ms ease-out;
+  transition: transform 75ms ease-out, opacity 75ms ease-out, -webkit-transform 75ms ease-out;
+}
+.dropdown-menu-item a {
+  padding: 0 20px;
+}
+.upload-menu a {
+  display: block;
+  line-height: 40px;
+}
+.dropdown-menu-item a:hover {
+  background-color: #f6f7f8;
+}
+/* Uploader
+   ========================================================================== */
+.uploader {
+  width: 100%;
+  text-align: center;
+  margin-top: 5%;
+}
+.upload {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+}
+.upload-dragger {
+  position: relative;
+  border: 1px dashed #c0c4cc;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  width: 640px;
+  height: 240px;
+  text-align: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+.upload-dragger .upload-container {
+  display: block;
+  position: relative;
+  top: 53%;
+  transform: translateY(-50%);
+}
+.upload-dragger .upload-icon {
+  color: #c0c4cc;
+  line-height: 50px;
+}
+.upload-dragger .upload-text {
+  color: #909296;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+}
+.upload-input {
+  display: none;
+}
+.upload-tip {
+  font-size: 14px;
+  color: #999;
+  line-height: 20px;
+}
+/* 【上傳影片】頁面
+   ========================================================================== */
+.uploading {
+  font-size: 15px;
+}
+.video-block, .image-block {
+  display: block;
+  position: relative;
+  border-radius: inherit;
+  float: left;
+}
+.video-thumbnail, .image-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  border-radius: 4px;
+}
+.video-responsive, .image-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+  border-radius: 4px;
+}
+.video-sizer, .image-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 56.25%;
+}
+.video-content, .image-content {
+  -webkit-box-flex: 1;
+  flex: 1 0 0px;
+}
+.layout {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+.layout-flex {
+  flex-basis: 100%;
+  -webkit-box-flex: 0;
+  flex-grow: 0;
+  max-width: 100%;
+}
+.video-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
