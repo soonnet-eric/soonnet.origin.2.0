@@ -67,6 +67,39 @@ thead, tfoot {
 .brand-image {
   opacity: .9;
 }
+/* 【主頁】
+   ========================================================================== */
+.banner-image {
+  width: 540px;
+}
+.banner-image img {
+  position: relative;
+  max-width: 540px;
+}
+
+.banner-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  width: 120px;
+}
+.banner-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+}
+.banner-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 27.77%;
+}
+.banner-content {
+  -webkit-box-flex: 1;
+  flex: 1 0 0px;
+}
 /* 【影音】Soonnet TV 列表 + 一般影片列表
    ========================================================================== */
 .filter {

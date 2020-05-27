@@ -21,7 +21,7 @@
   background-image: linear-gradient(to right, #e8eaec 0%, #e4e6e8 20%, #e8eaec 40%, #e8eaec 100%);
   background-repeat: no-repeat;
   position: relative;
-  width: calc(100% - 1.5rem) !important;
+  width: 95% !important;
   height: 1rem !important;
 }
 .loading .video-user {
@@ -34,22 +34,12 @@
   background-image: linear-gradient(to right, #e8eaec 0%, #e4e6e8 20%, #e8eaec 40%, #e8eaec 100%);
   background-repeat: no-repeat;
   position: relative;
-  width: calc(50% - 0.75rem) !important;
-  height: 1rem !important;
-}
-.loading .video-user {
-  -webkit-animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-name: placeHolderShimmer;
-  -webkit-animation-timing-function: linear;
-  background: #e8eaec;
-  background-image: linear-gradient(to right, #e8eaec 0%, #e4e6e8 20%, #e8eaec 40%, #e8eaec 100%);
-  background-repeat: no-repeat;
-  position: relative;
-  width: calc(50% - 0.75rem) !important;
+  width: 30% !important;
   height: 1rem !important;
   display: inline-block !important;
+}
+.loading .video-duration {
+	display: none;
 }
 .loading .programme {
   -webkit-animation-duration: 1s;
@@ -77,8 +67,67 @@
   background-image: linear-gradient(to right, #e8eaec 0%, #e4e6e8 20%, #e8eaec 40%, #e8eaec 100%);
   background-repeat: no-repeat;
   position: relative;
-  width: 25% !important;
+  width: 20% !important;
   height: 1rem !important;
+}
+/* 【影音】節目列表
+   ========================================================================== */
+.loading .programme-image {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeHolderShimmer;
+  -webkit-animation-timing-function: linear;
+  background: #e8eaec;
+  background-image: linear-gradient(to right, #e8eaec 0%, #e4e6e8 20%, #e8eaec 40%, #e8eaec 100%);
+  background-repeat: no-repeat;
+  position: relative;
+}
+.loading .programme-info {
+	width: 100%;
+	display: block;
+}
+.loading .programme-title {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeHolderShimmer;
+  -webkit-animation-timing-function: linear;
+  background: #e8eaec;
+  background-image: linear-gradient(to right, #e8eaec 0%, #e4e6e8 20%, #e8eaec 40%, #e8eaec 100%);
+  background-repeat: no-repeat;
+  position: relative;
+  width: 40% !important;
+  height: 1rem !important;
+}
+.loading .programme-intro {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeHolderShimmer;
+  -webkit-animation-timing-function: linear;
+  background: #e8eaec;
+  background-image: linear-gradient(to right, #e8eaec 0%, #e4e6e8 20%, #e8eaec 40%, #e8eaec 100%);
+  background-repeat: no-repeat;
+  position: relative;
+  width: 95% !important;
+  height: 1rem !important;
+}
+.loading .programme-last-updated {
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeHolderShimmer;
+  -webkit-animation-timing-function: linear;
+  background: #e8eaec;
+  background-image: linear-gradient(to right, #e8eaec 0%, #e4e6e8 20%, #e8eaec 40%, #e8eaec 100%);
+  background-repeat: no-repeat;
+  position: relative;
+  width: 30% !important;
+  height: 1rem !important;
+}
+.loading .programme-episode {
+  display: none;
 }
 @keyframes placeHolderShimmer {
   0% {
