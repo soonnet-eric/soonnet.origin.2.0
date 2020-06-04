@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<title> 相簿 - 尋寶網</title>
+<!-- SEO -->
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="尋寶網 Soonnet">
+<meta property="og:title" content="相簿 - 尋寶網">
+<meta property="og:type" content="website">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="尋寶網 Soonnet">
+<meta property="og:description" content="">
+<!-- CSS -->
+<link rel="stylesheet" href="../css/adminlte/adminlte.css">
+<link rel="stylesheet" href="../css/desktop/normalize.css">
+<link rel="stylesheet" href="../css/desktop/main.css">
+<!-- External CSS -->
+<link rel="stylesheet" href="../css/font-awesome/all.min.css">
+<!-- Favicon -->
+<link rel="shortcut icon" href="../images/favicon.ico">
+<!-- Script --> 
+<script src="../js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<!-- 目錄 -->
+<header class="header clearfix">
+  <div class="header-nav"> 
+    <!-- header left -->
+    <div class="header-left"> 
+      <!-- header logo -->
+      <h1 class="header-logo"> <a href="/" title="尋寶網"> <img src="../images/desktop/soonnet-logo.svg" alt="尋寶網"> </a></h1>
+      <!-- /.header-logo --> 
+      
+      <!-- header menu -->
+      <ul class="header-menu">
+        <li class="header-menu-item current"> <a href="../album/album.html" class="header-menu-link"> 相簿 </a> </li>
+        <li class="header-menu-item"> <a href="../event/eventlist.html" class="header-menu-link"> 賽程 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Daily/Daily.aspx" class="header-menu-link"> 新聞 </a> </li>
+        <li class="header-menu-item"> <a href="../video/video.html" class="header-menu-link"> 影音 </a> </li>
+        <li class="header-menu-item"> <a href="../topic/articlelist.html" class="header-menu-link"> 話題 </a> </li>
+      </ul>
+      <!-- /.header menu --> 
+    </div>
+    <!-- /.header left --> 
+    
+    <!-- header right -->
+    <div class="header-right"> 
+      
+      <!-- Search bar -->
+      <div class="search">
+        <form action="" method="GET">
+          <input type="text" name="word" placeholder="搜尋" autocomplete="off" spellcheck="true" id="search-keywords">
+          <button type="submit" class="search-icon"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <!-- /.Search bar -->
+      
+      <ul class="user-menu">
+        <li class="header-menu-item"> <a href="" class="upload fa fa-cloud-upload-alt" title="上傳"> </a> </li>
+        <li class="header-menu-item"> <a href="" class="user" title="登入"> <img class="user-logo" src="../images/guest-logo.jpg" alt="登入"> </a> </li>
+      </ul>
+    </div>
+    <!-- /.header right --> 
+  </div>
+  <!-- /.header-inner --> 
+</header>
+<!-- /.目錄 --> 
+
+<!-- 社交平台按鈕 -->
+<div id="social-block"> 
+  <!-- Facebook -->
+  <div class="social-btn"> <a href="https://www.facebook.com/soonnet/" target="_blank" class="social-icon facebook fab fa-facebook-f"> </a> </div>
+  <!-- Instagram -->
+  <div class="social-btn"> <a href="https://www.instagram.com/soonnettv/" target="_blank" class="social-icon instagram fab fa-instagram"> </a> </div>
+  <!-- YouTube -->
+  <div class="social-btn"> <a href="https://www.youtube.com/soonnettv" target="_blank" class="social-icon youtube fab fa-youtube"> </a> </div>
+</div>
+<!-- /.社交平台按鈕 --> 
+
+<!-- Container -->
+<div class="container clearfix"> 
+  <!-- 相簿 -->
+  <section id="primary">
+    <h2 class="section-title"> 類型 </h2>
+    <div class="section-group">
+      <div class="row">
+        <div class="album-category-card card"><a href="">
+          <div class="album-category-block clearfix">
+            <div class="album-category-thumbnail">
+              <div class="album-category-responsive">
+                <div class="album-category-sizer">
+                  <div class="album-category-image" style="background-image: url('../images/album/category/motorbike.jpg');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="album-title" title="重機">重機</div>
+          </a> </div>
+        <div class="album-category-card card"><a href="">
+          <div class="album-category-block clearfix">
+            <div class="album-category-thumbnail">
+              <div class="album-category-responsive">
+                <div class="album-category-sizer">
+                  <div class="album-category-image" style="background-image: url('../images/album/category/road-run.jpg');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="album-title" title="路跑">路跑</div>
+          </a> </div>
+        <div class="album-category-card card"><a href="">
+          <div class="album-category-block clearfix">
+            <div class="album-category-thumbnail">
+              <div class="album-category-responsive">
+                <div class="album-category-sizer">
+                  <div class="album-category-image" style="background-image: url('../images/album/category/bicycle.jpg');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="album-title" title="單車">單車</div>
+          </a> </div>
+        <div class="album-category-card card"><a href="">
+          <div class="album-category-block clearfix">
+            <div class="album-category-thumbnail">
+              <div class="album-category-responsive">
+                <div class="album-category-sizer">
+                  <div class="album-category-image" style="background-image: url('../images/album/category/triathlon.jpg');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="album-title" title="鐵人">鐵人</div>
+          </a> </div>
+        <div class="album-category-card card"><a href="">
+          <div class="album-category-block clearfix">
+            <div class="album-category-thumbnail">
+              <div class="album-category-responsive">
+                <div class="album-category-sizer">
+                  <div class="album-category-image" style="background-image: url('../images/album/category/ball-game.jpg');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="album-title" title="球類運動">球類運動</div>
+          </a> </div>
+        <div class="album-category-card card"><a href="">
+          <div class="album-category-block clearfix">
+            <div class="album-category-thumbnail">
+              <div class="album-category-responsive">
+                <div class="album-category-sizer">
+                  <div class="album-category-image" style="background-image: url('../images/album/category/water-sport.jpg');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="album-title" title="水上運動">水上運動</div>
+          </a> </div>
+        <div class="album-category-card card"><a href="">
+          <div class="album-category-block clearfix">
+            <div class="album-category-thumbnail">
+              <div class="album-category-responsive">
+                <div class="album-category-sizer">
+                  <div class="album-category-image" style="background-image: url('../images/album/category/comprehensive-sport.jpg');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="album-title" title="綜合運動">綜合運動</div>
+          </a> </div>
+        <div class="album-category-card card"><a href="">
+          <div class="album-category-block clearfix">
+            <div class="album-category-thumbnail">
+              <div class="album-category-responsive">
+                <div class="album-category-sizer">
+                  <div class="album-category-image" style="background-image: url('../images/album/category/daily.jpg');"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="album-title" title="風景生活">風景生活</div>
+          </a> </div>
+      </div>
+    </div>
+    <h2 class="section-title"> 最新上傳相簿 </h2>
+  </section>
+  <!-- ./相簿 -->
+  
+  <section id="secondary" class="section-group mt-4"> 
+    
+    <!-- 上傳相片  -->
+    <button type="button" class="btn btn-block btn-primary mb-4" value="我要提供活動資訊" onclick="location.href='../event/event-provide.html'"><i class="fa fa-cloud-upload-alt fa-fw fa-sm mr-1" aria-hidden="true"></i> 上傳相片 </button>
+    <!-- ./上傳相片 --> 
+    
+    <!-- 廣告 (300x250) --> 
+    <span class="ad-300x250 right"> <a href=""> <img src="../images/ads/300x250.png" alt="Advertisement"> </a> </span> 
+    <!-- ./廣告 (300x250) -->
+    
+    <h2 class="section-title"> 本週合集 <a href="" class="section-more"> 更多 </a></h2>
+    <div class="event-list card">
+      <div class="card-body">
+        <table class="table">
+          <thead>
+            <tr class="clickable-row" data-href="url://">
+              <th scope="col">合輯名稱</th>
+              <th scope="col">相簿數量</th>
+            </tr>
+          </thead>
+          <tbody class="collection">
+            <tr type="button" onclick="location.href=''">
+              <td class="collection-title">06/17 北宜追焦</td>
+              <td class="collection-album">17</td>
+            </tr>
+            <tr type="button" onclick="location.href=''">
+              <td class="collection-title">臺北渣打馬拉松</td>
+              <td class="collection-album">17</td>
+            </tr>
+            <tr type="button" onclick="location.href=''">
+              <td class="collection-title">06/19 國際游泳節</td>
+              <td class="collection-album">17</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </section>
+</div>
+<!-- /.Container --> 
+
+<!-- Back to Top -->
+<div class="backtop-btn"><a href="">
+  <div class="backtop-icon fas fa-angle-up"></div>
+  </a></div>
+<!-- ./Back to Top --> 
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-nav">
+    <dl>
+      <dt> 關於我們 </dt>
+      <dd> <a href="https://www.soonnet.org/About.aspx?A=US" target="_blank" title="關於我們"> 關於我們 </a> </dd>
+      <dd> <a href="https://www.soonnet.org/About.aspx?A=service" target="_blank" title="服務條款"> 服務條款 </a> </dd>
+      <dd> <a href="https://www.soonnet.org/About.aspx?A=privacy" target="_blank" title="隱私條款"> 隱私條款 </a> </dd>
+      <dd> <a href="https://www.soonnet.org/About.aspx?A=copyright" target="_blank" title="著作權條款"> 著作權條款 </a> </dd>
+      <dd> <a href="mailto:info@soonnet.org" target="_blank" title="聯絡我們"> 聯絡我們 </a> </dd>
+    </dl>
+    <dl>
+      <dt> 業務合作 </dt>
+      <dd> <a href="https://www.soonnet.org/AD_Demo/Advertising.html" target="_blank" title="廣告合作"> 廣告合作 </a> </dd>
+      <dd> <a href="mailto:sales_tw@soonnet.org" target="_blank" title="商務合作"> 商務合作 </a> </dd>
+    </dl>
+    <dl>
+      <dt> 意見回饋 </dt>
+      <dd> <a href="mailto:info@soonnet.org?subject=意見回饋&body=請提出您的意見：" target="_blank" title="提出意見"> 提出意見 </a> </dd>
+      <dd> <a href="../event/event-provision.html" target="_blank" title="提出活動資訊"> 提出活動資訊 </a> </dd>
+    </dl>
+    <dl>
+      <dt> 外部連結 </dt>
+      <dd> <a href="http://twrunner.soonnet.org/road_run/index.html" target="_blank" title="最強市民飆5K"> 最強市民飆5K </a> </dd>
+    </dl>
+    <dl>
+      <dt> 社交媒體 </dt>
+      <dd> <a href="https://www.facebook.com/soonnet/" target="_blank" title="Facebook"> Facebook </a> </dd>
+      <dd> <a href="https://www.instagram.com/soonnettv/" target="_blank" title="Instagram"> Instagram </a> </dd>
+      <dd> <a href="https://www.youtube.com/soonnettv" target="_blank" title="YouTube"> YouTube </a> </dd>
+    </dl>
+  </div>
+  <div class="footer-bottom">
+    <div class="copyright"> <span>本網站部份資訊由用戶提供，如侵犯您的版權，請<a href="mailto:info@soonnet.org">與我們聯繫</a>。</span> <span>Copyright &copy; 2020 尋寶網 SOONNET.org. All Rights Reserved.</span> </div>
+  </div>
+</footer>
+<!-- ./Footer -->
+</body>
+</html>

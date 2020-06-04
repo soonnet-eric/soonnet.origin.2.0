@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<title> 提出意見 - 尋寶網 </title>
+<!-- SEO -->
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="尋寶網 Soonnet">
+<!-- CSS -->
+<link rel="stylesheet" href="../css/adminlte/adminlte.css">
+<!-- Normalize -->
+<link rel="stylesheet" href="../css/desktop/normalize.css">
+<!-- Style -->
+<link rel="stylesheet" href="../css/desktop/main.css">
+<!-- Select2 -->
+<link rel="stylesheet" href="../plugins/select2/css/select2.min.css">
+<!-- icheck bootstrap -->
+<link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="../css/font-awesome/all.min.css">
+<!-- Favicon -->
+<link rel="shortcut icon" href="../images/favicon.ico">
+</head>
+<body>
+<!-- 目錄 -->
+<header class="header clearfix">
+  <div class="header-nav"> 
+    <!-- header left -->
+    <div class="header-left"> 
+      <!-- header logo -->
+      <h1 class="header-logo"> <a href="/" title="尋寶網"> <img src="../images/desktop/soonnet-logo.svg" alt="尋寶網"> </a></h1>
+      <!-- /.header-logo --> 
+      
+      <!-- header menu -->
+      <ul class="header-menu">
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Car/Car.aspx" class="header-menu-link"> 重機 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Marathon/Marathon.aspx" class="header-menu-link"> 路跑 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Bicycle/Bicycle.aspx" class="header-menu-link"> 單車 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Sport/Sport.aspx" class="header-menu-link"> 運動 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Gallery/Gallery.aspx" class="header-menu-link"> 攝影 </a> </li>
+		<li class="header-menu-item"> <a href="https://www.soonnet.org/Photo/Photo.aspx" class="header-menu-link"> 圖庫 </a> </li>
+        <li class="header-menu-item"> <a href="../event/eventlist.html" class="header-menu-link"> 活動 </a> </li>
+		<li class="header-menu-item"> <a href="../topic/articlelist.html" class="header-menu-link"> 話題 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Daily/Daily.aspx" class="header-menu-link"> 新聞 </a> </li>
+        <li class="header-menu-item"> <a href="../video/video.html" class="header-menu-link"> 影音 </a> </li>
+      </ul>
+      <!-- /.header menu --> 
+    </div>
+    <!-- /.header left --> 
+    
+    <!-- header right -->
+    <div class="header-right">
+      <ul class="user-menu">
+        <li class="header-menu-item"> <a href="" class="upload fa fa-cloud-upload-alt" title="上傳"> </a> </li>
+        <li class="header-menu-item"> <a href="" class="user" title="登入"> <img class="user-logo" src="../images/guest-logo.jpg" alt="登入"> </a> </li>
+      </ul>
+    </div>
+    <!-- /.header right --> 
+  </div>
+  <!-- /.header-inner --> 
+</header>
+<!-- /.目錄 --> 
+
+<!-- 社交平台按鈕 -->
+<div id="social-block"> 
+  <!-- Facebook -->
+  <div class="social-btn"> <a href="https://www.facebook.com/soonnet/" target="_blank" class="social-icon facebook fab fa-facebook-f"> </a> </div>
+  <!-- Instagram -->
+  <div class="social-btn"> <a href="https://www.instagram.com/soonnettv/" target="_blank" class="social-icon instagram fab fa-instagram"> </a> </div>
+  <!-- YouTube -->
+  <div class="social-btn"> <a href="https://www.youtube.com/soonnettv" target="_blank" class="social-icon youtube fab fa-youtube"> </a> </div>
+</div>
+<!-- /.社交平台按鈕 --> 
+
+<!-- Container -->
+<div class="container-md float-page comment clearfix"> 
+  
+  <!-- 頁面內容 -->
+  <section class="section-group pt-4">
+    <div class="card p-4">
+      <h3 class="page-title mb-2"> 提出意見 </h3>
+      <div class="clearfix"></div>
+      <hr class="divider">
+      <div class="page-content">
+        <p class="mb-3">如閣下於使用本網站時遇上問題、有任何建議或錯誤回報，歡迎在以下意見欄提出，我們將會收集您的意見。</p>
+        <div class="form-group">
+          <label for="content">*回報類別</label>
+          <select class="form-control custom-select select2-no-search">
+            <option selected>請選擇類別</option>
+            <option>會員帳戶相關／無法登入</option>
+            <option>上載時遇上問題</option>
+            <option>儲存空間不足</option>
+            <option>著作權侵權問題</option>
+            <option>欲移除內容（含有您本人肖像，或違規內容舉報）</option>
+            <option>提出建議</option>
+            <option>其他</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="comment-content">*詳細內容說明</label>
+          <textarea type="text" id="comment-content" class="form-control" rows="8" placeholder="如與會員帳戶相關問題，請附上會員帳號或註冊電郵等資料（請注意，不需要提供密碼！）"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="contact-name">聯絡人名稱</label>
+          <input type="text" id="contact-name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="contact-email">*聯絡電郵</label>
+          <input type="email" id="contact-email" class="form-control">
+        </div>
+        <div class="form-group row">
+          <div class="col-3">
+            <label>*是否需要客服回覆？</label>
+          </div>
+          <div class="col-9"> 
+            
+            <!-- radio -->
+            <div>
+              <div class="icheck-primary d-inline mr-4">
+                <input type="radio" id="reply-true" name="need-reply">
+                <label for="reply-true"> 是 </label>
+              </div>
+              <div class="icheck-primary d-inline">
+                <input type="radio" id="reply-false" name="need-reply">
+                <label for="reply-false"> 否 </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12"> <a href="#" class="btn btn-secondary">取消</a>
+        <input type="submit" value="提交" class="btn btn-primary float-right" onclick="location.href='../pages/comment-success.html'">
+      </div>
+    </div>
+  </section>
+  <!-- ./頁面內容 --> 
+</div>
+<!-- /.Container --> 
+
+<!-- Script --> 
+<script src="../js/jquery-3.4.1.min.js"></script> 
+<!-- Select2 --> 
+<script src="../plugins/select2/js/select2.full.min.js"></script> 
+<!-- Adminlte --> 
+<script src="../../../js/adminlte.min.js"></script> 
+<!-- Page Script --> 
+<script type="text/javascript">
+  $(function () {
+	  
+	//Select2
+    $('.select2').select2({
+	});
+
+    $('.select2-no-search').select2({
+      minimumResultsForSearch: Infinity
+    });
+  });
+	
+</script>
+</body>
+</html>

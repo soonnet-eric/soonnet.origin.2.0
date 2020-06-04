@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<title> 上載影片 - 尋寶網 </title>
+<!-- SEO -->
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="尋寶網 Soonnet">
+<meta property="og:title" content="上載影片 - 尋寶網">
+<meta property="og:type" content="website">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="尋寶網 Soonnet">
+<meta property="og:description" content="">
+<!-- CSS -->
+<link rel="stylesheet" href="../../css/adminlte/adminlte.css">
+<link rel="stylesheet" href="../../css/desktop/normalize.css">
+<link rel="stylesheet" href="../../css/desktop/main.css">
+<link rel="stylesheet" href="../../css/desktop/css-upload.css">
+<!-- External CSS -->
+<link rel="stylesheet" href="../../css/font-awesome/all.min.css">
+<!-- Favicon -->
+<link rel="shortcut icon" href="../../images/favicon.ico">
+<!-- Script --> 
+<script src="../../js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<!-- 目錄 -->
+<header class="header clearfix">
+  <div class="header-nav"> 
+    <!-- header left -->
+    <div class="header-left"> 
+      <!-- header logo -->
+      <h1 class="header-logo"> <a href="/" title="尋寶網"> <img src="../../images/desktop/soonnet-logo.svg" alt="尋寶網"> </a></h1>
+      <!-- /.header-logo --> 
+      
+      <!-- header menu -->
+      <ul class="header-menu">
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Car/Car.aspx" class="header-menu-link"> 重機 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Marathon/Marathon.aspx" class="header-menu-link"> 路跑 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Bicycle/Bicycle.aspx" class="header-menu-link"> 單車 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Sport/Sport.aspx" class="header-menu-link"> 運動 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Gallery/Gallery.aspx" class="header-menu-link"> 攝影 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Photo/Photo.aspx" class="header-menu-link"> 圖庫 </a> </li>
+        <li class="header-menu-item"> <a href="../event/eventlist.html" class="header-menu-link"> 活動 </a> </li>
+        <li class="header-menu-item"> <a href="../topic/articlelist.html" class="header-menu-link"> 話題 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Daily/Daily.aspx" class="header-menu-link"> 新聞 </a> </li>
+        <li class="header-menu-item"> <a href="../video/video.html" class="header-menu-link"> 影音 </a> </li>
+      </ul>
+      <!-- /.header menu --> 
+    </div>
+    <!-- /.header left --> 
+    
+    <!-- header right -->
+    <div class="header-right"> 
+      
+      <!-- Search bar -->
+      <div class="search">
+        <form action="" method="GET">
+          <input type="text" name="word" placeholder="搜尋" autocomplete="off" spellcheck="true" id="search-keywords">
+          <button type="submit" class="search-icon"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <!-- /.Search bar -->
+      
+      <ul class="user-menu">
+        <li class="header-menu-item"> <a href="" class="upload fa fa-cloud-upload-alt" title="上傳"> </a> </li>
+        <li class="header-menu-item"> <a href="" class="user" title="登入"> <img class="user-logo" src="../../images/guest-logo.jpg" alt="登入"> </a> </li>
+      </ul>
+      <ul class="upload-menu" role="menu">
+        <li class="dropdown-menu-item"> <a id="upload-image-btn" href=""><i class="fa fa-image mr-2"></i>上載相片</a> </li>
+        <li class="dropdown-menu-item"> <a id="upload-video-btn" href=""><i class="fa fa-film mr-2"></i>上載影片</a> </li>
+      </ul>
+    </div>
+    <!-- /.header right --> 
+  </div>
+  <!-- /.header-inner --> 
+</header>
+<!-- /.目錄 --> 
+
+<!-- 社交平台按鈕 -->
+<div id="social-block"> 
+  <!-- Facebook -->
+  <div class="social-btn"> <a href="https://www.facebook.com/soonnet/" target="_blank" class="social-icon facebook fab fa-facebook-f"> </a> </div>
+  <!-- Instagram -->
+  <div class="social-btn"> <a href="https://www.instagram.com/soonnettv/" target="_blank" class="social-icon instagram fab fa-instagram"> </a> </div>
+  <!-- YouTube -->
+  <div class="social-btn"> <a href="https://www.youtube.com/soonnettv" target="_blank" class="social-icon youtube fab fa-youtube"> </a> </div>
+</div>
+<!-- /.社交平台按鈕 --> 
+
+<!-- Container -->
+<div class="container clearfix">
+  <div class="uploader">
+    <div class="upload">
+      <div class="upload-dragger">
+        <div class="upload-container"><i class="upload-icon fas fa-cloud-upload-alt fa-5x mb-4"></i>
+          <div class="upload-text">
+            <h4><a href="">點擊上傳</a></h4>
+            或將文件拖曳到此處<br>
+            (使用 Element UI 上傳組件)</div>
+        </div>
+      </div>
+      <input type="file" name="file" class="upload-input">
+    </div>
+    <div class="upload-tip mt-3">
+      <ul>
+        <li>建議使用 Google Chrome 瀏覽器進行上傳</li>
+        <li>只支援 mp4/mov/avi/mpeg/mpg/flv/wmv/3gp 檔案格式</li>
+        <li>本網站有權在不予通知情況下移除違規影片及保留相關追究權利</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- /.Container -->
+
+</body>
+</html>

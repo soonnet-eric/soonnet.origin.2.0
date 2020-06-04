@@ -1,0 +1,2269 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, Tahoma, sans-serif, 微軟正黑體, 微软正黑体, "Microsoft JhengHei", 微軟雅黑體, 微软雅黑体, "Microsoft YaHei", 華文黑體, 华文黑体, STHeiti, 華文細黑, 华文细黑, STXihei, "儷黑 Pro", "LiHei Pro", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: normal;
+  color: #292c32;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f8;
+}
+a {
+  color: inherit;
+  transition: all .3s ease;
+}
+a:hover {
+  opacity: 0.9;
+}
+img {
+  vertical-align: middle;
+}
+.divider {
+  display: block;
+  -webkit-box-flex: 1;
+  flex: 1 1 0px;
+  max-width: 100%;
+  height: 0;
+  max-height: 0;
+  border: solid;
+  border-width: thin 0 0;
+  -webkit-transition: inherit;
+  transition: inherit;
+  border-color: #ececec;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.text-center {
+  text-align: center;
+}
+.align-center {
+  -webkit-box-align: center;
+  align-items: center;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clearfix {
+  overflow: auto;
+}
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.row {
+  margin: 0;
+}
+/* Custom Scroll Bar
+   ========================================================================== */ ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  background: #dbdbdb;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  background: #999;
+}
+/* Header Menu
+   ========================================================================== */
+.header {
+  position: -webkit-sticky;
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  min-width: 1152px;
+  height: 100px;
+  line-height: 100px;
+  background-color: #fff;
+  box-shadow: 0px 0px 30px 1px rgba(173, 173, 173, 0.4);
+}
+.header .header-nav {
+  padding: 0px 100px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+.header .header-nav, .header .header-left, .header .header-right {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+}
+.header ul {
+  margin: 0;
+}
+.header .header-logo {}
+.header .header-logo a {
+  display: block;
+  width: 150px;
+  height: auto;
+  overflow: hidden;
+}
+.header .header-menu {
+  margin-left: 60px;
+}
+.header .header-menu .header-menu-item {
+  float: left;
+  margin-right: 60px;
+}
+.header .header-menu .header-menu-link {
+  position: relative;
+  display: block;
+  padding: 0;
+  letter-spacing: 0.02rem;
+  color: inherit;
+}
+.header .header-menu .header-menu-link:hover, .header .header-menu li.current a {
+  color: #31c66c;
+}
+.header .header-menu .header-menu-link:hover::after, .header .header-menu li.current a::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #31c66c;
+}
+.header .user-menu .header-menu-item {
+  float: left;
+  margin-left: 60px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+.header .user-menu .header-menu-item a {
+  color: #ccc;
+  opacity: 1;
+}
+.header .user-menu .header-menu-item a:hover {
+  opacity: 0.8;
+}
+.header .user img {
+  width: 40px;
+  height: 40px;
+}
+.header .user-logo {
+  display: block;
+  position: relative;
+  border-radius: 50%;
+}
+.header .upload {}
+/* Search */
+.search {
+  position: relative;
+  float: right;
+}
+.search form {
+  position: relative;
+}
+.search input {
+  display: block;
+  padding: 0 30px 0 20px;
+  line-height: 35px;
+  border-radius: 30px;
+  border: 1px solid #dbdbdb;
+  width: 240px;
+  height: 35px;
+  font-size: 0.875rem;
+}
+.search button[type=submit] {
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  border: 0;
+  background-color: transparent;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  color: #ccc;
+  cursor: pointer;
+  opacity: 1;
+}
+.search button[type=submit]:hover {
+  opacity: 0.8;
+}
+/* Header responsive */
+@media (max-width: 1856px) {
+  .header .header-menu, .header .header-menu .header-menu-item {
+    margin-right: 50px;
+  }
+  .header .header-menu, .header .user-menu .header-menu-item {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 1728px) {
+  .header .header-menu, .header .header-menu .header-menu-item {
+    margin-right: 45px;
+  }
+  .header .header-menu, .header .user-menu .header-menu-item {
+    margin-left: 45px;
+  }
+}
+@media (max-width: 1664px) {
+  .header .header-nav {
+    padding: 0px 80px;
+  }
+}
+@media (max-width: 1600px) {
+  .header .header-menu, .header .header-menu .header-menu-item {
+    margin-right: 40px;
+  }
+  .header .header-menu, .header .user-menu .header-menu-item {
+    margin-left: 40px;
+  }
+}
+@media (max-width: 1536px) {
+  .header .header-nav {
+    padding: 0px 60px;
+  }
+  .search input {
+    width: 200px;
+  }
+}
+@media (max-width: 1472px) {
+  .header .header-menu, .header .header-menu .header-menu-item {
+    margin-right: 35px;
+  }
+  .header .header-menu, .header .user-menu .header-menu-item {
+    margin-left: 35px;
+  }
+}
+@media (max-width: 1408px) {
+  .search {
+    display: none;
+  }
+}
+@media (max-width: 1216px) {
+  .header .header-nav {
+    padding: 0px 40px;
+  }
+}
+/* 【首頁】
+   ========================================================================== */
+/* 熱門 TV */
+#hot-video .video-row {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: auto;
+}
+#hot-video .video-card {
+  width: calc((100% - 32px)/3);
+}
+#hot-video .video-card a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+#hot-video .video-block {
+  display: block;
+  position: relative;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+#hot-video .video-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  border-radius: 3px 3px 0 0;
+}
+#hot-video .video-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+  border-radius: 3px 3px 0 0;
+}
+#hot-video .video-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 56.25%;
+}
+#hot-video .video-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#hot-video .video-card:hover .video-image {
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+#hot-video .video-info {
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+#hot-video .video-info .video-title {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 1rem;
+  line-height: 20px;
+  width: 100%;
+  height: 40px;
+}
+#hot-video .video-info .video-user {
+  color: #757575;
+  font-size: 0.875rem;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* 熱門話題 */
+#hot-topic .section-group {
+  display: inline-block;
+}
+#hot-topic .article-row {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: auto;
+}
+#hot-topic .article-card {
+  width: calc((100% - 30px)/3);
+}
+#hot-topic .article-card a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+#hot-topic .article-block {
+  display: block;
+  position: relative;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+#hot-topic .article-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  border-radius: 3px 3px 0 0;
+}
+#hot-topic .article-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+  border-radius: 3px 3px 0 0;
+}
+#hot-topic .article-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 56.25%;
+}
+#hot-topic .article-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#hot-topic .article-card:hover .article-image {
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+#hot-topic .article-info {
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+#hot-topic .article-info .article-title {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 1rem;
+  line-height: 20px;
+  width: 100%;
+  height: 40px;
+}
+#hot-topic .article-info .article-user {
+  color: #757575;
+  font-size: 0.875rem;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* Menu
+   ========================================================================== */
+.upload-menu {
+  position: absolute;
+  top: 110px;
+  right: 0;
+  margin: 0;
+  padding: 15px 0;
+  height: auto;
+  z-index: 700;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 3px 5px 0 rgba(173, 173, 173, 0.4);
+  overflow: auto;
+  font-size: 0.9375rem;
+  width: 180px;
+  transition: transform 75ms ease-out, opacity 75ms ease-out;
+  transition: transform 75ms ease-out, opacity 75ms ease-out, -webkit-transform 75ms ease-out;
+}
+.dropdown-menu-item a {
+  padding: 0 20px;
+}
+.upload-menu a {
+  display: block;
+  line-height: 40px;
+}
+.dropdown-menu-item a:hover {
+  background-color: #f6f7f8;
+}
+/* Social Platform Float Button
+   ========================================================================== */
+#social-block {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  width: 40px;
+  height: auto;
+  z-index: 900;
+}
+#social-block .social-btn {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background: #2e3e4a;
+  text-align: center;
+}
+#social-block .social-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  color: #dbdbdb;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+#social-block .facebook {
+  font-size: 18px;
+}
+#social-block .instagram {
+  font-size: 20px;
+}
+#social-block .youtube {
+  font-size: 18px;
+}
+#social-block .facebook:hover {
+  font-size: 22px;
+}
+#social-block .instagram:hover {
+  font-size: 24px;
+}
+#social-block .youtube:hover {
+  font-size: 22px;
+}
+/* Back to Top
+   ========================================================================== */
+.backtop-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  z-index: 900;
+  background: #fff;
+  text-align: center;
+  border-radius: 50%;
+  color: #2e3e4a;
+  font-size: 20px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
+}
+.backtop-btn .backtop-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  color: #2e3e4a;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+/* Paging
+   ========================================================================== */
+.pagination {
+  display: block;
+  white-space: nowrap;
+  text-align: center;
+}
+.pagination button {
+  display: inline-block;
+  font-size: 0.875rem;
+  height: 28px;
+  line-height: 28px;
+  box-sizing: border-box;
+  border: none;
+  padding: 0 6px;
+}
+.pager {
+  user-select: none;
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+}
+.pager li {
+  padding: 0 4px;
+  background: #fff;
+  vertical-align: top;
+  display: inline-block;
+  font-size: 0.8125rem;
+  height: 28px;
+  line-height: 28px;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 0;
+  box-shadow: 0px 0px 30px 1px rgba(173, 173, 173, 0.1);
+}
+.pagination .btn-next, .pagination .btn-prev, .pagination .pager li {
+  margin: 0 5px;
+  background-color: #fff;
+  min-width: 30px;
+  border-radius: 2px;
+}
+.pagination .btn-next:disabled, .pagination .btn-prev:disabled {
+  color: #dbdbdb;
+  background-color: transparent;
+}
+.pagination .pager li:not(.disabled).active {
+  background-color: #2e3e4a;
+  color: #fff;
+}
+/* Container
+   ========================================================================== */
+.container, .container-xl, .container-lg, .container-md, .container-sm {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 20px 0;
+  height: auto !important;
+  min-height: calc(100vh - 344px);
+  margin-top: 100px;
+}
+.container-xl {
+  width: 1140px;
+}
+.container-lg {
+  width: 960px;
+}
+.container-md {
+  width: 720px;
+}
+.container-sm {
+  width: 540px;
+}
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.02rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.side-title {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.02rem;
+  margin-bottom: 10px;
+}
+.section-group {
+  margin-bottom: 50px;
+}
+.section-more {
+  letter-spacing: 0.02rem;
+  color: #999;
+  font-size: 0.8125rem;
+  float: right;
+}
+.section-more:hover {
+  color: #31c66c;
+}
+.section-more::after {
+  content: "\f105";
+  font-size: 1rem;
+  display: inline-block;
+  margin-left: 6px;
+  font-family: 'Font Awesome\ 5 Free';
+}
+.section-sub {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: auto;
+  font-size: 0.875rem;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.sorting a {
+  padding: 6px 8px;
+}
+.sorting .current {
+  background-color: #2e3e4a;
+  color: #fff !important;
+  border-radius: 2px;
+}
+.category a {
+  padding: 6px 10px;
+  margin-right: 10px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+.category .current {
+  background-color: #2e3e4a;
+  color: #fff !important;
+  font-weight: bold;
+}
+.card {
+  position: relative;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 30px 1px rgba(173, 173, 173, 0.1);
+  box-shadow: 0px 0px 30px 1px rgba(173, 173, 173, 0.1);
+}
+.card:hover {
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(173, 173, 173, 0.25);
+  box-shadow: 0px 0px 15px 1px rgba(173, 173, 173, 0.25);
+}
+#primary {
+  width: calc(100% - 330px);
+  float: left;
+}
+#secondary {
+  width: 300px;
+  float: right;
+}
+#secondary .section-group {
+  margin-bottom: 30px;
+}
+/* Tags */
+.tag-line {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 0.875rem;
+  overflow-x: hidden;
+  line-height: 32px;
+}
+.tag-line .tag:first-child {
+  margin-left: 5px;
+}
+.tag {
+  margin-right: 10px;
+  padding: 4px 8px;
+  background-color: #2e3e4a;
+  color: #fff;
+  border-radius: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-word;
+}
+/* Label */
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+/* Rank */
+.rank-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.rank-list li > div {
+  float: left;
+}
+.rank-no {
+  width: 30px;
+  color: #2e3e4a;
+  font-size: 28px;
+  text-align: center;
+  line-height: 37px;
+}
+.rank-list li > div.rank-title {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 1rem;
+  line-height: 20px;
+  min-height: 56px;
+  width: calc(100% - 30px);
+}
+.rank-list li + li {
+  border-top: 1px solid #dbdbdb;
+}
+.rank-list li:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.rank-list li a:hover {
+  color: #757575;
+}
+/* 【主頁】
+   ========================================================================== */
+#banner {
+  margin-top: 100px;
+}
+.show-neighbors {
+  overflow: hidden;
+}
+.carousel-indicators {
+  margin-right: auto;
+  margin-left: auto;
+}
+.carousel-control-prev, .carousel-control-next {
+  width: 5rem;
+  z-index: 10;
+}
+.carousel-inner {
+  width: calc((100% - 25%) * 3);
+  left: calc(3 * 12.5% - 100%);
+}
+.carousel-item-next:not(.carousel-item-left), .carousel-item-right.active {
+  -webkit-transform: translate3d(33%, 0, 0);
+  transform: translate3d(33%, 0, 0);
+}
+.carousel-item-prev:not(.carousel-item-right), .carousel-item-left.active {
+  -webkit-transform: translate3d(-33%, 0, 0);
+  transform: translate3d(-33%, 0, 0);
+}
+.item-third {
+  float: left;
+  position: relative;
+  width: 33.33333333%;
+}
+/* 【影音】主頁: 節目列表
+   ========================================================================== */
+#programme {
+  position: relative;
+}
+#programme .programme {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+#programme .programme img {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#programme .programme:hover img {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.owl-carousel .owl-stage {
+  padding: 0 !important;
+}
+/* 【相簿】主頁
+   ========================================================================== */
+.row {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: auto;
+  margin: 0;
+}
+.album-category-card {
+  width: calc((100% - 56px)/8);
+}
+.album-category-card a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.album-category-block {
+  display: block;
+  position: relative;
+  border-radius: inherit;
+}
+.album-category-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  border-radius: 3px;
+}
+.album-category-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+  border-radius: 3px;
+}
+.album-category-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 40%;
+}
+.album-category-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.album-category-image::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+.album-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+.collection tr, .collection tr td {}
+/* 【影音】主頁: 編輯精選 + 最新影片
+   ========================================================================== */
+#featured-video .section-group {
+  display: inline-block;
+  width: calc(100% - 330px);
+}
+#featured-video .video-row, #latest-video .video-row {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: auto;
+}
+#featured-video .video-card {
+  width: calc((100% - 15px)/2);
+}
+#latest-video .video-card {
+  width: calc((100% - 48px)/4);
+}
+#feature-video .video-card a, #latest-video .video-card a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+#featured-video .video-block, #latest-video .video-block {
+  display: block;
+  position: relative;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+#featured-video .video-thumbnail, #latest-video .video-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  border-radius: 3px 3px 0 0;
+}
+#featured-video .video-responsive, #latest-video .video-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+  border-radius: 3px 3px 0 0;
+}
+#featured-video .video-sizer, #latest-video .video-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 56.25%;
+}
+#featured-video .video-image, #latest-video .video-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#featured-video .video-card:hover .video-image, #latest-video .video-card:hover .video-image {
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+#featured-video .video-info, #latest-video .video-info {
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+#featured-video .video-info .video-title, #latest-video .video-info .video-title {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  width: 100%;
+  height: 2.5rem;
+}
+#featured-video .video-info .video-user, #latest-video .video-info .video-user {
+  color: #757575;
+  font-size: 0.875rem;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#latest-video .video-info .video-upload-date {
+  color: #757575;
+  font-size: 0.875rem;
+  width: 100%;
+}
+.video-duration {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  bottom: 4px;
+  right: 4px;
+  padding: 2px 4px;
+  line-height: 14px;
+  font-size: 0.75rem;
+}
+/* 【影音】我們的節目
+   ========================================================================== */
+#programme-list .programme-row {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: auto;
+}
+#programme-list .programme-card {
+  width: calc((100% - 15px)/2);
+  padding: 0;
+}
+#programme-list .programme-card a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+#programme-list .programme-block {
+  display: block;
+  position: relative;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+#programme-list .programme-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  width: 240px;
+  border-radius: 3px 0 0 3px;
+}
+#programme-list .programme-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+  border-radius: 3px 0 0 3px;
+}
+#programme-list .programme-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 56.25%;
+}
+#programme-list .programme-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#programme-list .programme-card:hover .programme-image {
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+#programme-list .programme-info {
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 16px;
+}
+#programme-list .programme-info .programme-title {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 18px;
+  line-height: 20px;
+  width: 100%;
+  font-weight: bold;
+}
+#programme-list .programme-info .programme-intro {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.25rem;
+  width: 100%;
+  height: 2.5rem;
+  color: #757575;
+}
+#programme-list .programme-info .programme-last-updated {
+  color: #757575;
+  font-size: 0.875rem;
+  width: 100%;
+}
+#programme-list .programme-episode {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  bottom: 4px;
+  right: 4px;
+  padding: 2px 4px;
+  line-height: 1.125rem;
+  font-size: 0.875rem;
+}
+/* 【影音】影片一覽
+   ========================================================================== */
+#all-video .video-row {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: auto;
+}
+#all-video .video-card {
+  width: calc((100% - 50px)/6);
+  padding: 0;
+}
+#all-video .video-card a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+#all-video .video-block {
+  display: block;
+  position: relative;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+#all-video .video-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  border-radius: 3px 3px 0 0;
+}
+#all-video .video-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+  border-radius: 3px 3px 0 0;
+}
+#all-video .video-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 56.25%;
+}
+#all-video .video-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#all-video .video-card:hover .video-image {
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+#all-video .video-info {
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+#all-video .video-info .video-title {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  width: 100%;
+  height: 2.5rem;
+}
+#all-video .video-info .video-user {
+  color: #757575;
+  font-size: 0.875rem;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#all-video .video-info .video-upload-date {
+  color: #757575;
+  font-size: 0.875rem;
+  width: 100%;
+}
+/* 【影音】影片觀賞頁: 左側主欄
+   ========================================================================== */
+#player {
+  position: relative;
+}
+#player-container {
+  position: relative;
+  width: 100%;
+  height: 534px;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+#video-content {
+  width: 100%;
+}
+#video-content .video-episode {
+  position: relative;
+  font-size: 0.875rem;
+  width: 100%;
+  color: #999;
+}
+#video-content .video-title {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.02rem;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  white-space: normal;
+  word-break: break-word;
+}
+#video-content .video-date {
+  display: inline-block;
+  font-size: 0.875rem;
+  color: #757575;
+}
+#video-content .video-category {
+  display: block;
+  font-size: 0.875rem;
+}
+#video-content .video-category a {
+  color: #27ae60;
+}
+#video-content .uploader {
+  color: #27ae60;
+}
+#video-content .uploader img {
+  width: 32px;
+  height: 32px;
+}
+#video-content .uploader .user-logo {
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+#video-content .video-action {
+  float: right;
+  font-size: 15px;
+}
+#video-content .video-action li {
+  display: inline-block;
+}
+#video-content .video-description {
+  white-space: pre-line;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+#video-content .video-description a {
+  color: #27ae60;
+}
+/* 【影音】影片觀賞頁: 右側副欄 - 集數
+   ========================================================================== */
+#programme-episode h2 {
+  position: relative;
+}
+#programme-episode .now-playing {
+  position: absolute;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: #999;
+  right: 0;
+  bottom: 0;
+}
+#programme-episode .scroll-menu {
+  overflow: auto;
+  height: 650px;
+}
+#programme-episode .video-card {
+  width: 100%;
+}
+#programme-episode .video-card a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+#programme-episode .video-block {
+  display: block;
+  position: relative;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+#programme-episode .video-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  width: 115px;
+  border-radius: 3px 0 0 3px;
+}
+#programme-episode .video-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+  border-radius: 3px 0 0 3px;
+}
+#programme-episode .video-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 56.25%;
+}
+#programme-episode .video-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#programme-episode .video-card:hover .video-image {
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+#programme-episode .video-info {
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  display: block;
+}
+#programme-episode .video-info .video-episode {
+  position: relative;
+  font-size: 0.75rem;
+  width: 100%;
+  color: #999;
+}
+#programme-episode .video-info .video-title {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  width: 100%;
+}
+/* 現正播放 */
+#programme-episode .playing {
+  background-color: #ececec;
+}
+#programme-episode .playing .video-info .video-episode::after {
+  content: ' ‧ 播放中';
+  color: #31c66c;
+}
+/* 【影音】影片觀賞頁: 右側副欄 - 相關影片
+   ========================================================================== */
+#related-video .video-card {
+  width: 100%;
+}
+#related-video .video-card a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+#related-video .video-block {
+  display: block;
+  position: relative;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+#related-video .video-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  width: 115px;
+  border-radius: 3px 0 0 3px;
+}
+#related-video .video-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+  border-radius: 3px 0 0 3px;
+}
+#related-video .video-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 56.25%;
+}
+#related-video .video-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#related-video .video-card:hover .video-image {
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+#related-video .video-info {
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+#related-video .video-info .video-title {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  width: 100%;
+}
+/* 【話題】文章主頁: 左側主欄 - 文章列表
+   ========================================================================== */
+#article-list .section-group {
+  display: inline-block;
+}
+#article-list .article-row {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: auto;
+}
+#article-list .article-card {
+  width: calc((100% - 30px)/3);
+}
+#article-list .article-card a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+#article-list .article-block {
+  display: block;
+  position: relative;
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+#article-list .article-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  border-radius: 3px 3px 0 0;
+}
+#article-list .article-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+  border-radius: 3px 3px 0 0;
+}
+#article-list .article-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 56.25%;
+}
+#article-list .article-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#article-list .article-card:hover .article-image {
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+#article-list .article-info {
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+#article-list .article-info .article-title {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 1rem;
+  line-height: 20px;
+  width: 100%;
+  height: 40px;
+}
+#article-list .article-info .article-user {
+  color: #757575;
+  font-size: 0.875rem;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* 【話題】文章觀賞頁: 左側主欄
+   ========================================================================== */
+#article {
+  width: 100%;
+}
+#article .title {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 0.02rem;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+}
+#article .date {
+  display: inline-block;
+  font-size: 0.875rem;
+  color: #757575;
+}
+#article .source, #article .category {
+  display: block;
+  font-size: 0.875rem;
+}
+#article .source a, #article .category a {
+  color: #27ae60;
+}
+#article .uploader {
+  display: inline-block;
+  color: #27ae60;
+}
+#article .uploader img {
+  width: 32px;
+  height: 32px;
+}
+#article .uploader .user-logo {
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+#article .action {
+  float: right;
+  font-size: 0.9375rem;
+  line-height: 32px;
+}
+#article .action li {
+  display: inline-block;
+}
+#article .content {
+  white-space: pre-line;
+  font-size: 1rem;
+  line-height: 28px;
+}
+#article .content img {
+  display: block;
+  margin: auto;
+  text-align: center;
+  max-width: 100%;
+}
+#article .content a {
+  color: #27ae60;
+}
+/* 【話題】文章觀賞頁: 右側副欄 - 相關話題
+   ========================================================================== */
+#related-article .article-card {
+  width: 100%;
+}
+#related-article .article-card a {
+  height: 100%;
+  width: 100%;
+}
+#related-article .article-block {
+  display: block;
+  position: relative;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+#related-article .article-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  width: 300px;
+  border-radius: 3px 3px 0 0;
+}
+#related-article .article-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+  border-radius: 3px 3px 0 0;
+}
+#related-article .article-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 56.25%;
+}
+#related-article .article-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#related-article .article-card:hover .article-image {
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+#related-article .article-info {
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+#related-article .article-info .article-title {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 0.9375rem;
+  line-height: 20px;
+  width: 100%;
+  min-height: 40px;
+}
+/* 【活動】活動列表: 左側主欄
+   ========================================================================== */
+.event-list {
+  font-size: 0.9375rem;
+}
+.event-list .event-list-title {
+  background-color: #f5f5f5;
+}
+.event-list .card-body {
+  padding: 0;
+}
+.event-list table tr:hover td {
+  background: #f4f6f8;
+}
+.event-list .event-bookmark {
+  width: 6%;
+  text-align: center;
+  cursor: pointer;
+}
+.event-list .active {
+  color: #26ad5e;
+}
+.event-list .event-date {
+  width: 12%;
+}
+.event-list .event-title {
+  width: auto;
+}
+.event-list .event-category {
+  width: 10%;
+}
+.event-list .event-region {
+  width: 10%;
+}
+.event-list .event-status {
+  width: 15%;
+}
+/* Icon */
+.icon-hot::before {
+  content: "\f06d";
+  display: inline-block;
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  margin-right: 0.5rem;
+  color: #e83a30;
+  width: 1.25em;
+  text-align: center;
+}
+.icon-featured::before {
+  content: "\f005";
+  display: inline-block;
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  margin-right: 0.5rem;
+  color: #e8b730;
+  font-size: 0.875rem;
+  width: 1.25em;
+  text-align: center;
+}
+.icon-album::before {
+  content: "\f87c";
+  display: inline-block;
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  margin-right: 0.5rem;
+  color: #26ad5e;
+  width: 1.25em;
+  text-align: center;
+}
+/* Tooltip */
+.event-list tr:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltip {
+  z-index: 1;
+  transform: translate(0, -200%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  min-width: auto;
+}
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 1rem;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.65) transparent transparent transparent;
+}
+.tooltip-inner {
+  padding: 0.25rem 0.5rem;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.65);
+  border-radius: 3px;
+}
+/* 【活動】活動列表: 右側副欄 - 篩選
+   ========================================================================== */
+#event-filter {
+  font-size: 0.9375rem;
+}
+#event-filter .btn-group {
+  display: block;
+}
+#event-filter .btn-filter-group {
+  position: relative;
+  display: block;
+}
+#event-filter .btn-filter {
+  background-color: #ececec;
+  border: none;
+  color: inherit;
+  margin: 2px 0;
+  padding: 0.25rem 0.5rem;
+}
+#event-filter .btn-filter-active {
+  background-color: #26ad5e;
+  color: #fff;
+}
+#event-filter .btn-filter:hover {
+  color: inherit;
+}
+#event-filter .btn-filter-active:hover {
+  color: #fff;
+}
+/* 【活動】活動內文: 左側主欄
+   ========================================================================== */
+#event {
+  width: 100%;
+}
+#event .title {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 0.02rem;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+}
+#event .remark {
+  display: inline-block;
+  font-size: 0.875rem;
+}
+#event .remark span, #event .distance span {
+  padding: 6px 10px;
+  margin-right: 10px;
+  background-color: #eee;
+  border-radius: 2px;
+  font-size: 0.875rem;
+}
+#event .action {
+  float: right;
+  font-size: 0.9375rem;
+  line-height: 32px;
+}
+#event .action li {
+  display: inline-block;
+}
+#event .content {
+  white-space: pre-line;
+  font-size: 1rem;
+  line-height: 28px;
+}
+#event .content img {
+  display: block;
+  margin: auto;
+  text-align: center;
+  max-width: 100%;
+}
+#event .content a {
+  color: #27ae60;
+}
+.event-detail-list a {
+  color: #27ae60;
+}
+.event-detail-list .data-title {
+  width: 7rem;
+}
+.event-detail-list .data-title span {
+  -webkit-box-flex: 0;
+  flex: none;
+  padding: 6px 10px;
+  color: #999;
+  border-radius: 2px;
+  font-size: 0.9375rem;
+}
+.event-detail-list .event-detail-item {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  border-top: 1px solid #ececec;
+}
+.event-detail-list .event-detail-item:first-child {
+  border-top: none;
+  padding-top: 0 !important;
+}
+.event-detail-list .event-detail-item:last-child {
+  padding-bottom: 0.5rem !important;
+}
+/* 【活動】活動內文: 右側副欄
+   ========================================================================== */
+.nearday-event-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nearday-event-list li > div {
+  float: left;
+}
+.nearday-event-list li > div.event-title {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 1rem;
+  line-height: 20px;
+  width: 100%;
+}
+.nearday-event-list li {
+  padding: 0.5rem 0;
+}
+.nearday-event-list li:first-child {
+  padding-top: 0;
+}
+.nearday-event-list li:last-child {
+  padding-bottom: 0;
+}
+.nearday-event-list li + li {
+  border-top: 1px solid #dbdbdb;
+}
+.nearday-event-list li:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.nearday-event-list li a:hover {
+  color: #757575;
+}
+.nearday-event-list .event-info {
+  font-size: 0.875rem;
+  color: #999;
+}
+.nearday-event-list .event-date, .nearday-event-list .event-region {
+  display: inline-block;
+}
+.nearday-event-list .event-date::before {
+  content: "\f073";
+  display: inline-block;
+  font-family: 'Font Awesome\ 5 Free';
+  margin-right: 6px;
+}
+.nearday-event-list .event-region::before {
+  content: "\f3c5";
+  display: inline-block;
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  margin-right: 6px;
+}
+/* 【個人專頁】
+   ========================================================================== */
+.profile-user-img {
+  border: none;
+  margin: 0 auto;
+  padding: 3px;
+  width: 100px;
+}
+/* 【搜尋】搜尋頁面
+   ========================================================================== */
+#search-result .video-card {
+  width: 100%;
+}
+#search-result .video-card a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+#search-result .video-block {
+  display: block;
+  position: relative;
+  border-top-left-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+#search-result .video-thumbnail {
+  position: relative;
+  background-color: #dbdbdb;
+  width: 300px;
+  border-radius: 3px 0 0 3px;
+}
+#search-result .video-responsive {
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  flex: 1 0 auto;
+  display: -webkit-box;
+  display: flex;
+  z-index: 0;
+  border-radius: 3px 0 0 3px;
+}
+#search-result .video-sizer {
+  -webkit-box-flex: 0;
+  flex: 0 0 0px;
+  padding-bottom: 56.25%;
+}
+#search-result .video-image {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+#search-result .video-card:hover .video-image {
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+#search-result .video-info {
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+#search-result .video-info .video-title {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+  font-size: 0.875rem;
+  line-height: 18px;
+  width: 100%;
+}
+/* Custom Page
+   ========================================================================== */
+.page-title, .comment-title {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 0.02rem;
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  white-space: normal;
+  word-break: break-word;
+}
+#page .page-content {
+  white-space: pre-line;
+  font-size: 1rem;
+  line-height: 28px;
+}
+.page-content {
+  font-size: 0.9375rem;
+}
+.page-content a {
+  color: #27ae60;
+}
+/* Advertisement
+   ========================================================================== */
+.ad-300x600, .ad-300x250 {
+  width: 300px;
+  margin-bottom: 30px;
+}
+/* Footer
+   ========================================================================== */
+.footer {
+  width: 100%;
+  background-color: #fff;
+  padding: 50px 0;
+  margin-top: 50px;
+  overflow: hidden;
+  bottom: 0;
+  z-index: 800;
+  clear: both;
+}
+.footer-nav {
+  width: 1280px;
+  clear: both;
+  overflow: hidden;
+  margin: 0 auto;
+}
+@media (max-width: 1408px) {
+  .footer-nav {
+    padding: 0 50px;
+  }
+}
+.footer dl {
+  float: left;
+  width: calc(100%/5);
+}
+.footer dl dt {
+  font-size: 0.9375rem;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  padding: 0 8px;
+}
+.footer dl dd {
+  font-size: 0.875rem;
+  height: 24px;
+  line-height: 24px;
+  overflow: hidden;
+  padding: 0 8px;
+}
+.footer dd a:hover {
+  color: #27ae60;
+}
+.footer .footer-bottom {
+  margin-top: 40px;
+}
+.footer .footer-bottom span {
+  font-size: 0.875rem;
+  text-align: center;
+  width: 1280px;
+  display: block;
+  margin: auto;
+  padding-top: 10px;
+}
+.footer .copyright {
+  text-align: center;
+}
+.footer a:hover {
+  color: #31c66c;
+}
+/* Float Box
+   ========================================================================== */
+.float-page {
+  -ms-flex-align: center;
+  align-items: center;
+  background: #f4f6f8;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.float-box {
+  width: 480px;
+  margin: auto;
+  font-size: 0.9375rem;
+}
+@media (max-width: 576px) {
+  .float-box {
+    margin-top: .5rem;
+    width: 90%;
+  }
+}
+.float-card-body {
+  background: #ffffff;
+  border-top: 0;
+  color: #666;
+  padding: 50px;
+}
+.float-card-body h1 {
+  text-align: center;
+  font-weight: 700;
+  color: #292c32;
+}
+.float-card-body .input-group .form-control {
+  border-right: 0;
+}
+.float-card-body .input-group .form-control:focus {
+  box-shadow: none;
+}
+.float-card-body .input-group .form-control:focus ~ .input-group-append .input-group-text {
+  border-color: #98d4b1;
+}
+.float-card-body .input-group .form-control.is-valid:focus {
+  box-shadow: none;
+}
+.float-card-body .input-group .form-control.is-valid ~ .input-group-append .input-group-text {
+  border-color: #28a745;
+}
+.float-card-body .input-group .form-control.is-invalid:focus {
+  box-shadow: none;
+}
+.float-card-body .input-group .form-control.is-invalid ~ .input-group-append .input-group-text {
+  border-color: #dc3545;
+}
+.float-card-body .input-group .input-group-text {
+  background-color: transparent;
+  border-bottom-right-radius: 3px;
+  border-left: 0;
+  border-top-right-radius: 3px;
+  color: #bdbdbd;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.float-box-msg {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+}
+/* 登入 / 註冊 / 意見回饋頁面
+   ========================================================================== */
+.fb-login-button {
+  background-color: #1877f2;
+  color: #fff;
+}
+.fb-login-button:hover {
+  background-color: #1464cc;
+}
+.float-card-body a:not(.fb-login-button) {
+  color: #26ad5e;
+}
+.additional {
+  margin: 10px 0;
+}
+.additional-row {
+  display: -webkit-box;
+  display: flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  flex-pack: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 15px;
+  color: #bdbdbd;
+}
+.additional-row::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #dbdbdb;
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+.additional-text {
+  z-index: 1;
+  position: relative;
+  display: inline-block;
+  padding: 0 16px;
+  color: #bec8d2;
+  text-align: center;
+  background-color: #fff;
+  font-size: 0.875rem;
+}
