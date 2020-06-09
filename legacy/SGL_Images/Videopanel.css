@@ -1,0 +1,348 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+#LokMultiPanel{
+    width: 420px;
+	white-space:normal;
+}
+#LokMultiPanel a {
+    color: #333;
+    font-weight: bold;
+}
+.LokWatch_TR {
+    height: 80px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.LokWatch_TR .Onewidth {
+    max-width: 144px;
+    width: 142px;
+    position: relative;
+    padding-right: 5px;
+}
+.LokWatch_TR li {
+    display: table-cell;
+    vertical-align: top;
+    min-width: 100%;
+}
+.LokWatch_TR .Padding_LeftRight {
+    width: 100%;
+    padding: 0 5px 0 5px;
+    position: relative;
+    height: 80px;
+}
+.LokWatch_TR .Onewidth img {
+	width: 142px;
+    height: 80px;
+}
+.VideoTime {
+    position: absolute;
+    right: 6px;
+    bottom: 4px;
+    padding: 3px;
+    background-color: #000;
+    color: #FFF;
+}
+.LokWatch_TR .D_subject {
+    text-align: left;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #282828;
+    font-weight: bold;
+    height: 40px;
+    line-height: 20px;
+}
+.LokWatch_TR .D_label {
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    text-align: left;
+    padding-top: 20px;
+    /*overflow: hidden;*/
+}
+.LokPPposition {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    text-align: center;
+	color:#FFF;
+    font-size: 19px;
+    width: 420px;
+    height: 236px;
+	cursor:pointer;
+	white-space:normal;
+}
+
+.LokPPposition img {
+    width: 420px;
+    height: 236px;
+}
+.LokPPposition .G_subject{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+	top:0px;
+	/*bottom:0px;*/
+	font-weight: bold;
+	 text-align:left;
+	 padding:10px;
+}
+#WWTwo {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+#WWTwo a {
+    padding-top: 3px;
+    padding-right: 16px;
+    padding-bottom: 3px;
+    padding-left: 16px;
+    background-color: #282828;
+    color: #FFF;
+}
+/*消除預設值*/
+.postusbanner{
+	padding-top: 0px;
+    padding-bottom: 0px;
+}
+.lokbannerdiv{
+   width:800px;
+   height:112px;
+   padding-bottom: 5px;
+   margin: 0 auto;
+}
+
+
+#lokliveDiv{
+	width:422px;
+	height:238px;
+}
+.livebody{
+	width:100%;
+	height:237px;
+	background-color: RGBA(0,0,0,0.99);
+}
+.liveinfo{
+	font-size: 18px;
+    color: #FFF;
+	width:100%;
+	background-color: RGBA(0,0,0,0.88);
+}
+.liveinfo ul {
+    display: inline-block;
+    width: 100%;
+	padding-left:10px;
+}
+.livedivbg {
+    background-color: #fa3e3e;
+    font-size: 18px;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: 500;
+    margin-top: 12px;
+    padding: 4px 6px;
+}
+.livedivtime {
+    font-size: 12px;
+    line-height: 30px;
+}
+
+
+
+
+#LokPlayerDIV .Defaultvideosize {
+/*    width: 466px;*/
+    height: 237px;
+}
+#LokPlayerDIV {
+/*    width: 466px;
+    height: 262px;*/
+    -webkit-box-align: center;
+    vertical-align: middle;
+    margin: 0 auto;
+    background-color: #ccc;
+    position: relative;
+}
+.LokReplayIMGDIV {
+    position: absolute;
+    left: 0px;
+    top: 35.9%;
+    right: 0px;
+    text-align: center;
+    display: none;
+}
+.Lokliveinfo {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+	right:0px;
+    padding: 10px;
+    color: #FFF;
+    font-size: 15px;
+}
+.livedivbgg {
+    background-color: #fa3e3e;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: 500;
+    padding: 4px 6px;
+	margin-top: 0px;
+}
+.liveinfo{
+	font-weight:bold;
+	background-color: rgba(0, 0, 0, .5);
+	opacity: .99;
+    padding: 1px 6px 2px 6px;
+	margin-left:5px;
+	border-radius: 4px;
+}
+#LokPlayerlayer #LokPlayerBar {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+    background-color: RGBA(0,0,0,0.50);
+    display: none;
+    height: 36px;
+	z-index: 2147483647;
+}
+#LokBarTable {
+    height: 36px;
+    color: #fff;
+	font-size:12px;
+}
+#LokBarTable img{
+	width:32px;
+	height: 32px;
+	cursor:pointer;
+}
+#LokPlayerDIV::-webkit-media-controls {
+  display:none !important;
+}
+#LokPlayerDIV video::-webkit-media-controls {
+  display:none !important;
+}
+#LokPlayerDIV video::-webkit-media-controls-enclosure {
+  display:none !important;
+}
+.VolumeBG {
+    /* border: 1px solid RGB(201,201,201); */
+    background-color: RGBA(229,229,229,0.75);
+    height: 5px;
+    position: relative;
+    z-index: -1px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.VolumeBar {
+    width: 0%;
+    background-color: RGB(41,182,246);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+#LokWaitingVideo{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right: 0px;
+	bottom:0px;
+	z-index:2147483647;
+	background-color: RGBA(0,0,0,0.50);
+	text-align:center;
+}
+@-o-keyframes spin {
+	100% {
+		-o-transform:rotate(360deg);
+		transform:rotate(360deg);
+	}
+}
+@-moz-keyframes spin {
+	100% {
+		-moz-transform:rotate(360deg);
+		transform:rotate(360deg);
+	}
+}
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform:rotate(360deg);
+		transform:rotate(360deg);
+	}
+}
+@keyframes spin {
+	100% {
+		transform:rotate(360deg);
+	}
+}
+.LokSpinner {
+    border: 6px solid hsla(0,0%,100%,0.99);
+    border-left-color: hsla(0,0%,100%,0.66);
+    border-bottom-color: hsla(0,0%,100%,0.33);
+    border-right-color: transparent;
+    border-radius: 100%;
+    -o-animation: spin 800ms infinite linear;
+    -moz-animation: spin 800ms infinite linear;
+    -webkit-animation: spin 800ms infinite linear;
+    animation: spin 800ms infinite linear;
+    z-index: 101;
+}
+.Errorfont {
+    color: #F00;
+    font-size: 14px;
+	font-weight:bold;
+	padding:10px;
+}
+.Lokposition {
+    position: absolute;
+    left: 0px;
+    top: 28.9%;
+    right: 0px;
+    text-align: center;
+}
+.Cssloads {
+    margin: 0 auto;
+    width: 30px;
+    height: 30px;
+    /* background-color: RGBA(189,189,189,0.65); */
+}
+video {
+    min-width: 100%;
+    min-height: 100%;
+}
+#LokPlayerlayer::full-screen {
+  width: 100%;
+  height: 100%;
+}
+::-moz-full-screen #LokPlayerlayer {
+  width: 100%;
+  height: 100%;
+}
+#LokPlayerlayer::-moz-full-screen {
+  width: 100%;
+  height: 100%;
+}
+#LokPlayerlayer::-webkit-full-screen {
+  width: 100%;
+  height: 100%;
+}
+.lokconnection{
+	cursor: pointer;
+	display:none;
+}.l_w-font{
+	color:#F00;
+	font-size:30px;
+}

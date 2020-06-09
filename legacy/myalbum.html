@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)https://www.soonnet.org/Photo/MyAlbum.aspx?U=126654&L=s&F=Manage&Y=101&G= -->
+<html lang="zh-HK" xmlns="http://www.w3.org/1999/xhtml" class="">
+<head id="Baseheader">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="og:description" content="soonnet.org">
+<title> 尋寶網 - Eric Chong的相簿 </title>
+<link href="./SGL_Images/GlobalStyle.css" rel="stylesheet" type="text/css">
+<link href="https://www.soonnet.org/SGL_Images/SGL_Favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="./SGL_Images/jquery.fancybox.css" media="screen">
+<script src="./SGL_Images/jquery-2.1.4.min.js" type="text/javascript"></script> 
+<script src="./SGL_Images/jquery-migrate-1.2.1.min.js" type="text/javascript"></script> 
+<script src="./SGL_Images/jquery.timer.js" type="text/javascript"></script> 
+<script src="./SGL_Images/GlobalJS.js" type="text/javascript"></script> 
+
+<!-- Update (2020) -->
+<link href="./SGL_Images/main_2020.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./SGL_Images/font-awesome/all.min.css">
+<script src="./SGL_Images/main_2020.js"></script> 
+<script type="text/javascript" src="./SGL_Images/jquery.fancybox.js"></script> 
+<script type="text/javascript">HomeLanguage='HK';</script> 
+<script type="text/javascript">
+$(document).ready(function () {popoad();
+    $('#ShowPanel').live('click', function () {
+		$('#LoginBox').css({ display: 'block' });
+	});
+	$('#LoginNow').live('click',function(){
+		$('#ShowPanel').css('display', 'none');
+		$('#IsLogged').fadeIn();	
+		$('#LoginBox').fadeOut();
+	});
+	$('body').click(function (){if(!lboarea){
+		$('#LoginBox').fadeOut();}
+	});$('.fancybox').fancybox();
+	
+// for event-tw-2019-popup banner 
+$('#YesIKnow2').click(function () {$('#event-tw-2019-popup').animate({ 'right': '-300px' }, 500, function () {$(this).css({ display: "none" });SetHoursCookie('LokNotice', false);});});
+});
+</script> 
+<script src="./SGL_Images/PhotoScript.js" type="text/javascript"></script> 
+<script src="./SGL_Images/progressbar.js" type="text/javascript"></script>
+<style>
+.LokLayer_Four {
+    position: fixed;
+    z-index: 1;
+    bottom: 0px;
+    right: 0px;
+}
+.LoadPanel {
+    border: 1px solid #e9e9e9;
+    background: url(/Photo/P_Images/Waiting_xx16.gif) no-repeat center center scroll;
+}
+.LoadPanel_Begin {
+    border: 1px solid #fff99c;
+    background: url(/Photo/P_Images/Waiting_xx16.gif) no-repeat center center scroll;
+}
+.MemberAlbumNavbar li.Lok-navitem3 {
+    white-space: nowrap;
+    width: auto;
+    text-align: left;
+    padding: 0;
+    color: #FFF;
+    float: left;
+    position: relative;
+}
+.MemberAlbumNavbar li.Lok-navitem3 b {
+    text-shadow: 1px 1px 2px black;
+    display: block;
+    padding: 8px 0px 0px 10px;
+    line-height: 1em;
+    font-weight: 100;
+    color: inherit;
+    cursor: pointer;
+}
+/*------------------------progressBar----------------------------*/
+#progressBar {
+    width: 400px;
+    height: 20px;
+}
+#progressBar div {
+    height: 100%;
+    color: #fff;
+    text-align: right;
+    font-size: 12px;
+    line-height: 22px;
+    width: 0;
+}
+.round-pink {
+    margin-left: 20px;
+    border-radius: 20px;
+    padding-bottom: 6px;
+    background: rgba(64,64,64,0.5);
+    box-shadow: 0 -1px 1px #c0bfbc inset;
+}
+.round-pink div {
+    border-radius: 20px;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0 2px 2px #333;
+    background: #773388; /* Old browsers */
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzk5NTVhYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzI5ODlkOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUxJSIgc3RvcC1jb2xvcj0iIzIwN2NjYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3NzMzODgiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: url(P_Images/icon_but02.png) no-repeat 98% 50%, -moz-linear-gradient(top, #9955aa 0%, #2989d8 50%, #207cca 51%, #773388 100%); /* FF3.6+ */
+    background: url(P_Images/icon_but02.png) no-repeat 98% 50%, -webkit-gradient(linear, left top, left bottom, color-stop(0%, #9955aa), color-stop(50%, #2989d8), color-stop(51%, #207cca), color-stop(100%, #773388)); /* Chrome,Safari4+ */
+    background: url(P_Images/icon_but02.png) no-repeat 98% 50%, -webkit-linear-gradient(top, #9955aa 0%, #2989d8 50%, #207cca 51%, #773388 100%); /* Chrome10+,Safari5.1+ */
+    background: url(P_Images/icon_but02.png) no-repeat 98% 50%, -o-linear-gradient(top, #9955aa 0%, #2989d8 50%, #207cca 51%, #773388 100%); /* Opera 11.10+ */
+    background: url(P_Images/icon_but02.png) no-repeat 98% 50%, -ms-linear-gradient(top, #9955aa 0%, #2989d8 50%, #207cca 51%, #773388 100%); /* IE10+ */
+    background: url(P_Images/icon_but02.png) no-repeat 98% 50%, linear-gradient(to bottom, #9955aa 0%, #2989d8 50%, #207cca 51%, #773388 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9955aa', endColorstr='#773388', GradientType=0 ); /* IE6-8 */
+}
+.NavbarLinks li.Lok-LokShortURL {
+    white-space: nowrap;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    width: auto;
+    text-align: center;
+    padding: 0;
+    color: #FFF;
+    font-size: 18px;
+    float: right;
+    margin-right: 250px;
+    position: relative;
+    text-shadow: 1px 1px 2px black;
+    display: block;
+    vertical-align: middle;
+    padding: 12px 15px 10px 55px;
+    background: url(/SGL_Images/shorten.png) no-repeat 40% 50%;
+    background-size: 45px;
+    cursor: pointer;
+}
+#LokShortURL {
+    position: relative;
+}
+.shortentextbox {
+    position: absolute;
+    height: 18px;
+    width: 250px;
+    -webkit-text-size-adjust: none;
+    font: 11px;
+-webkit-transform:(0.9);
+    border: solid 1px #E5E5E5;
+    outline: 0;
+    font: normal 11px/100% Verdana, Tahoma, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 0 8px;
+    border-radius: 20px;
+    padding-left: 5px;
+    margin-left: 0px;
+    margin-top: -3px;
+}
+.shortentextbox:focus {
+    border-color: #C9C9C9;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 0 8px;
+}
+</style>
+<script type="text/javascript">
+var LokMaxColumn=5,Wx;
+$(window).bind('resizeEnd', function() {LokAutoWidth();});
+$(document).ready(function() {if ($("#LokLayerThreeBody").length>0){Lokapd= $("#LokLayerThreeBody");Lokapdftop = Lokapd.position().top-0;}
+LokShorteds=LokShorthost + 'A' + $('#LokMain_Content_HiddenOwnerUpc').val();$('#LokShortBox').val(LokShorteds);
+$('#LokMain_Content_LinkButtonPanel input').keypress(function (e){var keyCode = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;if (keyCode == 13){var i;for (i = 0; i < this.form.elements.length; i++) if (this == this.form.elements[i]) break; i= (i +1) % this.form.elements.length; this.form.elements[i].focus();return false; }});
+$('#iOSPageBar .circlebtn').live('click',function(){$('#LokOverlay').fadeIn();});
+});
+$(window).bind('resize', function() {$(this).trigger('resizeEnd');Uio=11;});
+function Fpage(){if (!LokCKini($('#LokMain_Content_FlyPageBox').val())){alert('請輸入標準的數字作分頁號碼.');return false;}$('#LokOverlay').fadeIn();return true;}
+function Fpagebykey(){if (!LokCKini($('#LokMain_Content_FlyPageBox').val())){alert('請輸入標準的數字作分頁號碼.');return false;}$('#LokOverlay').fadeIn();eval($("#LokMain_Content_FlyButton").attr('href'));}
+</script>
+<noscript>
+</noscript>
+<style type="text/css">
+.fancybox-margin {
+    margin-right: 0px;
+}
+</style>
+</head>
+<body>
+<form method="post" action="https://www.soonnet.org/Photo/MyAlbum.aspx?U=126654&amp;L=s&amp;F=Manage&amp;Y=101&amp;G=" id="lamform">
+<div class="aspNetHidden">
+  <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+  <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+  <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/TmKZPn9z0cC4zMt60hNLrBYuvud6hABAy07IBvdvB7CxrcO1uZfaVZ6d/2r2uoG+62caOQIF/bmixaqciFlfi0VyEUsg+OpyLqQ7PS5y+gNlHvaNHStPsL7HFsRkgnFKjLIOLUS/Xt3XjbFbsuj4TqF2TcGbNeP/d0vfB8Yw23GBLtg+JmGGxftW+SzCQ24nDUymTHmWLnRhwbtDfhYY2I2mqt+GAd8Pk95L/ZpEGYKxOFVwbHgfFyeqQHKTMNS5OwbzzCNNAgifmLShMAc6Lj5FRrL9ACcbJaA6IVGZkacotJzO0j0PGjZTOSFRJJkYdbK3hDXODjfxvy2IEcHe/80lJesSCYei4OAwLwl2ZJ4RRAXheZ5N7Uv4bDRpuXgRGZgZ7tk1nfe3RbTkgmWagA68QzVX2jejHt3p+g5nmi1nektERtY+EcxVIcrXQBZE7TWMWhhv+tZPFULB9Bp7QA87+4hDeG+Xl27RR80BcQ33+c6+kR1yyh3VnikeHI9d7gYvb4fj4fUbDp1BQ6qgVu+Wp20U2NewnTJ5uu3h6n9zoZ+qiA5qmeWRtZwAIWAuID+xZUipeg2BKjjyuGnDxW3BqHxNZWnRZDFsRWui/KbZKVdPJsJt9e2V6LozXg/LoR90Ur5ZCW8nR20ILkz/PW7s5HE09r5WIgzsfixg9IeLzCczS7UoSMnC7nQ4+wVJWnklsvA05T70nicfA54VfdUbRlFvfZRnbctexV1prNjD4YW0Ys+TXpMdpVubokbdJVo14zu7ayMX5aVcYTauboxU9JTg00VergN5DE/Au1WUD77lP9ZezCSS5mQo4BLlgnt+lpzqpgR5W6BmOEzeRFTINcLQcx/VnJcqy10FrCrgsuz8kTm5vGjHHNEfDjAeU1XxNSF53ui2D3tBoJZHAulj0UZkDpzlT5Sp79KMMSTirHRIh1WUuwwIadSlqhy3xC4q8/fJAV2smEnGfKYLwKTM8ESIMSZtXNszLP9ux8CCfZsKm24c/N/iEkdQmqmtppXs6p9rJyeO90fxBPgrW2a8iwQiETOczqg9abkI485rKz0hfLzqjqDwMKh6/W37qpwPgWhBhVEkUhBQn09WHHhvFNs0Li33XhWztA62x1CiwEq3S4qdk2sh/8Celmm4JeNNRsCxNPGdmsHYYPYpy2r/vZuneVRwejBuQVuCcQQo/rr8vWIzukluoHM6QmjaaNNLsp05iQxzvSE9JMaDIqfpZxRYJWo04E4Od26zArn0tfK+xJ1GN4IvMaP4lAZm+RgTV7PCm+F1QOXfMFm8QvrgeGItG/bow5MDC/ETELlWD5K9RBC8z9r1Jy7aDU+BSv9iocpyM3346JwVxyQlPQszPRsKChRwGbLEBYJkL10sGzwe/Zt21vuNsXYkVyVzAD5QjPDBTl5vqGjVKbYWODq2H+1PoZRuuURB6WxqFLppxifOCvYBfQJ1fxXleM9wgkRoIBak0byLY9y9MMZYF5ZrMsuvSVowbibLf2ckcvN9ym5s3DPl78f72H2Cpg/4VK7v/chhUrlm3if/9L3UO1nIMACWCN3iEsaHBDorMXblCK0r4eUfL/K9F8Sxciy6FbDgjsamBYYBWV3AY/1Lh9rftEj5h3z+pGLPz45Cgi9jk+M5SctueNCYtO4vfq2jWTATyCqYFNZVbJ7d1L9UpE5Vh2cqeW2OzoZnTHDsb53N/yV/ixGB4tQD78lqRj10UZBigTGkM7oV2LQLh6V63ha63IPibZNfIq8d3/8f2Hp/aPa+aKjJyqLRu5ysAU76xlh88sW8v8JQz/i+1EvU/l6mK8A9ji7egDRUeezbFHQ+bD9PVaWuO86YAjDfr1fZE+lLjVT/xwt4tE8+rL8YVEr2gGuR98QoI8PTb4ZaNIGccs10A4QPu1OhULj64VSBafj5EPaDmFrtaa3ffH+C85khJiVYYU6Go7RwmR15hWJuyKD0seUvU6FozM0n/LkStEsLJa+a55OjV80MxydpGpKhJJ0oFaq9SFgTMU8kjxyB972WwRBW4f78sh4WV2iDMn9hYsXUyF6K6UdZ1GXTVkeGmUF0LtKKt8a/1Ew+tuYZhlL1F2GLyyTJLThSd8oC50eOLNTT9OZn0v0mem6mRJNYi6dsgYrvL7d8m+6UbyJR2tRUZ+cpJcmQ6gYLcp3alUhqTNu747wCFaUKMHH2svwP+PKa/kn58bz6ulqX8wzAi6guLhIIYug0xXViz9wz8KqGvI3g8mj9mxJAWjWHSKZFK4D8xGkAynANcGoPmK/9dG33qAmaIOKxwQk+ds1490dMYy9jRR8ZwtUjontpgrtH4Oz6Kkb1AhYantwAXfGJ2UbZ9bPfTRHbErmU/8WdFrXJffAAbZN8u+OsV9MlVQ9yoaQ//gECJlZ8C58lf6fs7wPRWGyh/Ir/geqiowxrE3d45twF3of9p1gvUe8o36vaRqjCklOjCO2ICbV8vKsSDBRFTE2ZYDnRjPDyxfgGOpisnoRa9asZYG6ROSnLsc/t9FsZ5OzfcOR1QgnKBHx0aA31gqlKDf56FRpbFgEZ/o9ZlKmuogBOpapQtXcE2BHXJQliX45p9mVS4gcagWad12B31Vqn9XIXAQhCJa4vOE3P00Z5zldoD52qNfXBEANeSoO8FK0dNawf09T4p1XkoE5nlCnMnvCgpqcHnnOSirK6Sk73bSv0M4R16u0yFPUnK0D4eZ0tjNA9W3w+JQ1c+o76JU4Ir/AaiT+aOo7xR5UTL4DvuQ4OpwlmYoSbqjqASTtZRcq+oy1z9IV7Y65ItpDY7mv7/VjyHmUhTOOrwxQ5IhDKXX+HyFn9VOMVBaLG7G9Rbr9iW8pP/B+nl5XcLX0rRWlrck+5vWlWHY7upA8LfAcYAn9cP3IW8q8aSvccZqWPMGeLzlyfTGvOGOeVjAppuLn7HlB3hZ3eJlz4fdJ7Kt6lyEO0Vs6w9aFJiP8lu5FBhJfVBqxr3tsi8aKESyx+i9R6dDX6K/iQz7ImuV1K2+LxN1cM++qgGT9U/LykAj+F0Wxjyopc1pht61AKlH7qtSWkXRSs/GEPAGSl4azZwXvveafJASrmEXvhyibRhLggsnC/kguZ15RSTQ7RQdkDG0CSz34yGcJX0Dvs4nQg0E+jzBz2QVgQWkX4lDvYg1NYZVKsFyDfQP9wha277cY8n0MDM7aFycUhbPq/FCtagcAehYZgAz60mXfX3QoPxof6vq/0zX8m9h3CpmsF59gKjgDVNRk+Oa2fuyp83zd2/PjmC9Zikahj+Z2LmhI2CFNTP8kBX9c1pzv/nYiEWoBcCTyRAz+qXa7JMSCvKn26GNrV1OAvAuvawSJteYs5NM82zdQQPy2uoM2OV17i6pmgb32EvWNV0EV8OvfxvZsAQJDtHGc7HO+LxaLqM3XDDP7ICqgnX5cxhmsNfAsZSuYyhXjmnyW7wHJUaaDx9++pFlpbS+NPNUzGnPYWYBYfN60kcHb5zIkeartz/Zw3lzwjUzeMvwDtWbaChgaZi15TlPl9KWomXpg3KMm6PFkRXia7rNSvGmkTR7NVZRsweWgEBOT1xi8F7eBuBzbFpb3v6WRga09DhJToS1yARt4TtInN9s/9x6emHol2anf4TdUCXZG+VgM41LsoY9fQclgZn2o9Jd9KVXNNAvpAIj4ArQ4Yghaxtj075mc1gtK9+k3P6iX8Qes+hZtXb8CjWuCz5QExrmfACxrskOlusUwdxT/3nieHDKoXb0/C3wI35pF1B1XzTzBRHoOMAdTmYpwWnymI08CojDjC4y6xqtslWSXqfXRFTCv61bA9OOKfxyYSAaCRyPcAM41Nwuh7j1kMfhhOQJqM+B7npMdf+gPPJHQKLsaBFrirXmrvKsAbcKoZRNI6S6+5NFK0Cp6xOFe74F/ufF68FVVwrmsH4O1uHqVd3eoDSRLPsmZxR0kYmEey3W0MaR1Rcwiektn3bzGeBvVyHzLrIcEK/v3pTuDPwVjI2B5MsjcHJ+d+U7yCy8dpMFCx6rg3k/+dTPkrWl8GT/TuhC+MmPOugqsRzOr8NkVODSQ4NeiT0vzhZH0OA4tRDv2ayH9mYr+HkQe5yYAmH+sAP4gsrhxfIHKmll/9WtKkhnDV/wvnF06ZdywGbNfHkLUi1CmRDDiCUhWCVcENCmgkAiWeelC0DdbZgZTOWE/yIcAovznD8kKDWPzarKMRrPzI2OrY7jCSpC524myIORlygZ4OqUSmUORqviga7WSKHTO8qitsq9Ko870KPGIl1ZzU5Qf/0xut8F2urnTayXqEuyHfxrvlCjKKOUigYcdrIQvRP21graP4ty7Kw0tytmtQ23IJzc56hxWG5KlXPUQQ2Wm6KYaTrn5hPLZFSfQ+9NitckPLi7VfgvM+XNtIVSdcovKeA17s0s83Web061yQga0bgTtWqeJ3FPozvMIF/b/8VFnZuZJEBmAaHkMousNDCTfU4kg5uzlOb1D1LIoXN6r+yaZIvVaLRxpUYvxwe2SL38W8+fZnds3CrgODl6HpafNT0JbKs3T0+/cxSE2UDUbx8+74GZnLaWFZaJNelFRSa9gon1uWf2jibC7bwB2SUWtHaIyZuWc/2lXKs6NiQFDkeuD/FsK/WaxAM4knOUtLfGjttFSB71XhpMJXZ5qed/MroKX1l65e6UyoMAC1wPOZxwPfG3yhURDM821+k9PPE5NaNktPFm+jHhIrIPDeGdTBF1FFyHDUg1UmRNMjYAj6EtEU1M1ThayZ00TRQvnTZgJrVc1BW6zzD68OXZPetv6WNV6bHRaY3SzVQHyhmM1RKSmaIXKuqrKHUdCFP6pqJ2/mA7R9I9oftB4OVsZ58Po1a+HNYgRf4nLXLKygTxusE/PVZLQqUSwQs2yb9ukUIHCQnoDMmJIySzrQfXPDE8qbZR3ByNojjQixxNpI+Swg84flU34tLRgEo7Gjg116NRWcU6iYnCkyFNDwN0MjgABfhAjFewL2nF+Hc2LQAEzMFdi88sra+dCTtj32Z+08IZDNvq4XK/joYh+d8Alzmd7Enum9yFHUupVugtK2JC0lXihcDUjYvUFcOiNyRvmKedpQ37q57+2LPdsrZ37nWRVIuaEXQFHTAhIdcZThTAk+b+4B3Ffxo0K2irCvrwJBga0fiU4SYECArAEOh8+iV3FSkFCoQrWfcCN0z9X8pEntui6dLHVsx7dVI44IXGaYvlXg/bWteE0IAsf+iCDrf7jQUtI+AGq2KCgo/AvAwHu/vY6nhufmuE3rT4eEuKYoiucJhPj5Sk7NBLnqgMtJhmlbad7+dDJDc4FjIn/bkTmdYbYMDPduBbBJ3CgA4iCS3ewPqwJ8t+BwKIBiBXO53w8z2AFpyhJWNe1V7wP1xpeaX+qsZlNHnWGd2OJ4ySgUYRTGCFWxzPrEBtqMRSvAOVNo23jw7lYGiJk8MtLR0IeDshC48qoeTm3Rrvn3UUxZotV/aENZmzl4Cf0hyI19rE2C16XS2iAJ2vOqZHyzqxTa0F6D0ahzIHCdgYwZUWDNTTLE3xHiAzJnev9fd20M2GOzY0wgv4gxFKdUbV+hxzWmPtbgpmmEQgIr1EgSVi2DPEsBbdzgC1Hzgo2sBaNKwMQifegjB/5wGodhIcFFw8EYDR+8nFaKE0CwkthoR0vIwNaCZW+Ua4b9skJxfzLqWHY+FNg7LzwbtP1tI3EbRqIytgc7gUNEQTRjuNAngR1fvRB8ROM0nH02IXKwQ2CizwspS/YuJJKzHzGvn1MIuHh8akGv2hSNtCyMLGJVOghqj73ltqnNTQ2CoO5tVIRlKwk4sEpOWMbK/TDJkhfr4kg8pkUa3kf9gKBkFcKzy886hHczhN0qn0JhIOH0KLroN+oWUMXKMV0xaMSFIF64g/BopBTGXNCWpxayIjXnc+QRBJIdSSI2JFIqw0IAhyop0hhroaajfKpUDY2ZHLJnpvJeu9rN9NRJQmEB0VOdGcSMyPBL1NWyp150xj6ME2VQzpV0upNb6PbEQOGqQVc5DoU9QQTeE/N0oKINZgfuWLukM+GY9tcDTq9zPSs8kp8+DahhAhgBss0nsK9xhSiVcjf4IUMdpVZfnt0m6XagGW5MYfOFPFzDeruqxlQgJQKU6EZOL4NGi6JmwXyxvzrCz73J+atWhcXLcOJ8eG7/VVZpv5pDoXRSO+L3dMNWHCgh/9TECbAcr2SxYo8iu6sMq/USVzJpSAz+wBVW7Z1EgNdOQCj6rmKrlfopJ0KFK450QT+ggl52XjJ6jPUe2NmGNalMKhkDJcFR8be6snJ5vH9qGffftZvgetexYsGHHXmMBqR67DZ2UJsHDTu8B8QV4oSyDkQjdv6Ng/maDPOvlhspdDigfTo5ry0vjpvTlxuoJujVWz1Up5tlZJhPxAraKDUOW8mh79BgQH4GF8KYxFu5VOrIrp1Ow8vAzUNC73TpiAnaInJZMOSnf3/FrzUIhaJwfnMUzuRoeoJvAvj7exBJQ5DsJCsoqBYSLlNNfDDKCKFOC5GcBXLtj3AbIHz36GArjmS78ps0YNU65F8jeWRCTJqWssh5RGSQ84GQZEWuTnR/8LmIvhqjnreoVYNj4O6OyiSDD0EifwVFJl8bHED8UPcjSz8SFACrG6Qz6Se5BeHaw6kw7Nfafpiw5fdhWZlvxetObf5vTfGay7c1KbKezIU5W2lRJneZ5nreIZ1nmUiro5pIJoB3tXyphdXBRWlQm2RQ/50FVlBoU3OhHT/jBEuE+xbLa0UN90ZTTDwJipFquSuVeMpuD6unrVpYBzYcxXMuToCCNEuq7mhbdwUnWnNtyyw86YXHzJRaXtg7ThwmEVySf6lXnZHVER5Nqr/E4SmfyllRyxzbmUAWtr8pwxvcszCEREXUy1UGZc4NynWAQs19Pl5Jmx2UjCqzjp1KcFyZGpl0ENBCNqVC6om79IrY1aEtSXXnxBYLF54TqCdFg6+NNez/+sgqY53iJktTRjBP+gv0uDrXhPbPTH35CDj/xMEFvxhybG4XhEkfJ4JqjgukXTKEJmVyWLhu0EJodoE3s1arXTeyPvNAFuH3w/POwPfuiI2EDUMBtFYprmH5grbdGwlEunduoUNjepS9mk2BlZv2TEit3tP/xZWaT7l+8j0bBrRdTl4J0JlCa91luJmXQvLxGr4M/W7skrSrmxeqj3jneiljYuU/bScku6vOVK/mvxuWcoAyoTps+S6H1Mi5w+uiMq8VvBvjLRHjkv0pPQwNGZksibkN7WT5JN+AKqGbHeLRnzpucDoyeYoM0p2HKq4Zl50Enzna5H0+uY+LJ56b68f4Fyg4hoPJzKT+aBJOrI0XQmJow5XEcfSZZyGX6XV3xjpGXzfOfzJD00AeP0yh5RdEZiHtWYIEgsaZAAehK9Rpg5KdWTtrIqppNvzxp8U/1Au5BHXRksaveBlmMR3pWZByk/QPXenfyac8yu6OGL0Iy5YkIyvlNoGrdGTCT8cCVmcA9gz++qc1de32TUO43SyT4oUi01twNaYqEbuXxED4gSU0r8PUKkR2ShlMk5Jlv9bB27wetYRzBgZWUmoNl0ZMBwjfByKr7w9dQfPQVY=">
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['lamform'];
+if (!theForm) {
+    theForm = document.lamform;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script> 
+<script src="./SGL_Images/WebResource.axd" type="text/javascript"></script> 
+<script src="./SGL_Images/ScriptResource.axd" type="text/javascript"></script> 
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 用戶端架構無法載入。');
+//]]>
+</script> 
+<script src="./SGL_Images/ScriptResource(1).axd" type="text/javascript"></script>
+<div class="aspNetHidden">
+  <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="8602D8CE">
+  <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="ET+Bb+T96SCatgxcQm6dCiS7Tlhebu7CAclDJV77oopb3wdM3Gh/yP6u3Ub7vvKsbc5Sgj4S5+ejN7xJymQl9izml9MMwzJ4NRXKQcr8GXVQ23eS3jOcBvY7yELUgdHK1jizpurWULUfUuCpvkYd4BNAv47jPJgBR/qdwsqzAfgrDSgReQsY3JYWPWtGkQFWKZfGVqnjf3t3sQDXosXgrWl7ZS8aS9RoobQ7ItbyQa7PHa22V9luALR26y0Pz5u8g2RYYhck8uDr8/SEl9HJ1vZcoOBb6FEavFSwBpYKvIn/bRKlm6amAaAonbApzZo4Z8VB08f9fqeFJwyKiUt2QUBCxfn5gdKcc2yiqjcoRINjctMYvXn/R/wdD4ObzXjPD3FcoQhpVSEYh3Toft9osf20rylpXQzLpY1gysnbtcU=">
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$LokScriptManager', 'lamform', ['tctl00$MemberUpPanel','MemberUpPanel','tctl00$LokMain_Content$PhotoBodyUpPanel','LokMain_Content_PhotoBodyUpPanel','tctl00$LokMain_Content$iOSPageUpPanel','LokMain_Content_iOSPageUpPanel'], [], [], 90, 'ctl00');
+//]]>
+</script>
+<div id="LokOverlay" class="LokOverlay" style="display:none"></div>
+<div id="event-tw-2019-popup" style="right: 0px;display:block">
+  <ul style="display:block">
+    <li><a href="javascript:void(0);" id="YesIKnow2" class="messageclose"></a></li>
+    <a target="_blank" href="http://twrunner.soonnet.org/"><img src="./SGL_Images/event-tw-2019-adv.jpg"></a>
+  </ul>
+</div>
+<div id="HrBar" style="display: none;"></div>
+<!-- 目錄 -->
+<header class="header">
+  <div class="header-nav"> 
+    <!-- header left -->
+    <div class="header-left"> 
+      <!-- header logo -->
+      <h1 class="header-logo"> <a href="/" title="尋寶網"> <img src="./SGL_Images/soonnet-logo.svg" alt="尋寶網"> </a></h1>
+      <!-- /.header-logo --> 
+      
+      <!-- header menu -->
+      <ul class="header-menu">
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Car/Car.aspx" class="header-menu-link"> 重機 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Marathon/Marathon.aspx" class="header-menu-link"> 路跑 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Bicycle/Bicycle.aspx" class="header-menu-link"> 單車 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Sport/Sport.aspx" class="header-menu-link"> 運動 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Gallery/Gallery.aspx" class="header-menu-link"> 攝影 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Photo/Photo.aspx" class="header-menu-link"> 圖庫 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Schedule/Schedule.aspx" class="header-menu-link"> 賽程 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Daily/Daily.aspx" class="header-menu-link"> 新聞 </a> </li>
+        <li class="header-menu-item"> <a href="../../video/video.html" class="header-menu-link"> 影音 </a> </li>
+      </ul>
+      <!-- /.header menu --> 
+    </div>
+    <!-- /.header left --> 
+    
+    <!-- header right -->
+    <div class="header-right"> 
+      
+      <!-- Search bar -->
+      <div class="search">
+        <form action="" method="GET">
+        <input type="text" name="word" placeholder="搜尋" autocomplete="off" spellcheck="true" id="search-keywords">
+        <button type="submit" class="search-icon"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <!-- /.Search bar -->
+      
+      <ul class="user-menu">
+        <li class="header-menu-item"> <a href="http://www.soonnet.org/Photo/PhotoUpload.aspx?W=IsCreate" class="upload fa fa-cloud-upload-alt" title="上傳"> </a> </li>
+        <li class="header-menu-item"> <a href="" class="user" title="登入"> <img class="user-logo" src="./SGL_Images/guest-logo.jpg" alt="登入"> </a> </li>
+      </ul>
+    </div>
+    <!-- /.header right --> 
+    
+  </div>
+  <!-- /.header-inner --> 
+</header>
+<!-- /.目錄 -->
+<div class="LokLine"></div>
+<div id="Bodyheight">
+  <div id="Lok_MainBody_Layer">
+    <div id="MemberAlbumHead">
+      <div id="MemberAlbum_BgDiv" class="AlbumBg" style="background-image: url(&#39;SGL_Images/Member_Bg.jpg&#39;);">
+        <div class="MemberAlbum_IsNull"></div>
+        <div class="AlbumDetails_Logo"><img src="./SGL_Images/Userlogo_Big.jpg" width="120"></div>
+        <div class="MemberAlbumDetails">
+          <div class="AlbumDetails_Subject">Eric Chong的相簿</div>
+          <div class="AlbumDetails_Name"></div>
+        </div>
+        <div class="MemberAlbumNavbar">
+          <ul class="NavbarLinks">
+            <li class="Lok-navitem3"><b><small class="TotleAlbumFont">(相簿:&nbsp;8&nbsp;&nbsp;&nbsp;相片:&nbsp;2,467&nbsp;&nbsp;&nbsp;瀏覽:&nbsp;1,569,190)</small></b></li>
+            <li class="Lok-navitem3">
+              <div id="progressBar" class="round-pink">
+                <div style="width: 1.35%;"> 容量[1024&nbsp;GB] 已使用<span class="barpercent">1.35%</span></div>
+              </div>
+            </li>
+            <li class="Lok-navitem3 Lok-LokShortURL">
+              <div>&nbsp;
+                <input class="shortentextbox" id="LokShortBox" readonly="readonly" type="text">
+              </div>
+            </li>
+          </ul>
+          <div class="AlbumDetails_info"> </div>
+        </div>
+      </div>
+      <div class="LokClearfloat"></div>
+    </div>
+    <div class="LokLayer_Three">
+      <div class="LokcontentInside">
+        <div class="LokLayer_Three_Body">
+          <div id="LokLayerThreeBody" class="PhotoBody">
+            <ul id="BodyListOne">
+              <div id="LokMain_Content_PhotoBodyUpPanel">
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=41988&amp;U=126654&amp;G=ce08b091-a73a-48ff-858f-7c20a489ddd5" target="_blank">
+                    <div id="LokAutoimg"><img src="./SGL_Images/AlbumPoster.jpg" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">Schedule Temp.</div>
+                      <div>攝手:Eric Chong</div>
+                      <div>日期:22/10/2019<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:7&nbsp;張<span class="LokFloatright">瀏覽2,072次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=35281&amp;U=126654&amp;G=3a284b7d-dc97-4e50-9b30-bdcdc7e4beaa" target="_blank">
+                    <div id="LokAutoimg"><img src="./SGL_Images/AlbumPoster(1).jpg" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">#ReasontoRun 活動詳情</div>
+                      <div>攝手:Eric Chong</div>
+                      <div>日期:21/03/2019<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:14&nbsp;張<span class="LokFloatright">瀏覽1,950次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=34434&amp;U=126654&amp;G=0d0aa291-03a6-4fcc-9065-ce84a129a56b" target="_blank">
+                    <div id="LokAutoimg"><img src="./SGL_Images/AlbumPoster(2).jpg" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2019-2-17 渣打香港馬拉松2019 (終點 07:30~10:00)</div>
+                      <div>攝手:Eric Chong</div>
+                      <div>日期:17/02/2019<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:320&nbsp;張<span class="LokFloatright">瀏覽1,113,851次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=33785&amp;U=126654&amp;G=ad803769-2a50-4461-9a26-31e92c2366ca" target="_blank">
+                    <div id="LokAutoimg"><img src="./SGL_Images/AlbumPoster(3).jpg" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">20190126 捷迅香港及華南區 27 週年暨春茗晚宴</div>
+                      <div>攝手:Eric Chong</div>
+                      <div>日期:27/01/2019<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">1</span></div>
+                      <div>相片:478&nbsp;張<span class="LokFloatright">瀏覽119,329次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=27633&amp;U=126654&amp;G=b5b59df7-d0df-4adf-8db7-d18e6f89fbe4" target="_blank">
+                    <div id="LokAutoimg"><img src="./SGL_Images/AlbumPoster(4).jpg" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">20180106 捷迅香港及華南區 26 週年暨春茗晚宴</div>
+                      <div>攝手:Eric Chong</div>
+                      <div>日期:08/01/2018<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:249&nbsp;張<span class="LokFloatright">瀏覽181,486次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=23785&amp;U=126654&amp;G=e2e4295d-04f6-49ba-ad08-e578e6de9755" target="_blank">
+                    <div id="LokAutoimg"><img src="./SGL_Images/AlbumPoster(5).jpg" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">20170218 捷迅香港及華南區 25 週年暨春茗晚宴</div>
+                      <div>攝手:Eric Chong</div>
+                      <div>日期:25/02/2017<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">3</span></div>
+                      <div>相片:315&nbsp;張<span class="LokFloatright">瀏覽45,861次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=21344&amp;U=126654&amp;G=dbd3f70e-cf20-4faf-a784-649502757e82" target="_blank">
+                    <div id="LokAutoimg"><img src="./SGL_Images/AlbumPoster(6).jpg" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">20161113 粉紅5公里慈善跑</div>
+                      <div>攝手:Eric Chong</div>
+                      <div>日期:13/11/2016<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:323&nbsp;張<span class="LokFloatright">瀏覽47,771次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=20920&amp;U=126654&amp;G=80ecfaa4-3a49-48d7-ac1f-1299fe8706ee" target="_blank">
+                    <div id="LokAutoimg"><img src="./SGL_Images/AlbumPoster(7).jpg" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">20161015 喜愛夜跑 Run Light Stand 2016</div>
+                      <div>攝手:Eric Chong</div>
+                      <div>日期:16/10/2016<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">7</span></div>
+                      <div>相片:761&nbsp;張<span class="LokFloatright">瀏覽56,870次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <input type="hidden" name="ctl00$LokMain_Content$HiddenPage" id="LokMain_Content_HiddenPage" value="1">
+                <input type="button" name="ctl00$LokMain_Content$RefreshButton" value="" onclick="javascript:__doPostBack(&#39;ctl00$LokMain_Content$RefreshButton&#39;,&#39;&#39;)" id="LokMain_Content_RefreshButton" style="display:none">
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div id="LokUnlimited" class="Unlimitedload"><img src="./SGL_Images/loading.gif" width="100" height="100"></div>
+      </div>
+      <div class="LokClearfloat"></div>
+    </div>
+    <div class="LokLayer_Four">
+      <div id="Level_Body_iOS">
+        <div id="iOSPageBar">
+          <div class="iOSTopBar_list">
+            <div class="iOSTop_list" id="LokBackToTop"><a><span class="arrow-top"></span></a> </div>
+          </div>
+          <div class="iOSBar_list">
+            <div class="iOSPage_list">
+              <div id="LokMain_Content_iOSPageUpPanel">
+                <div id="LokMain_Content_LinkButtonPanel"> <a id="LokMain_Content_LinkButtonFirst" tabindex="1" class="circlebtn" usesubmitbehavior="true" href="javascript:__doPostBack(&#39;ctl00$LokMain_Content$LinkButtonFirst&#39;,&#39;&#39;)"><span class="arrow-left3"></span><span class="arrow-left"></span></a> <a id="LokMain_Content_LinkButtonPrevPlus" tabindex="1" class="circlebtn" usesubmitbehavior="true" href="javascript:__doPostBack(&#39;ctl00$LokMain_Content$LinkButtonPrevPlus&#39;,&#39;&#39;)"><span class="arrow-left2"></span><span class="arrow-left2"></span></a> <a id="LokMain_Content_LinkButtonPrev" tabindex="1" class="circlebtn" usesubmitbehavior="true" href="javascript:__doPostBack(&#39;ctl00$LokMain_Content$LinkButtonPrev&#39;,&#39;&#39;)"><span class="arrow-left"></span></a> <a class="pagenumber circlebtn2" href="javascript:void(0);"><b> <span id="LokMain_Content_LinkDisplayLabel">Page 1 to 1</span></b></a> <a id="LokMain_Content_LinkButtonNext" tabindex="1" class="circlebtn" usesubmitbehavior="true" href="javascript:__doPostBack(&#39;ctl00$LokMain_Content$LinkButtonNext&#39;,&#39;&#39;)"><span class="arrow-right"></span></a> <a id="LokMain_Content_LinkButtonNextPlus" tabindex="1" class="circlebtn" usesubmitbehavior="true" href="javascript:__doPostBack(&#39;ctl00$LokMain_Content$LinkButtonNextPlus&#39;,&#39;&#39;)"><span class="arrow-right2"></span><span class="arrow-right2"></span></a> <a id="LokMain_Content_LinkButtonLast" tabindex="1" class="circlebtn" usesubmitbehavior="true" href="javascript:__doPostBack(&#39;ctl00$LokMain_Content$LinkButtonLast&#39;,&#39;&#39;)"><span class="arrow-right"></span><span class="arrow-right3"></span></a> <a onclick="return Fpage();" id="LokMain_Content_FlyButton" class="page-button circlebtn2" usesubmitbehavior="true" href="javascript:__doPostBack(&#39;ctl00$LokMain_Content$FlyButton&#39;,&#39;&#39;)">Go</a>
+                  <input name="ctl00$LokMain_Content$FlyPageBox" type="text" value="1" id="LokMain_Content_FlyPageBox" class="pagetextbox" onkeydown="LokKeyPressbyinput(event,2);">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input type="hidden" name="ctl00$LokMain_Content$HiddenOwnerUpc" id="LokMain_Content_HiddenOwnerUpc" value="126654b">
+      <input type="hidden" name="ctl00$LokMain_Content$HiddenAlbumTotal" id="LokMain_Content_HiddenAlbumTotal" value="8">
+    </div>
+    <div class="LokClearfloat"></div>
+  </div>
+  <div class="LokClearfloat"></div>
+</div>
+<p></p>
+<div class="LokClearfloat"></div>
+<div id="Lok_Footer">
+  <footer>
+    <div id="footerlinks"><span><a class="fancybox" href="https://www.soonnet.org/Photo/MyAlbum.aspx?U=126654&amp;L=s&amp;F=Manage&amp;Y=101&amp;G=#contactus">聯絡我們</a></span><span><a href="https://www.soonnet.org/About.aspx?A=US">關於我們</a></span><span><a href="https://www.soonnet.org/AD_Demo/Advertising.html">廣告查詢</a></span><span><a href="https://www.soonnet.org/About.aspx?A=service">服務條款</a></span><span><a href="https://www.soonnet.org/About.aspx?A=privacy">私隱條款</a></span><span><a href="https://www.soonnet.org/About.aspx?A=copyright">著作權條款</a></span></div>
+    <div class="footerContainer">
+      <div class="footerlogo"></div>
+      <div class="copyright">本網站部份資訊由用戶提供，如觸犯您的版權，<a href="mailto:info@soonnet.org">請與我們聯繫</a>。<br>
+        <span>Copyright©2020 尋寶網&nbsp;SOONNET.org. All Rights Reserved </span></div>
+      <div class="footerright">
+        <select id="Language_ZH">
+          <option value="0">中文(繁體)</option>
+          <option value="1">中文(简体)</option>
+        </select>
+        <div class="sns">
+          <ul class="clearfix">
+            <li class="facebook">
+              <iframe src="./SGL_Images/like.html" width="192" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="contactus" style="display: none;width:500px">
+    <h1>聯絡我們</h1>
+    <span>歡迎透過以下方式與尋寶網台灣或香港團隊聯絡</span>
+    <div class="contactlightdiv2"> <span class="advert">一般查詢</span>
+      <p><img src="./SGL_Images/tel.png" width="16">台灣區: 886-2-8792-9897 (分機806)</p>
+      <p class="tab">香港區: 852-2197-5506</p>
+      <p><img src="./SGL_Images/email.png" width="16"><a href="mailto:info@soonnet.org">info@soonnet.org</a></p>
+    </div>
+    <div class="contactlightdiv2"> <span class="somedia">商業合作</span>
+      <p><img src="./SGL_Images/tel.png" width="16">台灣區: 886-2-8792-9897 (分機806)</p>
+      <p class="tab">香港區: 852-2197-5566</p>
+      <p><img src="./SGL_Images/email.png" width="16"><a href="mailto:sales_tw@soonnet.org">sales_tw@soonnet.org</a></p>
+    </div>
+    <div class="contactlightdiv2"> <span class="somedia">社交媒體</span>
+      <p><img src="./SGL_Images/fb.png" alt="Facebook" name="Facebook" title="Facebook" width="16"> <a href="https://www.facebook.com/soonnet" target="_blank">www.facebook.com/soonnet</a></p>
+      <p><img src="./SGL_Images/weibo.png" alt="Line" name="Line" title="Line" width="16"> <a href="http://weibo.com/soonnet" target="_blank">weibo.com/soonnet</a></p>
+    </div>
+    <div class="contactlightqr1div">
+      <p><img src="./SGL_Images/weibo.png" width="15"> 微博 Weibo</p>
+      <p><img src="./SGL_Images/weiboqrcode.png" class="imgqrcode" alt=""></p>
+    </div>
+    <div class="contactlightqr3div">
+      <p><img src="./SGL_Images/wechat.png" width="15"> 微信 Wechat</p>
+      <p><img src="./SGL_Images/wechatqrcode.jpg" class="imgqrcode" alt=""></p>
+    </div>
+  </div>
+  <div class="LokClearfloat"></div>
+</div>
+<div id="LokMessageNotice" style="right: 0px; display: block;">
+  <ul>
+    <li>&nbsp;</li>
+    <li><a href="javascript:void(0);" id="YesIKnow" class="messageclose">&nbsp;</a></li>
+    <hr>
+    <li><a href="https://www.soonnet.org/Account/Account.aspx?W=MyMessage&amp;R=101" target="_blank" class="messagecontent"><span class="messageicon"><img src="./SGL_Images/message.png"></span>您有(<span id="LokNoticeinfo">1</span>)個新留言</a></li>
+    <li>&nbsp;</li>
+  </ul>
+</div>
+<script>$(document).ready(function() {AAeee('');});</script>
+</form>
+<script type="text/javascript">
+$(document).ready(function() {
+LokMemU=126654;Loknoticetimer.set({ time: 6000, autostart: true }); 
+        Loktwdcbm = true;
+    }); 
+</script>
+</body>
+</html>

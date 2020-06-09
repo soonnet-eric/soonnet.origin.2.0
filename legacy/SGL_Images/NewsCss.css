@@ -1,0 +1,486 @@
+#Lok_Left_Layer{
+	/*border: 1px solid #7a7a7a;*/
+	width:70%;
+	float:left;
+}
+
+#Lok_Right_Layer{
+	/*border: 1px solid #0F0;*/
+	width:29%;
+	float:right;
+}
+.MarathonInside{
+	width:auto;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top:10px;
+}
+#LeftTwocontainer {
+	padding:5px;
+}
+.ArticleBorder{
+
+	border-radius: 20px 20px 0 0;
+	width:760px;
+	padding: 10px; 
+	margin-top:10px;
+	margin-left:auto;
+	margin-right:auto;
+	box-shadow: inset 5px 5px 5px #AAAAAA;
+	border-right:#EEDDDD 1px solid;
+border-left:#EEDDDD 1px solid;
+border-top:#EEDDDD 1px solid;
+
+}
+.ThreeBodyLists {
+margin-top: 20px;
+}
+.opacLine {
+border-bottom: 1px inset rgba(255,255,255,0.00);
+}
+.ThreeBodyLists {
+margin-top: 20px;
+}
+.Font001 {
+color: #fff;
+float: left;
+font-size: 20px;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+background-color: #FB0;
+}
+.LevelTwoTitle {
+border-bottom: 3px inset #FB0;
+}
+
+
+
+
+/*---------------------------------------------------------------[Right]*/
+.LevelOneBody{
+	border: 1px solid #FB0;
+}
+.LevelOneBody ul{
+	padding-left:15px;
+	
+}
+.LevelOneBody  li{
+float:left;
+list-style-type: none; 
+display: list-item;
+text-align: -webkit-match-parent;
+margin-right:15px;
+margin-top:15px;
+}
+
+.TwoFont{
+	
+	font-size:18px;
+	color:#221814;
+}
+.TwoDateFont{
+	line-height:24px;
+	font-size:14px;
+	color:#888889;
+}
+
+.LevelTwoBody  li{
+	padding:10px;
+	border-bottom: 1px inset #F90;
+}
+
+.LevelThreeBody  li{
+	padding-bottom:5px;
+	padding-top:5px;
+}
+
+
+
+.LevelFourBody  li{
+	border-bottom: 1px inset #F90;
+	margin-top:10px;
+	margin-bottom:10px;
+	
+}
+.LevelFourPhoto{
+	float:left;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+.LevelFourName{
+	font-size:16px;
+	color:#888889;
+}
+.LevelFourDate{
+	font-size:12px;
+	color:#888889;
+	line-height:16px;
+}
+.LevelFourMessage{
+	color:#221814;
+	font-size:14px;
+}
+
+
+.rightleftcorncer{
+	font-size:12px;
+	float:right;
+	margin-top:-14px;
+}
+.tinyslidebox {
+width:808px;
+margin-left: auto;
+margin-right: auto;
+padding-bottom:5px;
+}
+.bigslidebox{
+-moz-box-shadow:    inset  0  0  20px   #fff;
+-o-box-shadow: inset  0 0  20px   #fff;
+   -webkit-box-shadow: inset  0 0  20px   #fff;
+   box-shadow:         inset  0 0   20px    #fff;
+background:url(../M_Images/runback.png) repeat-x, -webkit-linear-gradient(#fff, #F00, #600,   #FFF); /* For Safari 5.1 to 6.0 */
+  background:url(../M_Images/runback.png) repeat-x, -o-linear-gradient(#fff, #F00, #600,  #FFF); /* For Opera 11.1 to 12.0 */
+  background:url(../M_Images/runback.png) repeat-x, -moz-linear-gradient(#fff, #F00, #600,  #FFF); /* For Firefox 3.6 to 15 */
+  background:url(../M_Images/runback.png) repeat-x, linear-gradient(#fff, #F00, #600,  #FFF); /* Standard syntax */
+width:100%;
+}
+
+
+
+
+
+.ArticleTitleH1 {
+font-size: 36px;
+font-weight: 900;
+color: #060;
+padding-bottom:15px;
+}
+.topleftcorncer {
+font-size: 12px;
+float: left;
+}
+.toprightcorncer {
+font-size: 12px;
+float: right;
+
+}
+.smallbtn
+{
+ -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  border-radius: 28px;
+  font-family: "Noto Sans", "Microsoft JhengHei", "Arial Unicode MS", "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+  color: #666;
+  font-size: 12px;
+  text-decoration: none;
+  border:#ddd 1px solid;
+}
+#writerheader {
+	margin-top:10px;
+font-size: 15px;
+vertical-align:middle;
+background:#eee url(../N_Images/writer.png) no-repeat 0% center;
+background-size:25px;
+margin-bottom:15px;
+padding:5px;
+padding-left:32px;
+}
+
+.articleDate{
+	float:right;
+	font-size:12px;
+	font-weight:100;
+}
+ .whitebtn {
+  background-image: -webkit-linear-gradient(left, #ffffff, #eeeeee);
+  background-image: -moz-linear-gradient(left, #ffffff, #eeeeee);
+  background-image: -ms-linear-gradient(left, #ffffff, #eeeeee);
+  background-image: -o-linear-gradient(left, #ffffff, #eeeeee);
+  background-image: linear-gradient(left, #ffffff, #eeeeee);
+    padding: 0px 10px 0px 10px;
+ }
+  .conbtn {
+  background-image: -webkit-linear-gradient(left, #ffffff, #eeeeee);
+  background-image: -moz-linear-gradient(left, #ffffff, #eeeeee);
+  background-image: -ms-linear-gradient(left, #ffffff, #eeeeee);
+  background-image: -o-linear-gradient(left, #ffffff, #eeeeee);
+  background-image: linear-gradient(left, #ffffff, #eeeeee);
+    padding: 0px 5px 0px 12px;
+ }
+ 
+ #sharenav {
+list-style: none;
+float: right;
+position: relative;
+margin-top: -7px;
+}
+#sharenav li {
+float: right;
+margin-right: 2px;
+position: relative;
+display: block;
+color: #fff;
+text-decoration: none;
+}
+#LokPlusFav{
+padding-left:10px;
+}
+.LevelThreeBody li {
+padding-bottom: 5px;
+padding-top: 5px;
+}
+.sharebtn{
+	 	  background:url(../../SGL_Images/IconShare_black.png) no-repeat 15% 50%, -webkit-linear-gradient(left, #ffffff, #eeeeee);
+	  background:url(../../SGL_Images/IconShare_black.png) no-repeat 15% 50%, -moz-linear-gradient(left, #ffffff, #eeeeee);
+	  background:url(../../SGL_Images/IconShare_black.png) no-repeat 15% 50%, -ms-linear-gradient(left, #ffffff, #eeeeee);
+	background:url(../../SGL_Images/IconShare_black.png) no-repeat 15% 50%, -o-linear-gradient(left, #ffffff, #eeeeee);
+	background:url(../../SGL_Images/IconShare_black.png) no-repeat 15% 50%, linear-gradient(left, #ffffff, #eeeeee);
+  padding: 0px 10px 0px 20px;
+  }
+.ArticleLine {
+	padding-top:0px;	
+	padding-bottom:30px;
+border-bottom: 2px inset #CCC;
+}
+
+.icon-facebook-sign{
+}
+
+.icon-facebook-sign{
+}
+
+.icon-facebook-sign{
+}
+
+
+
+
+/*--- DROPDOWN ---*/
+#sharenav ul {
+	list-style: none;
+	position: absolute;
+	left: -9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+	bottom: 100%;
+}
+#sharenav ul li {
+	padding-top: 1px; /* Introducing a padding between the li and the a give the illusion spaced items */
+	float: none;
+	border-radius: 5px;
+	padding: 5px 5px 5px 5px;
+	background: -webkit-linear-gradient(left, #ffffff, #eeeeee);
+	background: -moz-linear-gradient(left, #ffffff, #eeeeee);
+	background: -ms-linear-gradient(left, #ffffff, #eeeeee);
+	background: -o-linear-gradient(left, #ffffff, #eeeeee);
+	background: linear-gradient(left, #ffffff, #eeeeee);
+	width: 150px;
+	margin-left: -50%;
+	text-align: center;
+	border: #ddd 1px solid;
+}
+#sharenav ul a {
+	white-space: nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+#sharenav li:hover ul { /* Display the dropdown on hover */
+	left: 0; /* Bring back on-screen when needed */
+}
+#sharenav li:hover a { /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+	margin-top: -1px;
+}
+#sharenav li:hover ul a { /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+	text-decoration: none;
+}
+.icon-facebook-sign {
+	width:28px;
+	height:28px;
+	background:url(../../SGL_Images/icon_facebook.png);
+	display:inline-block;
+}
+.icon-twitter {
+	width:28px;
+	height:28px;
+	background:url(../../SGL_Images/icon_twitter.png);
+	display:inline-block;
+
+}
+.icon-weibo {
+		width:28px;
+	height:28px;
+		background:url(../../SGL_Images/icon_weibo.png);
+	display:inline-block;
+
+}
+.icon-facebook-sign:hover {
+ -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+   opacity: 0.4;
+    filter: alpha(opacity=40);
+
+}
+.icon-twitter:hover {
+	 -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+	 opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+.icon-weibo:hover {
+	 -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+	 opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+#sharenav li:hover ul li a {
+}
+#sharenav li:hover ul li a:hover { /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+}
+
+
+
+.ArticleReplyBorder{
+	
+	width:760px;
+	padding: 10px; 
+	margin-top:-5px;
+	margin-left:auto;
+	margin-right:auto;
+	box-shadow: inset 5px -2px 5px #AAAAAA;
+	border-radius: 0 0 20px 20px ;
+	margin-bottom:20px;
+	border-right:#EEDDDD 1px solid;
+border-left:#EEDDDD 1px solid;
+border-bottom:#EEDDDD 1px solid;
+}
+.articleright {
+float: right;
+}
+.articlebtnpad {
+padding-right: 10px;
+margin-top:-2px;
+}
+
+.concorde {
+margin-top:-5px;
+}
+
+.concorde a {
+	font-size: 14px;
+	display: block;
+	position: relative;
+	text-decoration: none;
+	color: rgb(37,37,37);
+	text-align: center;
+	cursor:pointer;
+	padding-top:2px;
+	padding-bottom:1px;
+}
+.concorde a.off{
+position:relative;
+
+
+}
+
+.concorde a.off:before {
+ content:'❤ '; 
+}
+
+
+.concorde a.on {
+position:relative;
+}
+
+
+.concorde a.on:before {
+ content: "✖ unlike ";
+}
+
+
+.concorde  a:active:before,  .concorde a.on:before {
+	top: 5px;
+}
+
+
+
+#LokNavigationMenu{
+	height:40px;
+	background: #FB0;
+}
+
+.PageActivate {
+border-bottom-width: 5px;
+border-bottom-style: inset;
+border-bottom-color: #EC0;
+padding-bottom: 5px;
+}
+
+.IconFont{
+	position:relative;
+	font-size:18px;
+	font-weight:bold;
+	color:#ECO;
+	top:-2px;
+	margin-left:5px;
+}
+
+.MessageSubmit button{
+    height: 30px;
+    width: 80px;
+	cursor: pointer;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    background: #A90;
+    color: #FFF;
+    border: 0px none;
+    outline: 0px none;
+	float:right;
+	
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border-radius: 2px;
+}
+
+
+#artdivision div{
+padding-top:15px;
+padding-bottom:15px;
+}
+
+#artdivision ul{
+	margin-left:30px;
+	margin-top:-15px;
+}
+
+#artdivision ul li{
+	display:inline-block;
+	background:#fff;
+	color:#666;
+	padding:5px;
+	margin-left:5px;
+	margin-right:5px;
+	box-shadow:#ddd 2px 2px 5px;
+}
+
+#artdivision ul .selected{
+	background:#FB0;
+}
+.artleftspace{
+	 padding-right:30px;
+}
+.artremarkspace{
+	margin-left:10px;
+	margin-right:0px !important;
+}
+
+
+.OverBodyLists{
+width: 760px;
+overflow: hidden;
+text-overflow: ellipsis;
+word-wrap: break-word; 
+word-break: normal;
+line-height:30px;
+}

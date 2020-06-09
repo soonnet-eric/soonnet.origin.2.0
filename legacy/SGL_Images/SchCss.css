@@ -1,0 +1,1031 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+#Lok_Left_Layer{
+	/*border: 1px solid #7a7a7a;*/
+	width:70%;
+	float:left;
+}
+
+#Lok_Right_Layer{
+	/*border: 1px solid #0F0;*/
+	width:29%;
+	float:right;
+}
+.MarathonInside{
+	width:auto;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top:10px;
+}
+#LeftTwocontainer {
+	padding:5px;
+}
+.GameBorder{
+
+	border-radius: 20px 20px 0 0;
+	width:760px;
+	padding: 10px; 
+	margin-top:10px;
+	margin-left:auto;
+	margin-right:auto;
+	box-shadow: inset 5px 5px 5px #AAAAAA;
+	border-right:#EEDDDD 1px solid;
+border-left:#EEDDDD 1px solid;
+border-top:#EEDDDD 1px solid;
+
+}
+.ThreeBodyLists {
+margin-top: 20px;
+}
+
+.opacLine {
+border-bottom: 1px inset rgba(255,255,255,0.00);
+}
+
+.noLine {
+	 opacity: 0.0;
+    filter: alpha(opacity=0); /* For IE8 and earlier */
+}
+
+.ThreeBodyLists {
+margin-top: 20px;
+}
+.Font001 {
+color: #FFF;
+float: left;
+font-size: 20px;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+background-color: #0BC;
+}
+.LevelTwoTitle {
+border-bottom: 3px inset #0BC;
+}
+
+
+/*---------------------------------------------------------------[Right]*/
+.LevelOneBody{
+	border: 1px solid #0BC;
+}
+.LevelOneBody ul{
+	padding-left:15px;
+	
+}
+.LevelOneBody  li{
+float:left;
+list-style-type: none; 
+display: list-item;
+text-align: -webkit-match-parent;
+margin-right:15px;
+margin-top:15px;
+}
+
+.TwoFont{
+	
+	font-size:18px;
+	color:#221814;
+}
+.TwoDateFont{
+	line-height:24px;
+	font-size:14px;
+	color:#888889;
+}
+
+.LevelTwoBody  li{
+	padding:10px;
+	border-bottom: 1px inset #45;
+}
+
+.LevelThreeBody  li{
+	padding-bottom:5px;
+	padding-top:5px;
+}
+
+
+
+.LevelFourBody  li{
+	border-bottom: 1px inset #F90;
+	margin-top:10px;
+	margin-bottom:10px;
+	
+}
+.LevelFourPhoto{
+	float:left;
+	margin-right:10px;
+	margin-bottom:10px;
+}
+.LevelFourName{
+	font-size:16px;
+	color:#888889;
+}
+.LevelFourDate{
+	font-size:12px;
+	color:#888889;
+	line-height:16px;
+}
+.LevelFourMessage{
+	color:#221814;
+	font-size:14px;
+}
+
+
+.rightleftcorncer{
+	font-size:12px;
+	float:right;
+	margin-top:-14px;
+}
+.tinyslidebox {
+width:808px;
+margin-left: auto;
+margin-right: auto;
+padding-bottom:5px;
+}
+.bigslidebox{
+-moz-box-shadow:    inset  0  0  20px   #fff;
+-o-box-shadow: inset  0 0  20px   #fff;
+   -webkit-box-shadow: inset  0 0  20px   #fff;
+   box-shadow:         inset  0 0   20px    #fff;
+background:url(../M_Images/runback.png) repeat-x, -webkit-linear-gradient(#fff, #F00, #600,   #FFF); /* For Safari 5.1 to 6.0 */
+  background:url(../M_Images/runback.png) repeat-x, -o-linear-gradient(#fff, #F00, #600,  #FFF); /* For Opera 11.1 to 12.0 */
+  background:url(../M_Images/runback.png) repeat-x, -moz-linear-gradient(#fff, #F00, #600,  #FFF); /* For Firefox 3.6 to 15 */
+  background:url(../M_Images/runback.png) repeat-x, linear-gradient(#fff, #F00, #600,  #FFF); /* Standard syntax */
+width:100%;
+}
+
+
+
+
+
+
+
+.GameTitleH1 {
+font-size: 36px;
+font-weight: 900;
+color: #0BC;
+}
+
+.topleftcorncer {
+font-size: 12px;
+float: left;
+}
+
+/* edited start*/
+.toprightcorncer {
+font-size: 12px;
+float: right;
+margin-top: -4px;
+}
+/* edited end*/
+.smallbtn
+{
+ -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  border-radius: 28px;
+  font-family: "Noto Sans", "Microsoft JhengHei", "Arial Unicode MS", "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+  color: #666;
+  font-size: 12px;
+
+  text-decoration: none;
+  border:#ddd 1px solid;
+  margin-right:10px;
+
+}
+
+ .whitebtn {
+  background-image: -webkit-linear-gradient(left, #ffffff, #eeeeee);
+  background-image: -moz-linear-gradient(left, #ffffff, #eeeeee);
+  background-image: -ms-linear-gradient(left, #ffffff, #eeeeee);
+  background-image: -o-linear-gradient(left, #ffffff, #eeeeee);
+  background-image: linear-gradient(left, #ffffff, #eeeeee);
+    padding: 0px 10px 0px 10px;
+ }
+ #sharenav {
+list-style: none;
+float: right;
+position: relative;
+margin-top: -5px;
+}
+#sharenav li {
+float: right;
+margin-right: 2px;
+position: relative;
+display: block;
+color: #fff;
+text-decoration: none;
+}
+.LevelThreeBody li {
+padding-bottom: 5px;
+padding-top: 5px;
+}
+/*edited start*/
+.sharebtn{
+	 	  background:url(../../SGL_Images/IconShare_black.png) no-repeat 15% 50%, -webkit-linear-gradient(left, #ffffff, #eeeeee);
+	  background:url(../../SGL_Images/IconShare_black.png) no-repeat 15% 50%, -moz-linear-gradient(left, #ffffff, #eeeeee);
+	  background:url(../../SGL_Images/IconShare_black.png) no-repeat 15% 50%, -ms-linear-gradient(left, #ffffff, #eeeeee);
+	background:url(../../SGL_Images/IconShare_black.png) no-repeat 15% 50%, -o-linear-gradient(left, #ffffff, #eeeeee);
+	background:url(../../SGL_Images/IconShare_black.png) no-repeat 15% 50%, linear-gradient(left, #ffffff, #eeeeee);
+  padding: 0px 10px 0px 20px;
+  }
+  /*edited end*/
+.GameLine {
+margin-top: 15px;
+margin-bottom: 15px;
+border-bottom: 2px inset #CCC;
+}
+
+
+
+
+/*--- DROPDOWN ---*/
+#sharenav ul {
+	list-style: none;
+	position: absolute;
+	left: -9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+	bottom: 100%;
+}
+#sharenav ul li {
+	padding-top: 1px; /* Introducing a padding between the li and the a give the illusion spaced items */
+	float: none;
+	border-radius: 5px;
+	padding: 5px 5px 5px 5px;
+	background: -webkit-linear-gradient(left, #ffffff, #eeeeee);
+	background: -moz-linear-gradient(left, #ffffff, #eeeeee);
+	background: -ms-linear-gradient(left, #ffffff, #eeeeee);
+	background: -o-linear-gradient(left, #ffffff, #eeeeee);
+	background: linear-gradient(left, #ffffff, #eeeeee);
+	width: 100%;
+	margin-left: -50%;
+	text-align: center;
+	border: #ddd 1px solid;
+}
+#sharenav ul a {
+	white-space: nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+#sharenav li:hover ul { /* Display the dropdown on hover */
+	left: 0; /* Bring back on-screen when needed */
+}
+#sharenav li:hover a { /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+	margin-top: -1px;
+}
+#sharenav li:hover ul a { /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+	text-decoration: none;
+}
+
+/*edited stand*/
+.icon-facebook-sign {
+	width:28px;
+	height:28px;
+	background:url(../../SGL_Images/icon_facebook.png);
+	display:inline-block;
+}
+.icon-twitter {
+	width:28px;
+	height:28px;
+	background:url(../../SGL_Images/icon_twitter.png);
+	display:inline-block;
+
+}
+.icon-weibo {
+		width:28px;
+	height:28px;
+		background:url(../../SGL_Images/icon_weibo.png);
+	display:inline-block;
+
+}
+/*edited ended*/
+.icon-facebook-sign:hover {
+ -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+   opacity: 0.4;
+    filter: alpha(opacity=40);
+
+}
+.icon-twitter:hover {
+	 -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+	 opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+.icon-weibo:hover {
+	 -webkit-filter: sepia(100%);
+  filter: sepia(100%);
+	 opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+#sharenav li:hover ul li a {
+}
+#sharenav li:hover ul li a:hover { /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+}
+
+
+
+.GameReplyBorder{
+	width:760px;
+	padding: 10px; 
+	margin-top:-5px;
+	margin-left:auto;
+	margin-right:auto;
+	box-shadow: inset 5px -2px 5px #AAAAAA;
+	border-radius: 0 0 20px 20px ;
+	margin-bottom:20px;
+	border-right:#EEDDDD 1px solid;
+border-left:#EEDDDD 1px solid;
+border-bottom:#EEDDDD 1px solid;
+}
+
+.GameRateITBorder button{
+	display: none;
+}
+
+
+#LokNavigationMenu{
+	height:40px;
+	background: #0BC;
+}
+
+.Gameright{
+	float:right;
+	}
+.Gamebtnpad{
+	padding-left:10px;
+	padding-right:10px;
+}
+
+.Gamephoto{
+width:90%;
+height:auto
+}
+
+
+.Gamedetailrow{
+width:100%;
+display:block;
+
+clear:both;
+padding-top:5px;
+padding-left:20px;
+line-height:20px;
+padding-top:10px;
+padding-bottom:10px;
+}
+
+.Gamesubtitle {
+color: #FFF;
+float: left;
+font-size: 15px;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+background-color: #0AB;
+}
+
+.Gamesentence {
+color:#666;
+display:inline-block;
+font-size: 15px;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
+.Gameintro {
+color:#666;
+display:inline-block;
+font-size: 15px;
+padding-left: 10px;
+padding-right: 20px;
+padding-top: 2px;
+padding-bottom: 5px;
+width:80%;
+}
+
+/*---20150421 Added and Modified---*/
+
+.GameGo {
+	display:inline-block;
+padding:5px 5px 5px 5px;
+border-radius:20px;
+box-shadow: inset 1px -2px 7px #999;
+background-color:#0BC;
+color:#fff;
+}
+
+.GameGo:before {
+content:"按此前往 ▶";
+
+}
+
+.GameDown {
+		display:inline-block;
+	margin-left:-12px;
+padding:5px 5px 5px 5px;
+border-radius:20px;
+box-shadow: inset 1px -2px 7px #999;
+background-color:#0BC;
+color:#fff;
+}
+
+.GameDown:before {
+content:"按此下載 ▼";
+}
+
+.GameUpoloadPhotoBox:before{
+content:"提供/上載賽事照片";
+font-size:36px;
+color:#666;
+
+ }
+
+.GameUpoloadPhotoBox{
+background-color:#EEE;
+padding: 5% 28%;
+border:#DDD 1px solid;
+margin-top:10px;
+}
+
+.GameSearchBar{
+	background-color:#EEE;
+	height:40px;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+border:#DDD 1px solid;
+margin-top:10px;
+border-radius:20px;
+
+}
+
+/*--20150421 Added---*/
+
+.GameSearchDatepart{
+	display:inline-block;
+	padding-top:10px;
+	padding-left:30px;
+width:22%;
+white-space:nowrap;
+margin-left:20px;
+
+}
+
+/*--20150421 Added---*/
+/*--20150421 Modified---*/
+
+.GameSearchpart{
+	display:inline-block;
+	padding-top:10px;
+	padding-left:30px;
+width:15%;
+white-space:nowrap;
+margin-left:20px;
+
+}
+
+
+/*--20150421 Modified---*/
+
+.GameSearchIcon{
+	/*background-color:#EEE;*/
+	height:80px;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-bottom:10px;
+	padding:0px;
+	padding-bottom:20px;
+border:#DDD 1px solid;
+margin-top:10px;
+border-radius:20px;
+
+}
+
+/*--20150421 Modified---*/
+
+.catitem{
+border-radius:20px;
+box-shadow:inset 1px -2px 5px #ddd, 2px 2px 2px #ccc;
+padding:3px 16px 3px 16px;
+background:#F9F9F9;
+white-space:nowrap;
+font-size:13px;
+}
+
+ 
+
+
+.schtablecontainer{
+width:93%;
+margin-left:auto;
+margin-right:auto;
+}
+
+.status01:before {
+ white-space: nowrap;
+ content: "未 開 始 ☷";
+ background: #FC0;
+ font-size: 12px;
+ color: #600;
+ border-radius: 20px;
+ padding: 4px;
+ padding-left: 8px;
+ padding-right: 8px;
+
+ box-shadow: inset 1px 1px 10px #CCC;
+ text-shadow: 1px 1px 8px #999;
+
+}
+.status02:before {
+ white-space: nowrap;
+ content: "賽事取消✖";
+ background: #900;
+ font-size: 12px;
+ color: #fff;
+ border-radius: 20px;
+ padding: 4px;
+ padding-left: 8px;
+ padding-right: 8px;
+ box-shadow: inset 1px 1px 5px #f00;
+ text-shadow: 1px 1px 10px #030;
+
+}
+.status03:before {
+ white-space: nowrap;
+ content: "開始報名☶";
+ background: #F60;
+ font-size: 12px;
+
+ color: #fff;
+ border-radius: 20px;
+ padding: 4px;
+ padding-left: 8px;
+ padding-right: 8px;
+ box-shadow: inset 1px 1px 5px #eee;
+ text-shadow: 1px 1px 10px #030;
+
+}
+.status04:before {
+ white-space: nowrap;
+ content: "結束報名☲";
+ background: #6A0;
+ font-size: 12px;
+ color: #fff;
+ border-radius: 20px;
+ padding: 4px;
+ padding-left: 8px;
+ padding-right: 8px;
+ box-shadow: inset 1px 1px 5px #eee;
+ text-shadow: 1px 1px 10px #0A0;
+
+
+ 
+}
+.status05:before {
+ white-space: nowrap;
+ content: "賽事完結☰";
+ background: #066;
+ font-size: 12px;
+ color: #fff;
+ border-radius: 20px;
+ padding: 4px;
+ padding-left: 8px;
+ padding-right: 8px;
+ box-shadow: inset 1px 1px 5px #eee;
+ text-shadow: 1px 1px 10px #330;
+  
+}
+
+#LokGameSch{
+position:relative;	
+width:93%;
+margin-left:auto;
+margin-right:auto;
+}
+
+#LokGameSch ul{
+	display:inline-table;
+	width:100%;
+	height:auto;
+}
+#LokGameSch li{
+float:left;
+padding-left:10px;
+padding-right:10px;
+font-size:16px;
+line-height:28px;
+}
+
+#LokGameSch a{color:#008896; font-weight: bold;}
+
+
+#LokGameSchTitle{
+position:relative;	
+width:93%;
+margin-left:auto;
+margin-right:auto;
+}
+
+#LokGameSchTitle ul{
+	display:inline-table;
+	width:100%;
+	height:auto;
+	background-color:#DDD;
+	color:#334;
+	text-align:center;
+	border-bottom:2px solid #ddd;
+}
+#LokGameSchTitle li{
+	float:left;
+	padding-top:10px;
+	padding-left:10px;
+	padding-right:10px;
+	font-size:16px;
+	padding-bottom:10px;
+}
+
+
+.GameCatCell{
+	margin-left:3.5%;
+	width:8%;
+	-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+overflow: hidden;
+text-align:center;
+}
+
+.GameNameCell{
+	width:30%;
+	white-space:nowrap;
+	-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+overflow: hidden;
+}
+
+.GameDateCell{
+	width:8%;
+	white-space:nowrap;
+	-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+overflow: hidden;
+text-align:center;
+}
+.GameLocCell{
+	width:18.5%;
+	white-space:nowrap;
+	-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+overflow: hidden;
+
+}
+.GameHostCell{
+	width:18.5%;
+	white-space:nowrap;
+	-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+overflow: hidden;
+}
+.GameStaCell{
+	width:4.5%;
+	text-align:center;
+}
+.PinkMonthCell{
+background:#0BC;
+color:#fff;
+padding:6px;
+font-size:18px;
+width:43px;
+position:absolute;
+left:0px;
+right:10px; 
+}
+
+.schclear{
+width:100%;
+height:20px;
+display:block;
+}
+
+.LevelMarkBody {
+	border-left:#ccc 1px solid;
+	border-right:#ccc 1px solid;
+	border-bottom:#ccc 1px solid;
+	border-radius: 0 0 20px 20px;
+	margin-bottom:10px;
+	padding:30px;
+	padding-bottom:50px;
+}
+
+
+
+
+/*------------------------------RateIT----------------------------*/
+.rateit {
+    display: -moz-inline-box;
+    display: inline-block;
+    position: relative;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.rateit .rateit-range
+{
+    position: relative;
+    display: -moz-inline-box;
+    display: inline-block;
+    background: url(star.gif);
+    height: 16px;
+    outline: none;
+}
+
+.rateit .rateit-range * {
+    display:block;
+}
+
+/* for IE 6 */
+* html .rateit, * html .rateit .rateit-range
+{
+    display: inline;
+}
+
+/* for IE 7 */
+* + html .rateit, * + html .rateit .rateit-range
+{
+    display: inline;
+}
+
+.rateit .rateit-hover, .rateit .rateit-selected
+{
+    position: absolute;
+    left: 0px;
+}
+
+.rateit .rateit-hover-rtl, .rateit .rateit-selected-rtl
+{
+    left: auto;
+    right: 0px;
+}
+
+.rateit .rateit-hover
+{
+    background: url(star.gif) left -32px;
+}
+
+.rateit .rateit-hover-rtl
+{
+    background-position: right -32px;
+}
+
+.rateit .rateit-selected
+{
+    background: url(star.gif) left -16px;
+}
+
+.rateit .rateit-selected-rtl
+{
+    background-position: right -16px;
+}
+
+.rateit .rateit-preset
+{
+    background: url(star.gif) left -48px;
+}
+
+.rateit .rateit-preset-rtl
+{
+    background: url(star.gif) left -48px;
+}
+
+.rateit button.rateit-reset
+{
+    /*background: url(delete.gif) 0 0;*/
+    width: 16px;
+    height: 16px;
+    display: -moz-inline-box;
+    display: inline-block;
+    float: left;
+    outline: none;
+    border:none;
+    padding: 0;
+}
+
+.rateit button.rateit-reset:hover, .rateit button.rateit-reset:focus
+{
+    background-position: 0 -16px;
+}
+
+
+
+
+
+div.svg div.rateit-range {
+   background: url(star-normal.svg); 
+}
+
+div.svg div.rateit-hover {
+
+  background: url(star-hover.svg); 
+}
+
+div.svg div.rateit-selected {
+
+  background: url(star-selected.svg); 
+}
+
+div.svg div.rateit-preset {
+
+  background: url(star-preset.svg); 
+}
+
+span.svg span.rateit-range {
+   background: url(star-normal.svg); 
+}
+
+span.svg span.rateit-hover {
+
+  background: url(star-hover.svg); 
+}
+
+span.svg span.rateit-selected {
+
+  background: url(star-selected.svg); 
+}
+
+span.svg span.rateit-preset {
+
+  background: url(star-preset.svg); 
+}
+
+.gamescore_item {    
+    width: calc(100%/3);
+    display: inline-block;
+    float: left;
+	margin-bottom: 12px;
+
+}
+.gamescore_name {    
+box-shadow: -2px -2px 5px #cce inset;
+    float: left;
+    font-size: 16px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: center;
+    width: 36%;
+	
+}
+.gamescore_result{
+	 float: left;
+	 padding:0 10% 0 10%;
+}
+
+
+input, button{
+ font-family:"微軟正黑體", "Microsoft JhengHei";
+}
+
+
+.GameRateITBorder{
+	padding:10px;
+	border-bottom: 1px dotted #d3d3d3;
+}
+.GameRateITList{
+	margin-left:5px;
+	margin-top:10px;
+	margin-bottom:10px;
+	border: 1px dotted #d3d3d3;
+	border-radius: 5px;
+}
+
+.RateITButton {
+height: 30px;
+width: 120px;
+cursor: pointer;
+display: block;
+color: rgb(255, 255, 255);
+text-decoration: none;
+text-align: center;
+font-size: 18px;
+text-transform: uppercase;
+background: #7e318e;
+color: #FFF;
+border: 0px none;
+outline: 0px none;
+float: right;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border-radius: 2px;
+margin-right:10px;
+}
+
+/*---20150421 Added--*/
+.schbigbutton{
+width:60px;
+height:60px;
+margin-left:5px;
+margin-right:5px;
+border-radius:10px;
+display:inline-block;
+box-shadow:#aaa -2px -2px 10px inset;
+cursor:pointer;
+}
+
+.schbigbuttontitle{
+width:60px;
+height:30px;
+margin-top:-5px;
+margin-left:5px;
+margin-right:5px;
+border-radius:10px;
+display:inline-block;
+vertical-align:top;
+}
+
+.schbigbuttontitle s{
+	text-decoration:none;
+}
+
+.marathonbtn{
+	background:url(../../SGL_Images/sch_marathon.png) no-repeat center center;
+
+}
+
+.duathlonbtn{
+	background:url(../../SGL_Images/sch_duathlon.png) no-repeat center center;
+
+}
+
+.triathlonbtn{
+	background:url(../../SGL_Images/sch_triathlon.png) no-repeat center center;
+
+}
+
+.bicyclebtn{
+	background:url(../../SGL_Images/sch_bicycle.png) no-repeat center center;
+
+}
+
+.weightliftbtn{
+	background:url(../../SGL_Images/sch_weightlifting.png) no-repeat center center;
+
+}
+
+
+
+
+@media screen and (max-width: 1500px){
+.GameNameCell{
+	width:33%;
+
+}
+
+.GameDateCell{
+	width:9%;
+
+}
+.GameLocCell{
+	width:15%;
+
+}
+.GameHostCell{
+	width:14%;
+
+}
+
+.GameStaCell{
+	position:absolute;
+	right:30px;
+	text-align:center;
+}
+
+.status01, .status02, .status03, .status04, .status05{
+position:absolute;
+left:0;
+}
+
+
+
+
+
+}
+
+@media screen and (max-width: 1300px){
+
+.GameLocCell{
+	width:14%;
+
+}
+.GameHostCell{
+	width:14%;
+
+}
+
+
+}
+/*---20150421 Added--*/

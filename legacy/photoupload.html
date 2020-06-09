@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<!-- saved from url=(0056)http://www.soonnet.org/Photo/PhotoUpload.aspx?W=IsCreate -->
+<html lang="zh-HK" xmlns="http://www.w3.org/1999/xhtml" class="">
+<head id="Baseheader">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="og:description" content="soonnet.org">
+<title> 尋寶網 - 圖片上載 </title>
+<link href="./SGL_Images/GlobalStyle.css" rel="stylesheet" type="text/css">
+<link href="http://www.soonnet.org/SGL_Images/SGL_Favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="./SGL_Images/jquery.fancybox.css" media="screen">
+<script src="./SGL_Images/jquery-2.1.4.min.js" type="text/javascript"></script> 
+<script src="./SGL_Images/jquery-migrate-1.2.1.min.js" type="text/javascript"></script> 
+<script src="./SGL_Images/jquery.timer.js" type="text/javascript"></script> 
+<script src="./SGL_Images/GlobalJS.js" type="text/javascript"></script> 
+
+<!-- Update (2020) -->
+<link href="./SGL_Images/main_2020.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./SGL_Images/font-awesome/all.min.css">
+<script src="./SGL_Images/main_2020.js"></script> 
+<script type="text/javascript" src="./SGL_Images/jquery.fancybox.js"></script> 
+<script type="text/javascript">HomeLanguage='HK';</script> 
+<script type="text/javascript">
+$(document).ready(function () {popoad();
+    $('#ShowPanel').live('click', function () {
+		$('#LoginBox').css({ display: 'block' });
+	});
+	$('#LoginNow').live('click',function(){
+		$('#ShowPanel').css('display', 'none');
+		$('#IsLogged').fadeIn();	
+		$('#LoginBox').fadeOut();
+	});
+	$('body').click(function (){if(!lboarea){
+		$('#LoginBox').fadeOut();}
+	});$('.fancybox').fancybox();
+	
+// for event-tw-2019-popup banner 
+$('#YesIKnow2').click(function () {$('#event-tw-2019-popup').animate({ 'right': '-300px' }, 500, function () {$(this).css({ display: "none" });SetHoursCookie('LokNotice', false);});});
+});
+</script>
+<link href="./SGL_Images/PhotoCss.css" rel="stylesheet" type="text/css">
+<link href="./SGL_Images/jquery-ui.css" rel="stylesheet" type="text/css">
+<link href="./SGL_Images/buttonbase.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./SGL_Images/mootools-core.js"></script> 
+<script type="text/javascript" src="./SGL_Images/mediabox.js"></script> 
+<script src="./SGL_Images/PhotoScript.js" type="text/javascript"></script> 
+<script src="./SGL_Images/numeral.min.js" type="text/javascript"></script> 
+<script src="./SGL_Images/jquery-ui.min.js" type="text/javascript"></script>
+<style type="text/css">
+body {
+    background: #000;
+}
+#Lok_MainBody_Layer {
+    background: #000;
+}
+.LoadPanel {
+    border: 1px solid #e9e9e9;
+    background: url(/Photo/P_Images/Waiting_xx16.gif) no-repeat center center scroll;
+    width: 175px;
+    height: 175px;
+}
+.LoadPanel_Begin {
+    border: 1px solid #fff99c;
+    background: url(/Photo/P_Images/Waiting_xx16.gif) no-repeat center center scroll;
+    width: 175px;
+    height: 175px;
+}
+.soonbasicDate {
+    background: #cc99cc url(/Photo/P_Images/date.png) no-repeat right center;
+}
+#IsCancel {
+    cursor: pointer;
+}
+#mbOverlay {
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    cursor: pointer;
+}
+#mbOverlay.mbOverlayFF {
+    background: transparent url(80.png) repeat;
+}
+#mbOverlay.mbOverlayIE {
+    position: absolute;
+}
+#mbCenter {
+    height: 557px;
+    position: absolute;
+    z-index: 9999;
+    left: 50%;
+    background-color: #fff;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.70);
+    -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.70);
+}
+#mbCenter.mbLoading {
+    background: #fff url(P_Images/WhiteLoading.gif) no-repeat center;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+#mbImage {
+    left: 0;
+    top: 0;
+    font-family: Myriad, Verdana, Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+    text-align: left;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+#mbImage a, #mbImage a:link, #mbImage a:visited {
+    color: #ddd;
+}
+#mbImage a:hover, #mbImage a:active {
+    color: #fff;
+}
+#mbBottom {
+    min-height: 20px;
+    font-family: Myriad, Verdana, Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    font-size: 12px;
+    color: #999;
+    text-align: left;
+    padding: 0 10px 10px;
+}
+#mbTitle {
+    display: none;
+    color: #999;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 12px;
+}
+#mbNumber {
+    display: none;
+    color: #C00;
+    line-height: 26px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-align: center;
+    width: 65px;
+    height: 26px;
+}
+#mbCaption {
+    display: none;
+    color: #999;
+    line-height: 14px;
+    font-size: 10px;
+}
+#mbPrevLink, #mbNextLink, #mbCloseLink {
+    display: block;
+    float: right;
+    height: 20px;
+    margin: 0;
+    outline: none;
+}
+#mbPrevLink {
+    display: none;
+    width: 32px;
+    height: 100px;
+    background: transparent url(P_Images/CustomBlackPrevious.gif) no-repeat center;
+    position: absolute;
+    top: 38%;
+    left: -32px;
+}
+#mbNextLink {
+    display: none;
+    width: 32px;
+    height: 100px;
+    background: transparent url(P_Images/CustomBlackNext.gif) no-repeat center;
+    position: absolute;
+    top: 38%;
+    right: -32px;
+}
+#mbCloseLink {
+    width: 24px;
+    background: transparent url(P_Images/CustomBlackClose.gif) no-repeat center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#mbError {
+    position: relative;
+    font-family: Myriad, Verdana, Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    border: 10px solid #700;
+    padding: 10px 10px 10px;
+    margin: 20px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+#mbError a, #mbError a:link, #mbError a:visited, #mbError a:hover, #mbError a:active {
+    color: #d00;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.layout_default {
+    float: left;
+    margin: 5px
+}
+.mod_gallerylist {
+    width: 665px;
+    margin: 0 auto
+}
+.meta {
+    font-size: 12px;
+    text-align: center;
+}
+.image_container img {
+    border: 1px solid #CCC;
+    padding: 2px
+}
+.meta a {
+    color: #333;
+    text-decoration: none
+}
+.ProgressZero {
+    width: 100%;
+    background: url(/SGL_Images/uparrow.gif) no-repeat center center;
+    height: 100%;
+    position: absolute;
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    bottom: 0px;
+}
+.nowraper {
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 10%;
+}
+.nowrapbutton {
+    white-space: nowrap;
+    padding-left: 43%;
+}
+.nowrapwaitingerror {
+    width: 300px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 900;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    white-space: nowrap;
+}
+
+@media screen and (min-width:1300px) {
+.nowrapbutton {
+    white-space: nowrap;
+    padding-left: 46%;
+}
+}
+</style>
+<script type="text/javascript">
+var LokChangeevent=null,LokposterChangeevent=null,LokOoutt=false;
+window.onload = function () {window.onbeforeunload = function(e) {if(LokOoutt) {return;}return Ooutt;}
+		$('#LokinputFiles').bind('change', LokChangeevent);		
+		$('#LokPosterFileBox').bind('change', LokposterChangeevent);
+		LokChangeevent = function(event) {LokapiFiles=event.target.files;LokCheckinputFile();};
+		LokOoout = function(event) {return Ooutt;}
+		LokposterChangeevent = function(event) {
+				if (event.target.files.length <= 0){return;}
+				var Y4K=null;
+				var file = event.target.files[0];
+				var FFname=file.name;
+				var fd = new FormData();
+				var extStart=FFname.lastIndexOf(".");
+				var ext= FFname.substring(extStart,FFname.length).toUpperCase();
+				if(ext!=".PNG"&& ext!=".JPG"&& ext!=".JPEG"){alert('[' + FFname + ']  不是有效的圖像格式[Png,Jpeg,Jpg]');return;}
+				Y4K=GetCookie('YLocation');if (Y4K ==null){console.log('IsPoster:' + Y4K);return;	}fd.append("LokFile", file);
+				$('#LokOverlay').fadeIn('fast');
+				$.ajax({url: '/LokARX.cc?L='+Y4K +'&W=IsPoster',data: fd,cache: false,mimeType:"multipart/form-data",contentType: false,processData:false,type: 'POST',
+			success: function(data){
+				if (!data.startsWith("LokReadyDone")){$('#LokOverlay').fadeOut('fast');alert('Poster Error:' + data);}
+				else{
+						if (data.indexOf('|') != -1) {var PercentD = data.split('|');
+							$('#LamFrame').attr("src","/Web_Data/PhotoSupport.aspx?W=Isposter&U="+$('#LokMain_Content_LokDataUuiBox').val()+"&G="+$('#LokMain_Content_GUITBox').val()+"&F=" + PercentD[1]);
+							$('#CutPoster_Layer').css({ display: 'block' });
+						}else{$('#LokOverlay').fadeOut('fast');alert('Poster CB Error:' + data);}
+					}
+			},
+			error: function(jqXHR, textStatus, errorThrown){$('#LokOverlay').fadeOut('fast');alert('Poster Error:TimeOut.!');}
+		});console.log('name:' + event.target.files[0].name + '==' + Y4K);
+		};		
+		$('#CallUploadBox').live('click',function(){
+			$('#CallWebFace').attr("disabled", false);
+			$('#fileContainer').css({display:'none'});
+			LokDragdiv.innerHTML = PPCH;
+			$('#CancelJoin').css({ display: 'block' });
+			LokCancel=false;
+			$('#Selectfile_Layer').css({ display: 'block' }).fadeIn();
+		});
+		$('#CallFileBox').live('click',function(){
+			CleanupUI();
+		  $('#LokinputFiles').click();
+        });
+		$('#CallCacheButton').live('click', function () {
+			$('#LokMain_Content_UseCCButton').click();
+			$('#UploadBody_Layer').fadeIn(); 	
+			$('#Selectfile_Layer').fadeOut();
+			$('#LokMain_Content_CachePanel').fadeOut();
+				
+		});
+		$('#DELCacheButton').live('click', function () {
+			$('#LokMain_Content_DelCCButton').click();
+			$('#LokMain_Content_CachePanel').fadeOut();
+		});
+		$('#CallDelBox').live('click',function(){
+			if (confirm('確定要移除所有相片?')) {
+				$('#LokMain_Content_DelButton').click();
+			}
+		});
+		$('#CancelJoin').live('click',function(){
+				$('#UploadBody_Layer').fadeIn(); 	
+				$('#Selectfile_Layer').fadeOut();
+		});
+		$('#BoxClosed').live('click',function(){
+			  $('#CutPoster_Layer').fadeOut('fast', function () {
+					$('#LamFrame').attr("src","about:blank");
+					$('#LokOverlay').fadeOut('fast');
+			  });
+		});
+		$('#QueryBox li').live('click',function(){
+			var vt=$(this).attr('LokQ');
+				$('#LokMain_Content_LokQueryIMGkey').val(vt);
+				$('#LokMain_Content_RefreshButton').click();
+		});
+		$('#ConfirmButton').live('click',function(){
+			if (!LokCheckBox()){return;}
+
+			 
+			$('#LokinputFiles').each(function(){
+				$(this).after($(this).clone(true).val('')).remove();
+			});
+			$('#FixFileTotals').text(0);
+			$(this).attr("disabled", true);LokOoutt=true;
+			$('#LokMain_Content_CreateButton').click();
+		});
+		$('#EdittButton').live('click',function(){if (!LokCheckBox()){return;}
+
+			LokapiFiles=null;
+			$('#LokinputFiles').each(function(){
+				$(this).after($(this).clone(true).val('')).remove();
+			});
+			$('#FixFileTotals').text(0);
+			$('#Loksubmit').css({display:'none'});
+			LokOoutt=true;
+			$('#LokMain_Content_EditButton').click();
+		});
+		$('#CallWebFace').live('click',function(){});
+		$('#IsCancel').live('click',function(){if (LokCancel){return;}console.log('Canceling...');LokCancel=true;$('.ProgressFour').text('Canceling...');$('#OperationName').text('Canceling...');});
+        $('#CallEdirPosterBox').live('click',function(){
+				$('#LokPosterFileBox').unbind('change', LokposterChangeevent);
+				$('#LokPosterFileBox').each(function(){$(this).after($(this).clone(true).val('').bind('change', LokposterChangeevent)).remove();});
+				$("#LokPosterFileBox").click();
+        });
+		Lokuptimer = $.timer(function() {
+		  Lokcount++;$('#HasConsumeTime').html(s2t(Lokcount));
+		});Lokuptimer.set({time:1000});
+		
+		$('#CallNext').live('click',function(){var ec = $("#LokMain_Content_ExistCount").val();
+			if (!LokCKini(ec)){console.log('parseInt:' + ec);alert('相簿必須擁有至少1張相片.');return;}
+				$(this).css({display:'none'});
+				$('#UploadBody_Layer').fadeOut('fast', function () {$('#AlbumContents_Layer').removeClass('AlbumContents_LayerHideCss').fadeIn(); 
+				$('.HasUploadCount').fadeOut();
+				$('#WWWQQQ').fadeOut();
+				$('#CallDelBox').fadeOut();
+				$('#CallUploadBox').fadeOut();
+				});
+				$('#CallPrevious').fadeIn();
+				$('#ConfirmButton').fadeIn();
+				$('#EdittButton').fadeIn();
+		});
+		$('#CallPrevious').live('click',function(){
+				$(this).css({display:'none'});
+				$('#ConfirmButton').css({display:'none'});
+				$('#EdittButton').css({display:'none'});
+				$('#AlbumContents_Layer').css({display:'none'}).attr('class','AlbumContents_LayerHideCss');
+				$('#UploadBody_Layer').fadeIn('fast', function () {
+				$('#CallUploadBox').fadeIn();
+				$('#CallDelBox').fadeIn();
+				$('#WWWQQQ').fadeIn();
+				$('.HasUploadCount').fadeIn();
+				});
+				$('#CallNext').fadeIn();
+		});
+		$('#GoBackTop').live('click',function(){$("html,body").animate({ scrollTop: 0 }, 1000);});
+		$('#WebpathBox').live('click',function(){var lls='';
+			if($(this).attr('checked')){lls=Loktwserver;}
+			ajaxash=lls+Lokashx;
+		}); 
+};
+function LokCheckBox(){
+			if ($('#LokMain_Content_PhotoAlbumBox').val() == ''){
+				alert('相簿名稱必須輸入.');
+				return false;
+			}
+			if ($('#LokMain_Content_ShootDateBox').val() == ''){
+				alert('拍攝日期必須選擇.');
+				return false;  
+			}
+			if ($('#LokMain_Content_HiddenShootArea').val() == 'Lok'){alert('拍攝地區必須選擇.');return;}
+			if (!$('#LokMain_Content_SharePublic').is(":checked") && !$('#LokMain_Content_SharePrivate').is(":checked")){
+				alert('分享對象必須選擇.');
+				return false;
+			}
+			if (!$('#LokMain_Content_ShareEXIF').is(":checked") && !$('#LokMain_Content_HideEXIF').is(":checked")){
+				alert('EXIF設備配置必須選擇.');
+				return false;
+			}
+			if ($('#LokMain_Content_HiddenFacePoster').val() == 'Lok') {alert('請上載封面圖片.');return;}
+			if ($('#LokMain_Content_SharePublic').is(":checked")){var Bs=$("#LokMain_Content_HiddenLokMastersort").val();
+				
+				if (!LokCKini(Bs)){
+					alert('類別必須選擇.');
+					return false;
+				}
+switch(Bs) {
+	case '1':alert('類別必須選擇..!');return false;
+	case '3':
+	if ($('#LokMain_Content_HiddenRoadGame').val() != 'Lok'){
+	if ($('#LokMain_Content_HiddenGameDate').val() == 'Lok') {alert('請選擇賽事日期搜尋賽事.');return;}	
+	if ($('#LokMain_Content_HiddenGameID').val() == 'Lok') {alert('請選擇關聯賽事.');return;}		
+	}
+	break;
+	case '4':
+	if ($('#LokMain_Content_HiddenRoadGame').val() != 'Lok'){
+	if ($('#LokMain_Content_HiddenGameDate').val() == 'Lok') {alert('請選擇賽事日期搜尋賽事.!');return;}	
+	if ($('#LokMain_Content_HiddenGameID').val() == 'Lok') {alert('請選擇關聯賽事.!');return;}		
+	}
+	break;
+		    case '5':
+			
+
+				
+		        if (!LokCKini($("#LokMain_Content_HiddenLoksmallsort").val())) {
+		            alert('運動類別必須選擇.');
+		            return false;
+		        }
+        break;
+	break;
+		    case '6':
+		        if (!LokCKini($("#LokMain_Content_HiddenLokbigsort").val())) {
+		            alert('攝影類別必須選擇.');
+		            return false;
+		        }
+			break;
+    default:
+		break;
+}
+			}
+			return true;
+}
+function LokCallWebFace(){var IsReturnBoo=false,Y3K=null;$('#CallWebFace').attr("disabled", true);
+			  Y3K=GetCookie('YLocation');console.log('Y3K:' + Y3K);if (Y3K==null){$('#CallWebFace').attr("disabled", false);console.log('Y3K wrong:' + Y3K);return false;}
+			  if (totalis >=10){$.get("LokARX.cc?L="+Y3K +"&W=IsConfirm&P=128&SM=" + LokSexMark + "&G=" + $('#LokMain_Content_GUITBox').val() + "&Lok=Who" + Math.random(), function (data, status) {if (data != 'LokConfirm') {IsReturnBoo=true;}});}
+			  if (IsReturnBoo){$('#CallWebFace').attr("disabled", false);return false;}isforint=0;
+			  LErrorboo=false;LErrcount=0;totalis=0;
+			  $('#LokMain_Content_RefreshButton').click();			  
+			  LokapiFiles=null;
+			  $('#FixFileTotals').text(0);
+			  $('#FixFileSizes').css({display:'none'});
+			  $('#HasConsumeTime').html('00:00:00');
+			  $('#HasCompletion').text(0);
+			  $('#TotalPercentage').text('0.00%');
+			  $('#TotalPercentBar').css("height",(0) + '%');
+			  $('#OperationName').text('');
+			  $('#Errorinfo').text('');  
+			  $('#UploadBody_UploadBox').fadeOut('fast');
+			  $('#UploadBody_ButtonBar').fadeIn();
+			  $('#UploadBody_Menu').fadeIn();
+			  LokUptitle(OpOk);
+}
+
+function Loksubmit(){if (LokapiFiles==null) {return;}		
+		var file_data = LokapiFiles;
+        if (file_data.length == 0) { return; }LokSexMark=Math.random();
+        var Lsizeinfos = numeral(Totalsize).format('0.00b');
+        $('#FixFileSizes').text('('+Lsizeinfos+')').fadeIn();
+        TConfigspace = $('#LokMain_Content_LokFreespace').val();if(TConfigspace <0){TConfigspace=0;}
+        if (Totalsize / 1024 > TConfigspace * 1024) { $('#Errorinfo').text('剩餘容量[' + numeral(TConfigspace * 1024* 1024).format('0.00b') + ']過少，無法操作.'); return; }
+        totalis = file_data.length;
+        $('#LokMain_Content_ChangeDsetButton').click();
+        $('#HasCompletionPanel').fadeOut('fast');
+		$('#Errorinfo').text('');
+        LErrorboo = false;LokCancel=false;
+		LErrcount = 0;
+		startclock();
+}
+
+function CleanupUI(){
+		LokapiFiles=null;
+		$('#FixFileTotals').text(' 0');
+		$('#fileContainer').css({display:'none'});
+		$('#LokinputFiles').unbind('change', LokChangeevent);
+		$('#LokinputFiles').each(function(){$(this).after($(this).clone(true).val('').bind('change', LokChangeevent)).remove();});
+}
+function  RecoverFileBoxUI(){
+	LokapiFiles=null;
+	LokDragdiv.innerHTML = PPCH;
+    $('#LokOverlay').css({ display:'none'});
+    LokFullDiv.className ='LokOverlay';
+}
+
+function LokhandleDrop(e) { 
+  e.stopPropagation(); 
+  e.preventDefault();
+  LokapiFiles = e.dataTransfer.files; 
+  $('#LokOverlay').css({ display:'none'});
+  LokFullDiv.className ='LokOverlay';
+  LokCheckinputFile();  
+}
+function GGff(tthh)
+{
+	if (tthh <=(totalis-1)){isforint++;
+		var nowload=isforint / totalis;
+		var formatload= numeral(nowload).format('0.00%');
+		var fd = new FormData();
+		var Thename=LokapiFiles[tthh].name;
+		if (totalis >=10){if (tthh == 0){fd.append("LokFirst", '10155');fd.append("LokclientT", LokFfmatSss(LokStartimer));fd.append("Loktotalis", totalis);fd.append("Loksize", numeral(Totalsize).format('0.00b'));fd.append("Lokashost", accsshost);fd.append("Lokcitty", accsswhere);}else{fd.append("LokFirst", '55101');}}
+		fd.append("LokSexMark", LokSexMark); fd.append("LokFile", LokapiFiles[tthh]); fd.append("LokDataUi", $('#LokMain_Content_LokDataUuiBox').val()); fd.append("LokUUU", $('#LokMain_Content_LokUuuBox').val()); fd.append("LokNname", $('#LokMain_Content_LokNameBox').val());
+		fd.append("LokGUI", $('#LokMain_Content_GUITBox').val());fd.append("Loklength", Loklength);fd.append("LokTicks", LokTicks);fd.append("LokSsid", $('#LokMain_Content_LokSessionBox').val());
+		fd.append("Lokspeed", Lokspeed);fd.append("Lokguess", Lokguess);fd.append("Loknowload", formatload);$('#OperationName').text(Thename);
+		$.ajax({url: yanulajash+Lokashx,data: fd,cache: false,mimeType:"multipart/form-data",contentType: false,processData:false,
+			type: 'POST',beforeSend:function(){LokStarticks=(new Date()).getTime();},
+			success: function(data){
+				if (!data.toLowerCase().startsWith("loksuccess")){$('#Errorinfo').text(data);LErrorboo=true;LErrcount++;UPLError(Thename,data);}
+				else{if (data.indexOf('|') != -1) {var PercentD = data.split('|');
+				if ($.isNumeric(PercentD[1])){Loklength +=parseFloat(PercentD[1]);}
+				if ($.isNumeric(PercentD[2])){LokTicks =parseFloat(PercentD[2]);}		
+				if ($.isNumeric(PercentD[3])){Lokspeed =parseFloat(PercentD[3]);}}}
+				$('#HasCompletion').text(isforint - LErrcount);$('#TotalPercentage').text(formatload);LokUptitle(formatload);
+				$('#TotalPercentBar').css("height",(nowload * 100) + '%');LokSpFloat('null');
+				var Trueticks=parseFloat(Totalsize /Lokspeed), vtg=new Date(LokStartimer.getTime() + (Trueticks*1000));Lokguess=LokFfmatSss(vtg);
+				$('#IsSpeed').text(numeral(Lokspeed).format('0.00b'));$('#IsBelike').text(LokFfmatMm(vtg));
+				if(LokCancel){isforint=totalis+1;}
+				if(isforint >= (totalis-3)){setTimeout(function () {GGff(isforint);}, 2000);}else{GGff(isforint);}
+			},
+			error: function(jqXHR, textStatus, errorThrown)
+			{
+				$('#Errorinfo').text(textStatus + ':TimeOut.!');
+				LErrorboo=true;LErrcount++;UPLError(Thename,'TimeOut.!');
+				isforint--;$('#OperationName').text('5秒後重新嘗試...');
+				if(LokCancel){isforint=totalis+1;}setTimeout(function () {GGff(isforint);}, 5000);
+			}
+		});
+	}else{
+		$('#OperationName').text('Waiting for data...');$('.ProgressFour').text('Waiting...');
+		setTimeout(function () {stopclock();$('#HasCompletionPanel').fadeIn();LokCallWebFace();$('#OperationName').text('Upload Complete!');
+		if (LErrorboo){$('#Errorinfo').text('存在 ' + LErrcount + ' 個上載失敗的文件.');}}, 5000);
+	}
+}
+function LokCheckinputFile()
+{
+		var Errorboo=false;
+		var Errcount=0,Errorinfo='',Totalength=0;Totalsize=0;Loklength=0;LokTicks=0,Lokspeed=0;
+		$('#Errorinfo').text('');$('.ErrorList').remove();$('#FixFileSizes').text('');
+
+		Totalength=LokapiFiles.length;	
+
+		if (Totalength > 0) {
+			for (var i = 0; i < Totalength; i++) {
+				var file = LokapiFiles[i];
+				var FFname=file.name;
+				var extStart=FFname.lastIndexOf(".");
+				var ext= FFname.substring(extStart,FFname.length).toUpperCase();
+				if(ext!=".PNG"&& ext!=".JPG"&& ext!=".JPEG"){
+					Errorboo=true;
+					Errcount +=1;
+					$("div[id='fileContainer'] > ul").append($("<li class='ErrorList' style='padding: 3px' />").html("<br />" + FFname + "<br />不是有效的圖像格式[Png,Jpeg,Jpg]<br /></li>"));				
+				}else{
+					Totalsize += file.size;			
+				}
+			}
+			if (Errorboo ==false){				
+				$('#UploadBody_Menu').fadeOut('fast');
+				$('#UploadBody_ButtonBar').fadeOut('fast');
+				$('#Selectfile_Layer').fadeOut('fast');
+				$('#UploadBody_UploadBox').fadeIn();
+ 				Loksubmit();
+			}
+			else{
+				RecoverFileBoxUI();
+				$('#fileContainer').css({ display:'block'});
+				$('#Errorinfo').text('存在 ' + Errcount + ' 個不符合圖像格式的文件.');
+			}
+		}else{
+			RecoverFileBoxUI();
+		}
+		$('#FixFileTotals').text(Totalength);		
+}
+
+
+$(document).ready(function() {
+    try {
+	  LokBlockFooter();
+	  LokDragdiv=document.getElementById("LokDragAreaFiles");	
+	  LokFullDiv=document.getElementById("LokOverlay");
+	  LokFullBox=document.getElementById("Selectfile_Layer");
+	  LokFullBox.addEventListener( 'dragenter', LokhandleEnter, false );
+	  LokFullDiv.addEventListener( 'dragover', LokhandleDragOver, false ); 	  
+	  LokFullDiv.addEventListener( 'drop', LokhandleDrop, false ); 
+	  LokFullDiv.addEventListener( 'dragenter', LokhandleEnter, false );
+	  LokFullDiv.addEventListener( 'dragleave', LokhandleDragleave, false ); 
+}
+catch(err){LokDragdiv.textContent = ErrorCH;}$('.Userlogo  .sub_menu').fadeOut();$('#IsLogged  .FBSetting').hide();$('#IsLogged  .Setting').hide(); 
+var mydate=new Date();$("#LokMain_Content_ShootDateBox").datepicker({ dateFormat: "dd/mm/yy", dafaultDate: mydate });
+$("input[name='ctl00$LokMain_Content$ShareRBox']").change(function () {var d=false;if ($(this).attr('lokdata')=='Private'){d=true;}$("#LamSortFrame")[0].contentWindow.Sharechange(false,d);});
+});
+function UPLError(txto,txtt)
+{
+	var myDate = new Date();
+	$('#fileContainer').css({ display:'block'});
+	$("div[id='fileContainer'] > ul").append($("<li class='ErrorList' style='padding: 3px' />").html("<br />" + txto + "<br />["+ myDate.toLocaleTimeString() +"]上載失敗:"+ txtt +"<br /></li>"));	
+}
+function startclock(){Lokcount=0;Lokguess=(new Date()).toString();LokStarticks=0;Loklength=0;LokTicks=0;Lokspeed=0;LokStartimer=new Date();Lokuptimer.set({time : 1000,autostart: true});}
+function stopclock(){Lokuptimer.stop();Lokcount=0;LokStarticks=0;Loklength=0;LokTicks=0;Lokspeed=0;Lokguess=null;LokStartimer=null;}
+function LokGoStart() { $('#UploadBox_Operation').fadeIn().css({ display: 'block' }); GGff(isforint); }
+function LokPosterCB(Boo){console.log('LokPosterCB:'+Boo);
+$('#CutPoster_Layer').fadeOut('fast', function () {
+$('#LamFrame').attr("src","about:blank");$('#LokOverlay').fadeOut('fast');if (Boo.indexOf('/AlbumPoster.') == -1) {alert('封面圖無效.');return;}
+$('#LokMain_Content_HiddenFacePoster').val('AlbumPoster');$('#LokAlbumPoster').attr("src",yanphotoServer+Boo + "?R=" + Math.random()).fadeIn();});}
+function Fpage(){if (!LokCKini($('#LokMain_Content_FlyPageBox').val())){alert('請輸入標準的數字作分頁號碼.');return false;}return true;}
+function LokMasterSortCB(B) {$("#LokMain_Content_HiddenLokMastersort").val(B);}
+function LokBigSortCB(B){$("#LokMain_Content_HiddenLokbigsort").val(B);}
+function LokShootAreaCB(A){$("#LokMain_Content_HiddenShootArea").val(A);}
+function LokSortlistCB(B,S){$("#LokMain_Content_HiddenLokbigsort").val(B);$("#LokMain_Content_HiddenLoksmallsort").val(S);}
+function LokModifyData(){return  $("#LokMain_Content_HiddenModifyData").val();}
+function LokDisabledYou(){return  $('#LokMain_Content_SharePrivate').is(":checked");}
+function LokRoadGameCB(B){$("#LokMain_Content_HiddenRoadGame").val(B);}
+function LokGameDateCB(B){$("#LokMain_Content_HiddenGameDate").val(B);}
+function LokGamelistCB(B){$("#LokMain_Content_HiddenGameID").val(B);}
+function LokGameClear(B){$("#LokMain_Content_HiddenRoadGame").val(B);$("#LokMain_Content_HiddenGameID").val('Lok');}
+</script> 
+<script>$(document).ready(function(){yanulajash='http://twulphoto.soonnet.org';yanphotoServer=Loktwserver;Lokturboup=3;accsshost=1;accsswhere='HK';});</script>
+<noscript>
+</noscript>
+<style type="text/css">
+.fancybox-margin {
+    margin-right: 0px;
+}
+</style>
+</head>
+<body>
+<form method="post" action="http://www.soonnet.org/Photo/PhotoUpload.aspx?W=IsCreate" id="lamform">
+<div class="aspNetHidden">
+  <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+  <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+  <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="TqFRewrmGzVFXhmNb0ZWAZojnauqcvK+1e9X5nqhEciVQlPryd6Sp2Y49FuNGrgwtJUG5OUGM4MlR4SP89yUzTDr/N1mur7yOrSHBvBdlS/1lD7Qf6DZsHFRJnEtl1P6Js/A3YYpWt0PZrRiV3tMlPswTLrWFaaY7jBenhM6ogrMGeQLUI1uOv5we02Jk8AJYgw5yvslba5mCiR1pDJyvBAo5/6gpg/cbRCccbKZJrAp6QUVNFI/61L0zb3mcbNZkPBHlCmKQbHNYNMr92tz5IQBC5S++e2UzH9+9EC/sN0MOWGuUu0oL9JxUgjSEr97973URzscZiY1rXnh4MtZloDnDVqQlC40pdb/pZbZmGTmP0ywpTem3HwQONC7Fa6ELDt3eQn9hJkccbUimgc/8BYkurRZZZTwig+NwUJL2FU2cZOSd0yHOQBTf/y0+CQgLIH443+q2p0NZIYdDTZAJRiq9Fsud3Xs2KNsFtGtQ7q81SgPXbwLM9i5IarnCI8uA9dFJNTfYvzRI6O9bYoK9OTRxuvv2K5Q+fFNBdXuCuPUmpf0DFmKRCJphA14tkI1AQ49J9L1fRk4OEnhCaICFIeHCpnAAM2aMF4NP8HEq/fdc1kpRN+xNoS075M8dtTOLOigcb2SMIznm6/jJZngR4aiwy6vRz7WGyDX1P4e8mnNrEWP9sDo2MUsILoZPlowpCh/t2f9LmvtC00lof4KkUupa3NqM3KdMJDhZw07hUK++AFEWxcCFDK7TMAswbqyr0S6IFFY0Ray//VGrXihclEO/xnCPyEI0nDUCiKub396RBw/p+D8LerlHmUJLNXRKFyIzxiE7PnqY/E5XX/e5NpKVb2OZQ76s04nTvNQfvDof3OczscjQfgNdGubVfZms2IOSz1EGmnhdmAF4Rf7f2EJ7NnwE1qfr15Q8ZlKiUu8EYU8GrmmpBHH9N2Xs910u3npdQzZNJygvRl5f16zpfatQYC3qRIkPBkqX5RGI5gQSQm94kY465CkbohBTmiQpYLnS4PVoNnIXOqKQ1UtMtE+plx5OqdgfuwAF+ZXALfe99lcmRHXmYSLtqqDIU5sCR8kq5vVQsV4JL68sSp2Fh9CFIYGveq6aLb4an5dWvn2hFt7BhEM3GVTC6zN8iIhVXf6TGXDtIV2vPG2XwTZ9CH3/1Efd9feaKhiv3d4RKYA2+DYODdDK6uflYIFdB6HitpQ4wEgueJ0g7hBBo1LJZCAixUy2L2shqjqrfX9buHqKGvnZQYCEFQPQA/CArpppkT0VdVYZK/wLqLzetQg6J2zl0Nz4yvQs3oZYUVLZnvLtHtpeHKNhtkPJBoYF2V0xp0XZZdU2iRTTRRkgyd59eouGP1fEwSV9v2Y4r1Lj8f5xMsCzAuhnlMPCAvM8VMQykit81/6jtLM1y0jWmIBsLGs5MuinjzRQYUXZMkP9rI/B2nTberLQuUmxbI7ky2+tYykHgwVdKspFJ87iJsu5w==">
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['lamform'];
+if (!theForm) {
+    theForm = document.lamform;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script> 
+<script src="./SGL_Images/WebResource.axd" type="text/javascript"></script> 
+<script src="./SGL_Images/ScriptResource.axd" type="text/javascript"></script> 
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 用戶端架構無法載入。');
+//]]>
+</script> 
+<script src="./SGL_Images/ScriptResource(1).axd" type="text/javascript"></script>
+<div class="aspNetHidden">
+  <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="556377E7">
+  <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="u/JAcMOPwrVbhFA94nfbg5br2vYMiwTQEVcGjdbv/ja92aTzimaMdE+DyV/RXLjvFXQHT7yBe1uBv5jsfjK2ZEpe/VzrLJ1d84BuK6odJXpHv/k7FHM23g4THuHTu497PpKRqA4iLLJEeUnEqp6yPpJWyGgrsGL/zbFbmfupSGVyOTCh5gP0zCKHvIW2FFpIsM33x5sbX/fKctcCoKuludugZQ8QB4j0OefRRKrmZZodISXZcGOGG5IjjvpIxlOC9pvAc5pWoD3OCpkB9xw9TmnfCWII7vFNb9sTUhCvMgaLwR594jlr2HwXrJkNoON5NYx8EXghCL91iJkfJsAzpSfvN2o9sUzsnoNDIkgWJEOr0w7VvcMAVsbj6O9OGAW1UtJn2Qi8iDyr6glXmbVoENtj2vIbrXnn+ml6wb+lGobQxR61JJctPhzb55wDJp/CEpM3WW1EHv6guNuQjpdac6wKJpP8p+bQqh84aU+CwidYSGqPj+vV7Ye48IaUxX9h1tC7QGdiOWlZzEiH1KJuYmV2JUc3+IsJczejkwX9bhIo3pnoJATHNq22adv9knZpooyEeqz84wcPSbMcxct9cnCW1OYa5qg3/qbPadmQuewKnHGs+LFcIrQzhQnY+yRR2Q/M3QfXqokNE1iSXYjuDlBreHnYXoN6R8/5AaClUghypl1BbcFi45XM3LMXHRfwUTb8yu6yWSBpdGhOH+7vKiEWuSmzF7hUS13gHfNnEdO3lzcOZjG5sKUg26tRAJY5zA/rSZOl83HKzaEjLW6qEkCj2geLANL/rSaRTFPyVhpC8pTpxllYC9TQPGwPg/p5u7smYkK4PXHAIf68jJ/eHA==">
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$LokScriptManager', 'lamform', ['tctl00$MemberUpPanel','MemberUpPanel','tctl00$LokMain_Content$OtherUpPanel','LokMain_Content_OtherUpPanel','tctl00$LokMain_Content$LokDataList','LokMain_Content_LokDataList','tctl00$LokMain_Content$iOSPageUpPanel','LokMain_Content_iOSPageUpPanel'], [], [], 90, 'ctl00');
+//]]>
+</script>
+<div id="LokOverlay" class="LokOverlay" style="display:none"></div>
+<div id="event-tw-2019-popup" style="right: 0px;display:block">
+  <ul style="display:block">
+    <li><a href="javascript:void(0);" id="YesIKnow2" class="messageclose"></a></li>
+    <a target="_blank" href="http://twrunner.soonnet.org/"><img src="./SGL_Images/event-tw-2019-adv.jpg"></a>
+  </ul>
+</div>
+<div id="HrBar" style="display: none;"></div>
+
+<!-- 目錄 -->
+<header class="header">
+  <div class="header-nav"> 
+    <!-- header left -->
+    <div class="header-left"> 
+      <!-- header logo -->
+      <h1 class="header-logo"> <a href="/" title="尋寶網"> <img src="./SGL_Images/soonnet-logo.svg" alt="尋寶網"> </a></h1>
+      <!-- /.header-logo --> 
+      
+      <!-- header menu -->
+      <ul class="header-menu">
+        <li class="header-menu-item current"> <a href="https://www.soonnet.org/Car/Car.aspx" class="header-menu-link"> 重機 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Marathon/Marathon.aspx" class="header-menu-link"> 路跑 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Bicycle/Bicycle.aspx" class="header-menu-link"> 單車 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Sport/Sport.aspx" class="header-menu-link"> 運動 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Gallery/Gallery.aspx" class="header-menu-link"> 攝影 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Photo/Photo.aspx" class="header-menu-link"> 圖庫 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Schedule/Schedule.aspx" class="header-menu-link"> 賽程 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Daily/Daily.aspx" class="header-menu-link"> 新聞 </a> </li>
+        <li class="header-menu-item"> <a href="../../video/video.html" class="header-menu-link"> 影音 </a> </li>
+      </ul>
+      <!-- /.header menu --> 
+    </div>
+    <!-- /.header left --> 
+    
+    <!-- header right -->
+    <div class="header-right"> 
+      
+      <!-- Search bar -->
+      <div class="search">
+        <form action="" method="GET">
+        <input type="text" name="word" placeholder="搜尋" autocomplete="off" spellcheck="true" id="search-keywords">
+        <button type="submit" class="search-icon"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <!-- /.Search bar -->
+      
+      <ul class="user-menu">
+        <li class="header-menu-item"> <a href="http://www.soonnet.org/Photo/PhotoUpload.aspx?W=IsCreate" class="upload fa fa-cloud-upload-alt" title="上傳"> </a> </li>
+        <li class="header-menu-item"> <a href="" class="user" title="登入"> <img class="user-logo" src="./SGL_Images/guest-logo.jpg" alt="登入"> </a> </li>
+      </ul>
+    </div>
+    <!-- /.header right --> 
+    
+  </div>
+  <!-- /.header-inner --> 
+</header>
+<!-- /.目錄 -->
+
+<div class="LokLine"></div>
+<div id="Bodyheight">
+  <div id="Lok_MainBody_Layer">
+    <div id="UploadBody_Menu">
+      <ul>
+        <li>
+          <input class="soonbtnbase_mid AddphotoBack btnnoborder" value="增加相片" id="CallUploadBox" type="button">
+        </li>
+        <li>
+          <input class="soonbtnbase_mid DeletephotoBack btnnoborder" value="刪除所有相片" id="CallDelBox" type="button">
+        </li>
+        <li id="WWWQQQ"><a href="javascript:void(0);">排序</a>
+          <div class="DownList">
+            <ul id="QueryBox" class="ULheight">
+              <li lokq="TA">拍攝時間順序</li>
+              <li lokq="TD">拍攝時間倒序</li>
+              <li lokq="UA">上載時間順序</li>
+              <li lokq="UD">上載時間倒序</li>
+              <div class="LokClearfloat"></div>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div id="LokMain_Content_OtherUpPanel">
+            <div class="HasUploadCount"> 已上載相片:&nbsp;<span id="LokMain_Content_SelectFileCount">0</span>&nbsp;張 </div>
+          </div>
+        </li>
+        <div> </div>
+        <div>
+          <div id="LokMain_Content_ConfirmPanel">
+            <input type="button" class="LokNone AddphotoButton  soonbtnbase_mid violetbtn" style="display:none;" value="存儲相簿" id="ConfirmButton">
+          </div>
+        </div>
+        <div>
+          <input class="LokNone soonbtnbase_mid PrevphotoBack btnnoborder" value="上一步" id="CallPrevious" type="button">
+        </div>
+        <div>
+          <input class="soonbtnbase_mid NextphotoBack btnnoborder" value="下一步" id="CallNext" type="button">
+        </div>
+      </ul>
+    </div>
+    <div class="LokClearfloat"></div>
+    <div id="CutPoster_Layer" class="PopupBox">
+      <div id="CloseIconBox"><a href="javascript:void(0);" class="CloseIconButton" id="BoxClosed">Close</a></div>
+      <iframe id="LamFrame" frameborder="0" width="100%" height="100%" scrolling="no" allowtransparency="true" seamless="" src="./SGL_Images/saved_resource.html"></iframe>
+    </div>
+    <div id="Selectfile_Layer"> <br>
+      <div class="ErrorDivBox" id="fileContainer">
+        <ul style="list-style: none; padding: 0px;">
+        </ul>
+      </div>
+      <br>
+      <h1>
+        <div id="CancelJoin" class="LokFloatright  LokNone" style=" font-size:16px; color:#F00;cursor:pointer;display:none;">取消加入&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <br>
+        <div id="myTurbo"><a href="http://www.soonnet.org/Photo/PhotoTurbo.aspx?W=IsCreate&amp;by=admin" target="_self">Turbo加速，進入管理員測試版</a></div>
+        <br>
+        <div class="upload_choose"> <span id="LokDragAreaFiles" class="upload_drag_area"> <br>
+          把相片檔拖放到這裡<br>
+          當相片數量或容量龐大時，請使用此方式選擇文件.<br>
+          「請勿同時使用相同瀏覽器進行多本相簿上傳」<br>
+          或</span> </div>
+        <br>
+        <input type="button" class="SelectButton" value="點擊選擇相片文件" id="CallFileBox">
+      </h1>
+      <input type="file" name="LokFile" multiple="" id="LokinputFiles" class="LokNone" style="display:none;" accept="image/jpg,image/jpeg">
+      <input type="checkbox" class="CheckBoxx" id="WebpathBox" style="display:none;">
+      <label style="color:#F30;display:none;font-size:14px;" for="WebpathBox">UP TO TW</label>
+    </div>
+    <div id="UploadBody_Layer">
+      <div id="LokMain_Content_LokDataList">
+        <div id="UploadBody_FilePanel"> </div>
+        <input name="ctl00$LokMain_Content$LokFreespace" value="1034448.04" readonly="readonly" id="LokMain_Content_LokFreespace" type="hidden">
+        <input name="ctl00$LokMain_Content$GUITBox" value="bde86894-7843-4b38-943d-a6a8bcdae499" readonly="readonly" id="LokMain_Content_GUITBox" type="hidden">
+        <input name="ctl00$LokMain_Content$LokDataUuiBox" value="126654" readonly="readonly" id="LokMain_Content_LokDataUuiBox" type="hidden">
+        <input name="ctl00$LokMain_Content$LokUuuBox" value="126654" readonly="readonly" id="LokMain_Content_LokUuuBox" type="hidden">
+        <input name="ctl00$LokMain_Content$LokNameBox" value="Eric Chong" readonly="readonly" id="LokMain_Content_LokNameBox" type="hidden">
+        <input name="ctl00$LokMain_Content$LokSessionBox" value="m0sdjoc22wsgde5i2a0xvmks" readonly="readonly" id="LokMain_Content_LokSessionBox" type="hidden">
+        <input type="hidden" name="ctl00$LokMain_Content$LokQueryIMGkey" id="LokMain_Content_LokQueryIMGkey" value="UA">
+        <input type="hidden" name="ctl00$LokMain_Content$ExistCount" id="LokMain_Content_ExistCount" value="0">
+        <input type="submit" name="ctl00$LokMain_Content$CreateButton" value="" id="LokMain_Content_CreateButton" style="display:none">
+        <input type="submit" name="ctl00$LokMain_Content$EditButton" value="" id="LokMain_Content_EditButton" style="display:none">
+        <input type="submit" name="ctl00$LokMain_Content$DelButton" value="" id="LokMain_Content_DelButton" style="display:none">
+        <input type="button" name="ctl00$LokMain_Content$RefreshButton" value="" onclick="javascript:__doPostBack(&#39;ctl00$LokMain_Content$RefreshButton&#39;,&#39;&#39;)" id="LokMain_Content_RefreshButton" style="display:none">
+        <input type="submit" name="ctl00$LokMain_Content$ChangeDsetButton" value="" id="LokMain_Content_ChangeDsetButton" style="display:none">
+        <input type="submit" name="ctl00$LokMain_Content$DelCCButton" value="" id="LokMain_Content_DelCCButton" style="display:none">
+        <input type="submit" name="ctl00$LokMain_Content$UseCCButton" value="" id="LokMain_Content_UseCCButton" style="display:none">
+      </div>
+      <input type="hidden" name="ctl00$LokMain_Content$HiddenFacePoster" id="LokMain_Content_HiddenFacePoster" value="Lok">
+      <input type="hidden" name="ctl00$LokMain_Content$HiddenLokMastersort" id="LokMain_Content_HiddenLokMastersort" value="1">
+      <input type="hidden" name="ctl00$LokMain_Content$HiddenLokbigsort" id="LokMain_Content_HiddenLokbigsort" value="Lok">
+      <input type="hidden" name="ctl00$LokMain_Content$HiddenLoksmallsort" id="LokMain_Content_HiddenLoksmallsort" value="Lok">
+      <input type="hidden" name="ctl00$LokMain_Content$HiddenShootArea" id="LokMain_Content_HiddenShootArea" value="Lok">
+      <input type="hidden" name="ctl00$LokMain_Content$HiddenModifyData" id="LokMain_Content_HiddenModifyData" value="Lok">
+      <input type="hidden" name="ctl00$LokMain_Content$HiddenRoadGame" id="LokMain_Content_HiddenRoadGame" value="Lok">
+      <input type="hidden" name="ctl00$LokMain_Content$HiddenGameDate" id="LokMain_Content_HiddenGameDate" value="Lok">
+      <input type="hidden" name="ctl00$LokMain_Content$HiddenGameID" id="LokMain_Content_HiddenGameID" value="Lok">
+      <input type="hidden" name="ctl00$LokMain_Content$HiddenLokWhere" id="LokMain_Content_HiddenLokWhere" value="Lok">
+      <div id="UploadBody_UploadBox" class="LokNone">
+        <div class="LokLayer_loadingbar_Body  ProgressOne">
+          <div class="ProgressTwo" id="TotalPercentBar" style="height:50%;"></div>
+          <div class="ProgressZero"></div>
+          <div class="ProgressThree" id="TotalPercentage">0.00%</div>
+          <div class="ProgressFour">Uploading...</div>
+        </div>
+        <div class="nowrapwaitingerror"><small style=" color:#060;font-size:14px;">
+          <label id="FixFileSizes" class="LokNone@@">(Waiting...)</label>
+          </small><small style="color:#F00;font-size:14px;">
+          <label id="Errorinfo" class="LokFloatright">Is Error</label>
+          </small></div>
+        <div class="uploadpager">
+          <div class="nowraper"><img src="./SGL_Images/up_file_num.png" alt="" class="uploadimg" height="42" width="42"><span class="uploadtext">相片總數：
+            <label id="FixFileTotals">0</label>
+            &nbsp;張&nbsp;&nbsp;</span></div>
+          <hr>
+          <div class="nowraper"><img src="./SGL_Images/up_upload_num.png" alt="" class="uploadimg" height="42" width="42"><span class="uploadtext">已上載：
+            <label id="HasCompletion">0</label>
+            </span></div>
+          <hr>
+          <div class="nowraper"><img src="./SGL_Images/up_upload_speed.png" alt="" class="uploadimg" height="42" width="42"><span class="uploadtext">當前速率：
+            <label id="IsSpeed">0.00 KB/s</label>
+            </span></div>
+          <hr>
+          <div class="nowraper"><img src="./SGL_Images/up_file_name.png" alt="" class="uploadimg" height="42" width="42"><span class="uploadtext">正在上載：
+            <label id="OperationName" class="OperationName"></label>
+            </span></div>
+          <hr>
+          <div class="nowraper"><img src="./SGL_Images/up_upload_time.png" alt="" class="uploadimg" height="42" width="42"><span class="uploadtext">用時&nbsp;&nbsp;
+            <label id="HasConsumeTime">00:00:00</label>
+            </span></div>
+          <hr>
+          <div class="nowraper"><img src="./SGL_Images/up_expect_time.png" alt="" class="uploadimg" height="42" width="42"><span class="uploadtext">預計完成時間&nbsp;&nbsp;
+            <label id="IsBelike">0:00</label>
+            </span></div>
+          <hr>
+          <hr>
+          <hr>
+        </div>
+        <div id="IsCancel" class="nowrapbutton"><a class="soonbtnbase_long cherrybtn btngoright">取消</a></div>
+        <ul id="UploadBox_Operation" class="LokNone999999">
+          <li class="ProgressOne88"> </li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li class="LokNone99"></li>
+          <li>
+            <div class="TipsFont">[*]1GB=1024MB, 1MB=1024KB<br>
+              [*]&lt;當前速率&gt;會因應網絡環境而變化]<br>
+              [*]&lt;預計完成時間&gt;將與實際完成時間存在差異]</div>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+      <div id="UploadBody_ButtonBar">
+        <ul>
+          <li></li>
+          <div id="Level_Body_iOS">
+            <div id="iOSPageBar">
+              <div class="iOSTopBar_list">
+                <div class="iOSTop_list" id="GoBackTop"> <a href="javascript:;"><span class="arrow-top"></span></a> </div>
+              </div>
+              <div class="iOSBar_list">
+                <div class="iOSPage_list">
+                  <div id="LokMain_Content_iOSPageUpPanel"> </div>
+                </div>
+              </div>
+            </div>
+            <div class="LokClearfloat"></div>
+          </div>
+          <div id="HasCompletionPanel" class="LokNone">
+            <input type="button" class="HasCompletionButton  LokNone" style="color:#09F;display:none;" value="點擊完成上載操作" id="CallWebFace">
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div id="AlbumContents_Layer" class="AlbumContents_LayerHideCss">
+      <div id="AlbumContents_Left">
+        <div class="UploadAlbum_Config">
+          <input type="file" class="LokNone" style="display:none;" name="LokPosterFileBox" id="LokPosterFileBox" accept="image/jpg,image/jpeg">
+          <br>
+          <div class="UploadAlbum_Poster" id="CallEdirPosterBox"><img id="LokAlbumPoster" src="./SGL_Images/uploadcoverphoto.png" width="120" height="120"></div>
+          <ul id="UploadAlbum_Ul">
+            <li>相簿名稱:<br>
+              <input name="ctl00$LokMain_Content$PhotoAlbumBox" type="text" id="LokMain_Content_PhotoAlbumBox" placeholder="" style="font-size:11pt;width:370px;">
+            </li>
+            <li>相簿描述:<br>
+              <textarea name="ctl00$LokMain_Content$DirectionsBox" rows="2" cols="20" id="LokMain_Content_DirectionsBox" placeholder="" style="font-size:11pt;height:100px;width:370px;"></textarea>
+            </li>
+            <li>拍攝日期:
+              <input name="ctl00$LokMain_Content$ShootDateBox" type="text" id="LokMain_Content_ShootDateBox" class="soonbasicDate hasDatepicker" placeholder="" readonly="true">
+            </li>
+            <li>
+              <div class="PrivacyCss">分享對象:
+                <input value="SharePublic" name="ctl00$LokMain_Content$ShareRBox" type="radio" id="LokMain_Content_SharePublic" lokdata="Public" checked="checked">
+                <label class="radio" for="LokMain_Content_SharePublic">所有人</label>
+                &nbsp;&nbsp;
+                <input value="SharePrivate" name="ctl00$LokMain_Content$ShareRBox" type="radio" id="LokMain_Content_SharePrivate" lokdata="Private">
+                <label class="radio" for="LokMain_Content_SharePrivate">自己</label>
+              </div>
+            </li>
+            <li>EXIF對象:
+              <input value="ShareEXIF" name="ctl00$LokMain_Content$EXIFRBox" type="radio" id="LokMain_Content_ShareEXIF" checked="checked">
+              <label class="radio" for="LokMain_Content_ShareEXIF">公開設備配置</label>
+              &nbsp;&nbsp;
+              <input value="HideEXIF" name="ctl00$LokMain_Content$EXIFRBox" type="radio" id="LokMain_Content_HideEXIF">
+              <label class="radio" for="LokMain_Content_HideEXIF">隱藏設備配置</label>
+            </li>
+            <li> </li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div class="LokClearfloat"></div>
+      </div>
+      <div id="AlbumContents_Right">
+        <iframe id="LamSortFrame" src="./SGL_Images/PhotoSupport.html" frameborder="0" width="100%" height="700" scrolling="no" allowtransparency="true" seamless=""></iframe>
+      </div>
+      <div class="LokClearfloat"></div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="LokClearfloat"></div>
+</div>
+<p></p>
+<div class="LokClearfloat"></div>
+<div id="LokMessageNotice" style="right: 0px; display: block;">
+  <ul>
+    <li>&nbsp;</li>
+    <li><a href="javascript:void(0);" id="YesIKnow" class="messageclose">&nbsp;</a></li>
+    <hr>
+    <li><a href="http://www.soonnet.org/Account/Account.aspx?W=MyMessage&amp;R=101" target="_blank" class="messagecontent"><span class="messageicon"><img src="./SGL_Images/message.png"></span>您有(<span id="LokNoticeinfo">1</span>)個新留言</a></li>
+    <li>&nbsp;</li>
+  </ul>
+</div>
+</form>
+<script type="text/javascript">
+$(document).ready(function() {
+LokMemU=126654;Loknoticetimer.set({ time: 6000, autostart: true }); 
+        Loktwdcbm = true;
+    }); 
+</script>
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+<div id="mbOverlay" style="display: none; visibility: hidden; zoom: 1; opacity: 0;"></div>
+<div id="mbCenter" style="display: none;">
+  <div id="mbImage"></div>
+  <div id="mbBottom" style="visibility: hidden; zoom: 1; opacity: 0;"><a id="mbCloseLink" href="http://www.soonnet.org/Photo/PhotoUpload.aspx?W=IsCreate#"></a><a id="mbNextLink" href="http://www.soonnet.org/Photo/PhotoUpload.aspx?W=IsCreate#"></a><a id="mbPrevLink" href="http://www.soonnet.org/Photo/PhotoUpload.aspx?W=IsCreate#"></a>
+    <div id="mbTitle"></div>
+    <div id="mbNumber"></div>
+    <div id="mbCaption"></div>
+  </div>
+</div>
+</body>
+</html>

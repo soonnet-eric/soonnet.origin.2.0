@@ -1,0 +1,129 @@
+﻿@charset "utf-8";
+body{
+	 background-color: RGB(238,238,238);
+}
+
+.Lokshadow{
+	/*
+-moz-box-shadow:0px 0px 1px #535353; -webkit-box-shadow:0px 0px 1px #535353; box-shadow:0px 0px 1px #535353;
+
+*/
+background-color:#FFF;	
+ border: 1px solid #e5e5e5;
+   border-radius: 3px;
+}
+.Lok_VideoBanner {
+    /*width: 466px;
+    height: 262px;*/
+    width: 700px;
+    height: 393px;
+    margin: 0 auto;
+    position: relative;
+}
+.Lok_VideoLive {
+    /*width: 466px;
+    height: 262px;*/
+    width: 700px;
+    height: 393px;
+    margin: 0 auto;
+    position: relative;
+}
+@-o-keyframes spin {
+	100% {
+		-o-transform:rotate(360deg);
+		transform:rotate(360deg);
+	}
+}
+@-moz-keyframes spin {
+	100% {
+		-moz-transform:rotate(360deg);
+		transform:rotate(360deg);
+	}
+}
+@-webkit-keyframes spin {
+	100% {
+		-webkit-transform:rotate(360deg);
+		transform:rotate(360deg);
+	}
+}
+@keyframes spin {
+	100% {
+		transform:rotate(360deg);
+	}
+}
+.LokSpinner{
+/*	width: 30px;
+	height: 30px;
+	border: 6px solid hsla(0,0%,100%,0.99);
+	border-left-color: hsla(0,0%,100%,0.66);
+	border-bottom-color: hsla(0,0%,100%,0.33);*/
+	border: 6px solid hsla(0,0%,100%,0.99);
+	border-left-color: hsla(0,0%,100%,0.66);
+	border-bottom-color: hsla(0,0%,100%,0.33);
+	border-right-color: transparent;
+	border-radius: 100%;
+	-o-animation: spin 800ms infinite linear;
+	-moz-animation: spin 800ms infinite linear;
+	-webkit-animation: spin 800ms infinite linear;
+	animation: spin 800ms infinite linear;
+	z-index:101;
+}
+.VideoPlay{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+ background:RGBA(189,189,189,0.35) url(/SGL_Images/Player/playcircle_48_w.png) no-repeat center center; 
+background-repeat: no-repeat;
+background-position: center;
+display:none;
+}
+#LokNavigationBar_N {
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px inset RGB(41,182,246);
+    background-color: #282828;
+    min-width: 1200px;
+    min-height: 40px;
+    box-shadow: 0px 0px 1px #969696;
+}
+.LokMarginAutoDiv {
+    width: 1200px;
+    margin: 0 auto;
+}
+.SelectedVideo {
+	width: 0px;
+	height: 0px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent RGB(41,182,246) transparent;
+	position: absolute;
+	top: 30px;
+	left: 41%;
+}
+.SelectedDaily {
+	display:none;
+}
+.livedivbg{
+	background-color: #fa3e3e;
+	font-size:18px;
+	    border-radius: 4px;
+    display: inline-block;
+    font-weight: 500;
+    margin-top: 12px;
+    padding: 4px 6px;
+}
+.livedivtime{
+	font-size:12px;
+	line-height:30px;
+}
+::-webkit-media-controls {
+  display:none !important;
+}
+video::-webkit-media-controls {
+  display:none !important;
+}
+video::-webkit-media-controls-enclosure {
+  display:none !important;
+}

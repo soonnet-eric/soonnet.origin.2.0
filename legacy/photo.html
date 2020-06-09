@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)https://www.soonnet.org/Photo/Photo.aspx -->
+<html lang="zh-HK" xmlns="http://www.w3.org/1999/xhtml" class="">
+<head id="Baseheader">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="og:description" content="soonnet.org">
+<title> 尋寶網 - 圖庫 </title>
+<link href="./SGL_Images/GlobalStyle.css" rel="stylesheet" type="text/css">
+<link href="https://www.soonnet.org/SGL_Images/SGL_Favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" type="text/css" href="./SGL_Images/jquery.fancybox.css" media="screen">
+<script src="./SGL_Images/sdk.js" async="" crossorigin="anonymous"></script><script id="facebook-jssdk" src="./SGL_Images/sdk.js(1)./SGL_Images/"></script><script src="./SGL_Images/jquery-2.1.4.min.js" type="text/javascript"></script> 
+<script src="./SGL_Images/jquery-migrate-1.2.1.min.js" type="text/javascript"></script> 
+<script src="./SGL_Images/jquery.timer.js" type="text/javascript"></script> 
+<script src="./SGL_Images/GlobalJS.js" type="text/javascript"></script> 
+
+<!-- Update (2020) -->
+<link href="./SGL_Images/main_2020.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./SGL_Images/font-awesome/all.min.css">
+<script src="./SGL_Images/main_2020.js"></script> 
+<script type="text/javascript" src="./SGL_Images/jquery.fancybox.js"></script> 
+<script type="text/javascript">HomeLanguage='HK';</script> 
+<script type="text/javascript">
+$(document).ready(function () {popoad();
+    $('#ShowPanel').live('click', function () {
+		$('#LoginBox').css({ display: 'block' });
+	});
+	$('#LoginNow').live('click',function(){
+		$('#ShowPanel').css('display', 'none');
+		$('#IsLogged').fadeIn();	
+		$('#LoginBox').fadeOut();
+	});
+	$('body').click(function (){if(!lboarea){
+		$('#LoginBox').fadeOut();}
+	});$('.fancybox').fancybox();
+	
+// for event-tw-2019-popup banner 
+$('#YesIKnow2').click(function () {$('#event-tw-2019-popup').animate({ 'right': '-300px' }, 500, function () {$(this).css({ display: "none" });SetHoursCookie('LokNotice', false);});});
+});
+</script> 
+<script src="./SGL_Images/PhotoScript.js" type="text/javascript"></script>
+<style>
+.LokLayer_Four {
+    position: fixed;
+    z-index: 1;
+    bottom: 0px;
+    right: 0px;
+}
+.LoadPanel {
+    border: 1px solid #e9e9e9;
+    background: url(/Photo/P_Images/Waiting_xx16.gif) no-repeat center center scroll;
+}
+.LoadPanel_Begin {
+    border: 1px solid #fff99c;
+    background: url(/Photo/P_Images/Waiting_xx16.gif) no-repeat center center scroll;
+}
+.wallnav {
+    list-style: none;
+    margin-top: 3px;
+    margin-bottom: 10px;
+    float: left;
+/ Clear floats / position: relative;
+    z-index: 1;
+    font-size: 16px;
+}
+.wallnav li {
+    float: left;
+    margin-right: 6px;
+    position: relative;
+    cursor: pointer;
+    background: #fff;
+    border-bottom: #eee 1px dotted;
+}
+.wallnav a {
+    color: #999999;
+    text-decoration: none;
+    display: block;
+    padding: 4px 10px;
+    margin: 0;
+    text-shadow: 0 1px 1px rgba(200,200,200, .3);
+}
+.wallnav a:hover {
+    background: #000;
+    color: #fff;
+}
+.wallnav ul {
+    background: #fff;
+    background: rgba(255,255,255,0);
+    list-style: none;
+    position: absolute;
+    left: -9999px;
+    z-index: 1;
+}
+.wallnav ul li {
+    padding-top: 1px;
+    float: none;
+    width: 100px;
+    margin-left: -5px;
+    margin-top: -1px;
+}
+.wallnav ul a {
+    white-space: nowrap;
+}
+.wallnav li:hover ul {
+    left: 0;
+}
+.wallnav li:hover a {
+    color: #777;
+    text-decoration: none;
+    display: block;
+    padding: 4px 10px;
+    margin: 0;
+    text-shadow: 0 1px 1px rgba(200,200,200, .3);
+    background: -webkit-linear-gradient(rgba(255, 255, 255, 1), rgba(255, 250, 250, 0.8)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient( rgba(255, 255, 255, 1), rgba(255, 250, 250, 0.8)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient( rgba(255, 255, 255, 1), rgba(255, 250, 250, 0.8)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient( rgba(255, 255, 255, 1), rgba(255, 250, 250, 0.8)); /* Standard syntax */
+    border-bottom: #FFCCCC dotted 1px;
+}
+.wallnav li:hover ul a {
+    text-decoration: none;
+}
+.wallnav li:hover ul li a:hover {
+    color: #AAA;
+    text-decoration: none;
+    display: block;
+    padding: 4px 10px;
+    margin: 0;
+    text-shadow: 0 1px 1px rgba(200,200,200, .3);
+    background: -webkit-linear-gradient(rgba(245, 245, 245, 1), rgba(245, 240, 240, 0.8)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient( rgba(245, 245, 245, 1), rgba(245, 240, 240, 0.8)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient( rgba(245, 245, 245, 1), rgba(245, 240, 240, 0.8)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient( rgba(245, 245, 245, 1), rgba(245, 240, 240, 0.8)); /* Standard syntax */
+}
+.btnborder {
+    padding: 3px 3px 3px 3px;
+    border: #cbb solid 1px;
+}
+.postusbanner {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.lokbannerdiv {
+    width: 800px;
+    height: 112px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    display: none;
+}
+</style>
+<script type="text/javascript">
+var LokMaxColumn=5,Wx;
+$(window).bind('resizeEnd', function() {LokAutoWidth();});
+$(document).ready(function() {LokAutoWidth();
+$('#iOSPageBar .circlebtn').live('click',function(){$('#LokOverlay').fadeIn();});
+	if ($("#LokLayerThreeBody").length>0){Lokapd= $("#LokLayerThreeBody");Lokapdftop = Lokapd.position().top-0;}
+	$('#selectCity li a').live('click',function(){var  Pp=$(this).attr("Lokdata");if (!LokDigitReg.test(Pp)){return;}$('#LokOverlay').fadeIn();$('#LokMain_Content_HiddenPage').val(1);$("#LokMain_Content_HiddenCityNumber").val(Pp);$("#LokMain_Content_RefreshButton").click();$("#CityName").text($(this).text());});
+	$('#selectFly li a').live('click',function(){var  Pp=$(this).attr("LokQ");if (!LokDigitReg.test(Pp)){return;}$('#LokOverlay').fadeIn();LokMaxColumn=Pp;$('#LokMain_Content_HiddenPage').val(1);$("#LokMain_Content_HiddenDisplayNumber").val(Pp);$("#LokMain_Content_RefreshButton").click();$("#selectFly").text($(this).text());});
+$('#LokMain_Content_LinkButtonPanel input').keypress(function (e){var keyCode = e.keyCode ? e.keyCode : e.which ? e.which : e.charCode;if (keyCode == 13){var i;for (i = 0; i < this.form.elements.length; i++) if (this == this.form.elements[i]) break; i= (i +1) % this.form.elements.length; this.form.elements[i].focus();return false; }});
+
+
+});
+$(window).bind('resize', function() {$(this).trigger('resizeEnd');Uio=11;});
+function ATQ(){$('#HiATQ').text($('#LokMain_Content_HiddenAlbumTotal').val());LokReLoadAlbumPoster();}
+function Fpage(){if (!LokCKini($('#LokMain_Content_FlyPageBox').val())){alert('請輸入標準的數字作分頁號碼.');return false;}$('#LokOverlay').fadeIn();return true;}
+function Fpagebykey(){console.log('Fpagebykey:');if (!LokCKini($('#LokMain_Content_FlyPageBox').val())){alert('請輸入標準的數字作分頁號碼.');return false;}$('#LokOverlay').fadeIn();eval($("#LokMain_Content_FlyButton").attr('href'));}
+</script>
+<noscript>
+</noscript>
+<style type="text/css">
+.fancybox-margin {
+    margin-right: 17px;
+}
+</style>
+<style type="text/css">
+.fb_hidden {
+    position: absolute;
+    top: -10000px;
+    z-index: 10001
+}
+.fb_reposition {
+    overflow: hidden;
+    position: relative
+}
+.fb_invisible {
+    display: none
+}
+.fb_reset {
+    background: none;
+    border: 0;
+    border-spacing: 0;
+    color: #000;
+    cursor: auto;
+    direction: ltr;
+    font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+    text-indent: 0;
+    text-shadow: none;
+    text-transform: none;
+    visibility: visible;
+    white-space: normal;
+    word-spacing: normal
+}
+.fb_reset>div {
+    overflow: hidden
+}
+@keyframes fb_transform {
+from {
+opacity:0;
+transform:scale(.95)
+}
+to {
+opacity:1;
+transform:scale(1)
+}
+}
+.fb_animate {
+    animation: fb_transform .3s forwards
+}
+.fb_dialog {
+    background: rgba(82, 82, 82, .7);
+    position: absolute;
+    top: -10000px;
+    z-index: 10001
+}
+.fb_dialog_advanced {
+    border-radius: 8px;
+    padding: 10px
+}
+.fb_dialog_content {
+    background: #fff;
+    color: #373737
+}
+.fb_dialog_close_icon {
+    background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
+    cursor: pointer;
+    display: block;
+    height: 15px;
+    position: absolute;
+    right: 18px;
+    top: 17px;
+    width: 15px
+}
+.fb_dialog_mobile .fb_dialog_close_icon {
+    left: 5px;
+    right: auto;
+    top: 5px
+}
+.fb_dialog_padding {
+    background-color: transparent;
+    position: absolute;
+    width: 1px;
+    z-index: -1
+}
+.fb_dialog_close_icon:hover {
+    background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
+}
+.fb_dialog_close_icon:active {
+    background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
+}
+.fb_dialog_iframe {
+    line-height: 0
+}
+.fb_dialog_content .dialog_title {
+    background: #6d84b4;
+    border: 1px solid #365899;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0
+}
+.fb_dialog_content .dialog_title>span {
+    background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
+    float: left;
+    padding: 5px 0 7px 26px
+}
+body.fb_hidden {
+    height: 100%;
+    left: 0;
+    margin: 0;
+    overflow: visible;
+    position: absolute;
+    top: -10000px;
+    transform: none;
+    width: 100%
+}
+.fb_dialog.fb_dialog_mobile.loading {
+    background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
+    min-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 10001
+}
+.fb_dialog.fb_dialog_mobile.loading.centered {
+    background: none;
+    height: auto;
+    min-height: initial;
+    min-width: initial;
+    width: auto
+}
+.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
+    width: 100%
+}
+.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
+    background: none
+}
+.loading.centered #fb_dialog_loader_close {
+    clear: both;
+    color: #fff;
+    display: block;
+    font-size: 19px;
+    padding-top: 20px
+}
+#fb-root #fb_dialog_ipad_overlay {
+    background: rgba(0, 0, 0, .4);
+    bottom: 0;
+    left: 0;
+    min-height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10000
+}
+#fb-root #fb_dialog_ipad_overlay.hidden {
+    display: none
+}
+.fb_dialog.fb_dialog_mobile.loading iframe {
+    visibility: hidden
+}
+.fb_dialog_mobile .fb_dialog_iframe {
+    position: sticky;
+    top: 0
+}
+.fb_dialog_content .dialog_header {
+    background: linear-gradient(from(#738aba), to(#2c4987));
+    border-bottom: 1px solid;
+    border-color: #043b87;
+    box-shadow: white 0 1px 1px -1px inset;
+    color: #fff;
+    font: bold 14px Helvetica, sans-serif;
+    text-overflow: ellipsis;
+    text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
+    vertical-align: middle;
+    white-space: nowrap
+}
+.fb_dialog_content .dialog_header table {
+    height: 43px;
+    width: 100%
+}
+.fb_dialog_content .dialog_header td.header_left {
+    font-size: 13px;
+    padding-left: 5px;
+    vertical-align: middle;
+    width: 60px
+}
+.fb_dialog_content .dialog_header td.header_right {
+    font-size: 13px;
+    padding-right: 5px;
+    vertical-align: middle;
+    width: 60px
+}
+.fb_dialog_content .touchable_button {
+    background: linear-gradient(from(#4267B2), to(#2a4887));
+    background-clip: padding-box;
+    border: 1px solid #29487d;
+    border-radius: 3px;
+    display: inline-block;
+    line-height: 18px;
+    margin-top: 3px;
+    max-width: 85px;
+    padding: 4px 12px;
+    position: relative
+}
+.fb_dialog_content .dialog_header .touchable_button input {
+    background: none;
+    border: none;
+    color: #fff;
+    font: bold 12px Helvetica, sans-serif;
+    margin: 2px -12px;
+    padding: 2px 6px 3px 6px;
+    text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+}
+.fb_dialog_content .dialog_header .header_center {
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 18px;
+    text-align: center;
+    vertical-align: middle
+}
+.fb_dialog_content .dialog_content {
+    background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
+    border: 1px solid #4a4a4a;
+    border-bottom: 0;
+    border-top: 0;
+    height: 150px
+}
+.fb_dialog_content .dialog_footer {
+    background: #f5f6f7;
+    border: 1px solid #4a4a4a;
+    border-top-color: #ccc;
+    height: 40px
+}
+#fb_dialog_loader_close {
+    float: left
+}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button {
+    text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
+}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
+    visibility: hidden
+}
+#fb_dialog_loader_spinner {
+    animation: rotateSpinner 1.2s linear infinite;
+    background-color: transparent;
+    background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px
+}
+@keyframes rotateSpinner {
+0% {
+transform:rotate(0deg)
+}
+100% {
+transform:rotate(360deg)
+}
+}
+.fb_iframe_widget {
+    display: inline-block;
+    position: relative
+}
+.fb_iframe_widget span {
+    display: inline-block;
+    position: relative;
+    text-align: justify
+}
+.fb_iframe_widget iframe {
+    position: absolute
+}
+.fb_iframe_widget_fluid_desktop, .fb_iframe_widget_fluid_desktop span, .fb_iframe_widget_fluid_desktop iframe {
+    max-width: 100%
+}
+.fb_iframe_widget_fluid_desktop iframe {
+    min-width: 220px;
+    position: relative
+}
+.fb_iframe_widget_lift {
+    z-index: 1
+}
+.fb_iframe_widget_fluid {
+    display: inline
+}
+.fb_iframe_widget_fluid span {
+    width: 100%
+}
+</style>
+</head>
+<body>
+<form method="post" action="https://www.soonnet.org/Photo/Photo.aspx" id="lamform">
+<div class="aspNetHidden">
+  <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+  <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+  <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['lamform'];
+if (!theForm) {
+    theForm = document.lamform;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script> 
+<script src="./SGL_Images/WebResource.axd" type="text/javascript"></script> 
+<script src="./SGL_Images/ScriptResource.axd" type="text/javascript"></script> 
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 用戶端架構無法載入。');
+//]]>
+</script> 
+<script src="./SGL_Images/ScriptResource(1).axd" type="text/javascript"></script>
+<div class="aspNetHidden">
+  <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E730ED7E">
+  <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="BLhGkq8AVajV+6FBGa510n6EBVBJG+Shrdqm4cG7Pl6eOFJFIpOiVl6fuE6+xA7hBQDQCXL30LG14oEZjJhuNTxuNmNkDA0PgKc4Fdwzt14sKfEOY8ocFKvoBZdNyOlNWUCXw/9oF7pDGoPdMVPJ75KAS3OcI2Tn/VJSJOZ8Kukb/6Qo8M14HCHUjSsTM5XbzSRS8LuSma2XfdAMbbaZv6+5HTt9gIQ15DvHEO9KyiBvW6lTewVDKB4UXvMFDcYlENWnEzzxYJHrFs+uBMy6m4V3y277rRu8smYqR/+S7GXA2jSet6dTMUiLlrEvnk+gf9MipVrFX78NlgS/qtC9AewPcaZ8aCInlWt7ku3gcCW7Pega0/M5G54e3IZeYNQqaZJyFIOV3finjmZKvqxFJBRzAIQks9dir0cHMzZk7w4Bf843BmDlt1MveHD8/ksLEZ8vLdLTqyD17Ca3kfWp+t9aGHYP0WiDnCA3zJAOgsM=">
+</div>
+<script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$LokScriptManager', 'lamform', ['tctl00$MemberUpPanel','MemberUpPanel','tctl00$LokMain_Content$PhotoBodyUpPanel','LokMain_Content_PhotoBodyUpPanel','tctl00$LokMain_Content$iOSPageUpPanel','LokMain_Content_iOSPageUpPanel'], [], [], 90, 'ctl00');
+//]]>
+</script>
+<div id="LokOverlay" class="LokOverlay" style="display:none"></div>
+<div id="event-tw-2019-popup" style="right: 0px;display:block">
+  <ul style="display:block">
+    <li><a href="javascript:void(0);" id="YesIKnow2" class="messageclose"></a></li>
+    <a target="_blank" href="http://twrunner.soonnet.org/"><img src="./SGL_Images/event-tw-2019-adv.jpg"></a>
+  </ul>
+</div>
+<div id="HrBar" style="display: none;"></div>
+<!-- 目錄 -->
+<header class="header">
+  <div class="header-nav"> 
+    <!-- header left -->
+    <div class="header-left"> 
+      <!-- header logo -->
+      <h1 class="header-logo"> <a href="/" title="尋寶網"> <img src="./SGL_Images/soonnet-logo.svg" alt="尋寶網"> </a></h1>
+      <!-- /.header-logo --> 
+      
+      <!-- header menu -->
+      <ul class="header-menu">
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Car/Car.aspx" class="header-menu-link"> 重機 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Marathon/Marathon.aspx" class="header-menu-link"> 路跑 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Bicycle/Bicycle.aspx" class="header-menu-link"> 單車 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Sport/Sport.aspx" class="header-menu-link"> 運動 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Gallery/Gallery.aspx" class="header-menu-link"> 攝影 </a> </li>
+        <li class="header-menu-item current"> <a href="https://www.soonnet.org/Photo/Photo.aspx" class="header-menu-link"> 圖庫 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Schedule/Schedule.aspx" class="header-menu-link"> 賽程 </a> </li>
+        <li class="header-menu-item"> <a href="https://www.soonnet.org/Daily/Daily.aspx" class="header-menu-link"> 新聞 </a> </li>
+        <li class="header-menu-item"> <a href="../../video/video.html" class="header-menu-link"> 影音 </a> </li>
+      </ul>
+      <!-- /.header menu --> 
+    </div>
+    <!-- /.header left --> 
+    
+    <!-- header right -->
+    <div class="header-right"> 
+      
+      <!-- Search bar -->
+      <div class="search">
+        <form action="" method="GET">
+        <input type="text" name="word" placeholder="搜尋" autocomplete="off" spellcheck="true" id="search-keywords">
+        <button type="submit" class="search-icon"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <!-- /.Search bar -->
+      
+      <ul class="user-menu">
+        <li class="header-menu-item"> <a href="http://www.soonnet.org/Photo/PhotoUpload.aspx?W=IsCreate" class="upload fa fa-cloud-upload-alt" title="上傳"> </a> </li>
+        <li class="header-menu-item"> <a href="" class="user" title="登入"> <img class="user-logo" src="./SGL_Images/guest-logo.jpg" alt="登入"> </a> </li>
+      </ul>
+    </div>
+    <!-- /.header right --> 
+    
+  </div>
+  <!-- /.header-inner --> 
+</header>
+<!-- /.目錄 -->
+<div class="LokLine"></div>
+<div id="Bodyheight">
+  <div id="Lok_MainBody_Layer">
+    <div class="LokLayer_One">
+      <div class="LayerOne_Center    LokNone">
+        <div class="LayerOne_Font  PageActivate">最新上載</div>
+        <div class="LayerOne_Font">&nbsp;&nbsp;&nbsp;&nbsp;近期熱門</div>
+      </div>
+      
+      <!--LevelAdvertisement-->
+      <div id="LokMain_Content_MainbannerPanel">
+        <div id="LokMain_Content_ctl02_ADVweatherPanel">
+          <div class="lokbannerdiv">
+            <div id="LokMain_Content_ctl02_AdvOnePanel"> <a href="https://w3.sdec.ntpc.edu.tw/files/40-1000-21-1.php?Lang=zh-tw" target="_blank">
+              <div class="postusbanner" id="SortindexBanner" style="background-image: url(&quot;/Advertisement/D_002.png&quot;);"></div>
+              </a> 
+              <script type="text/javascript">$(document).ready(function () { AAdsd(); });</script> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="LokClearfloat"></div>
+    </div>
+    <div class="LokLayer_Two">
+      <div class="LayerTwo_Center">
+        <div class="LayerTwo_Font">共&nbsp;<span id="HiATQ">35640</span>&nbsp;相薄</div>
+      </div>
+      <div class="LayerTwo_Setting">
+        <div id="LokMain_Content_LokSelectPanel">
+          <ul class="SettingListBar wallnav">
+            <li> <a class="btnborder LayerThree_Font"><span id="CityName">不限地區</span><span class="btndown">▼</span></a>
+              <ul id="selectCity">
+                <li><a lokdata="0">不限地區</a></li>
+                <li><a lokdata="46">台灣</a></li>
+                <li><a lokdata="18">香港</a></li>
+                <li><a lokdata="9">中國</a></li>
+                <li><a lokdata="42">新加坡</a></li>
+                <li><a lokdata="50">澳門</a></li>
+                <li><a lokdata="22">印度</a></li>
+                <li><a lokdata="24">日本</a></li>
+                <li><a lokdata="25">韓國</a></li>
+                <li><a lokdata="51">馬來西亞</a></li>
+                <li><a lokdata="52">紐西蘭</a></li>
+                <li><a lokdata="10155">其他</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        &nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div class="LokClearfloat"></div>
+    </div>
+    <div class="LokLayer_Three">
+      <div class="LokcontentInside">
+        <div class="LokLayer_Three_Body">
+          <div id="LokLayerThreeBody" class="PhotoBody">
+            <div id="LokMain_Content_PhotoBodyUpPanel">
+              <ul id="BodyListOne">
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50705&amp;U=84015&amp;G=0808edc9-6f9d-4067-83a5-444e8121aa17" target="_blank">
+                    <div id="LokAutoimg"><img src="./SGL_Images/AlbumPoster.jpg" data-bak="0" data-hots="1" width="450" style="width: 357px; height: 357px; display: inline;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020-6-6 RideHolics 騎摩客水牛坑吃土盃</div>
+                      <div>攝手:kwjko</div>
+                      <div>日期:08/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:367&nbsp;張<span class="LokFloatright">瀏覽350次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50704&amp;U=119&amp;G=569830b6-b758-4f8b-a864-651dfe1862f2" target="_blank">
+                    <div id="LokAutoimg"><img src="./SGL_Images/AlbumPoster(1).jpg" data-bak="0" data-hots="1" width="450" style="width: 357px; height: 357px; display: inline;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">109-06-07（日）北宜練拍</div>
+                      <div>攝手:呂謹亦</div>
+                      <div>日期:08/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:490&nbsp;張<span class="LokFloatright">瀏覽3,380次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50703&amp;U=221701&amp;G=7c8274dd-b779-4b69-a3e5-d5f814dce94e" target="_blank">
+                    <div id="LokAutoimg"><img src="./SGL_Images/AlbumPoster(2).jpg" data-bak="0" data-hots="1" width="450" style="width: 357px; height: 357px; display: inline;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020.6.7 182追焦照</div>
+                      <div>攝手:a89691111</div>
+                      <div>日期:08/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:152&nbsp;張<span class="LokFloatright">瀏覽40,240次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50702&amp;U=221701&amp;G=afb9fa08-f9d9-42d9-b4b4-4219137aeaa4" target="_blank">
+                    <div id="LokAutoimg"><img src="./SGL_Images/AlbumPoster(3).jpg" data-bak="0" data-hots="1" width="450" style="width: 357px; height: 357px; display: inline;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020.6.7 霧台追焦照</div>
+                      <div>攝手:a89691111</div>
+                      <div>日期:08/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:41&nbsp;張<span class="LokFloatright">瀏覽14,493次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50701&amp;U=154137&amp;G=28586e54-723c-4264-ad25-4d2eb249198f" target="_blank">
+                    <div id="LokAutoimg"><img src="./SGL_Images/AlbumPoster(4).jpg" data-bak="0" data-hots="1" width="450" style="width: 357px; height: 357px; display: inline;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020/06/08 內湖鐵人 週一團練</div>
+                      <div>攝手:張信利</div>
+                      <div>日期:08/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:187&nbsp;張<span class="LokFloatright">瀏覽2,351次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50700&amp;U=170696&amp;G=0148c337-203f-4cc1-aa9f-ea691a2a6ff3" target="_blank">
+                    <div id="LokAutoimg"><img src="./SGL_Images/AlbumPoster(5).jpg" data-bak="0" data-hots="1" width="450" style="width: 357px; height: 357px; display: inline;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020/6/6風櫃嘴隨手拍-單車篇.(7:51-9:14)! ^_^</div>
+                      <div>攝手:Jack Chin</div>
+                      <div>日期:08/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">10</span></div>
+                      <div>相片:2281&nbsp;張<span class="LokFloatright">瀏覽70,586次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50699&amp;U=221890&amp;G=8c53a6d7-8737-4a02-80f8-f87695f6072e" target="_blank">
+                    <div id="LokAutoimg"><img src="./SGL_Images/AlbumPoster(6).jpg" data-bak="0" data-hots="1" width="450" style="width: 357px; height: 357px; display: inline;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020.06.07 福河橋河濱晨跑</div>
+                      <div>攝手:仙輩</div>
+                      <div>日期:08/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:458&nbsp;張<span class="LokFloatright">瀏覽30,604次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50698&amp;U=14808&amp;G=73da3e22-5af8-4f2b-91e1-ce6ea3913589" target="_blank">
+                    <div id="LokAutoimg"><img src="./SGL_Images/AlbumPoster(7).jpg" data-bak="0" data-hots="1" width="450" style="width: 357px; height: 357px; display: inline;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020/6/7 山林涼</div>
+                      <div>攝手:Sean Lin</div>
+                      <div>日期:08/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:2794&nbsp;張<span class="LokFloatright">瀏覽54,387次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50697&amp;U=220284&amp;G=39cfbd72-b13d-4738-9944-801f9ba4ecc3" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="220284/5b8a2814-d03d-4873-9403-e571b8c2b5f9" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">00020200607</div>
+                      <div>攝手:張宏韋</div>
+                      <div>日期:08/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:152&nbsp;張<span class="LokFloatright">瀏覽49,579次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50696&amp;U=222889&amp;G=9cc03986-4d01-47a7-88bc-693cad46fd4c" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="222889/2eb89770-67f5-4b9c-8a1e-21b0634172a1" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">109/06/07 182 27.5K</div>
+                      <div>攝手:莊鎮宇</div>
+                      <div>日期:08/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:340&nbsp;張<span class="LokFloatright">瀏覽142,838次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50695&amp;U=217081&amp;G=2c970e07-e047-4674-b420-e6f954026226" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="217081/d2e5ecf9-539a-4478-b64c-8696adf418c7" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">CB1000R </div>
+                      <div>攝手:王巧克</div>
+                      <div>日期:08/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:18&nbsp;張<span class="LokFloatright">瀏覽2,012次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50694&amp;U=201886&amp;G=1ebcadb8-3197-446e-947f-68644b6377b2" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="201886/fdc134ed-5535-4444-bc14-5e7c03c50b56" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020.6.7 龍湖</div>
+                      <div>攝手:蔡承育</div>
+                      <div>日期:08/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:60&nbsp;張<span class="LokFloatright">瀏覽58,302次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50693&amp;U=204317&amp;G=052d5953-dad9-40e4-8304-acf84a7d9c92" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="204317/38d6c2bd-8cee-402e-8ae1-aebb37afeb18" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">0607 北宜早鳥 0710~0840</div>
+                      <div>攝手:Yong Jie Su</div>
+                      <div>日期:08/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:253&nbsp;張<span class="LokFloatright">瀏覽32,773次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50692&amp;U=181698&amp;G=bcba844a-4bec-4032-91ff-1dcd2476334d" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="181698/50482546-530a-45c1-8f70-5b9afa9a0c3b" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">666跑後山六六大順-大鵬灣路跑友誼賽</div>
+                      <div>攝手:陳粵棟</div>
+                      <div>日期:08/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:514&nbsp;張<span class="LokFloatright">瀏覽24,601次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50691&amp;U=222565&amp;G=ec47c36f-5bab-486f-8022-ecb82d3dc5d1" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="222565/7c0646ed-9f7d-443c-a46c-a7deae28381f" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">6/07 182</div>
+                      <div>攝手:Chia En Yueh</div>
+                      <div>日期:08/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:57&nbsp;張<span class="LokFloatright">瀏覽35,480次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50689&amp;U=196510&amp;G=4b08b79a-91f0-4e16-aa97-c87055180201" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="196510/78ca196d-4e45-4858-820b-999a8d3f1095" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">20200607北宜公路</div>
+                      <div>攝手:邱宇晨</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:216&nbsp;張<span class="LokFloatright">瀏覽28,477次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50688&amp;U=222747&amp;G=5747add9-d55a-4d5a-bf20-db547c4c0bb4" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="222747/01b36c75-b895-4ced-8e16-b3e68111865c" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020/06/07 台24野店</div>
+                      <div>攝手:H.T</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:44&nbsp;張<span class="LokFloatright">瀏覽24,181次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50687&amp;U=200729&amp;G=83cb4198-aed2-4d6d-b13f-6303ded8f44c" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="200729/7e4c784d-c8cf-4ecc-8eb7-31f2d6926e02" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">0607 龍湖宮追焦</div>
+                      <div>攝手:ray212023</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">1</span></div>
+                      <div>相片:199&nbsp;張<span class="LokFloatright">瀏覽126,300次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50686&amp;U=221978&amp;G=e62110a7-847d-435c-a020-71b2074d328a" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="221978/65087b83-e0ca-45d9-9b27-3e8662991991" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">6/6 182 1415-1555</div>
+                      <div>攝手:Kai Xu Yang</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:63&nbsp;張<span class="LokFloatright">瀏覽36,241次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50685&amp;U=85179&amp;G=6d09f781-aba4-405b-abc4-7c8ebd2cfe28" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="85179/6aab50c0-07c6-4ab1-bb15-fbd6c2f68a41" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020.04.02-夜拍練習(花蓮車站)</div>
+                      <div>攝手:Huang Chien Ming</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:8&nbsp;張<span class="LokFloatright">瀏覽1,165次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50684&amp;U=222924&amp;G=c46cd959-b959-4ba2-96f1-4a429fce4b81" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="222924/15d800dc-43f3-44b1-b148-e84b0d3f734d" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">182-27K （04:00～04:30）</div>
+                      <div>攝手:Mickey Luo</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:86&nbsp;張<span class="LokFloatright">瀏覽31,259次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50683&amp;U=222318&amp;G=221120ca-c4bb-4bc8-9790-df5eb00d70ab" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="222318/5e429b0d-3600-4ff2-94fe-0b02ffc46b3b" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">台3線 2020 06 07 117K 上午</div>
+                      <div>攝手:振哥</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:301&nbsp;張<span class="LokFloatright">瀏覽33,088次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50682&amp;U=222899&amp;G=4a927707-a3b2-4b1b-b441-595226055850" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="222899/49061039-76c2-4cf2-993b-2cd078c58e83" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">補0606</div>
+                      <div>攝手:郭洺宏</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:129&nbsp;張<span class="LokFloatright">瀏覽40,424次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50681&amp;U=202300&amp;G=ce044921-1011-4a98-940c-510a55ca9366" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="202300/3e643f0f-3ed5-4326-9d20-4293d0e70ae4" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">0607專屬拍攝</div>
+                      <div>攝手:暗之戰將</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:51&nbsp;張<span class="LokFloatright">瀏覽2,260次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50680&amp;U=219915&amp;G=97b0e088-4b53-426f-b292-abcfcfb8c21a" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="219915/cdf9f59a-9fc8-4bf0-9aec-9b24cd20a1c6" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020 6/7 下午 野店</div>
+                      <div>攝手:Thomas918</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:104&nbsp;張<span class="LokFloatright">瀏覽89,615次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50679&amp;U=202543&amp;G=cbb0a5c0-b05a-47c0-aa2f-e0fd3296b92e" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="202543/03b479bd-6603-48f8-8e9e-fb1e2485a182" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">20200607 高雄182縣道追焦</div>
+                      <div>攝手:Mingking  Lin</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:50&nbsp;張<span class="LokFloatright">瀏覽28,428次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50678&amp;U=217514&amp;G=fc26cf00-1335-48de-b8ae-c6bd96ac1f6f" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="217514/c56d7f31-8d57-41ef-a525-25c7d87c4e4a" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020.06.07 182</div>
+                      <div>攝手:bb熊</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:216&nbsp;張<span class="LokFloatright">瀏覽100,953次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50677&amp;U=221442&amp;G=13f7d85f-2c26-46be-9af5-766a4894610b" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="221442/1527b64c-1077-477e-ac8e-1cd344935472" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020/6/7北宜32.8早午場/8:14-12:05</div>
+                      <div>攝手:黃柏新</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">1</span></div>
+                      <div>相片:286&nbsp;張<span class="LokFloatright">瀏覽36,791次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50676&amp;U=221403&amp;G=c7dcf479-1b32-46a8-9cc5-abc7f138f714" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="221403/0094c885-ce66-42fd-8ccb-1050a5b58ac6" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020.06.07 台三</div>
+                      <div>攝手:徐睿得</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">1</span></div>
+                      <div>相片:262&nbsp;張<span class="LokFloatright">瀏覽57,321次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50675&amp;U=222899&amp;G=ca88667a-eaf1-4188-964d-0cc5d816cdf8" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="222899/6de8d155-0191-4658-a6a6-6912d9b33023" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">0607霧台</div>
+                      <div>攝手:郭洺宏</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">1</span></div>
+                      <div>相片:534&nbsp;張<span class="LokFloatright">瀏覽203,799次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50674&amp;U=220746&amp;G=79286224-1d0c-4bc2-b20d-3efb6b596a31" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="220746/4128e767-776b-47eb-b8a3-3cf3364326cc" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020/06/07 台三 舊金灣1500-1630  新手練攝</div>
+                      <div>攝手:曾思維</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">1</span></div>
+                      <div>相片:44&nbsp;張<span class="LokFloatright">瀏覽15,766次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50673&amp;U=221883&amp;G=f85be79e-8508-455a-88ee-76572470c7d9" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="221883/2421829d-24fc-4e60-a1a2-bad656b11450" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020/06/07 182 1440-1600</div>
+                      <div>攝手:山道攝</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">2</span></div>
+                      <div>相片:214&nbsp;張<span class="LokFloatright">瀏覽180,948次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50672&amp;U=222925&amp;G=8a598129-e6f8-46b0-a8f3-1ad61b568b32" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="222925/5865ab27-c462-4261-b935-3e639292f822" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">20200607</div>
+                      <div>攝手:周怡均</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">1</span></div>
+                      <div>相片:518&nbsp;張<span class="LokFloatright">瀏覽50,967次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50671&amp;U=713&amp;G=9ec21361-675a-4f5d-bfae-0b8b830f3484" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="713/b0c9eb18-f73f-4970-9283-b5a2a21f5a66" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020 06 07  觀音山</div>
+                      <div>攝手:陳家雄</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:55&nbsp;張<span class="LokFloatright">瀏覽11,012次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50670&amp;U=219491&amp;G=2999f643-a7db-495f-b5da-5f93aa87575b" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="219491/006d8e77-ee24-4257-8544-341f07e73547" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020-06-07 TKS</div>
+                      <div>攝手:R州</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:24&nbsp;張<span class="LokFloatright">瀏覽6,165次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50669&amp;U=200724&amp;G=133a0d50-19f8-47ba-b42a-454cd855d100" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="200724/3b68a054-0ab0-4bee-9b3d-17ba780509be" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">霧台神山台24線 C.P RACING</div>
+                      <div>攝手:howaeryout</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">2</span></div>
+                      <div>相片:207&nbsp;張<span class="LokFloatright">瀏覽86,914次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50668&amp;U=713&amp;G=acadded5-b254-4ecf-b431-c73e30a9c8ab" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="713/931d6353-d9d4-429e-9039-bae523da3547" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020 06 07  觀音山</div>
+                      <div>攝手:陳家雄</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">17</span></div>
+                      <div>相片:500&nbsp;張<span class="LokFloatright">瀏覽68,102次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50666&amp;U=218154&amp;G=6f0f77a9-dca9-40c1-83c2-1325e7aab0a4" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="218154/8fb177ba-24fd-4c21-b86f-23344c3d7986" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020.06.07 北宜財茂彎</div>
+                      <div>攝手:blue235</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">3</span></div>
+                      <div>相片:904&nbsp;張<span class="LokFloatright">瀏覽107,624次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50665&amp;U=142345&amp;G=4dd6004b-8c64-4970-9f46-3b9550d26869" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="142345/2932ac32-c697-4ff8-95e0-d01d69e164ad" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">20200607 174</div>
+                      <div>攝手:王翔彥</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:113&nbsp;張<span class="LokFloatright">瀏覽25,312次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50663&amp;U=68823&amp;G=95f6adc8-1c89-41b4-aad0-3c21d9bd3bfe" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="68823/42d924fc-f174-4237-a518-b6338404803e" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">109-6-7 7:30-11:00北宜(棲霞)照片如有模糊請見諒 歡迎代標籤 感謝賞照</div>
+                      <div>攝手:李柳存</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">10</span></div>
+                      <div>相片:1306&nbsp;張<span class="LokFloatright">瀏覽142,132次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50662&amp;U=217261&amp;G=8c6b9802-0f70-4a21-82b1-7d6bb0946c1d" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="217261/bbaeeca8-055d-423e-bd8f-522d6eb67623" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">182縣道 水桶灣</div>
+                      <div>攝手:邵長星</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">2</span></div>
+                      <div>相片:287&nbsp;張<span class="LokFloatright">瀏覽144,284次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50661&amp;U=222919&amp;G=a3cca099-4d11-4db1-8f77-35d3d8885004" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="222919/79a26588-6a96-491e-959a-468749ceae3b" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">06/07 霧台觀景台</div>
+                      <div>攝手:jatin0417</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:70&nbsp;張<span class="LokFloatright">瀏覽31,613次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50660&amp;U=205672&amp;G=e46acce9-7a4f-4017-89fa-e887c6672cd7" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="205672/1a6b782d-a449-4e37-8ad5-e2c8f8061085" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">.2020.6.7 105K 三峰</div>
+                      <div>攝手:邱品鈞</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">2</span></div>
+                      <div>相片:243&nbsp;張<span class="LokFloatright">瀏覽35,553次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50659&amp;U=222352&amp;G=5067ea7a-6930-404f-927d-61eee6f2377c" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="222352/bc786064-b974-4858-93e0-7ae900d05cf9" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">6/7-182-區間避車彎</div>
+                      <div>攝手:海膽</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">4</span></div>
+                      <div>相片:742&nbsp;張<span class="LokFloatright">瀏覽280,133次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50658&amp;U=221044&amp;G=57cb9a14-1504-4c66-9277-1180ec22d87f" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="221044/69ee582d-a4cd-4f68-b220-f65d18ba71dd" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">台7乙 20200607</div>
+                      <div>攝手:DandingMochi</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">1</span></div>
+                      <div>相片:179&nbsp;張<span class="LokFloatright">瀏覽22,422次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50657&amp;U=201972&amp;G=1925a94f-ebfe-41f4-bb97-a8810787222b" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="201972/3a634198-431c-4f63-9625-548d8414f135" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">台三105K草莓灣練拍</div>
+                      <div>攝手:戴旺成</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">1</span></div>
+                      <div>相片:289&nbsp;張<span class="LokFloatright">瀏覽57,050次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50656&amp;U=199487&amp;G=f5358f75-5943-468d-8909-9400d53fe65d" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="199487/0c7c69b0-4b0d-4872-b7f4-e2ea2118832d" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">2020.05.03-金山-中角-沙珠灣-衝浪</div>
+                      <div>攝手:chris2018</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">0</span></div>
+                      <div>相片:263&nbsp;張<span class="LokFloatright">瀏覽30,675次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50655&amp;U=221620&amp;G=c6a2e0cb-2284-4188-b119-6346f2236592" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="221620/6d8c260f-05b0-4724-aa96-c59692836c5b" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">109/6/7 霧台追焦 </div>
+                      <div>攝手:柯功明</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">1</span></div>
+                      <div>相片:307&nbsp;張<span class="LokFloatright">瀏覽131,916次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50653&amp;U=220729&amp;G=d860ed55-7e08-4968-b78f-1f9e5ad9d8d9" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="220729/2d5cfdd9-16ae-4222-978e-5e900f01f40e" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">霧台20200607</div>
+                      <div>攝手:吳明洲</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">1</span></div>
+                      <div>相片:181&nbsp;張<span class="LokFloatright">瀏覽82,016次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+                <li>
+                  <div id="Titletips"><a href="https://www.soonnet.org/Photo/PhotoDisplay.aspx?P=50652&amp;U=195305&amp;G=6b22d6bf-2b2e-40a0-9228-69afdcb09d84" target="_blank">
+                    <div id="LokAutoimg"><img id="LokImgLoad" src="./SGL_Images/Dot.png" class="LoadPanel" data-bak="0" data-hots="1" data-src="195305/78fa7e28-bdf6-4919-ac99-011c7cd75d0d" width="450" style="width: 357px; height: 357px;"></div>
+                    <div class="LiMyAlbumTips">
+                      <div class="AlbumTitle">20200607 北宜34(0630~0840)＆328(0850~1100) 新手練拍</div>
+                      <div>攝手:朱育民</div>
+                      <div>日期:07/06/2020<span class="LokFloatright"><img src="./SGL_Images/Icon05.png" width="13">1</span></div>
+                      <div>相片:526&nbsp;張<span class="LokFloatright">瀏覽48,408次</span></div>
+                    </div>
+                    </a></div>
+                </li>
+              </ul>
+              <input type="hidden" name="ctl00$LokMain_Content$HiddenPage" id="LokMain_Content_HiddenPage" value="1">
+              <input type="hidden" name="ctl00$LokMain_Content$HiddenAlbumTotal" id="LokMain_Content_HiddenAlbumTotal" value="35640">
+              <input type="button" name="ctl00$LokMain_Content$RefreshButton" value="" onclick="javascript:__doPostBack(&#39;ctl00$LokMain_Content$RefreshButton&#39;,&#39;&#39;)" id="LokMain_Content_RefreshButton" style="display:none">
+            </div>
+          </div>
+        </div>
+        <div id="LokUnlimited" class="Unlimitedload"><img src="./SGL_Images/loading.gif" width="100" height="100"></div>
+      </div>
+      <div class="LokClearfloat"></div>
+    </div>
+    <div class="LokLayer_Four">
+      <div id="Level_Body_iOS">
+        <div id="iOSPageBar">
+          <div class="iOSTopBar_list">
+            <div class="iOSTop_list" id="LokBackToTop"><a><span class="arrow-top"></span></a> </div>
+          </div>
+          <div class="iOSBar_list">
+            <div class="iOSPage_list">
+              <div id="LokMain_Content_iOSPageUpPanel">
+                <div id="LokMain_Content_LinkButtonPanel"> <a id="LokMain_Content_LinkButtonFirst" tabindex="1" class="circlebtn" usesubmitbehavior="true" href="javascript:__doPostBack(&#39;ctl00$LokMain_Content$LinkButtonFirst&#39;,&#39;&#39;)"><span class="arrow-left3"></span><span class="arrow-left"></span></a> <a id="LokMain_Content_LinkButtonPrevPlus" tabindex="1" class="circlebtn" usesubmitbehavior="true" href="javascript:__doPostBack(&#39;ctl00$LokMain_Content$LinkButtonPrevPlus&#39;,&#39;&#39;)"><span class="arrow-left2"></span><span class="arrow-left2"></span></a> <a id="LokMain_Content_LinkButtonPrev" tabindex="1" class="circlebtn" usesubmitbehavior="true" href="javascript:__doPostBack(&#39;ctl00$LokMain_Content$LinkButtonPrev&#39;,&#39;&#39;)"><span class="arrow-left"></span></a> <a class="pagenumber circlebtn2" href="javascript:void(0);"><b> <span id="LokMain_Content_LinkDisplayLabel">Page 1 to 713</span></b></a> <a id="LokMain_Content_LinkButtonNext" tabindex="2" class="circlebtn" usesubmitbehavior="true" href="javascript:__doPostBack(&#39;ctl00$LokMain_Content$LinkButtonNext&#39;,&#39;&#39;)"><span class="arrow-right"></span></a> <a id="LokMain_Content_LinkButtonNextPlus" tabindex="11" class="circlebtn" usesubmitbehavior="true" href="javascript:__doPostBack(&#39;ctl00$LokMain_Content$LinkButtonNextPlus&#39;,&#39;&#39;)"><span class="arrow-right2"></span><span class="arrow-right2"></span></a> <a id="LokMain_Content_LinkButtonLast" tabindex="713" class="circlebtn" usesubmitbehavior="true" href="javascript:__doPostBack(&#39;ctl00$LokMain_Content$LinkButtonLast&#39;,&#39;&#39;)"><span class="arrow-right"></span><span class="arrow-right3"></span></a> <a onclick="return Fpage();" id="LokMain_Content_FlyButton" class="page-button circlebtn2" usesubmitbehavior="true" href="javascript:__doPostBack(&#39;ctl00$LokMain_Content$FlyButton&#39;,&#39;&#39;)">Go</a>
+                  <input name="ctl00$LokMain_Content$FlyPageBox" type="text" value="1" id="LokMain_Content_FlyPageBox" class="pagetextbox" onkeydown="LokKeyPressbyinput(event,2);">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input type="hidden" name="ctl00$LokMain_Content$HiddenCityNumber" id="LokMain_Content_HiddenCityNumber" value="Lok">
+      <input type="hidden" name="ctl00$LokMain_Content$HiddenDisplayNumber" id="LokMain_Content_HiddenDisplayNumber" value="Lok">
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="LokClearfloat"></div>
+</div>
+<p></p>
+<div class="LokClearfloat"></div>
+<div id="Lok_Footer">
+  <footer>
+    <div id="footerlinks"><span><a class="fancybox" href="https://www.soonnet.org/Photo/Photo.aspx#contactus">聯絡我們</a></span><span><a href="https://www.soonnet.org/About.aspx?A=US">關於我們</a></span><span><a href="https://www.soonnet.org/AD_Demo/Advertising.html">廣告查詢</a></span><span><a href="https://www.soonnet.org/About.aspx?A=service">服務條款</a></span><span><a href="https://www.soonnet.org/About.aspx?A=privacy">私隱條款</a></span><span><a href="https://www.soonnet.org/About.aspx?A=copyright">著作權條款</a></span></div>
+    <div class="footerContainer">
+      <div class="footerlogo"></div>
+      <div class="copyright">本網站部份資訊由用戶提供，如觸犯您的版權，<a href="mailto:info@soonnet.org">請與我們聯繫</a>。<br>
+        <span>Copyright©2020 尋寶網&nbsp;SOONNET.org. All Rights Reserved </span></div>
+      <div class="footerright">
+        <select id="Language_ZH">
+          <option value="0">中文(繁體)</option>
+          <option value="1">中文(简体)</option>
+        </select>
+        <div class="sns">
+          <ul class="clearfix">
+            <li class="facebook">
+              <iframe src="./SGL_Images/like.html" width="192" height="46" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="contactus" style="display: none;width:500px">
+    <h1>聯絡我們</h1>
+    <span>歡迎透過以下方式與尋寶網台灣或香港團隊聯絡</span>
+    <div class="contactlightdiv2"> <span class="advert">一般查詢</span>
+      <p><img src="./SGL_Images/tel.png" width="16">台灣區: 886-2-8792-9897 (分機806)</p>
+      <p class="tab">香港區: 852-2197-5506</p>
+      <p><img src="./SGL_Images/email.png" width="16"><a href="mailto:info@soonnet.org">info@soonnet.org</a></p>
+    </div>
+    <div class="contactlightdiv2"> <span class="somedia">商業合作</span>
+      <p><img src="./SGL_Images/tel.png" width="16">台灣區: 886-2-8792-9897 (分機806)</p>
+      <p class="tab">香港區: 852-2197-5566</p>
+      <p><img src="./SGL_Images/email.png" width="16"><a href="mailto:sales_tw@soonnet.org">sales_tw@soonnet.org</a></p>
+    </div>
+    <div class="contactlightdiv2"> <span class="somedia">社交媒體</span>
+      <p><img src="./SGL_Images/fb.png" alt="Facebook" name="Facebook" title="Facebook" width="16"> <a href="https://www.facebook.com/soonnet" target="_blank">www.facebook.com/soonnet</a></p>
+      <p><img src="./SGL_Images/weibo.png" alt="Line" name="Line" title="Line" width="16"> <a href="http://weibo.com/soonnet" target="_blank">weibo.com/soonnet</a></p>
+    </div>
+    <div class="contactlightqr1div">
+      <p><img src="./SGL_Images/weibo.png" width="15"> 微博 Weibo</p>
+      <p><img src="./SGL_Images/weiboqrcode.png" class="imgqrcode" alt=""></p>
+    </div>
+    <div class="contactlightqr3div">
+      <p><img src="./SGL_Images/wechat.png" width="15"> 微信 Wechat</p>
+      <p><img src="./SGL_Images/wechatqrcode.jpg" class="imgqrcode" alt=""></p>
+    </div>
+  </div>
+  <div class="LokClearfloat"></div>
+</div>
+<div id="LokMessageNotice">
+  <ul>
+    <li>&nbsp;</li>
+    <li><a href="javascript:void(0);" id="YesIKnow" class="messageclose">&nbsp;</a></li>
+    <hr>
+    <li><a href="https://www.soonnet.org/Account/Account.aspx?W=MyMessage&amp;R=101" target="_blank" class="messagecontent"><span class="messageicon"><img src="./SGL_Images/message.png"></span>您有(<span id="LokNoticeinfo"></span>)個新留言</a></li>
+    <li>&nbsp;</li>
+  </ul>
+</div>
+<script>LokUNdata='';$(document).ready(function() {AAeee('');});ATQ();</script>
+</form>
+<script type="text/javascript">
+$(document).ready(function() {
+Loknoticetimer.stop(); 
+        Loktwdcbm = true;
+    }); 
+</script>
+<div id="fb-root" class=" fb_reset">
+  <div style="position: absolute; top: -10000px; width: 0px; height: 0px;">
+    <div></div>
+  </div>
+</div>
+</body>
+</html>
