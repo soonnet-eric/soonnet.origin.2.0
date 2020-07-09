@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<title> 合集詳情 - 尋寶網管理後臺 </title>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="../../../css/font-awesome/all.min.css">
+<!-- icheck bootstrap -->
+<link rel="stylesheet" href="../../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+<!-- daterange picker -->
+<link rel="stylesheet" href="../../../plugins/daterangepicker/daterangepicker.css">
+<!-- Select2 -->
+<link rel="stylesheet" href="../../../plugins/select2/css/select2.min.css">
+<!-- Bootstrap4 Duallistbox -->
+<link rel="stylesheet" href="../../../plugins/bootstrap4-duallistbox/bootstrap-duallistbox.min.css">
+<!-- Theme Style -->
+<link rel="stylesheet" href="../../../css/adminlte/adminlte.css">
+<!-- Summernote -->
+<link rel="stylesheet" href="../../../plugins/summernote/summernote-bs4.css">
+<!-- Normalize -->
+<link rel="stylesheet" href="../../../css/desktop/normalize.css">
+<!-- Style -->
+<link rel="stylesheet" href="../../../css/desktop/main.css">
+<!-- Favicon -->
+<link rel="shortcut icon" href="../../../images/favicon.ico">
+</head>
+<body>
+<div class="wrapper"> 
+  
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light"> 
+    <!-- Left Navbar -->
+    <ul class="navbar-nav">
+      <li class="nav-item"> <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a> </li>
+    </ul>
+    
+    <!-- Right Navbar -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"> <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><img src="../../../images/user-image.jpg" class="user-image img-circle" Title="Username" alt="User Image"></a> </li>
+    </ul>
+  </nav>
+  <!-- /.Navbar --> 
+  
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4"> 
+    <!-- Soonnet Logo --> 
+    <a href="../../../dashboard.html" class="brand-link clearfix" title="尋寶網管理後臺"> <img src="../../../images/soonnet-logo.svg" alt="Soonnet Logo" class="brand-image"> </a> 
+    
+    <!-- Sidebar -->
+    <div class="sidebar"> 
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <li class="nav-header">網站內容</li>
+          <!-- 首頁設定 -->
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-home"></i>
+            <p> 首頁 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="../../home/banner.html" class="nav-link">
+                <p>橫額設定</p>
+                </a> </li>
+              <li class="nav-item disable"> <a href="#" class="nav-link">
+                <p>搜索關鍵字</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- 相簿 -->
+          <li class="nav-item has-treeview menu-open"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-images"></i>
+            <p> 相簿 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="../../album/album.html" class="nav-link">
+                <p>相簿列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../album/featured-album.html" class="nav-link">
+                <p>精選相簿</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../album/featured-photo.html" class="nav-link">
+                <p>精選相片</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../album/collection.html" class="nav-link active">
+                <p>相簿合集列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../album/album-category.html" class="nav-link">
+                <p>相簿分類</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- 影音 -->
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-play-circle"></i>
+            <p> 影音 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="../../video/soonnettv.html" class="nav-link">
+                <p>Soonnet TV 列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../video/video.html" class="nav-link">
+                <p>一般影片列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../video/featured.html" class="nav-link">
+                <p>精選影音</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../video/programme.html" class="nav-link">
+                <p>節目列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../video/programme-category.html" class="nav-link">
+                <p>節目類型</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../video/video-category.html" class="nav-link">
+                <p>影片分類</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- 活動 -->
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-calendar"></i>
+            <p> 活動 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="../../event/event.html" class="nav-link">
+                <p>活動列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../event/featured.html" class="nav-link">
+                <p>精選活動</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../event/category.html" class="nav-link">
+                <p>活動類型</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../event/country.html" class="nav-link">
+                <p>舉辦城市</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../event/region.html" class="nav-link">
+                <p>舉辦地區</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../event/status.html" class="nav-link">
+                <p>報名狀態</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../event/remark.html" class="nav-link">
+                <p>活動附註</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- 話題 -->
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-fire"></i>
+            <p> 話題 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="../../topic/article.html" class="nav-link">
+                <p>文章列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../topic/article-featured.html" class="nav-link">
+                <p>編輯推薦</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../topic/article-category.html" class="nav-link">
+                <p>文章類型</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../topic/article-source.html" class="nav-link">
+                <p>轉載來源</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- Footer -->
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-list"></i>
+            <p> 頁腳 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="../../footer/parent.html" class="nav-link">
+                <p>頁腳母層管理</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../footer/child.html" class="nav-link">
+                <p>頁腳子層管理</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../footer/page.html" class="nav-link">
+                <p>頁面管理</p>
+                </a> </li>
+            </ul>
+          </li>
+          <li class="nav-header">其他</li>
+          <!-- 用戶 -->
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-user"></i>
+            <p> 用戶 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="../../user/user.html" class="nav-link">
+                <p>會員列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../user/user-photo-capacity.html" class="nav-link">
+                <p>相簿使用量</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../user/user-video-capacity.html" class="nav-link">
+                <p>影片使用量</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../user/admin.html" class="nav-link">
+                <p>權限人員列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../user/blacklist.html" class="nav-link">
+                <p>禁止訪問列表</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- 留言 -->
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-comment-dots"></i>
+            <p> 留言 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="../../comment/comment.html" class="nav-link">
+                <p>留言列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../comment/comment-hidden.html" class="nav-link">
+                <p>已隱藏留言</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- 廣告 -->
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-ad"></i>
+            <p> 廣告 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="../../ad/advertisement.html" class="nav-link">
+                <p>廣告列表</p>
+                </a> </li>
+              <li class="nav-item"> <a href="../../ad/advertiser.html" class="nav-link">
+                <p>廣告商管理</p>
+                </a> </li>
+              <li class="nav-item"> <a href="#" class="nav-link">
+                <p>版位參考</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- 伺服器狀態 -->
+          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-server"></i>
+            <p> 伺服器狀態 </p>
+            </a> </li>
+          <!-- 數據統計 -->
+          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-chart-bar"></i>
+            <p> 數據統計 </p>
+            </a> </li>
+          <!-- 操作日誌 -->
+          <li class="nav-item has-treeview disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-history"></i>
+            <p> 操作日誌 <i class="right fas fa-caret-up"></i> </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item"> <a href="#" class="nav-link">
+                <p>管理人員操作日誌</p>
+                </a> </li>
+              <li class="nav-item"> <a href="#" class="nav-link">
+                <p>用戶操作日誌</p>
+                </a> </li>
+            </ul>
+          </li>
+          <!-- 檢舉內容 -->
+          <li class="nav-item"> <a href="../report/report.html" class="nav-link"> <i class="nav-icon fas fa-ban"></i>
+            <p> 檢舉內容 </p>
+            </a> </li>
+          <!-- 系統設定 -->
+          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-cog"></i>
+            <p> 系統設定 </p>
+            </a> </li>
+        </ul>
+      </nav>
+      <!-- /.Sidebar Menu --> 
+    </div>
+    <!-- /.Sidebar --> 
+  </aside>
+  
+  <!-- Content Wrapper -->
+  <div class="content-wrapper"> 
+    <!-- Content Header -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark"> 合集詳情 </h1>
+          </div>
+          <!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item">相簿</li>
+              <li class="breadcrumb-item"><a href="../../album/collection.html">合集列表</a></li>
+              <li class="breadcrumb-item active">合集詳情</li>
+            </ol>
+          </div>
+          <!-- /.col --> 
+        </div>
+        <!-- /.row --> 
+      </div>
+      <!-- /.Container Fluid --> 
+    </div>
+    <!-- /.Content Header --> 
+    
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-sm-12">
+            <div class="card card-primary">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-4">
+                    <label for="collection-image">合集封面圖（建議尺寸：450x450）</label>
+                    <!-- Collection Image -->
+                    <div class="Adminalbum-thumbnail w-100">
+                      <div class="Adminalbum-responsive mb-2">
+                        <div class="Adminalbum-sizer"></div>
+                        <div class="Adminalbum-content">
+                          <div class="layout h-100 align-center ma-0">
+                            <div class="layout-flex">
+                              <div class="text-center o-60"><i class="fas fa-image fa-2x"></i></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    ＜此處使用上傳插件，上傳後即時顯示圖片＞
+                    <button type="button" class="btn btn-block btn-default btn-sm mb-3" data-toggle="modal" data-target="#modal-featured--set"><i class="nav-icon fas fa-image mr-1"></i> 上載自訂縮圖 </button>
+                    <!-- /.Collection Image --> 
+                  </div>
+                  <div class="col-8">
+                    <div class="form-group">
+                      <label for="collection-title">*合集名稱</label>
+                      <input type="text" id="collection-title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="collection-description">合集簡介</label>
+                      <textarea type="text" id="collection-description" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group mb-3">
+                      <label for="collection-album">*合集相簿（只顯示最新100本相簿，如相簿屬於100本以外請到「相簿列表」中單本加入至合集）</label>
+                      <select class="duallistbox" multiple="multiple">
+                        <option>(顯示最新100本相簿)</option>
+                        <option>2020 台北渣打馬拉松</option>
+                        <option>REASON TO RUN 2020</option>
+                        <option>06/20 北宜追焦</option>
+                        <option>06/19 138縣道追焦</option>
+                        <option>香港泰拳錦標賽</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="article-keywords">關鍵字（以 "," 作分隔，不需加上空格）</label>
+                      <input type="text" id="article-keywords" class="form-control" placeholder="e.g. 北宜,重機,追焦">
+                    </div>
+                    <div class="form-group">
+                      <label for="article-visibility">公開狀態</label>
+                      <select class="form-control custom-select select2-no-search">
+                        <option selected>顯示</option>
+                        <option>隱藏</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-body --> 
+            </div>
+            <!-- /.card --> 
+          </div>
+          <!-- /.col --> 
+        </div>
+        <!-- /.row -->
+        <div class="row justify-content-center">
+          <div class="col-8"> <a href="#" class="btn btn-secondary">取消</a>
+            <input type="submit" value="保存" class="btn btn-primary float-right">
+          </div>
+        </div>
+      </div>
+      <!-- /.Container Fluid --> 
+    </div>
+    <!-- /.Content --> 
+  </div>
+  <!-- /.Content Wrapper --> 
+</div>
+
+<!-- jQuery --> 
+<script src="../../../js/jquery-3.4.1.min.js"></script> 
+<!-- Bootstrap 4 --> 
+<script src="../../../js/bootstrap.bundle.min.js"></script> 
+<!-- Select2 --> 
+<script src="../../../plugins/select2/js/select2.full.min.js"></script> 
+<!-- Bootstrap4 Duallistbox --> 
+<script src="../../../plugins/bootstrap4-duallistbox/jquery.bootstrap-duallistbox.min.js"></script> 
+<!-- date-range-picker --> 
+<script src="../../../plugins/moment/moment.min.js"></script> 
+<script src="../../../plugins/daterangepicker/daterangepicker.js"></script> 
+<!-- Adminlte --> 
+<script src="../../../js/adminlte.min.js"></script> 
+<!-- Summernote --> 
+<script src="../../../plugins/summernote/summernote-bs4.min.js"></script> 
+<!-- Page Script --> 
+<script type="text/javascript">
+  $(function () {
+
+	//Bootstrap Duallistbox
+    $('.duallistbox').bootstrapDualListbox({
+		nonSelectedListLabel: '相簿',
+  		selectedListLabel: '加入至此合集',
+		filterPlaceHolder: '搜尋',
+  		moveOnSelect: false,
+		infoText: false,
+		moveSelectedLabel: '添加所選',
+		moveAllLabel: '添加所有',
+		removeSelectedLabel: '移除所選',
+		removeAllLabel: '移除所有'
+	})
+	  
+	//Select2
+    $('.select2').select2({
+	});
+
+    $('.select2-no-search').select2({
+      minimumResultsForSearch: Infinity
+    });
+	  
+	//Single Date picker
+	$('.single-date-picker').daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+    minYear: 2010,
+    maxYear: parseInt(moment().format('YYYY')) + 4,
+	autoUpdateInput: false
+	});
+	  
+	$('.single-date-picker').on('apply.daterangepicker', function(ev, picker) {
+  	  $(this).val(picker.startDate.format('YYYY-MM-DD'));
+	});
+  
+	//Date range picker
+    $('.date-range-picker').daterangepicker({
+      autoUpdateInput: false
+	});
+	$('.date-range-picker').on('apply.daterangepicker', function(ev, picker) {
+      $(this).val(picker.startDate.format('YYYY-MM-DD') + ' - ' + picker.endDate.format('YYYY-MM-DD'));
+	});
+	  
+	// Summernote
+    $('.textarea').summernote({
+		height: 500,   //set editable area's height
+	})
+  });
+	
+</script>
+</body>
+</html>
