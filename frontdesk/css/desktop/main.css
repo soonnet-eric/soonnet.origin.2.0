@@ -795,9 +795,9 @@ img {
   .container {
     margin-top: 50px;
   }
-	.videoindex {
-		margin-top: 50px !important;
-	}
+  .videoindex {
+    margin-top: 50px !important;
+  }
 }
 @media (min-width: 1440px) {
   .container {
@@ -1849,16 +1849,72 @@ label {
   white-space: normal;
   word-break: break-word;
 }
-#page .page-content {
-  white-space: pre-line;
+.page-content {
   font-size: 1rem;
   line-height: 1.75rem;
 }
-.page-content {
-  font-size: 0.9375rem;
-}
 .page-content a {
   color: #27ae60;
+}
+.page-content ol, .page-content ul {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+.page-content li {
+  display: list-item;
+}
+.page-content h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: 0.02rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  clear: both;
+}
+.page-content p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  clear: both;
+}
+.page-content blockquote {
+  padding: 6px 16px;
+  border: none;
+  quotes: "\201C""\201D";
+  display: inline-block;
+}
+.page-content blockquote p:before {
+  content: open-quote;
+  font-weight: bold;
+}
+.page-content blockquote p:after {
+  content: close-quote;
+  font-weight: bold;
+}
+.page-content .about-grid {
+  text-align: center;
+  padding: 1.5rem;
+}
+/* 廣告合作 */
+.ad-content h5 {
+  font-weight: bold;
+}
+.ad-table {
+  text-align: center;
+  width: 100%;
+}
+.ad-table img {
+  padding: 4px;
+}
+.ad-table td, .ad-table th {
+  border: .1rem solid #dee2e6;
+}
+.ad-table td {
+  padding: 8px 10px;
+  text-align: center;
 }
 /* Advertisement
    ========================================================================== */
@@ -1868,6 +1924,9 @@ label {
 }
 .ad-300x600, .ad-300x250 {
   margin-bottom: 30px;
+}
+.ad-footer {
+	display: none;
 }
 /* Footer
    ========================================================================== */
@@ -2123,5 +2182,15 @@ label {
   }
   #event-list .event-bookmark, .event-category, .event-region, .event-status {
     display: none;
+  }
+  /* 流動版臨時廣告欄位 */
+  .ad-footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+	  display: block;
+  }
+  .ad-footer img {
+    width: 100%;
   }
 }
