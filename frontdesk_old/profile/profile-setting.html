@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<title> 個人資料設定 - 尋寶網 </title>
+<!-- SEO -->
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="尋寶網 Soonnet">
+<meta property="og:title" content="個人資料設定 - 尋寶網">
+<meta property="og:type" content="website">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="尋寶網 Soonnet">
+<meta property="og:description" content="">
+<!-- CSS -->
+<link rel="stylesheet" href="../css/adminlte/adminlte.css">
+<link rel="stylesheet" href="../css/bootstrap/bootstrap-grid.css">
+<link rel="stylesheet" href="../css/desktop/normalize.css">
+<link rel="stylesheet" href="../css/desktop/main.css">
+<!-- External CSS -->
+<link rel="stylesheet" href="../css/font-awesome/all.min.css">
+<link rel="stylesheet" href="../plugins/select2/css/select2.min.css">
+<link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+<link rel="stylesheet" href="../plugins/daterangepicker/daterangepicker.css">
+<!-- Favicon -->
+<link rel="shortcut icon" href="../images/favicon.ico">
+</head>
+<body>
+<!-- 目錄 -->
+<header class="header">
+  <div class="header-nav"> 
+    <!-- header left -->
+    <div class="header-left"> 
+      <!-- header logo -->
+      <h1 class="header-logo"> <a href="/" title="尋寶網"> <img src="../images/desktop/soonnet-logo.svg" alt="尋寶網"> </a></h1>
+      <!-- /.header-logo --> 
+      
+      <!-- header menu -->
+      <nav class="header-nav-wrap">
+        <ul class="header-menu">
+          <li class="header-menu-item"> <a href="https://www.soonnet.org/Car/Car.aspx" class="header-menu-link"> 重機 </a> </li>
+          <li class="header-menu-item"> <a href="https://www.soonnet.org/Marathon/Marathon.aspx" class="header-menu-link"> 路跑 </a> </li>
+          <li class="header-menu-item"> <a href="https://www.soonnet.org/Bicycle/Bicycle.aspx" class="header-menu-link"> 單車 </a> </li>
+          <li class="header-menu-item"> <a href="https://www.soonnet.org/Sport/Sport.aspx" class="header-menu-link"> 運動 </a> </li>
+          <li class="header-menu-item"> <a href="https://www.soonnet.org/Gallery/Gallery.aspx" class="header-menu-link"> 攝影 </a> </li>
+          <li class="header-menu-item"> <a href="https://www.soonnet.org/Photo/Photo.aspx" class="header-menu-link"> 圖庫 </a> </li>
+          <li class="header-menu-item"> <a href="../event/eventlist.html" class="header-menu-link"> 活動 </a> </li>
+          <li class="header-menu-item"> <a href="../topic/articlelist.html" class="header-menu-link"> 話題 </a> </li>
+          <li class="header-menu-item"> <a href="https://www.soonnet.org/Daily/Daily.aspx" class="header-menu-link"> 新聞 </a> </li>
+          <li class="header-menu-item"> <a href="../video/video.html" class="header-menu-link"> 影音 </a> </li>
+        </ul>
+      </nav>
+      <!-- /.header menu --> 
+      <!-- mobile menu --> 
+      <a class="header-menu-toggle"><span></span></a> 
+      <!-- /.mobile menu --> 
+    </div>
+    <!-- /.header left --> 
+    
+    <!-- header right -->
+    <div class="header-right"> 
+      
+      <!-- Search bar -->
+      <div class="search">
+        <form action="" method="GET">
+          <input type="text" name="word" placeholder="搜尋" autocomplete="off" spellcheck="true" id="search-keywords">
+          <button type="submit" class="search-icon"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <!-- /.Search bar -->
+      
+      <ul class="user-menu">
+        <li class="header-menu-item"> <a href="" class="upload fa fa-cloud-upload-alt" title="上傳"> </a> </li>
+        <li class="header-menu-item"> <a href="" class="user" title="登入"> <img class="user-logo" src="../images/guest-logo.jpg" alt="登入"> </a> </li>
+      </ul>
+    </div>
+    <!-- /.header right --> 
+  </div>
+  <!-- /.header-inner --> 
+</header>
+<!-- /.目錄 --> 
+
+<!-- 社交平台按鈕 -->
+<div id="social-block"> 
+  <!-- Facebook -->
+  <div class="social-btn"> <a href="https://www.facebook.com/soonnet/" target="_blank" class="social-icon facebook fab fa-facebook-f"> </a> </div>
+  <!-- Instagram -->
+  <div class="social-btn"> <a href="https://www.instagram.com/soonnettv/" target="_blank" class="social-icon instagram fab fa-instagram"> </a> </div>
+  <!-- YouTube -->
+  <div class="social-btn"> <a href="https://www.youtube.com/soonnettv" target="_blank" class="social-icon youtube fab fa-youtube"> </a> </div>
+</div>
+<!-- /.社交平台按鈕 --> 
+
+<!-- Container -->
+<div id="profile" class="container">
+  <section>
+    <div class="section-group">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+            <div class="card-body box-profile">
+              <div class="text-center"> <img class="profile-user-img img-fluid img-circle"
+                       src="../images/user-logo.jpg"
+                       alt="User profile picture"> </div>
+              <h3 class="profile-username text-center mb-1">Eric Chong</h3>
+              <p class="text-muted text-center">一句話的自我介紹</p>
+            </div>
+            <!-- /.card-body -->
+            <div class="card-body">
+              <ul>
+                <li class="profile-nav"><a class="profile-nav-link" href="../profile/profile-album.html"> <i class="fas fa-share fa-fw mr-1"></i> 發佈內容 </a></li>
+                <li class="profile-nav"><a class="profile-nav-link" href="../profile/profile-bookmark-album.html"><i class="fas fa-bookmark fa-fw mr-1"></i> 我的收藏 </a></li>
+                <li class="profile-nav"><a class="profile-nav-link" href="../profile/profile-comment-received.html"><i class="fas fa-comments fa-fw mr-1"></i> 我的留言 </a></li>
+                <li class="profile-nav active"><a class="profile-nav-link" href="../profile/profile-setting.html"><i class="fas fa-cog fa-fw mr-1"></i> 設定 </a> </li>
+              </ul>
+            </div>
+            <!-- /.card-body --> 
+          </div>
+          <!-- /.card --> 
+        </div>
+        <!-- /.col -->
+        <div class="col-md-9 pl-md-4">
+          <div class="card">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-12">
+                  <ul class="nav nav-pills">
+                    <li class="nav-item"><a class="nav-link active" href="../profile/profile-setting.html" data-toggle="tab">個人資料設定</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../profile/profile-password.html" data-toggle="tab">更改密碼</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body"> 
+              <!-- My Profile -->
+              <div class="my-profile section-group">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group row">
+                      <label for="user-logo" class="col-sm-2 col-form-label">個人頭像</label>
+                      <div class="col-sm-10"> <img class="profile-user-img img-fluid img-circle"
+                       src="../images/user-logo.jpg"> </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="username" class="col-sm-2 col-form-label">會員名稱</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="username" placeholder="您顯示於社群上的名稱">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="bio" class="col-sm-2 col-form-label">自我介紹</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="bio" placeholder="您的簡短自我介紹">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="user-url" class="col-sm-2 col-form-label">自定義網址</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control" id="user-url" placeholder="www.soonnet.org/<yourusename> (一旦儲存將無法更改)">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="email" class="col-sm-2 col-form-label">Email</label>
+                      <div class="col-sm-10 col-form-label"> user@soonnet.org </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="password" class="col-sm-2 col-form-label">密碼</label>
+                      <div class="col-sm-2">
+                        <button type="button" class="btn btn-block btn-default" onclick="location.href='../../frontdesk/profile/profile-password.html'">更改密碼</button>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="gender" class="col-sm-2 col-form-label">性別</label>
+                      <!-- radio -->
+                      <div class="col-sm-10 col-form-label">
+                        <div class="icheck-primary d-inline mr-4">
+                          <input type="radio" id="male" name="gender">
+                          <label for="male"> 男 </label>
+                        </div>
+                        <div class="icheck-primary d-inline">
+                          <input type="radio" id="female" name="gender">
+                          <label for="female"> 女 </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="user-email" class="col-sm-2 col-form-label">出生日期</label>
+                      <div class="col-sm-10">
+                        <input type="date" class="form-control" placeholder="出生日期">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label for="user-email" class="col-sm-2 col-form-label">接收資訊</label>
+                      <div class="col-sm-10">
+                        <div class="icheck-primary">
+                          <input type="checkbox" id="receive">
+                          <label for="receive"> 我願意接收 尋寶網 Soonnet 的最新資訊 </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="col-3"> <a href="#" class="btn btn-secondary">取消</a>
+                        <input type="submit" value="儲存設定" class="btn btn-primary float-right" onclick="location.href='../event/event-provision-success.html'">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.My Profile --> 
+            </div>
+            <!-- /.card-body --> 
+          </div>
+          <!-- /.nav-tabs-custom --> 
+        </div>
+        <!-- /.col --> 
+      </div>
+      <!-- /.row --> 
+      
+    </div>
+  </section>
+</div>
+<!-- /.Container --> 
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-nav container">
+    <dl>
+      <dt> 關於我們 </dt>
+      <dd> <a href="../pages/about.html" title="關於我們"> 關於我們 </a> </dd>
+      <dd> <a href="../pages/terms.html" title="服務條款"> 服務條款 </a> </dd>
+      <dd> <a href="../pages/privacy.html" title="隱私條款"> 隱私條款 </a> </dd>
+      <dd> <a href="../pages/copyright.html" title="著作權條款"> 著作權條款 </a> </dd>
+      <dd> <a href="../pages/contact.html" title="聯絡我們"> 聯絡我們 </a> </dd>
+    </dl>
+    <dl>
+      <dt> 業務合作 </dt>
+      <dd> <a href="../pages/advertising.html" title="廣告合作"> 廣告合作 </a> </dd>
+      <dd> <a href="../pages/cooperate.html" title="商務合作"> 商務合作 </a> </dd>
+    </dl>
+    <dl>
+      <dt> 意見回饋 </dt>
+      <dd> <a href="mailto:info@soonnet.org?subject=意見回饋&body=請提出您的意見：" target="_blank" title="提出意見"> 提出意見 </a> </dd>
+      <dd> <a href="../event/event-provision.html" target="_blank" title="提出活動資訊"> 提出活動資訊 </a> </dd>
+    </dl>
+    <dl>
+      <dt> 外部連結 </dt>
+      <dd> <a href="http://twrunner.soonnet.org/road_run/index.html" target="_blank" title="最強市民飆5K"> 最強市民飆5K </a> </dd>
+    </dl>
+    <dl>
+      <dt> 社交媒體 </dt>
+      <dd> <a href="https://www.facebook.com/soonnet/" target="_blank" title="Facebook"> Facebook </a> </dd>
+      <dd> <a href="https://www.instagram.com/soonnettv/" target="_blank" title="Instagram"> Instagram </a> </dd>
+      <dd> <a href="https://www.youtube.com/soonnettv" target="_blank" title="YouTube"> YouTube </a> </dd>
+    </dl>
+  </div>
+  <div class="footer-bottom">
+    <div class="copyright"> <span>本網站部份資訊由用戶提供，如侵犯您的版權，請<a href="../pages/contact.html">與我們聯繫</a>。</span> <span>Copyright &copy; 2020 尋寶網 SOONNET.org. All Rights Reserved.</span> </div>
+  </div>
+</footer>
+<!-- ./Footer --> 
+
+<!-- Script --> 
+<script src="../js/jquery-3.4.1.min.js"></script> 
+<script src="../js/main.js"></script>
+</body>
+</html>

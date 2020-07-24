@@ -59,7 +59,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-header">網站內容</li>
-          <!-- 首頁設定 -->
+          <!-- 首頁 -->
           <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-home"></i>
             <p> 首頁 <i class="right fas fa-caret-up"></i> </p>
             </a>
@@ -235,22 +235,22 @@
             </ul>
           </li>
           <!-- 伺服器狀態 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-server"></i>
+          <li class="nav-item"> <a href="../server/server-status.html" class="nav-link"> <i class="nav-icon fas fa-server"></i>
             <p> 伺服器狀態 </p>
             </a> </li>
           <!-- 數據統計 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-chart-bar"></i>
+          <li class="nav-item"> <a href="../statistic/statistics.html" class="nav-link"> <i class="nav-icon fas fa-chart-bar"></i>
             <p> 數據統計 </p>
             </a> </li>
           <!-- 操作日誌 -->
-          <li class="nav-item has-treeview disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-history"></i>
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-history"></i>
             <p> 操作日誌 <i class="right fas fa-caret-up"></i> </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item"> <a href="#" class="nav-link">
+              <li class="nav-item"> <a href="../log/admin-log.html" class="nav-link">
                 <p>管理人員操作日誌</p>
                 </a> </li>
-              <li class="nav-item"> <a href="#" class="nav-link">
+              <li class="nav-item"> <a href="../log/user-log.html" class="nav-link">
                 <p>用戶操作日誌</p>
                 </a> </li>
             </ul>
@@ -260,7 +260,7 @@
             <p> 檢舉內容 </p>
             </a> </li>
           <!-- 系統設定 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-cog"></i>
+          <li class="nav-item"> <a href="../setting/setting.html" class="nav-link"> <i class="nav-icon fas fa-cog"></i>
             <p> 系統設定 </p>
             </a> </li>
         </ul>
@@ -295,7 +295,7 @@
     <!-- /.Content Header --> 
     
     <!-- Main content -->
-    <div id="collection" class="content">
+    <div id="b-album" class="content">
       <div class="container-fluid">
         <div class="row mb-3">
           <div class="col-8"> </div>
@@ -328,48 +328,48 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="Admincollection-head"><div class="Adminalbum-block mr-2 clearfix">
-                          <div class="Adminalbum-thumbnail">
-                            <div class="Adminalbum-responsive">
-                              <div class="Adminalbum-sizer">
-                                <div class="Adminalbum-image" style="background-image: url('../../images/album/collection/collection-cover-1.jpg');"></div>
+                      <td class="b-collection-head"><div class="b-album-block mr-2">
+                          <div class="b-album-thumbnail">
+                            <div class="b-album-responsive">
+                              <div class="b-album-sizer">
+                                <div class="b-album-image" style="background-image: url('../../images/album/collection/collection-cover-1.jpg');"></div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <span class="Admintitle"><a href=""> 06/17 北宜追焦 </a></span> <span class="subtext"> 這是6月17日的北宜追焦照~ </span> <span class="tag"> <a> 北宜 </a><a> 追焦 </a> </span></td>
-                      <td class="album-count"> 6 </td>
-                      <td class="uploader-count"> 6 </td>
-                      <td class="photo-count"> 3,246 </td>
-                      <td class="created-date"> 2020年03月31日 09:38 <span class="subtext unlisted"> 不公開 </span></td>
-                      <td class="last-edited-date"> 2020年03月31日 09:38 </td>
-                      <td class="last-edited"> Eric Chong </td>
-                      <td class="view-count"> 18,293 </td>
-                      <td class="bookmark-count"> 4</td>
-                      <td class="share-count"> 2 </td>
-                      <td class="cell-md operate"><span type="button" class="Adminoperate-btn featured" data-toggle="modal" data-target="#modal-featured--add"> 設為精選 </span><span class="Adminoperate-btn edit"><a href=""> 編輯 </a></span><span type="button" class="Adminoperate-btn danger" data-toggle="modal" data-target="#modal-collection--remove"> 刪除 </span></td>
+                        <span class="b-title"><a href=""> 06/17 北宜追焦 </a></span> <span class="b-subtext"> 這是6月17日的北宜追焦照~ </span> <span class="b-tag"> <a> 北宜 </a><a> 追焦 </a> </span></td>
+                      <td class="b-album-count"> 6 </td>
+                      <td class="b-user-count"> 6 </td>
+                      <td class="b-photo-count"> 3,246 </td>
+                      <td class="b-create-datetime"> 2020年03月31日 09:38 <span class="b-subtext b-unlisted"> 不公開 </span></td>
+                      <td class="b-last-edited"> 2020年03月31日 09:38 </td>
+                      <td class="b-operator"> Eric Chong </td>
+                      <td class="b-view-count"> 18,293 </td>
+                      <td class="b-bookmark-count"> 4 </td>
+                      <td class="b-share-count"> 2 </td>
+                      <td class="cell-md b-operate"><span type="button" class="b-operate-btn b-featured" data-toggle="modal" data-target="#modal-featured--add"> 設為精選 </span><span class="b-operate-btn b-edit"><a href=""> 編輯 </a></span><span type="button" class="b-operate-btn b-danger" data-toggle="modal" data-target="#modal-collection--remove"> 刪除 </span></td>
                     </tr>
                     <tr>
-                      <td class="Admincollection-head"><div class="Adminalbum-block mr-2 clearfix">
-                          <div class="Adminalbum-thumbnail">
-                            <div class="Adminalbum-responsive">
-                              <div class="Adminalbum-sizer">
-                                <div class="Adminalbum-image" style="background-image: url('../../images/album/collection/collection-cover-2.jpg');"></div>
+                      <td class="b-collection-head"><div class="b-album-block mr-2">
+                          <div class="b-album-thumbnail">
+                            <div class="b-album-responsive">
+                              <div class="b-album-sizer">
+                                <div class="b-album-image" style="background-image: url('../../images/album/collection/collection-cover-2.jpg');"></div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <span class="Admintitle"><a href=""> 臺北渣打馬拉松 </a></span> <span class="subtext"> 臺灣渣打馬拉松合集 </span> <span class="tag"> <a> 渣打 </a> </span></td>
-                      <td class="album-count"> 12 </td>
-                      <td class="uploader-count"> 10 </td>
-                      <td class="photo-count"> 33,246 </td>
-                      <td class="created-date"> 2020年02月21日 07:44 <span class="subtext public"> 公開 </span></td>
-                      <td class="last-edited-date"> 2020年02月28日 14:38 </td>
-                      <td class="last-edited"> devin </td>
-                      <td class="view-count"> 12,293 </td>
-                      <td class="bookmark-count"> 24</td>
-                      <td class="share-count"> 2 </td>
-                      <td class="cell-md operate"><span type="button" class="Adminoperate-btn featured" data-toggle="modal" data-target="#modal-featured--remove"> 從精選移除 </span><span class="Adminoperate-btn edit"><a href=""> 編輯 </a></span><span type="button" class="Adminoperate-btn danger" data-toggle="modal" data-target="#modal-collection--remove"> 刪除 </span></td>
+                        <span class="b-title"><a href=""> 臺北渣打馬拉松 </a></span> <span class="b-subtext"> 臺灣渣打馬拉松合集 </span> <span class="b-tag"> <a> 渣打 </a> </span></td>
+                      <td class="b-album-count"> 12 </td>
+                      <td class="b-user-count"> 10 </td>
+                      <td class="b-photo-count"> 33,246 </td>
+                      <td class="b-create-datetime"> 2020年02月21日 07:44 <span class="b-subtext b-public"> 公開 </span></td>
+                      <td class="b-last-edited"> 2020年02月28日 14:38 </td>
+                      <td class="b-operator"> devin </td>
+                      <td class="b-view-count"> 12,293 </td>
+                      <td class="b-bookmark-count"> 24 </td>
+                      <td class="b-share-count"> 2 </td>
+                      <td class="cell-md b-operate"><span type="button" class="b-operate-btn b-featured" data-toggle="modal" data-target="#modal-featured--remove"> 從精選移除 </span><span class="b-operate-btn b-edit"><a href=""> 編輯 </a></span><span type="button" class="b-operate-btn b-danger" data-toggle="modal" data-target="#modal-collection--remove"> 刪除 </span></td>
                     </tr>
                   </tbody>
                   <tfoot>

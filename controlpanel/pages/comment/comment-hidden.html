@@ -51,7 +51,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-header">網站內容</li>
-          <!-- 首頁設定 -->
+          <!-- 首頁 -->
           <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-home"></i>
             <p> 首頁 <i class="right fas fa-caret-up"></i> </p>
             </a>
@@ -227,22 +227,22 @@
             </ul>
           </li>
           <!-- 伺服器狀態 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-server"></i>
+          <li class="nav-item"> <a href="../server/server-status.html" class="nav-link"> <i class="nav-icon fas fa-server"></i>
             <p> 伺服器狀態 </p>
             </a> </li>
           <!-- 數據統計 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-chart-bar"></i>
+          <li class="nav-item"> <a href="../statistic/statistics.html" class="nav-link"> <i class="nav-icon fas fa-chart-bar"></i>
             <p> 數據統計 </p>
             </a> </li>
           <!-- 操作日誌 -->
-          <li class="nav-item has-treeview disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-history"></i>
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-history"></i>
             <p> 操作日誌 <i class="right fas fa-caret-up"></i> </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item"> <a href="#" class="nav-link">
+              <li class="nav-item"> <a href="../log/admin-log.html" class="nav-link">
                 <p>管理人員操作日誌</p>
                 </a> </li>
-              <li class="nav-item"> <a href="#" class="nav-link">
+              <li class="nav-item"> <a href="../log/user-log.html" class="nav-link">
                 <p>用戶操作日誌</p>
                 </a> </li>
             </ul>
@@ -252,7 +252,7 @@
             <p> 檢舉內容 </p>
             </a> </li>
           <!-- 系統設定 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-cog"></i>
+          <li class="nav-item"> <a href="../setting/setting.html" class="nav-link"> <i class="nav-icon fas fa-cog"></i>
             <p> 系統設定 </p>
             </a> </li>
         </ul>
@@ -287,11 +287,11 @@
     <!-- /.Content Header --> 
     
     <!-- Main content -->
-    <div id="comment" class="content">
+    <div id="b-comment" class="content">
       <div class="container-fluid">
         <div class="row mb-3">
           <div class="col-12">
-            <div class="filter"><a href="" class="current">全部</a><a href="">相簿留言</a><a href="">影音留言</a><a href="">活動留言</a><a href="">話題留言</a></div>
+            <div class="b-filter"><a href="" class="current">全部</a><a href="">相簿留言</a><a href="">影音留言</a><a href="">活動留言</a><a href="">話題留言</a></div>
           </div>
         </div>
         <div class="row mb-2">
@@ -313,44 +313,44 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="comment-content cell-lg"> 你真美 </td>
-                      <td class="comment-user"><span class="user-icon mr-1"><img src="../../images/user-image.jpg" class="user-image img-circle" alt="User Image"></span> <span class="user-name"> <a href="" target="_blank"> 陳小明 </a> </span></td>
-                      <td class="comment-category"> 相簿 </td>
-                      <td class="comment-date"> 2016年03月17日 17:09 </td>
-                      <td class="comment-hidden-date"> 2016年03月17日 17:09 </td>
-                      <td class="operator">-</td>
-                      <td class="remark">(用戶自行刪除)</td>
-                      <td class="cell-md operate"><span class="Adminoperate-btn edit"><a href=""> 查看 </a></span><span type="button" class="Adminoperate-btn" data-toggle="modal" data-target="#modal-comment--reassign"> 取消隱藏 </span></td>
+                      <td class="b-comment-content cell-lg"> 你真美 </td>
+                      <td class="b-comment-user"><span class="b-user-icon mr-1"><img src="../../images/user-image.jpg" class="user-image img-circle" alt="User Image"></span> <span class="b-username"> <a href="" target="_blank"> 陳小明 </a> </span></td>
+                      <td class="category"> 相簿 </td>
+                      <td class="b-time"> 2016年03月17日 17:09 </td>
+                      <td class="b-hidden-time"> 2016年03月17日 17:09 </td>
+                      <td class="b-operator">-</td>
+                      <td class="b-remarks">(用戶自行刪除)</td>
+                      <td class="cell-md b-operate"><span class="b-operate-btn b-edit"><a href=""> 查看 </a></span><span type="button" class="b-operate-btn" data-toggle="modal" data-target="#modal-comment--reassign"> 取消隱藏 </span></td>
                     </tr>
                     <tr>
-                      <td class="comment-content cell-lg"> Fxxk </td>
-                      <td class="comment-user"><span class="user-icon mr-1"><img src="../../images/user-image.jpg" class="user-image img-circle" alt="User Image"></span> <span class="user-name"> <a href="" target="_blank"> Lam Chi Fung </a> </span></td>
-                      <td class="comment-category"> 話題 </td>
-                      <td class="comment-date"> 2016年03月15日 12:44 </td>
-                      <td class="comment-hidden-date"> 2016年03月17日 17:09 </td>
-                      <td class="operator">Eric Chong</td>
-                      <td class="remark">粗言</td>
-                      <td class="cell-md operate"><span class="Adminoperate-btn edit"><a href=""> 查看 </a></span><span type="button" class="Adminoperate-btn" data-toggle="modal" data-target="#modal-comment--reassign"> 取消隱藏 </span></td>
+                      <td class="b-comment-content cell-lg"> Fxxk </td>
+                      <td class="b-comment-user"><span class="b-user-icon mr-1"><img src="../../images/user-image.jpg" class="user-image img-circle" alt="User Image"></span> <span class="b-username"> <a href="" target="_blank"> Lam Chi Fung </a> </span></td>
+                      <td class="category"> 話題 </td>
+                      <td class="b-time"> 2016年03月15日 12:44 </td>
+                      <td class="b-hidden-time"> 2016年03月17日 17:09 </td>
+                      <td class="b-operator">Eric Chong</td>
+                      <td class="b-remarks">粗言</td>
+                      <td class="cell-md b-operate"><span class="b-operate-btn b-edit"><a href=""> 查看 </a></span><span type="button" class="b-operate-btn" data-toggle="modal" data-target="#modal-comment--reassign"> 取消隱藏 </span></td>
                     </tr>
                     <tr>
-                      <td class="comment-content cell-lg"> 你好大 </td>
-                      <td class="comment-user"><span class="user-icon mr-1"><img src="../../images/user-image.jpg" class="user-image img-circle" alt="User Image"></span> <span class="user-name"> <a href="" target="_blank"> 鄭小春 </a> </span></td>
-                      <td class="comment-category"> 相簿 </td>
-                      <td class="comment-date"> 2016年03月11日 09:59 </td>
-                      <td class="comment-hidden-date"> 2016年03月17日 17:09 </td>
-                      <td class="operator">Eric Chong</td>
-                      <td class="remark">不雅</td>
-                      <td class="cell-md operate"><span class="Adminoperate-btn edit"><a href=""> 查看 </a></span><span type="button" class="Adminoperate-btn" data-toggle="modal" data-target="#modal-comment--reassign"> 取消隱藏 </span></td>
+                      <td class="b-comment-content cell-lg"> 你好大 </td>
+                      <td class="b-comment-user"><span class="b-user-icon mr-1"><img src="../../images/user-image.jpg" class="user-image img-circle" alt="User Image"></span> <span class="b-username"> <a href="" target="_blank"> 鄭小春 </a> </span></td>
+                      <td class="category"> 相簿 </td>
+                      <td class="b-time"> 2016年03月11日 09:59 </td>
+                      <td class="b-hidden-time"> 2016年03月17日 17:09 </td>
+                      <td class="b-operator">Eric Chong</td>
+                      <td class="b-remarks">不雅</td>
+                      <td class="cell-md b-operate"><span class="b-operate-btn b-edit"><a href=""> 查看 </a></span><span type="button" class="b-operate-btn" data-toggle="modal" data-target="#modal-comment--reassign"> 取消隱藏 </span></td>
                     </tr>
                     <tr>
-                      <td class="comment-content cell-lg"> 我要參加這賽事！ </td>
-                      <td class="comment-user"><span class="user-icon mr-1"><img src="../../images/user-image.jpg" class="user-image img-circle" alt="User Image"></span> <span class="user-name"> <a href="" target="_blank"> achen </a> </span></td>
-                      <td class="comment-category"> 活動 </td>
-                      <td class="comment-date"> 2016年02月28日 04:09 </td>
-                      <td class="comment-hidden-date"> 2016年03月17日 17:09 </td>
-                      <td class="operator">Eric Chong</td>
-                      <td class="remark">用戶要求移除</td>
-                      <td class="cell-md operate"><span class="Adminoperate-btn edit"><a href=""> 查看 </a></span><span type="button" class="Adminoperate-btn" data-toggle="modal" data-target="#modal-comment--reassign"> 取消隱藏 </span></td>
+                      <td class="b-comment-content cell-lg"> 我要參加這賽事！ </td>
+                      <td class="b-comment-user"><span class="b-user-icon mr-1"><img src="../../images/user-image.jpg" class="user-image img-circle" alt="User Image"></span> <span class="b-username"> <a href="" target="_blank"> achen </a> </span></td>
+                      <td class="category"> 活動 </td>
+                      <td class="b-time"> 2016年02月28日 04:09 </td>
+                      <td class="b-hidden-time"> 2016年03月17日 17:09 </td>
+                      <td class="b-operator">Eric Chong</td>
+                      <td class="b-remarks">用戶要求移除</td>
+                      <td class="cell-md b-operate"><span class="b-operate-btn b-edit"><a href=""> 查看 </a></span><span type="button" class="b-operate-btn" data-toggle="modal" data-target="#modal-comment--reassign"> 取消隱藏 </span></td>
                     </tr>
                   </tbody>
                   <tfoot>

@@ -53,7 +53,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-header">網站內容</li>
-          <!-- 首頁設定 -->
+          <!-- 首頁 -->
           <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-home"></i>
             <p> 首頁 <i class="right fas fa-caret-up"></i> </p>
             </a>
@@ -229,22 +229,22 @@
             </ul>
           </li>
           <!-- 伺服器狀態 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-server"></i>
+          <li class="nav-item"> <a href="../server/server-status.html" class="nav-link"> <i class="nav-icon fas fa-server"></i>
             <p> 伺服器狀態 </p>
             </a> </li>
           <!-- 數據統計 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-chart-bar"></i>
+          <li class="nav-item"> <a href="../statistic/statistics.html" class="nav-link"> <i class="nav-icon fas fa-chart-bar"></i>
             <p> 數據統計 </p>
             </a> </li>
           <!-- 操作日誌 -->
-          <li class="nav-item has-treeview disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-history"></i>
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-history"></i>
             <p> 操作日誌 <i class="right fas fa-caret-up"></i> </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item"> <a href="#" class="nav-link">
+              <li class="nav-item"> <a href="../log/admin-log.html" class="nav-link">
                 <p>管理人員操作日誌</p>
                 </a> </li>
-              <li class="nav-item"> <a href="#" class="nav-link">
+              <li class="nav-item"> <a href="../log/user-log.html" class="nav-link">
                 <p>用戶操作日誌</p>
                 </a> </li>
             </ul>
@@ -254,7 +254,7 @@
             <p> 檢舉內容 </p>
             </a> </li>
           <!-- 系統設定 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-cog"></i>
+          <li class="nav-item"> <a href="../setting/setting.html" class="nav-link"> <i class="nav-icon fas fa-cog"></i>
             <p> 系統設定 </p>
             </a> </li>
         </ul>
@@ -289,11 +289,11 @@
     <!-- /.Content Header --> 
     
     <!-- Main content -->
-    <div id="featured" class="content">
+    <div id="b-album" class="content">
       <div class="container-fluid">
         <div class="row mb-3">
           <div class="col-sm-10">
-            <div class="filter"><a href="" class="current">全部</a><a href="">目前顯示中</a><a href="">過往精選項目</a></div>
+            <div class="b-filter"><a href="" class="current">全部</a><a href="">目前顯示中</a><a href="">過往精選項目</a></div>
           </div>
           <div class="col-sm-2">
             <button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#modal-featured--set"><i class="nav-icon fas fa-plus fa-sm mr-1"></i> 新增精選相簿 </button>
@@ -319,24 +319,24 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="Albumalbum-head"><div class="Adminalbum-block mr-2 clearfix">
-                          <div class="Adminalbum-thumbnail">
-                            <div class="Adminalbum-responsive">
-                              <div class="Adminalbum-sizer">
-                                <div class="Adminalbum-image" style="background-image: url('../../images/album/album-cover-1.jpg');"></div>
+                      <td class="b-album-head"><div class="b-album-block mr-2">
+                          <div class="b-album-thumbnail">
+                            <div class="b-album-responsive">
+                              <div class="b-album-sizer">
+                                <div class="b-album-image" style="background-image: url('../../images/album/album-cover-1.jpg');"></div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <span class="Admintitle"><a href=""> 2020.05.27 北宜. 財茂彎午後雨中練習追焦 </a></span> <span class="tag"> <a> 北宜 </a><a> 財茂 </a><a> 雨 </a></span></td>
-                      <td class="author"><a href=""> devin </a></td>
-                      <td class="category"><a href=""> 重機 </a></td>
-                      <td class="status"><span class="unpublished"> 隱藏中 </span></td>
-                      <td class="date"> 2020年03月31日 </td>
-                      <td class="cell-sm view-count"> 18,293 </td>
-                      <td class="cell-sm click-count"> 10 </td>
-                      <td class="cell-sm conversion-rate"> 5% </td>
-                      <td class="cell-sm operate"><span type="button" class="Adminoperate-btn danger" data-toggle="modal" data-target="#modal-featured--remove"> 從精選移除 </span></td>
+                        <span class="b-title"><a href=""> 2020.05.27 北宜. 財茂彎午後雨中練習追焦 </a></span> <span class="b-tag"> <a> 北宜 </a><a> 財茂 </a><a> 雨 </a></span></td>
+                      <td class="b-username"><a href=""> devin </a></td>
+                      <td class="b-category"><a href=""> 重機 </a></td>
+                      <td class="b-status"><span class="b-unpublished"> 隱藏中 </span></td>
+                      <td class="b-date"> 2020年03月31日 </td>
+                      <td class="cell-sm b-view-count"> 18,293 </td>
+                      <td class="cell-sm b-click-count"> 10 </td>
+                      <td class="cell-sm b-conversion-rate"> 5% </td>
+                      <td class="cell-sm b-operate"><span type="button" class="b-operate-btn b-danger" data-toggle="modal" data-target="#modal-featured--remove"> 從精選移除 </span></td>
                     </tr>
                   </tbody>
                   <tfoot>

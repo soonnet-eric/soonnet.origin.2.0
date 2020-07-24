@@ -59,7 +59,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-header">網站內容</li>
-          <!-- 首頁設定 -->
+          <!-- 首頁 -->
           <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-home"></i>
             <p> 首頁 <i class="right fas fa-caret-up"></i> </p>
             </a>
@@ -235,22 +235,22 @@
             </ul>
           </li>
           <!-- 伺服器狀態 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-server"></i>
+          <li class="nav-item"> <a href="../server/server-status.html" class="nav-link"> <i class="nav-icon fas fa-server"></i>
             <p> 伺服器狀態 </p>
             </a> </li>
           <!-- 數據統計 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-chart-bar"></i>
+          <li class="nav-item"> <a href="../statistic/statistics.html" class="nav-link"> <i class="nav-icon fas fa-chart-bar"></i>
             <p> 數據統計 </p>
             </a> </li>
           <!-- 操作日誌 -->
-          <li class="nav-item has-treeview disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-history"></i>
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-history"></i>
             <p> 操作日誌 <i class="right fas fa-caret-up"></i> </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item"> <a href="#" class="nav-link">
+              <li class="nav-item"> <a href="../log/admin-log.html" class="nav-link">
                 <p>管理人員操作日誌</p>
                 </a> </li>
-              <li class="nav-item"> <a href="#" class="nav-link">
+              <li class="nav-item"> <a href="../log/user-log.html" class="nav-link">
                 <p>用戶操作日誌</p>
                 </a> </li>
             </ul>
@@ -260,7 +260,7 @@
             <p> 檢舉內容 </p>
             </a> </li>
           <!-- 系統設定 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-cog"></i>
+          <li class="nav-item"> <a href="../setting/setting.html" class="nav-link"> <i class="nav-icon fas fa-cog"></i>
             <p> 系統設定 </p>
             </a> </li>
         </ul>
@@ -295,12 +295,12 @@
     <!-- /.Content Header --> 
     
     <!-- Main content -->
-    <div id="event" class="content">
+    <div id="b-event" class="content">
       <div class="container-fluid">
 		  
         <div class="row mb-3">
           <div class="col-8">
-            <div class="filter"><a href="">上年度</a><a href="">本年度</a><a href="">下年度</a><a href="">過去90天</a><a href="">過去30天</a><a href="">過去14天</a><a href="" class="current">過去7天至未來所有</a><a href="">未來14天</a><a href="">未來30天</a><a href="">未來90天</a></div>
+            <div class="b-filter"><a href="">上年度</a><a href="">本年度</a><a href="">下年度</a><a href="">過去90天</a><a href="">過去30天</a><a href="">過去14天</a><a href="" class="current">過去7天至未來所有</a><a href="">未來14天</a><a href="">未來30天</a><a href="">未來90天</a></div>
           </div>
           <div class="col-sm-2">
             <button type="button" class="btn btn-block btn-primary btn-sm" value="新增活動" onclick="location.href='../../../controlpanel/pages/event/event/create.html'"><i class="nav-icon fas fa-plus fa-sm mr-1"></i> 新增活動 </button>
@@ -333,94 +333,94 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="event-date"> 2020/04/26 (日) </td>
-                      <td class="event-title"><a href=""> 元旦迎曙光新年第一 RUN 線上路跑 </a></td>
-                      <td class="event-category"> 路跑 </td>
-                      <td class="event-country"> 香港 </td>
-                      <td class="event-region"> 九龍 </td>
-                      <td class="event-status"> 截止報名 <span class="Adminsubtext"> 2020/9/23 - 2020/10/22 </span></td>
-                      <td class="event-remark"><span class="remark-tag"> <a> 駐場攝影師 </a> <a> 尋寶網報導 </a></span></td>
-                      <td class="cell-xs view-count"> 1,266 </td>
-                      <td class="cell-xs like-count"> 2 </td>
-                      <td class="cell-xs comment-count"> 4</td>
-                      <td class="cell-xs bookmark-count"> 2 </td>
-                      <td class="cell-xs share-count"> 2 </td>
-                      <td class="cell-md operate"><span type="button" class="Adminoperate-btn featured" data-toggle="modal" data-target="#modal-featured--remove"> 從精選移除 </span><span class="Adminoperate-btn edit"><a href=""> 編輯 </a></span><span type="button" class="Adminoperate-btn danger" data-toggle="modal" data-target="#modal-event--remove"> 刪除 </span></td>
+                      <td class="b-event-date"> 2020/04/26 (日) </td>
+                      <td class="b-event-name"><a href=""> 元旦迎曙光新年第一 RUN 線上路跑 </a></td>
+                      <td class="b-event-category"> 路跑 </td>
+                      <td class="b-event-country"> 香港 </td>
+                      <td class="b-event-region"> 九龍 </td>
+                      <td class="b-event-status"> 截止報名 <span class="b-subtext"> 2020/9/23 - 2020/10/22 </span></td>
+                      <td class="b-event-remark"><span class="b-tag"> <a> 駐場攝影師 </a> <a> 尋寶網報導 </a></span></td>
+                      <td class="cell-xs b-view-count"> 1,266 </td>
+                      <td class="cell-xs b-like-count"> 2 </td>
+                      <td class="cell-xs b-comment-count"> 4</td>
+                      <td class="cell-xs b-bookmark-count"> 2 </td>
+                      <td class="cell-xs b-share-count"> 2 </td>
+                      <td class="cell-md b-operate"><span type="button" class="b-operate-btn b-featured" data-toggle="modal" data-target="#modal-featured--remove"> 從精選移除 </span><span class="b-operate-btn b-edit"><a href=""> 編輯 </a></span><span type="button" class="b-operate-btn b-danger" data-toggle="modal" data-target="#modal-event--remove"> 刪除 </span></td>
                     </tr>
                     <tr>
-                      <td class="event-date"> 2020/04/26 (日) </td>
-                      <td class="event-title"><a href=""> 2020 7th長堤曙光元旦馬拉松 </a></td>
-                      <td class="event-category"> 鐵人 </td>
-                      <td class="event-country"> 臺灣 </td>
-                      <td class="event-region"> 臺南縣 </td>
-                      <td class="event-status"> 截止報名 <span class="Adminsubtext"> 2020/9/23 - 2020/10/22 </span></td>
-                      <td class="event-remark"> - </td>
-                      <td class="cell-xs view-count"> 1,266 </td>
-                      <td class="cell-xs like-count"> 2 </td>
-                      <td class="cell-xs comment-count"> 4</td>
-                      <td class="cell-xs bookmark-count"> 2 </td>
-                      <td class="cell-xs share-count"> 2 </td>
-                      <td class="cell-md operate"><span type="button" class="Adminoperate-btn featured" data-toggle="modal" data-target="#modal-featured--remove"> 從精選移除 </span><span class="Adminoperate-btn edit"><a href=""> 編輯 </a></span><span type="button" class="Adminoperate-btn danger" data-toggle="modal" data-target="#modal-event--remove"> 刪除 </span></td>
+                      <td class="b-event-date"> 2020/04/26 (日) </td>
+                      <td class="b-event-name"><a href=""> 2020 7th長堤曙光元旦馬拉松 </a></td>
+                      <td class="b-event-category"> 鐵人 </td>
+                      <td class="b-event-country"> 臺灣 </td>
+                      <td class="b-event-region"> 臺南縣 </td>
+                      <td class="b-event-status"> 截止報名 <span class="b-subtext"> 2020/9/23 - 2020/10/22 </span></td>
+                      <td class="b-event-remark"> - </td>
+                      <td class="cell-xs b-view-count"> 1,266 </td>
+                      <td class="cell-xs b-like-count"> 2 </td>
+                      <td class="cell-xs b-comment-count"> 4</td>
+                      <td class="cell-xs b-bookmark-count"> 2 </td>
+                      <td class="cell-xs b-share-count"> 2 </td>
+                      <td class="cell-md b-operate"><span type="button" class="b-operate-btn b-featured" data-toggle="modal" data-target="#modal-featured--remove"> 從精選移除 </span><span class="b-operate-btn b-edit"><a href=""> 編輯 </a></span><span type="button" class="b-operate-btn b-danger" data-toggle="modal" data-target="#modal-event--remove"> 刪除 </span></td>
                     </tr>
                     <tr>
-                      <td class="event-date"> 2020/05/03 (日) </td>
-                      <td class="event-title"><a href=""> 心晴跑‧跑傳情19/20 </a></td>
-                      <td class="event-category"> 路跑 </td>
-                      <td class="event-country"> 香港 </td>
-                      <td class="event-region"> 新界 </td>
-                      <td class="event-status"> 報名開放中 <span class="Adminsubtext"> 2020/9/23 - 2020/10/22 </span></td>
-                      <td class="event-remark"> - </td>
-                      <td class="cell-xs view-count"> 1,266 </td>
-                      <td class="cell-xs like-count"> 2 </td>
-                      <td class="cell-xs comment-count"> 4</td>
-                      <td class="cell-xs bookmark-count"> 2 </td>
-                      <td class="cell-xs share-count"> 2 </td>
-                      <td class="cell-md operate"><span type="button" class="Adminoperate-btn featured" data-toggle="modal" data-target="#modal-featured--add"> 設為精選 </span><span class="Adminoperate-btn edit"><a href=""> 編輯 </a></span><span type="button" class="Adminoperate-btn danger" data-toggle="modal" data-target="#modal-event--remove"> 刪除 </span></td>
+                      <td class="b-event-date"> 2020/05/03 (日) </td>
+                      <td class="b-event-name"><a href=""> 心晴跑‧跑傳情19/20 </a></td>
+                      <td class="b-event-category"> 路跑 </td>
+                      <td class="b-event-country"> 香港 </td>
+                      <td class="b-event-region"> 新界 </td>
+                      <td class="b-event-status"> 報名開放中 <span class="b-subtext"> 2020/9/23 - 2020/10/22 </span></td>
+                      <td class="b-event-remark"> - </td>
+                      <td class="cell-xs b-view-count"> 1,266 </td>
+                      <td class="cell-xs b-like-count"> 2 </td>
+                      <td class="cell-xs b-comment-count"> 4</td>
+                      <td class="cell-xs b-bookmark-count"> 2 </td>
+                      <td class="cell-xs b-share-count"> 2 </td>
+                      <td class="cell-md b-operate"><span type="button" class="b-operate-btn b-featured" data-toggle="modal" data-target="#modal-featured--add"> 設為精選 </span><span class="b-operate-btn b-edit"><a href=""> 編輯 </a></span><span type="button" class="b-operate-btn b-danger" data-toggle="modal" data-target="#modal-event--remove"> 刪除 </span></td>
                     </tr>
                     <tr>
-                      <td class="event-date"> 2020/05/03 (日) </td>
-                      <td class="event-title"><a href=""> 元旦迎曙光新年第一 RUN 線上路跑 </a></td>
-                      <td class="event-category"> 路跑 </td>
-                      <td class="event-country"> 香港 </td>
-                      <td class="event-region"> 九龍灣 </td>
-                      <td class="event-status"> 活動延期 <span class="Adminsubtext"> 2020/9/23 - 2020/10/22 </span></td>
-                      <td class="event-remark"> - </td>
-                      <td class="cell-xs view-count"> 1,266 </td>
-                      <td class="cell-xs like-count"> 2 </td>
-                      <td class="cell-xs comment-count"> 4</td>
-                      <td class="cell-xs bookmark-count"> 2 </td>
-                      <td class="cell-xs share-count"> 2 </td>
-                      <td class="cell-md operate"><span type="button" class="Adminoperate-btn featured" data-toggle="modal" data-target="#modal-featured--add"> 設為精選 </span><span class="Adminoperate-btn edit"><a href=""> 編輯 </a></span><span type="button" class="Adminoperate-btn danger" data-toggle="modal" data-target="#modal-event--remove"> 刪除 </span></td>
+                      <td class="b-event-date"> 2020/05/03 (日) </td>
+                      <td class="b-event-name"><a href=""> 元旦迎曙光新年第一 RUN 線上路跑 </a></td>
+                      <td class="b-event-category"> 路跑 </td>
+                      <td class="b-event-country"> 香港 </td>
+                      <td class="b-event-region"> 九龍灣 </td>
+                      <td class="b-event-status"> 活動延期 <span class="b-subtext"> 2020/9/23 - 2020/10/22 </span></td>
+                      <td class="b-event-remark"> - </td>
+                      <td class="cell-xs b-view-count"> 1,266 </td>
+                      <td class="cell-xs b-like-count"> 2 </td>
+                      <td class="cell-xs b-comment-count"> 4</td>
+                      <td class="cell-xs b-bookmark-count"> 2 </td>
+                      <td class="cell-xs b-share-count"> 2 </td>
+                      <td class="cell-md b-operate"><span type="button" class="b-operate-btn b-featured" data-toggle="modal" data-target="#modal-featured--add"> 設為精選 </span><span class="b-operate-btn b-edit"><a href=""> 編輯 </a></span><span type="button" class="b-operate-btn b-danger" data-toggle="modal" data-target="#modal-event--remove"> 刪除 </span></td>
                     </tr>
                     <tr>
-                      <td class="event-date"> 2020/05/03 (日) </td>
-                      <td class="event-title"><a href=""> 元旦迎曙光新年第一 RUN 線上路跑 </a></td>
-                      <td class="event-category"> 路跑 </td>
-                      <td class="event-country"> 香港 </td>
-                      <td class="event-region"> 九龍灣 </td>
-                      <td class="event-status"> 報名開放中 <span class="Adminsubtext"> 2020/9/23 - 2020/10/22 </span></td>
-                      <td class="event-remark"><span class="remark-tag"> <a> 田總認證活動 </a> <a> 國際活動 </a></span></td>
-                      <td class="cell-xs view-count"> 1,266 </td>
-                      <td class="cell-xs like-count"> 2 </td>
-                      <td class="cell-xs comment-count"> 4</td>
-                      <td class="cell-xs bookmark-count"> 2 </td>
-                      <td class="cell-xs share-count"> 2 </td>
-                      <td class="cell-md operate"><span type="button" class="Adminoperate-btn featured" data-toggle="modal" data-target="#modal-featured--add"> 設為精選 </span><span class="Adminoperate-btn edit"><a href=""> 編輯 </a></span><span type="button" class="Adminoperate-btn danger" data-toggle="modal" data-target="#modal-event--remove"> 刪除 </span></td>
+                      <td class="b-event-date"> 2020/05/03 (日) </td>
+                      <td class="b-event-name"><a href=""> 元旦迎曙光新年第一 RUN 線上路跑 </a></td>
+                      <td class="b-event-category"> 路跑 </td>
+                      <td class="b-event-country"> 香港 </td>
+                      <td class="b-event-region"> 九龍灣 </td>
+                      <td class="b-event-status"> 報名開放中 <span class="b-subtext"> 2020/9/23 - 2020/10/22 </span></td>
+                      <td class="b-event-remark"><span class="b-tag"> <a> 田總認證活動 </a> <a> 國際活動 </a></span></td>
+                      <td class="cell-xs b-view-count"> 1,266 </td>
+                      <td class="cell-xs b-like-count"> 2 </td>
+                      <td class="cell-xs b-comment-count"> 4</td>
+                      <td class="cell-xs b-bookmark-count"> 2 </td>
+                      <td class="cell-xs b-share-count"> 2 </td>
+                      <td class="cell-md b-operate"><span type="button" class="b-operate-btn b-featured" data-toggle="modal" data-target="#modal-featured--add"> 設為精選 </span><span class="b-operate-btn b-edit"><a href=""> 編輯 </a></span><span type="button" class="b-operate-btn b-danger" data-toggle="modal" data-target="#modal-event--remove"> 刪除 </span></td>
                     </tr>
                     <tr>
-                      <td class="event-date"> 2020/05/31 (日) </td>
-                      <td class="event-title"><a href=""> 2020 NeverStop永不放棄系列活動 挑戰【經典】陽金P字山道 </a></td>
-                      <td class="event-category"> 單車 </td>
-                      <td class="event-country"> 臺灣 </td>
-                      <td class="event-region"> 臺北市 </td>
-                      <td class="event-status"> 未開放報名 </td>
-                      <td class="event-remark"> - </td>
-                      <td class="cell-xs view-count"> 1,266 </td>
-                      <td class="cell-xs like-count"> 2 </td>
-                      <td class="cell-xs comment-count"> 4</td>
-                      <td class="cell-xs bookmark-count"> 2 </td>
-                      <td class="cell-xs share-count"> 2 </td>
-                      <td class="cell-md operate"><span type="button" class="Adminoperate-btn featured" data-toggle="modal" data-target="#modal-featured--add"> 設為精選 </span><span class="Adminoperate-btn edit"><a href=""> 編輯 </a></span><span type="button" class="Adminoperate-btn danger" data-toggle="modal" data-target="#modal-event--remove"> 刪除 </span></td>
+                      <td class="b-event-date"> 2020/05/31 (日) </td>
+                      <td class="b-event-name"><a href=""> 2020 NeverStop永不放棄系列活動 挑戰【經典】陽金P字山道 </a></td>
+                      <td class="b-event-category"> 單車 </td>
+                      <td class="b-event-country"> 臺灣 </td>
+                      <td class="b-event-region"> 臺北市 </td>
+                      <td class="b-event-status"> 未開放報名 </td>
+                      <td class="b-event-remark"> - </td>
+                      <td class="cell-xs b-view-count"> 1,266 </td>
+                      <td class="cell-xs b-like-count"> 2 </td>
+                      <td class="cell-xs b-comment-count"> 4</td>
+                      <td class="cell-xs b-bookmark-count"> 2 </td>
+                      <td class="cell-xs b-share-count"> 2 </td>
+                      <td class="cell-md b-operate"><span type="button" class="b-operate-btn b-featured" data-toggle="modal" data-target="#modal-featured--add"> 設為精選 </span><span class="b-operate-btn b-edit"><a href=""> 編輯 </a></span><span type="button" class="b-operate-btn b-danger" data-toggle="modal" data-target="#modal-event--remove"> 刪除 </span></td>
                     </tr>
                   </tbody>
                   <tfoot>

@@ -57,7 +57,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-header">網站內容</li>
-          <!-- 首頁設定 -->
+          <!-- 首頁 -->
           <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-home"></i>
             <p> 首頁 <i class="right fas fa-caret-up"></i> </p>
             </a>
@@ -233,32 +233,32 @@
             </ul>
           </li>
           <!-- 伺服器狀態 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-server"></i>
+          <li class="nav-item"> <a href="../../server/server-status.html" class="nav-link"> <i class="nav-icon fas fa-server"></i>
             <p> 伺服器狀態 </p>
             </a> </li>
           <!-- 數據統計 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-chart-bar"></i>
+          <li class="nav-item"> <a href="../../statistic/statistics.html" class="nav-link"> <i class="nav-icon fas fa-chart-bar"></i>
             <p> 數據統計 </p>
             </a> </li>
           <!-- 操作日誌 -->
-          <li class="nav-item has-treeview disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-history"></i>
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-history"></i>
             <p> 操作日誌 <i class="right fas fa-caret-up"></i> </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item"> <a href="#" class="nav-link">
+              <li class="nav-item"> <a href="../../log/admin-log.html" class="nav-link">
                 <p>管理人員操作日誌</p>
                 </a> </li>
-              <li class="nav-item"> <a href="#" class="nav-link">
+              <li class="nav-item"> <a href="../../log/user-log.html" class="nav-link">
                 <p>用戶操作日誌</p>
                 </a> </li>
             </ul>
           </li>
           <!-- 檢舉內容 -->
-          <li class="nav-item"> <a href="../report/report.html" class="nav-link"> <i class="nav-icon fas fa-ban"></i>
+          <li class="nav-item"> <a href="../../report/report.html" class="nav-link"> <i class="nav-icon fas fa-ban"></i>
             <p> 檢舉內容 </p>
             </a> </li>
           <!-- 系統設定 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-cog"></i>
+          <li class="nav-item"> <a href="../../setting/setting.html" class="nav-link"> <i class="nav-icon fas fa-cog"></i>
             <p> 系統設定 </p>
             </a> </li>
         </ul>
@@ -302,14 +302,14 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-4">
-                    <label for="collection-image">合集封面圖（建議尺寸：450x450）</label>
+                    <label for="b-collection-image">合集封面圖（建議尺寸：450x450）</label>
                     <!-- Collection Image -->
-                    <div class="Adminalbum-thumbnail w-100">
-                      <div class="Adminalbum-responsive mb-2">
-                        <div class="Adminalbum-sizer"></div>
-                        <div class="Adminalbum-content">
-                          <div class="layout h-100 align-center ma-0">
-                            <div class="layout-flex">
+                    <div class="b-album-thumbnail w-100">
+                      <div class="b-album-responsive mb-2">
+                        <div class="b-album-sizer"></div>
+                        <div class="b-album-content">
+                          <div class="b-layout h-100 align-center ma-0">
+                            <div class="b-layout-flex">
                               <div class="text-center o-60"><i class="fas fa-image fa-2x"></i></div>
                             </div>
                           </div>
@@ -322,15 +322,15 @@
                   </div>
                   <div class="col-8">
                     <div class="form-group">
-                      <label for="collection-title">*合集名稱</label>
-                      <input type="text" id="collection-title" class="form-control">
+                      <label for="b-collection-title">*合集名稱</label>
+                      <input type="text" id="b-collection-title" class="form-control">
                     </div>
                     <div class="form-group">
-                      <label for="collection-description">合集簡介</label>
-                      <textarea type="text" id="collection-description" class="form-control"></textarea>
+                      <label for="b-description">合集簡介</label>
+                      <textarea type="text" id="b-description" class="form-control"></textarea>
                     </div>
                     <div class="form-group mb-3">
-                      <label for="collection-album">*合集相簿（只顯示最新100本相簿，如相簿屬於100本以外請到「相簿列表」中單本加入至合集）</label>
+                      <label for="b-collection-album">*合集相簿（只顯示最新100本相簿，如相簿屬於100本以外請到「相簿列表」中單本加入至合集）</label>
                       <select class="duallistbox" multiple="multiple">
                         <option>(顯示最新100本相簿)</option>
                         <option>2020 台北渣打馬拉松</option>
@@ -341,11 +341,11 @@
                       </select>
                     </div>
                     <div class="form-group">
-                      <label for="article-keywords">關鍵字（以 "," 作分隔，不需加上空格）</label>
-                      <input type="text" id="article-keywords" class="form-control" placeholder="e.g. 北宜,重機,追焦">
+                      <label for="b-keywords">關鍵字（以 "," 作分隔，不需加上空格）</label>
+                      <input type="text" id="b-keywords" class="form-control" placeholder="e.g. 北宜,重機,追焦">
                     </div>
                     <div class="form-group">
-                      <label for="article-visibility">公開狀態</label>
+                      <label for="b-visibility">公開狀態</label>
                       <select class="form-control custom-select select2-no-search">
                         <option selected>顯示</option>
                         <option>隱藏</option>

@@ -72,21 +72,22 @@ thead, tfoot {
 .login-page .form-control {
   width: auto;
 }
-/* 【主頁】橫額設定
+/* 【主頁】
    ========================================================================== */
-.banner-image {
+/* 橫額設定 */
+.b-banner-image {
   width: 540px;
 }
-.banner-image img {
+.b-banner-image img {
   position: relative;
   max-width: 540px;
 }
-.Adminbanner-thumbnail {
+.b-banner-thumbnail {
   position: relative;
   background-color: #dbdbdb;
   width: 120px;
 }
-.Adminbanner-responsive {
+.b-banner-responsive {
   position: relative;
   overflow: hidden;
   -webkit-box-flex: 1;
@@ -95,34 +96,34 @@ thead, tfoot {
   display: flex;
   z-index: 0;
 }
-.Adminbanner-sizer {
+.b-banner-sizer {
   -webkit-box-flex: 0;
   flex: 0 0 0px;
   padding-bottom: 27.77%;
 }
-.Adminbanner-content {
+.b-banner-content {
   -webkit-box-flex: 1;
   flex: 1 0 0px;
 }
 /* 【相簿】
    ========================================================================== */
-.Adminalbum-head, .Albumcollection-head {
+.b-album-head, .b-collection-head {
   min-width: 20rem;
   max-width: 30rem;
 }
-.Adminalbum-block {
+.b-album-block {
   display: block;
   position: relative;
   border-radius: inherit;
   float: left;
 }
-.Adminalbum-thumbnail {
+.b-album-thumbnail {
   position: relative;
   background-color: #dbdbdb;
   border-radius: 4px;
   width: 80px;
 }
-.Adminalbum-responsive {
+.b-album-responsive {
   position: relative;
   overflow: hidden;
   -webkit-box-flex: 1;
@@ -132,21 +133,21 @@ thead, tfoot {
   z-index: 0;
   border-radius: 4px;
 }
-.Adminalbum-sizer {
+.b-album-sizer {
   -webkit-box-flex: 0;
   flex: 0 0 0px;
   padding-bottom: 100%;
 }
-.Adminalbum-category-sizer {
+.b-album-category-sizer {
   -webkit-box-flex: 0;
   flex: 0 0 0px;
   padding-bottom: 66.66%;
 }
-.Adminalbum-content {
+.b-album-content {
   -webkit-box-flex: 1;
   flex: 1 0 0px;
 }
-.Adminalbum-image {
+.b-album-image {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -157,23 +158,22 @@ thead, tfoot {
   width: 100%;
   height: 100%;
 }
-/* 【相簿】橫額設定
-   ========================================================================== */
-.photo-image {
+/* 精選相片 */
+.b-photo-image {
   min-width: 100px;
   min-height: 100px;
   text-align: center;
 }
-.photo-image img {
+.b-photo-image img {
   position: relative;
   max-width: 100px;
   max-height: 100px;
 }
-.photo-image a {
+.b-photo-image a {
   display: inline-block;
   position: relative;
 }
-.enlarged-image img {
+.b-photo-image-enlarge img {
   display: none;
   position: absolute;
   z-index: 1100;
@@ -184,40 +184,41 @@ thead, tfoot {
   left: calc(100% + 1rem);
   transform: translateY(-50%);
 }
-/* 【影音】Soonnet TV 列表 + 一般影片列表
+/* 【影音】
    ========================================================================== */
-.filter {
+/* Soonnet TV 列表 + 一般影片列表 */
+.b-filter {
   display: block;
   position: relative;
 }
-.filter a {
+.b-filter a {
   padding: 6px 10px;
   margin-right: 10px;
   background-color: #fff;
   border-radius: 0.25rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
 }
-.filter .current {
+.b-filter .current {
   background-color: #2e3e4a;
   color: #fff !important;
 }
-.Adminvideo-head {
+.b-video-head {
   min-width: 20rem;
   max-width: 30rem;
 }
-.Adminvideo-block, .image-block {
+.b-video-block, .b-image-block {
   display: block;
   position: relative;
   border-radius: inherit;
   float: left;
 }
-.Adminvideo-thumbnail, .image-thumbnail {
+.b-video-thumbnail, .b-image-thumbnail {
   position: relative;
   background-color: #dbdbdb;
   border-radius: 4px;
   width: 120px;
 }
-.Adminvideo-responsive, .image-responsive {
+.b-video-responsive, .b-image-responsive {
   position: relative;
   overflow: hidden;
   -webkit-box-flex: 1;
@@ -227,16 +228,16 @@ thead, tfoot {
   z-index: 0;
   border-radius: 4px;
 }
-.Adminvideo-sizer, .image-sizer {
+.b-video-sizer, .b-image-sizer {
   -webkit-box-flex: 0;
   flex: 0 0 0px;
   padding-bottom: 56.25%;
 }
-.Adminvideo-content, .image-content {
+.b-video-content, .b-image-content {
   -webkit-box-flex: 1;
   flex: 1 0 0px;
 }
-.layout {
+.b-layout {
   display: -webkit-box;
   display: flex;
   -webkit-box-flex: 1;
@@ -244,13 +245,13 @@ thead, tfoot {
   flex-wrap: nowrap;
   min-width: 0;
 }
-.layout-flex {
+.b-layout-flex {
   flex-basis: 100%;
   -webkit-box-flex: 0;
   flex-grow: 0;
   max-width: 100%;
 }
-.Adminvideo-image {
+.b-video-image {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -261,7 +262,7 @@ thead, tfoot {
   width: 100%;
   height: 100%;
 }
-.Adminduration {
+.b-duration {
   position: absolute;
   background-color: rgba(0, 0, 0, .8);
   color: #fff;
@@ -272,7 +273,7 @@ thead, tfoot {
   line-height: 14px;
   font-size: 0.75rem;
 }
-.Admintitle {
+.b-title {
   position: relative;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -283,7 +284,7 @@ thead, tfoot {
   word-break: break-word;
   vertical-align: top;
 }
-.Admintag {
+.b-tag {
   position: relative;
   display: block;
   font-size: 12px;
@@ -292,7 +293,7 @@ thead, tfoot {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.Admintag a {
+.b-tag a {
   display: inline-flex;
   margin-right: 8px;
   padding: 2px 6px;
@@ -301,12 +302,12 @@ thead, tfoot {
   border-radius: 2px;
   margin-top: 0.25rem;
 }
-.Adminsubtext {
+.b-subtext {
   display: block;
   font-size: 0.8125rem;
   color: #757575;
 }
-.Adminpublished::before, .Adminprocessed::before {
+.b-published::before, .b-processed::before {
   content: '';
   display: inline-block;
   width: 8px;
@@ -317,7 +318,7 @@ thead, tfoot {
   background-color: #28a745;
   margin-right: 2px;
 }
-.Adminprocessing::before {
+.b-processing::before {
   content: '';
   display: inline-block;
   width: 8px;
@@ -328,7 +329,7 @@ thead, tfoot {
   background-color: #ffc107;
   margin-right: 2px;
 }
-.Adminunpublished::before, .Adminunprocessed::before {
+.b-unpublished::before, .b-unprocessed::before {
   content: '';
   display: inline-block;
   width: 8px;
@@ -339,7 +340,7 @@ thead, tfoot {
   background-color: #dc3545;
   margin-right: 2px;
 }
-.Admincharge::before {
+.b-charge::before {
   content: '\f155';
   font-family: 'Font Awesome\ 5 Free';
   font-weight: 900;
@@ -348,7 +349,7 @@ thead, tfoot {
   text-align: center;
   width: 1.25em;
 }
-.Adminpublic::before {
+.b-public::before {
   content: '\f06e';
   font-family: 'Font Awesome\ 5 Free';
   font-weight: 900;
@@ -357,7 +358,7 @@ thead, tfoot {
   text-align: center;
   width: 1.25em;
 }
-.Adminunlisted::before {
+.b-unlisted::before {
   content: '\f070';
   font-family: 'Font Awesome\ 5 Free';
   font-weight: 900;
@@ -366,7 +367,7 @@ thead, tfoot {
   text-align: center;
   width: 1.25em;
 }
-.Adminprivate::before {
+.b-private::before {
   content: '\f023';
   font-family: 'Font Awesome\ 5 Free';
   font-weight: 900;
@@ -375,19 +376,18 @@ thead, tfoot {
   text-align: center;
   width: 1.25em;
 }
-.resolution, .file-size {
+.b-resolution, .b-file-size {
   display: block;
 }
-.Adminoperate-btn {
+.b-operate-btn {
   display: block;
   color: #007bff;
 }
-.Adminoperate-btn:hover {
+.b-operate-btn:hover {
   color: #0056b3;
 }
-/* 【影音】精選項目
-   ========================================================================== */
-#featured .uploader {
+/* 精選項目 */
+#featured .b-uploader {
   display: block;
   color: #757575;
 }
@@ -399,23 +399,23 @@ thead, tfoot {
 .list-group-item {
   display: table-row !important;
 }
-#Adminprogramme .programme-head {
+#b-programme .b-programme-head {
   min-width: 20rem;
   max-width: 40rem;
 }
-#Adminprogramme .programme-block {
+#b-programme .b-programme-block {
   display: block;
   position: relative;
   border-radius: inherit;
   float: left;
 }
-#Adminprogramme .programme-thumbnail {
+#b-programme .b-programme-thumbnail {
   position: relative;
   background-color: #dbdbdb;
   border-radius: 4px;
   width: 150px;
 }
-#Adminprogramme .programme-responsive {
+#b-programme .b-programme-responsive {
   position: relative;
   overflow: hidden;
   -webkit-box-flex: 1;
@@ -425,12 +425,12 @@ thead, tfoot {
   z-index: 0;
   border-radius: 4px;
 }
-#Adminprogramme .programme-sizer {
+#b-programme .b-programme-sizer {
   -webkit-box-flex: 0;
   flex: 0 0 0px;
   padding-bottom: 56.25%;
 }
-#Adminprogramme .programme-image {
+#b-programme .b-programme-image {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -441,7 +441,7 @@ thead, tfoot {
   width: 100%;
   height: 100%;
 }
-#Adminprogramme .episode {
+#b-programme .b-episode {
   position: absolute;
   background-color: rgba(0, 0, 0, .8);
   color: #fff;
@@ -452,21 +452,21 @@ thead, tfoot {
   line-height: 14px;
   font-size: 0.75rem;
 }
-#Adminprogramme .title {
+#b-programme .b-title {
   display: block;
   font-size: 1rem;
   font-weight: bold;
 }
-#Adminprogramme .intro {
+#b-programme .b-intro {
   display: block;
   color: #757575;
 }
-#Adminprogramme .category span {
+#b-programme .b-category span {
   display: block;
 }
 /* 【賽事】賽事列表
    ========================================================================== */
-#event .remark-tag {
+#b-event .b-tag {
   position: relative;
   display: block;
   font-size: 12px;
@@ -475,7 +475,7 @@ thead, tfoot {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#event .remark-tag a {
+#b-event .b-tag a {
   display: table;
   width: auto;
   margin-right: 8px;
@@ -487,23 +487,23 @@ thead, tfoot {
 }
 /* 【話題】文章列表
    ========================================================================== */
-#article .article-head {
+#b-article .b-article-head {
   min-width: 20rem;
   max-width: 30rem;
 }
-#article .article-block {
+#b-article .b-article-block {
   display: block;
   position: relative;
   border-radius: inherit;
   float: left;
 }
-#article .article-thumbnail {
+#b-article .b-article-thumbnail {
   position: relative;
   background-color: #dbdbdb;
   border-radius: 4px;
   width: 120px;
 }
-#article .article-responsive {
+#b-article .b-article-responsive {
   position: relative;
   overflow: hidden;
   -webkit-box-flex: 1;
@@ -513,16 +513,16 @@ thead, tfoot {
   z-index: 0;
   border-radius: 4px;
 }
-#article .article-sizer {
+#b-article .b-article-sizer {
   -webkit-box-flex: 0;
   flex: 0 0 0px;
   padding-bottom: 56.25%;
 }
-.article-content {
+#b-article .b-article-content {
   -webkit-box-flex: 1;
   flex: 1 0 0px;
 }
-.article-image {
+#b-article .b-article-image {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -533,22 +533,22 @@ thead, tfoot {
   width: 100%;
   height: 100%;
 }
-.source-head {
+.b-source-head {
   line-height: 80px;
 }
-.source-block {
+.b-source-block {
   display: block;
   position: relative;
   border-radius: inherit;
   float: left;
 }
-.source-thumbnail {
+.b-source-thumbnail {
   position: relative;
   background-color: #dbdbdb;
   border-radius: 4px;
   width: 80px;
 }
-.source-responsive {
+.b-source-responsive {
   position: relative;
   overflow: hidden;
   -webkit-box-flex: 1;
@@ -558,12 +558,12 @@ thead, tfoot {
   z-index: 0;
   border-radius: 4px;
 }
-.source-sizer {
+.b-source-sizer {
   -webkit-box-flex: 0;
   flex: 0 0 0px;
   padding-bottom: 100%;
 }
-.source-image {
+.b-source-image {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -574,7 +574,7 @@ thead, tfoot {
   width: 100%;
   height: 100%;
 }
-.source-content {
+.b-source-content {
   -webkit-box-flex: 1;
   flex: 1 0 0px;
 }
@@ -586,7 +586,7 @@ thead, tfoot {
 }
 /* 【頁腳】
    ========================================================================== */
-.status-display::before {
+.b-status-display::before {
   content: '';
   display: inline-block;
   width: 8px;
@@ -597,7 +597,7 @@ thead, tfoot {
   background-color: #28a745;
   margin-right: 2px;
 }
-.status-hidden::before {
+.b-status-hidden::before {
   content: '';
   display: inline-block;
   width: 8px;
@@ -610,7 +610,7 @@ thead, tfoot {
 }
 /* 【廣告】
    ========================================================================== */
-#ad .ad-image {
+#b-ad .b-ad-image {
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -621,14 +621,14 @@ thead, tfoot {
   width: 100%;
   height: 100%;
 }
-#ad .advertiser-logo {
+#b-ad .b-advertiser-logo {
   width: 8rem;
   text-align: center;
 }
-#ad .advertiser-logo img {
+#b-ad .b-advertiser-logo img {
   height: 50px;
 }
-#ad .caption {
+#b-ad .b-caption {
   position: relative;
   display: block;
   font-size: 12px;
@@ -636,7 +636,11 @@ thead, tfoot {
   white-space: nowrap;
   overflow: hidden;
 }
-.ad-name a img {
+#b-ad .b-ad-name a {
+  display: inline-block;
+  position: relative;
+}
+#b-ad .b-ad-name a img {
   display: none;
   position: absolute;
   z-index: 1100;
@@ -645,8 +649,4 @@ thead, tfoot {
   top: 50%;
   left: calc(100% + 1rem);
   transform: translateY(-50%);
-}
-.ad-name a {
-  display: inline-block;
-  position: relative;
 }

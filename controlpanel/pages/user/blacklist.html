@@ -53,7 +53,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-header">網站內容</li>
-          <!-- 首頁設定 -->
+          <!-- 首頁 -->
           <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-home"></i>
             <p> 首頁 <i class="right fas fa-caret-up"></i> </p>
             </a>
@@ -229,22 +229,22 @@
             </ul>
           </li>
           <!-- 伺服器狀態 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-server"></i>
+          <li class="nav-item"> <a href="../server/server-status.html" class="nav-link"> <i class="nav-icon fas fa-server"></i>
             <p> 伺服器狀態 </p>
             </a> </li>
           <!-- 數據統計 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-chart-bar"></i>
+          <li class="nav-item"> <a href="../statistic/statistics.html" class="nav-link"> <i class="nav-icon fas fa-chart-bar"></i>
             <p> 數據統計 </p>
             </a> </li>
           <!-- 操作日誌 -->
-          <li class="nav-item has-treeview disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-history"></i>
+          <li class="nav-item has-treeview"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-history"></i>
             <p> 操作日誌 <i class="right fas fa-caret-up"></i> </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item"> <a href="#" class="nav-link">
+              <li class="nav-item"> <a href="../log/admin-log.html" class="nav-link">
                 <p>管理人員操作日誌</p>
                 </a> </li>
-              <li class="nav-item"> <a href="#" class="nav-link">
+              <li class="nav-item"> <a href="../log/user-log.html" class="nav-link">
                 <p>用戶操作日誌</p>
                 </a> </li>
             </ul>
@@ -254,7 +254,7 @@
             <p> 檢舉內容 </p>
             </a> </li>
           <!-- 系統設定 -->
-          <li class="nav-item disable"> <a href="#" class="nav-link"> <i class="nav-icon fas fa-cog"></i>
+          <li class="nav-item"> <a href="../setting/setting.html" class="nav-link"> <i class="nav-icon fas fa-cog"></i>
             <p> 系統設定 </p>
             </a> </li>
         </ul>
@@ -289,7 +289,7 @@
     <!-- /.Content Header --> 
     
     <!-- Main content -->
-    <div id="blacklist" class="content">
+    <div id="b-user" class="content">
       <div class="container-fluid">
         <div class="row mb-3"> </div>
         <div class="row mb-2">
@@ -311,24 +311,24 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="user-id"> 66823 </td>
-                      <td class="user-info cell-lg"><span class="user-icon mr-1"><img src="../../images/user-image.jpg" class="user-image img-circle" alt="User Image"></span> <span class="user-name"> <a href="" target="_blank"> pkpkpk </a> </span></td>
-                      <td class="user-email"> chansiuming@hotmail.com </td>
-                      <td class="cell-sm user-last-visited"> 2020/4/26 16:50 </td>
-                      <td class="cell-sm user-blocked-time"> 2020/4/28 12:20 </td>
-                      <td class="cell-sm operator">Eric Chong</td>
-                      <td class="user-remarks">發佈違規影片</td>
-                      <td class="cell-md operate"><span type="button" class="Adminoperate-btn" data-toggle="modal" data-target="#modal-user--edit"> 更改資料 </span><span type="button" class="Adminoperate-btn" data-toggle="modal" data-target="#modal-user--role"> 權限設定 </span></td>
+                      <td class="b-user-id"> 66823 </td>
+                      <td class="b-user-info cell-lg"><span class="b-user-icon mr-1"><img src="../../images/user-image.jpg" class="user-image img-circle" alt="User Image"></span> <span class="b-username"> <a href="" target="_blank"> pkpkpk </a> </span></td>
+                      <td class="b-user-email"> chansiuming@hotmail.com </td>
+                      <td class="cell-sm b-user-last-visited"> 2020/4/26 16:50 </td>
+                      <td class="cell-sm b-user-blocked-time"> 2020/4/28 12:20 </td>
+                      <td class="cell-sm b-operator">Eric Chong</td>
+                      <td class="b-remarks">發佈違規影片</td>
+                      <td class="cell-md b-operate"><span type="button" class="b-operate-btn" data-toggle="modal" data-target="#modal-user--edit"> 更改資料 </span><span type="button" class="b-operate-btn" data-toggle="modal" data-target="#modal-user--role"> 權限設定 </span></td>
                     </tr>
                     <tr>
-                      <td class="user-id"> 55698 </td>
-                      <td class="user-info cell-lg"><span class="user-icon mr-1"><img src="../../images/user-image.jpg" class="user-image img-circle" alt="User Image"></span> <span class="user-name"> <a href="" target="_blank"> fxxx </a> </span></td>
-                      <td class="user-email"> abc@hellokitty.com </td>
-                      <td class="cell-sm user-last-visited"> 2020/4/26 16:50 </td>
-                      <td class="cell-sm user-blocked-time"> 2020/5/12 08:50 </td>
-                      <td class="cell-sm operator">devin</td>
-                      <td class="user-remarks">罵髒話</td>
-                      <td class="cell-md operate"><span type="button" class="Adminoperate-btn" data-toggle="modal" data-target="#modal-user--edit"> 更改資料 </span><span type="button" class="Adminoperate-btn" data-toggle="modal" data-target="#modal-user--role"> 權限設定 </span></td>
+                      <td class="b-user-id"> 55698 </td>
+                      <td class="b-user-info cell-lg"><span class="b-user-icon mr-1"><img src="../../images/user-image.jpg" class="user-image img-circle" alt="User Image"></span> <span class="b-username"> <a href="" target="_blank"> fxxx </a> </span></td>
+                      <td class="b-user-email"> abc@hellokitty.com </td>
+                      <td class="cell-sm b-user-last-visited"> 2020/4/26 16:50 </td>
+                      <td class="cell-sm b-user-blocked-time"> 2020/5/12 08:50 </td>
+                      <td class="cell-sm b-operator">devin</td>
+                      <td class="b-remarks">罵髒話</td>
+                      <td class="cell-md b-operate"><span type="button" class="b-operate-btn" data-toggle="modal" data-target="#modal-user--edit"> 更改資料 </span><span type="button" class="b-operate-btn" data-toggle="modal" data-target="#modal-user--role"> 權限設定 </span></td>
                     </tr>
                   </tbody>
                   <tfoot>
