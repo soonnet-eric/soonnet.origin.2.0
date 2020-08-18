@@ -41,6 +41,9 @@ $(function ($) {
 
     };
 	
+	/* Rellax */
+	var rellax = new Rellax('.rellax');
+	
 	/* Initialize
     * ------------------------------------------------------ */
     (function ssInit() {
