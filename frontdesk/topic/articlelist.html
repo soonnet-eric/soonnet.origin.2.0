@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="../css/bootstrap/bootstrap-grid.css">
 <link rel="stylesheet" href="../css/desktop/normalize.css">
 <link rel="stylesheet" href="../css/desktop/main.css">
+<link rel="stylesheet" href="../css/desktop/responsive.css">
 <!-- External CSS -->
 <link rel="stylesheet" href="../css/font-awesome/all.min.css">
 <!-- Favicon -->
@@ -83,6 +84,90 @@
 </header>
 <!-- /.目錄 --> 
 
+<!-- 流動版目錄 -->
+<header id="m-header">
+  <div class="m-header-flex">
+    <div class="m-header-left"> <a href="javascript:void(0);" onclick="menuToggle()"><i class="fa fa-bars"></i></a>
+      <div class="m-header-logo"> <a href="./../index.html" title="尋寶網"> <img src="./../images/soonnet-logo-text.svg" alt="尋寶網"> </a></div>
+    </div>
+    <div class="m-header-right"> <a href="javascript:void(0);" onclick="searchToggle()"><i class="fa fa-search fa-fw"></i></a> </div>
+  </div>
+  
+  <!-- NAVIGATOR -->
+  <nav id="m-header-nav">
+    <div class="m-header-menu p-4"> 
+      <!-- Profile Panel -->
+      <section class="m-profile">
+        <div class="m-profile-panel">
+          <div class="m-profile-left">
+            <div class="m-profile-user">
+              <button type="button" class="profile-button"><img class="user-logo" src="./../images/guest-logo.jpg"></button>
+              <div class="user-info ml-2">
+                <div class="user-name">Username</div>
+                <span class="view-profile"><a href="./../member/profile.html">查看我的個人檔案</a></span></div>
+            </div>
+          </div>
+          <div class="m-profile-right">
+            <div class="menu-operate-btn"><i class="fa fa-cloud-upload-alt"></i> <i class="fa fa-bell"></i></div>
+          </div>
+        </div>
+      </section>
+      <!-- /.Profile Panel --> 
+      
+      <!-- Menu -->
+      <div class="m-menu">
+        <div class="m-menu-panel-wrapper my-3">
+          <div class="menu-panel"> <span class="menu-wrap"><a href="./../album/album.html" target="_self"> <img class="menu-icon" src="./../images/menu/album.png" alt="相簿">
+            <div class="menu-text">相簿</div>
+            </a></span> <span class="menu-wrap"><a href="./../event/event.html" target="_self"> <img class="menu-icon" src="./../images/menu/event.png" alt="活動">
+            <div class="menu-text">活動列表</div>
+            </a></span> <span class="menu-wrap"><a href="./../topic/article.html" target="_self"> <img class="menu-icon" src="./../images/menu/topic.png" alt="話題">
+            <div class="menu-text">話題</div>
+            </a></span> <span class="menu-wrap"><a href="./../video/video.html" target="_self"> <img class="menu-icon" src="./../images/menu/soonnettv.png" alt="影音">
+            <div class="menu-text">影音</div>
+            </a></span> <span class="menu-wrap"><a href="./../video/programme.html" target="_self"> <img class="menu-icon" src="./../images/menu/programme.png" alt="我們的節目">
+            <div class="menu-text">我們的節目</div>
+            </a></span> </div>
+        </div>
+        <div class="m-menu-panel-wrapper">
+          <div class="menu-row mb-2"> <span class="menu-header"> 定期活動 </span> </div>
+          <div class="menu-panel"> <span class="menu-wrap"><a href="http://twrunner.soonnet.org/road_run/index.html" target="_self"> <img class="menu-icon" src="./../images/menu/twrunner.png" alt="最強市民飆5K">
+            <div class="menu-text">最強市民飆5K</div>
+            </a></span> <span class="menu-wrap"><a href="http://tperunner.soonnet.org/road_run/index.html" target="_self"> <img class="menu-icon" src="./../images/menu/tperunner.png" alt="5K最速RUN">
+            <div class="menu-text">5K最速RUN</div>
+            </a></span></div>
+        </div>
+      </div>
+      <!-- /.Menu --> 
+      
+      <!-- Footer -->
+      <div class="m-menu-footer">
+        <div class="m-menu-footer-wrapper mt-3 mb-2"> <span class="menu-footer-item"><a href="./../footer/about.html"> 關於我們 </a></span> <span class="menu-footer-item"><a href="./../footer/about.html"> 聯絡我們 </a></span> <span class="menu-footer-item"><a href="./../footer/advertising.html"> 廣告合作 </a></span> <span class="menu-footer-item"><a href="./../footer/cooperate.html"> 商務合作 </a></span> <span class="menu-footer-item"><a href="./../footer/terms.html"> 服務條款 </a></span> <span class="menu-footer-item"><a href="./../footer/privacy.html"> 隱私條款 </a></span> <span class="menu-footer-item"><a href="./../footer/copyright.html"> 著作權條款 </a></span> </div>
+        <div class="m-footer-nav">
+          <div class="m-social-wrapper mb-2"> <span class="social-btn"><a class="m-social-icon facebook fab fa-facebook-f fa-fw" href="https://www.facebook.com/soonnet/" target="_blank"> </a></span> <span class="social-btn"><a class="m-social-icon instagram fab fa-instagram fa-fw" href="https://www.instagram.com/soonnettv/" target="_blank"> </a></span> <span class="social-btn"><a class="m-social-icon youtube fab fa-youtube fa-fw" href="https://www.youtube.com/soonnettv" target="_blank"> </a></span> </div>
+          <div class="m-copyright"> 尋寶網 SOONNET.org 版權所有 © 2020 </div>
+        </div>
+        <!-- /.Footer --> 
+        
+      </div>
+    </div>
+  </nav>
+  <!-- /.NAVIGATOR --> 
+  
+  <!-- Search Panel -->
+  <nav id="m-search-panel">
+    <div class="m-search">
+      <div class="m-search-dialog">
+        <label><i class="fa fa-search fa-fw"></i></label>
+        <input type="text" id="search-term" placeholder="搜尋">
+      </div>
+      <a class="close-btn" href="javascript:void(0);" onclick="searchToggle()"> <i class="fa fa-times fa-fw"></i> </a> </div>
+  </nav>
+  <!-- /.Search Panel --> 
+  
+</header>
+<!-- /.流動版目錄 --> 
+    
 <!-- 社交平台按鈕 -->
 <div id="social-block"> 
   <!-- Facebook -->

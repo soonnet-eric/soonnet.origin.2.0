@@ -90,29 +90,32 @@
 <div id="photo" class="container-80 uploading">
   <div class="row justify-content-center">
     <div class="col-12">
+      <div class="row justify-content-center my-4">
+        <div class="col-12"> <a href="#" class="btn btn-secondary">取消</a>
+          <input type="submit" value="保存" class="btn btn-primary float-right">
+        </div>
+      </div>
       <h2 class="section-title"> 建立相簿 </h2>
       <div class="row">
         <div class="col-9 pr-4">
-
-              <div class="photo-uploader pt-1">
-                <div class="photo-upload">
-                  <div class="upload-dragger">
-                    <div class="upload-container"><i class="upload-icon fas fa-cloud-upload-alt fa-5x mb-4"></i>
-                      <div class="upload-text">
-                        <h4><a href="">點擊上傳</a></h4>
-                        或將相片拖曳到此處</div>
-                    </div>
-                  </div>
-                  <input type="file" name="file" class="upload-input">
-                </div>
-                <div class="upload-tip mt-3">
-                  <ul>
-                    <li>建議使用 <a href="https://www.google.com/chrome/" target="_blank">Google Chrome 瀏覽器</a>進行上傳</li>
-                    <li>本網站有權在不予通知情況下移除違規或未經當事人同意之相片</li>
-                  </ul>
+          <div class="photo-uploader pt-1">
+            <div class="photo-upload">
+              <div class="upload-dragger">
+                <div class="upload-container"><i class="upload-icon fas fa-cloud-upload-alt fa-5x mb-4"></i>
+                  <div class="upload-text">
+                    <h4><a href="">點擊上傳</a></h4>
+                    或將相片拖曳到此處</div>
                 </div>
               </div>
-
+              <input type="file" name="file" class="upload-input">
+            </div>
+            <div class="upload-tip mt-3">
+              <ul>
+                <li>建議使用 <a href="https://www.google.com/chrome/" target="_blank">Google Chrome 瀏覽器</a>進行上傳</li>
+                <li>本網站有權在不予通知情況下移除違規或未經當事人同意之相片</li>
+              </ul>
+            </div>
+          </div>
         </div>
         <div class="col-3">
           <div class="card card-primary">
@@ -187,6 +190,10 @@
                       <input type="radio" id="private" name="exif-visibility">
                       <label for="private"> 隱藏 </label>
                     </div>
+                  </div>
+                  <!-- /.radio -->
+                  <div class="form-group">
+                    <input type="submit" value="刪除相簿" class="btn btn-danger float-right">
                   </div>
                 </div>
               </div>
