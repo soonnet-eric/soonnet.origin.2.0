@@ -104,25 +104,25 @@ button:focus, input:focus {
   background-color: #26ad5e !important;
   border-color: #26ad5e !important;
 }
-.el-button--primary:hover{
+.el-button--primary:hover {
   color: #ffffff !important;
   background-color: #1e874a !important;
   border-color: #1b7a43 !important;
 }
-.el-button--primary:active{
+.el-button--primary:active {
   color: #ffffff !important;
   background-color: #1b7a43 !important;
   border-color: #186e3c !important;
 }
-.el-checkbox .el-checkbox__inner:hover{
+.el-checkbox .el-checkbox__inner:hover {
   color: #26ad5e !important;
 }
-.el-checkbox.is-checked .el-checkbox__inner{
+.el-checkbox.is-checked .el-checkbox__inner {
   color: #ffffff !important;
   background-color: #26ad5e !important;
   border-color: #26ad5e !important;
 }
-.el-checkbox.is-checked .el-checkbox__inner:hover{
+.el-checkbox.is-checked .el-checkbox__inner:hover {
   color: #ffffff !important;
   background-color: #26ad5e !important;
   border-color: #26ad5e !important;
@@ -1197,6 +1197,16 @@ label {
   text-align: center;
   width: 100%;
 }
+.scrolling-wrapper-flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+.scrolling-wrapper-flexbox::-webkit-scrollbar {
+  display: none;
+}
 .collection tr {
   cursor: pointer;
 }
@@ -1237,7 +1247,7 @@ label {
 .cover-photo {
   height: 500px;
   width: 100%;
-  background-size: 100%;
+  /*background-size: 100%;*/
   background-attachment: scroll;
   background-position: 50% 50%;
   position: relative;
@@ -2793,7 +2803,36 @@ label {
 /* Responsive Version
    ========================================================================== */
 /* Large devices (desktops, less than 1200px) */
-@media (max-width: 1199.98px) {}
+@media (max-width: 1199.98px) {
+  /* Album */
+  .cover-photo {
+    height: 300px;
+  }
+  #cover-head {
+    padding-top: 150px;
+    max-height: 300px;
+  }
+  .time-filter, .tag-search, .pagination-btn-first, .pagination-btn-last {
+    display: none !important;
+  }
+  .album-name {
+    font-size: 2rem;
+  }
+  /* Profile */
+  #profile .card-header, #profile .card-body {
+    padding: 0.25rem;
+    padding-top: 1rem;
+  }
+  .my-comment .comment-content {
+    width: 64%;
+  }
+  .my-comment .comment-date {
+    width: 18%;
+  }
+  .my-comment .comment-operation {
+    width: 18%;
+  }
+}
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
   /* General */
@@ -2820,6 +2859,29 @@ label {
   #programme-episode .video-info, #related-video .video-info, .related-article .article-info {
     height: 100%;
   }
+  /* Album */
+  .user-avatar {
+    float: none;
+  }
+  .user-avatar.mr-3 {
+    margin-right: auto !important;
+  }
+  .cover-photo {
+    height: 350px;
+  }
+  #cover-head {
+    padding-top: 100px;
+  }
+  /* Profile */
+  .my-comment .comment-content {
+    width: 50%;
+  }
+  .my-comment .comment-date {
+    width: 25%;
+  }
+  .my-comment .comment-operation {
+    width: 25%;
+  }
 }
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
@@ -2837,6 +2899,31 @@ label {
   }
   #event-list .event-bookmark, .event-category, .event-region, .event-status {
     display: none;
+  }
+  /* Album */
+  .album-category-block {
+    width: 100px;
+    height: auto;
+  }
+  .album-category-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  .scrolling-wrapper-flexbox {
+    flex-wrap: nowrap;
+  }
+  /* Profile */
+  .my-comment .comment-content {
+    width: 54%;
+  }
+  .my-comment .comment-date {
+    width: 23%;
+  }
+  .my-comment .comment-operation {
+    width: 23%;
   }
 }
 /* Extra small devices (portrait phones, less than 576px) */
