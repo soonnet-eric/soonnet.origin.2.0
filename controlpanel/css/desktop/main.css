@@ -40,9 +40,16 @@ thead, tfoot {
 [class*=icheck-] > label {
   font-weight: normal !important;
 }
+.text-dashboard-blue {
+    color: #3b8bba;
+}
+.text-dashboard-grey {
+    color: #c1c7d1;
+}
 /* Custom Scroll Bar
    ========================================================================== */ ::-webkit-scrollbar {
   width: 5px;
+       height: 5px;
 }
 ::-webkit-scrollbar-track {
   -webkit-border-radius: 0.25rem;
@@ -72,7 +79,93 @@ thead, tfoot {
 .login-page .form-control {
   width: auto;
 }
-/* 【主頁】
+/* 【儀表板 Dashboard】
+   ========================================================================== */
+.info-box .info-box-number {
+  display: block;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.info-box .progress-description, .info-box .info-box-text {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.info-box .progress {
+  height: 8px;
+}
+.info-box .progress .progress-bar {
+  background-color: #007bff;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #2e3e4a;
+}
+@media (min-width: 768px) {
+  .col-xl-3 .info-box .progress-description, .col-lg-3 .info-box .progress-description, .col-md-3 .info-box .progress-description {
+    display: block;
+  }
+}
+.bg-info {
+  background-color: #2e3e4a !important;
+}
+.info-box {
+  min-height: 0;
+}
+.info-box .info-box-icon {
+  font-size: 1.25rem;
+  width: 50px;
+}
+/* 上傳進度 */
+.b-upload-task {
+  font-size: 0.75rem;
+}
+.b-upload-task.table-striped tbody tr:nth-of-type(odd) {
+  background: none;
+}
+.b-upload-task.table thead > tr > th:first-of-type, .b-upload-task.table thead > tr > td:first-of-type, .b-upload-task.table tbody > tr > th:first-of-type, .b-upload-task.table tbody > tr > td:first-of-type {
+  padding-left: 1rem !important;
+}
+.b-upload-task.table thead > tr > th:last-of-type, .b-upload-task.table thead > tr > td:last-of-type, .b-upload-task.table tbody > tr > th:last-of-type, .b-upload-task.table tbody > tr > td:last-of-type {
+  padding-right: 0.5rem !important;
+}
+.b-upload-task.table thead > tr:nth-of-type(even) > th:first-of-type, .b-upload-task.table thead > tr:nth-of-type(even) > td:first-of-type, .b-upload-task.table tbody > tr:nth-of-type(even) > th:first-of-type, .b-upload-task.table tbody > tr:nth-of-type(even) > td:first-of-type {
+  padding-left: 0.25rem !important;
+}
+.b-upload-task.table tr:nth-of-type(odd) td {
+  padding-bottom: 0;
+}
+.b-upload-task.table tr:nth-of-type(even) td {
+  border-top: 0;
+  padding-top: 0;
+}
+.b-upload-task th, .b-upload-task tr, .b-upload-task td {
+  padding: 0.25rem;
+  max-width: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.b-upload-task .progress {
+  height: 0.75rem;
+    border-radius: 6px;
+}
+
+
+.users-list img {
+    width: 48px;
+    height: 48px;
+}
+.users-list > li {
+    width: 12.5%;
+}
+.users-list .users-list-location {
+        color: #748290;
+    font-size: 12px;
+}
+
+/* 【主頁 Home】
    ========================================================================== */
 /* 橫額設定 */
 .b-banner-image {
@@ -105,7 +198,7 @@ thead, tfoot {
   -webkit-box-flex: 1;
   flex: 1 0 0px;
 }
-/* 【相簿】
+/* 【相簿 Album】
    ========================================================================== */
 .b-album-head, .b-collection-head {
   min-width: 20rem;
@@ -184,7 +277,7 @@ thead, tfoot {
   left: calc(100% + 1rem);
   transform: translateY(-50%);
 }
-/* 【影音】
+/* 【影音 Video】
    ========================================================================== */
 /* Soonnet TV 列表 + 一般影片列表 */
 .b-filter {
@@ -578,13 +671,13 @@ thead, tfoot {
   -webkit-box-flex: 1;
   flex: 1 0 0px;
 }
-/* 【用戶】
+/* 【用戶 User】
    ========================================================================== */
 .user-image {
   height: auto;
   width: 36px;
 }
-/* 【頁腳】
+/* 【頁腳 Footer】
    ========================================================================== */
 .b-status-display::before {
   content: '';
@@ -649,4 +742,19 @@ thead, tfoot {
   top: 50%;
   left: calc(100% + 1rem);
   transform: translateY(-50%);
+}
+/* 【社交動態 Feed】
+   ========================================================================== */
+#b-feedpost .b-feedpost-content {
+  min-width: 10rem;
+  max-width: 20rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-word;
+}
+/* 【系統設定 Setting】
+   ========================================================================== */
+#b-setting .b-logo-nightmode {
+    background-color: #2e3e4a;
 }

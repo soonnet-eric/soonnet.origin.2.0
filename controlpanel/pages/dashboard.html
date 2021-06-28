@@ -262,7 +262,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">尋寶網管理後臺</h1>
+            <h1 class="m-0 text-dark">儀表板</h1>
           </div>
           <!-- /.col -->
           <div class="col-sm-6">
@@ -279,12 +279,370 @@
     
     <!-- Main content -->
     <div class="content">
-      <div class="container-fluid">
+      <div class="container-fluid"> 
+        
+        <!-- 昨日新增 -->
+        <h5 class="mb-2">昨日新增</h5>
         <div class="row">
-          <div class="col-12"> ** </div>
+          <section class="col-12">
+            <div class="row">
+              <section class="col-xl-9 col-12">
+                <div class="row">
+                  <div class="col-md-2 col-6">
+                    <div class="info-box"> <span class="info-box-icon bg-info"><i class="fa fa-folder-plus"></i></span>
+                      <div class="info-box-content"> <span class="info-box-text">相簿</span> <span class="info-box-number">36</span> </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <div class="info-box"> <span class="info-box-icon bg-info"><i class="fa fa-images"></i></span>
+                      <div class="info-box-content"> <span class="info-box-text">相片</span> <span class="info-box-number">7,676</span> </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <div class="info-box"> <span class="info-box-icon bg-info"><i class="fa fa-comments"></i></span>
+                      <div class="info-box-content"> <span class="info-box-text">社交動態</span> <span class="info-box-number">4</span> </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <div class="info-box"> <span class="info-box-icon bg-info"><i class="fa fa-comment-dots"></i></span>
+                      <div class="info-box-content"> <span class="info-box-text">留言</span> <span class="info-box-number">9</span> </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <div class="info-box"> <span class="info-box-icon bg-info"><i class="fa fa-running"></i></span>
+                      <div class="info-box-content"> <span class="info-box-text">賽事</span> <span class="info-box-number">12</span> </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <div class="info-box"> <span class="info-box-icon bg-info"><i class="fa fa-newspaper"></i></span>
+                      <div class="info-box-content"> <span class="info-box-text">文章</span> <span class="info-box-number">2</span> </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <div class="info-box"> <span class="info-box-icon bg-info"><i class="fa fa-play-circle"></i></span>
+                      <div class="info-box-content"> <span class="info-box-text">影片</span> <span class="info-box-number">2</span> </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <div class="info-box"> <span class="info-box-icon bg-info"><i class="fa fa-user-plus"></i></span>
+                      <div class="info-box-content"> <span class="info-box-text">新會員</span> <span class="info-box-number">4</span> </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <div class="info-box"> <span class="info-box-icon bg-info"><i class="fa fa-download"></i></span>
+                      <div class="info-box-content"> <span class="info-box-text">相片下載量</span> <span class="info-box-number">65</span> </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <div class="info-box"> <span class="info-box-icon bg-info"><i class="fa fa-cloud-upload-alt"></i></span>
+                      <div class="info-box-content"> <span class="info-box-text">硬盤使用量</span> <span class="info-box-number">36 GB</span> </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="col-xl-3 col-12"> 
+                <!-- 目前在線人數 -->
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">目前在線人數</h3>
+                  </div>
+                  <!-- /.card-header -->
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-8">
+                        <div class="chart-responsive">
+                          <canvas id="pieChart" height="150"></canvas>
+                        </div>
+                        <!-- ./chart-responsive --> 
+                      </div>
+                      <!-- /.col -->
+                      <div class="col-md-4">
+                        <ul class="chart-legend clearfix">
+                          <li> 在線人數: 98 </li>
+                          <li><i class="far fa-circle text-dashbaord-blue"></i> 會員: 3 </li>
+                          <li><i class="far fa-circle text-dashboard-grey"></i> 非會員: 95 </li>
+                        </ul>
+                      </div>
+                      <!-- /.col --> 
+                    </div>
+                    <!-- /.row --> 
+                  </div>
+                  <!-- /.card-body --> 
+                  
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+        
+        <!-- 網站統計 -->
+        <h5 class="mb-2">網站統計</h5>
+        <div class="row">
+          <section class="col-xl-7 col-12"> 
+            <!-- 訪問量 -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title"> <i class="fas fa-users mr-1"></i> 訪問量 </h3>
+                <div class="card-tools">
+                  <ul class="nav nav-pills ml-auto">
+                    <li class="nav-item"> <a class="nav-link active" href="#visitor-chart" data-toggle="tab">日</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#visitor-chart" data-toggle="tab">週</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#visitor-chart" data-toggle="tab">月</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#visitor-chart" data-toggle="tab">年</a> </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="tab-content p-0">
+                  <div class="chart" id="visitor-chart"
+                       style="position: relative; height: 300px;">
+                    <canvas id="visitor-chart-canvas" height="300" style="height: 300px;"></canvas>
+                  </div>
+                  <div class="d-flex flex-row justify-content-end"> <span class="mr-2"> <i class="fas fa-square text-dashboard-blue"></i> 訪問量 </span> <span> <i class="fas fa-square text-dashboard-grey"></i> 瀏覽量 </span> </div>
+                </div>
+              </div>
+              <!-- /.card-body --> 
+            </div>
+            
+            <!-- 裝置訪問量 -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title"> <i class="fas fa-desktop  mr-1"></i> 裝置訪問量</h3>
+                <div class="card-tools">
+                  <ul class="nav nav-pills ml-auto">
+                    <li class="nav-item"> <a class="nav-link active" href="#visitor-chart" data-toggle="tab">日</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#visitor-chart" data-toggle="tab">週</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#visitor-chart" data-toggle="tab">月</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#visitor-chart" data-toggle="tab">年</a> </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="position-relative mb-4">
+                  <canvas id="device-chart" height="200"></canvas>
+                </div>
+                <div class="d-flex flex-row justify-content-end"> <span class="mr-2"> <i class="fas fa-square text-dashboard-blue"></i> 桌面電腦 </span> <span> <i class="fas fa-square text-dashboard-grey"></i> 流動裝置 </span> </div>
+              </div>
+            </div>
+            <!-- /.card --> 
+            
+          </section>
+          <section class="col-xl-5 col-12"> 
+            
+            <!-- 最近上傳項目 -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title"> <i class="fas fa-cloud-upload-alt mr-1"></i> 最近上傳項目 </h3>
+                <div class="card-tools">
+                  <ul class="nav nav-pills ml-auto">
+                    <li class="nav-item"> <a class="nav-link active" href="#visitor-chart" data-toggle="tab">進行中</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#visitor-chart" data-toggle="tab">已中斷</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#visitor-chart" data-toggle="tab">已完成</a> </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="card-body table-responsive p-0">
+                <table class="b-upload-task table table-striped table-valign-middle">
+                  <thead>
+                    <tr>
+                      <th> # </th>
+                      <th> 會員 </th>
+                      <th> 數量 </th>
+                      <th> 開始時間 </th>
+                      <th> 速率 </th>
+                      <th> 已進行 </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td rowspan="2"> 6 </td>
+                      <td> 陳小強 </td>
+                      <td> 4298張 (26.7GB) </td>
+                      <td> 07/05 13:56:53 </td>
+                      <td> 1.24 MB/s </td>
+                      <td><i class="fas fa-mobile-alt" title="手機上載"></i></td>
+                    </tr>
+                    <tr>
+                      <td colspan="4"><span class="progress"> <span class="progress-bar bg-green" style="width: 5%"> 5% </span> </span></td>
+                      <td> 06:55 </td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2"> 5 </td>
+                      <td> 張小強 </td>
+                      <td> 98張 (61.18MB) </td>
+                      <td> 07/05 13:40:53 </td>
+                      <td> 352.56 KB/s </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td colspan="4"><span class="progress"> <span class="progress-bar bg-green" style="width: 44%"> 44% </span> </span></td>
+                      <td> 48:03 </td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2"> 4 </td>
+                      <td> asdasdasdasdasdsad </td>
+                      <td> 32張 (61.18MB) </td>
+                      <td> 07/05 13:40:53 </td>
+                      <td> 352.56 KB/s </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td colspan="4"><span class="progress"> <span class="progress-bar bg-green" style="width: 80%"> 80% </span> </span></td>
+                      <td> 1:03:15 </td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2"> 3 </td>
+                      <td> Mercury </td>
+                      <td> 2398張 (61.18MB) </td>
+                      <td> 07/05 13:40:53 </td>
+                      <td> 352.56 KB/s </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td colspan="4"><span class="progress"> <span class="progress-bar bg-green" style="width: 32%"> 32% </span> </span></td>
+                      <td> 1:21:13 </td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2"> 2 </td>
+                      <td> 張小強 </td>
+                      <td> 104張 (61.18MB) </td>
+                      <td> 07/05 13:40:53 </td>
+                      <td> 352.56 KB/s </td>
+                      <td><i class="fas fa-mobile-alt" title="手機上載"></i></td>
+                    </tr>
+                    <tr>
+                      <td colspan="4"><span class="progress"> <span class="progress-bar bg-green" style="width: 86%"> 86% </span> </span></td>
+                      <td> 2:56:03 </td>
+                    </tr>
+                    <tr>
+                      <td rowspan="2"> 1 </td>
+                      <td> aaron00014 </td>
+                      <td> 98張 (61.18MB) </td>
+                      <td> 07/05 13:40:53 </td>
+                      <td> 352.56 KB/s </td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td colspan="4"><span class="progress"> <span class="progress-bar bg-green" style="width: 98%"> 98% </span> </span></td>
+                      <td> 11:00:03 </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <!-- 相片上傳 -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title"> <i class="fas fa-images mr-1"></i> 相片上傳 </h3>
+                <div class="card-tools">
+                  <ul class="nav nav-pills ml-auto">
+                    <li class="nav-item"> <a class="nav-link active" href="#upload-photo-chart" data-toggle="tab">日</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#upload-photo-chart" data-toggle="tab">週</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#upload-photo-chart" data-toggle="tab">月</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="#upload-photo-chart" data-toggle="tab">年</a> </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="tab-content p-0">
+                  <div class="chart" id="upload-photo-chart"
+                       style="position: relative; height: 300px;">
+                    <canvas id="upload-photo-chart-canvas" height="300" style="height: 300px;"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-6 border-right">
+                    <div class="description-block"> <span class="description-percentage text-success"></span>
+                      <h5 class="description-header">36</h5>
+                      <span class="description-text">相簿</span> </div>
+                  </div>
+                  <div class="col-6 border-right">
+                    <div class="description-block"> <span class="description-percentage text-warning"></span>
+                      <h5 class="description-header">5,757</h5>
+                      <span class="description-text">相片</span> </div>
+                  </div>
+                </div>
+                <!-- /.row --> 
+                
+              </div>
+              <!-- /.card-footer --> 
+            </div>
+            
+            <!--  新加入會員 -->
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title"> <i class="fas fa-user-plus mr-1"></i> 在線會員 </h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body p-0">
+                <ul class="users-list clearfix">
+                  <li> <img src="../images/user-image.jpg" alt="User Image"> <a class="users-list-name" href="#">陳小明</a> <span class="users-list-location">台灣</span> </li>
+                  <li> <img src="../images/user-image.jpg" alt="User Image"> <a class="users-list-name" href="#">Chan44</a> <span class="users-list-location">台灣</span> </li>
+                  <li> <img src="../images/user-image.jpg" alt="User Image"> <a class="users-list-name" href="#">secumm</a> <span class="users-list-location">台灣</span> </li>
+                  <li> <img src="../images/user-image.jpg" alt="User Image"> <a class="users-list-name" href="#">JOEYLEE</a> <span class="users-list-location">台灣</span> </li>
+                  <li> <img src="../images/user-image.jpg" alt="User Image"> <a class="users-list-name" href="#">明日香</a> <span class="users-list-location">台灣</span> </li>
+                  <li> <img src="../images/user-image.jpg" alt="User Image"> <a class="users-list-name" href="#">桐人</a> <span class="users-list-location">台灣</span> </li>
+                  <li> <img src="../images/user-image.jpg" alt="User Image"> <a class="users-list-name" href="#">Aurora</a> <span class="users-list-location">香港</span> </li>
+                  <li> <img src="../images/user-image.jpg" alt="User Image"> <a class="users-list-name" href="#">happy88</a> <span class="users-list-location">香港</span> </li>
+                  <li> <img src="../images/user-image.jpg" alt="User Image"> <a class="users-list-name" href="#">陳小明</a> <span class="users-list-location">香港</span> </li>
+                  <li> <img src="../images/user-image.jpg" alt="User Image"> <a class="users-list-name" href="#">Chan44</a> <span class="users-list-location">香港</span> </li>
+                  <li> <img src="../images/user-image.jpg" alt="User Image"> <a class="users-list-name" href="#">secumm</a> <span class="users-list-location">中國</span> </li>
+                  <li> <img src="../images/user-image.jpg" alt="User Image"> <a class="users-list-name" href="#">JOEYLEE</a> <span class="users-list-location">中國</span> </li>
+                  <li> <img src="../images/user-image.jpg" alt="User Image"> <a class="users-list-name" href="#">明日香</a> <span class="users-list-location">中國</span> </li>
+                  <li> <img src="../images/user-image.jpg" alt="User Image"> <a class="users-list-name" href="#">桐人</a> <span class="users-list-location">中國</span> </li>
+                  <li> <img src="../images/user-image.jpg" alt="User Image"> <a class="users-list-name" href="#">Aurora</a> <span class="users-list-location">中國</span> </li>
+                  <li> <img src="../images/user-image.jpg" alt="User Image"> <a class="users-list-name" href="#">happy88</a> <span class="users-list-location">中國</span> </li>
+                </ul>
+                <!-- /.users-list --> 
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer text-center"> <a href="javascript:">查看所有會員</a> </div>
+              <!-- /.card-footer --> 
+            </div>
+          </section>
+        </div>
+        
+        <!-- 伺服器空間 -->
+        <h5 class="mb-2">伺服器空間</h5>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="info-box"> <span class="info-box-icon"><i class="fa fa-server"></i></span>
+              <div class="info-box-content"> <span class="info-box-text">台北</span> <span class="info-box-number">TW PHOHO HOST (78 D:)</span>
+                <div class="progress">
+                  <div class="progress-bar bg-red" style="width: 99%"></div>
+                </div>
+                <span class="progress-description"> 剩餘 154 GB，共 19.5 TB (99%) </span> </div>
+            </div>
+          </div>
+          <!-- /.col -->
+          
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="info-box"> <span class="info-box-icon"><i class="fa fa-server"></i></span>
+              <div class="info-box-content"> <span class="info-box-text">台北</span> <span class="info-box-number">TW VIDEO HOST (86 F:)</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 70%"></div>
+                </div>
+                <span class="progress-description"> 剩餘 11.2 TB，共 80.1 TB (14%) </span> </div>
+            </div>
+          </div>
+          <!-- /.col -->
+          
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="info-box"> <span class="info-box-icon"><i class="fa fa-server"></i></span>
+              <div class="info-box-content"> <span class="info-box-text">香港</span> <span class="info-box-number">HK HOST</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width: 66%"></div>
+                </div>
+                <span class="progress-description"> 剩餘 21.7 TB，共 32.6 TB (66%) </span> </div>
+            </div>
+          </div>
           <!-- /.col --> 
         </div>
-        <!-- /.row --> 
       </div>
       <!-- /.Container Fluid --> 
     </div>
@@ -297,9 +655,11 @@
 <script src="../js/jquery-3.4.1.min.js"></script> 
 <!-- Bootstrap 4 --> 
 <script src="../js/bootstrap.bundle.min.js"></script> 
-<!-- Toastr --> 
-<script src="../plugins/toastr/toastr.min.js"></script> 
+<!-- ChartJS --> 
+<script src="../plugins/chart.js/Chart.min.js"></script> 
 <!-- Adminlte --> 
-<script src="../js/adminlte.min.js"></script>
+<script src="../js/adminlte.min.js"></script> 
+<!-- AdminLTE dashboard demo (This is only for demo purposes) --> 
+<script src="../js/dashboard.js"></script>
 </body>
 </html>

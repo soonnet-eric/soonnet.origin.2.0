@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="telephone=no" name="format-detection">
+<title> 我的動態相片 - 尋寶網 </title>
+<!-- SEO -->
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="尋寶網 Soonnet">
+<meta property="og:title" content="社群動態 - 尋寶網">
+<meta property="og:type" content="website">
+<meta property="og:image" content="">
+<meta property="og:url" content="">
+<meta property="og:site_name" content="尋寶網 Soonnet">
+<meta property="og:description" content="">
+<!-- CSS -->
+<link rel="stylesheet" href="../css/adminlte/adminlte.css">
+<link rel="stylesheet" href="../css/bootstrap/bootstrap-grid.css">
+<link rel="stylesheet" href="../css/desktop/normalize.css">
+<link rel="stylesheet" href="../css/desktop/main.css">
+<link rel="stylesheet" href="../css/mobile/m-main.css">
+<!-- External CSS -->
+<link rel="stylesheet" href="../css/font-awesome/all.min.css">
+<!-- Favicon -->
+<link rel="shortcut icon" href="../images/favicon.ico">
+</head>
+<body>
+
+<!-- 目錄 (流動版) -->
+<header id="m-header">
+  <div class="m-header-flex">
+    <div class="m-header-left"> <a href="javascript:void(0);" onclick="menuToggle()"><i class="fa fa-bars"></i></a>
+      <div class="m-header-logo"> <a href="./index.html" title="尋寶網"> <img src="../images/soonnet-logo-text.svg" alt="尋寶網"> </a></div>
+    </div>
+    <div class="m-header-right"> <a href="javascript:void(0);" onclick="searchToggle()"><i class="fa fa-search fa-fw"></i></a> </div>
+  </div>
+  
+  <!-- NAVIGATOR -->
+  <nav id="m-header-nav">
+    <div class="m-header-menu p-4"> 
+      <!-- Profile Panel -->
+      <section class="m-profile">
+        <div class="m-profile-panel">
+          <div class="m-profile-left">
+            <div class="m-profile-user">
+              <button type="button" class="profile-button"><img class="user-logo" src="../images/guest-logo.jpg"></button>
+              <div class="user-info ml-2">
+                <div class="user-name">未登入</div>
+                <span class="view-profile"><a href="./member/profile.html">查看我的個人檔案</a></span></div>
+            </div>
+          </div>
+          <div class="m-profile-right">
+            <div class="menu-operate-btn"><i class="fa fa-cloud-upload-alt"></i> <i class="fa fa-bell"></i></div>
+          </div>
+        </div>
+      </section>
+      <!-- /.Profile Panel --> 
+      
+      <!-- Menu -->
+      <div class="m-menu">
+        <div class="m-menu-panel-wrapper my-3">
+          <div class="menu-panel"> <span class="menu-wrap"><a href="./album/album.html" target="_self"> <img class="menu-icon" src="../images/m-menu/album.png" alt="相簿">
+            <div class="menu-text">相簿</div>
+            </a></span> <span class="menu-wrap"><a href="./social/feed.html" target="_self"> <img class="menu-icon" src="../images/m-menu/feed.png" alt="相簿">
+            <div class="menu-text">社群動態</div>
+            </a></span> <span class="menu-wrap"><a href="./event/event.html" target="_self"> <img class="menu-icon" src="../images/m-menu/event.png" alt="活動">
+            <div class="menu-text">活動列表</div>
+            </a></span> <span class="menu-wrap"><a href="./topic/article.html" target="_self"> <img class="menu-icon" src="../images/m-menu/topic.png" alt="話題">
+            <div class="menu-text">話題</div>
+            </a></span> <span class="menu-wrap"><a href="./video/video.html" target="_self"> <img class="menu-icon" src="../images/m-menu/soonnettv.png" alt="影音">
+            <div class="menu-text">影音</div>
+            </a></span> <span class="menu-wrap"><a href="./video/programme.html" target="_self"> <img class="menu-icon" src="../images/m-menu/programme.png" alt="我們的節目">
+            <div class="menu-text">我們的節目</div>
+            </a></span> </div>
+        </div>
+        <div class="m-menu-panel-wrapper">
+          <div class="menu-row mb-2"> <span class="menu-header"> 活動網頁 </span> </div>
+          <div class="menu-panel"> <span class="menu-wrap"><a href="http://twrunner.soonnet.org/road_run/index.html" target="_self"> <img class="menu-icon" src="../images/m-menu/twrunner.png" alt="最強市民飆5K">
+            <div class="menu-text">最強市民飆5K</div>
+            </a></span> <span class="menu-wrap"><a href="http://tperunner.soonnet.org/road_run/index.html" target="_self"> <img class="menu-icon" src="../images/m-menu/tperunner.png" alt="5K最速RUN">
+            <div class="menu-text">5K最速RUN<br>
+              (已停辦)</div>
+            </a></span></div>
+        </div>
+      </div>
+      <!-- /.Menu --> 
+      
+      <!-- Footer -->
+      <div class="m-menu-footer">
+        <div class="m-menu-footer-wrapper mt-3 mb-2"> <span class="menu-footer-item"><a href="../footer/about.html"> 關於我們 </a></span> <span class="menu-footer-item"><a href="./footer/about.html"> 聯絡我們 </a></span> <span class="menu-footer-item"><a href="../footer/advertising.html"> 廣告合作 </a></span> <span class="menu-footer-item"><a href="./footer/cooperate.html"> 商務合作 </a></span> <span class="menu-footer-item"><a href="../footer/terms.html"> 服務條款 </a></span> <span class="menu-footer-item"><a href="./footer/privacy.html"> 隱私條款 </a></span> <span class="menu-footer-item"><a href="../footer/copyright.html"> 著作權條款 </a></span> </div>
+        <div class="m-footer-nav">
+          <div class="m-social-wrapper mb-2"> <span class="social-btn"><a class="m-social-icon facebook fab fa-facebook-f fa-fw" href="https://www.facebook.com/soonnet/" target="_blank"> </a></span> <span class="social-btn"><a class="m-social-icon instagram fab fa-instagram fa-fw" href="https://www.instagram.com/soonnettv/" target="_blank"> </a></span> <span class="social-btn"><a class="m-social-icon youtube fab fa-youtube fa-fw" href="https://www.youtube.com/soonnettv" target="_blank"> </a></span> </div>
+          <div class="m-copyright"> 尋寶網 SOONNET.org 版權所有 © 2021 </div>
+        </div>
+        <!-- /.Footer --> 
+        
+      </div>
+    </div>
+  </nav>
+  <!-- /.NAVIGATOR --> 
+  
+  <!-- Search Panel -->
+  <nav id="m-search-panel">
+    <div class="m-search">
+      <div class="m-search-dialog">
+        <label><i class="fa fa-search fa-fw"></i></label>
+        <input type="text" id="search-term" placeholder="搜尋">
+      </div>
+      <a class="close-btn" href="javascript:void(0);" onclick="searchToggle()"> <i class="fa fa-times fa-fw"></i> </a> </div>
+  </nav>
+  <!-- /.Search Panel --> 
+  
+</header>
+<!-- /.目錄 (流動版) --> 
+
+<!-- 目錄 -->
+<header class="header">
+  <div class="header-nav"> 
+    <!-- header left -->
+    <div class="header-left"> 
+      <!-- header logo -->
+      <h1 class="header-logo"> <a href="/" title="尋寶網"> <img src="../images/desktop/soonnet-logo.svg" alt="尋寶網"> </a></h1>
+      <!-- /.header-logo --> 
+      
+      <!-- header menu -->
+      <nav class="header-nav-wrap">
+        <ul class="header-menu">
+          <li class="header-menu-item"> <a href="https://www.soonnet.org/Car/Car.aspx" class="header-menu-link"> 重機 </a> </li>
+          <li class="header-menu-item"> <a href="https://www.soonnet.org/Marathon/Marathon.aspx" class="header-menu-link"> 路跑 </a> </li>
+          <li class="header-menu-item"> <a href="https://www.soonnet.org/Bicycle/Bicycle.aspx" class="header-menu-link"> 單車 </a> </li>
+          <li class="header-menu-item"> <a href="https://www.soonnet.org/Sport/Sport.aspx" class="header-menu-link"> 運動 </a> </li>
+          <li class="header-menu-item"> <a href="https://www.soonnet.org/Gallery/Gallery.aspx" class="header-menu-link"> 攝影 </a> </li>
+          <li class="header-menu-item"> <a href="https://www.soonnet.org/Photo/Photo.aspx" class="header-menu-link"> 圖庫 </a> </li>
+          <li class="header-menu-item"> <a href="../event/eventlist.html" class="header-menu-link"> 活動 </a> </li>
+          <li class="header-menu-item"> <a href="../topic/articlelist.html" class="header-menu-link"> 話題 </a> </li>
+          <li class="header-menu-item"> <a href="https://www.soonnet.org/Daily/Daily.aspx" class="header-menu-link"> 新聞 </a> </li>
+          <li class="header-menu-item"> <a href="../video/video.html" class="header-menu-link"> 影音 </a> </li>
+        </ul>
+      </nav>
+      <!-- /.header menu --> 
+      <!-- mobile menu --> 
+      <a class="header-menu-toggle"><span></span></a> 
+      <!-- /.mobile menu --> 
+    </div>
+    <!-- /.header left --> 
+    
+    <!-- header right -->
+    <div class="header-right"> 
+      
+      <!-- Search bar -->
+      <div class="search">
+        <form action="" method="GET">
+          <input type="text" name="word" placeholder="搜尋" autocomplete="off" spellcheck="true" id="search-keywords">
+          <button type="submit" class="search-icon"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <!-- /.Search bar -->
+      
+      <ul class="user-menu">
+        <li class="header-menu-item"> <a href="" class="upload fa fa-cloud-upload-alt" title="上傳"> </a> </li>
+        <li class="header-menu-item"> <a href="" class="user" title="登入"> <img class="user-logo" src="../images/guest-logo.jpg" alt="登入"> </a> </li>
+      </ul>
+    </div>
+    <!-- /.header right --> 
+  </div>
+  <!-- /.header-inner --> 
+</header>
+<!-- /.目錄 --> 
+
+<!-- 社交平台按鈕 -->
+<div id="social-block"> 
+  <!-- Facebook -->
+  <div class="social-btn"> <a href="https://www.facebook.com/soonnet/" target="_blank" class="social-icon facebook fab fa-facebook-f"> </a> </div>
+  <!-- Instagram -->
+  <div class="social-btn"> <a href="https://www.instagram.com/soonnettv/" target="_blank" class="social-icon instagram fab fa-instagram"> </a> </div>
+  <!-- YouTube -->
+  <div class="social-btn"> <a href="https://www.youtube.com/soonnettv" target="_blank" class="social-icon youtube fab fa-youtube"> </a> </div>
+</div>
+<!-- /.社交平台按鈕 --> 
+
+<!-- Container -->
+<div id="feedpost" class="container">
+  <section>
+    <div class="section-group">
+      <div class="row"> 
+        <!-- 個人資料 -->
+        <div class="col-lg-3">
+          <div class="card">
+            <div class="card-body box-profile">
+              <div class="text-center"> <img class="profile-user-img img-fluid img-circle"
+                       src="../images/user-logo.jpg"
+                       alt="User profile picture"> </div>
+              <h3 class="profile-username text-center mb-1">Eric Chong</h3>
+              <p class="text-muted text-center">一句話的自我介紹</p>
+            </div>
+            <!-- /.card-body -->
+            <div class="card-body">
+              <ul>
+                <li class="profile-nav"><a class="profile-nav-link" href="../social/feed.html"> <i class="fas fa-home fa-fw mr-1"></i> 動態主頁 </a></li>
+                <li class="profile-nav"><a class="profile-nav-link" href="../social/myfeed.html"> <i class="fas fa-user-circle fa-fw mr-1"></i> 我的動態 </a></li>
+                <li class="profile-nav active"><a class="profile-nav-link" href="../social/mymedia-photo.html"> <i class="fas fa-user-circle fa-fw mr-1"></i> 我的動態相片 </a></li>
+              </ul>
+            </div>
+            <!-- /.card-body --> 
+          </div>
+          <!-- /.card --> 
+        </div>
+        <!-- /.個人資料 --> 
+        
+        <!-- 相片牆 -->
+        <div class="col-md-6 px-lg-2">
+          <div class="card">
+            <div class="card-header">
+              <div class="row">
+                <div class="col-8">
+                  <ul class="nav nav-pills">
+                    <li class="nav-item"><a class="nav-link active" href="../social/mymedia-photo.html" data-toggle="tab">動態相片<span class="count">132</span></a></li>
+                    <li class="nav-item"><a class="nav-link" href="../social/mymedia-video.html" data-toggle="tab">動態影片<span class="count">33</span></a></li>
+                  </ul>
+                </div>
+                <!-- Search bar -->
+                <div class="col-4">
+                  <div class="search">
+                    <form action="" method="GET">
+                      <input type="text" name="word" placeholder="搜尋動態" autocomplete="off" spellcheck="true" id="search-album">
+                      <button type="submit" class="search-icon"><i class="fas fa-search"></i></button>
+                    </form>
+                  </div>
+                </div>
+                <!-- /.Search bar --> 
+              </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body"> 
+              <!-- My Profile -->
+              <div class="my-media section-group">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="row">
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="feedpost-photo-card card"><a href="" data-toggle="modal" data-target="#feedpost-view">
+                          <div class="feedpost-block">
+                            <div class="feedpost-thumbnail">
+                              <div class="feedpost-responsive">
+                                <div class="feedpost-sizer">
+                                  <div class="feedpost-image" style="background-image: url('../images/album/album-cover-1.jpg');"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="feedpost-photo-card card"><a href="" data-toggle="modal" data-target="#feedpost-view">
+                          <div class="feedpost-block">
+                            <div class="feedpost-thumbnail">
+                              <div class="feedpost-responsive">
+                                <div class="feedpost-sizer">
+                                  <div class="feedpost-image" style="background-image: url('../images/album/album-cover-2.jpg');"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="feedpost-photo-card card"><a href="" data-toggle="modal" data-target="#feedpost-view">
+                          <div class="feedpost-block">
+                            <div class="feedpost-thumbnail">
+                              <div class="feedpost-responsive">
+                                <div class="feedpost-sizer">
+                                  <div class="feedpost-image" style="background-image: url('../images/album/album-cover-3.jpg');"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="feedpost-photo-card card"><a href="" data-toggle="modal" data-target="#feedpost-view">
+                          <div class="feedpost-block">
+                            <div class="feedpost-thumbnail">
+                              <div class="feedpost-responsive">
+                                <div class="feedpost-sizer">
+                                  <div class="feedpost-image" style="background-image: url('../images/album/album-cover-4.jpg');"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="feedpost-photo-card card"><a href="" data-toggle="modal" data-target="#feedpost-view">
+                          <div class="feedpost-block">
+                            <div class="feedpost-thumbnail">
+                              <div class="feedpost-responsive">
+                                <div class="feedpost-sizer">
+                                  <div class="feedpost-image" style="background-image: url('../images/album/album-cover-5.jpg');"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="feedpost-photo-card card"><a href="" data-toggle="modal" data-target="#feedpost-view">
+                          <div class="feedpost-block">
+                            <div class="feedpost-thumbnail">
+                              <div class="feedpost-responsive">
+                                <div class="feedpost-sizer">
+                                  <div class="feedpost-image" style="background-image: url('../images/album/album-cover-1.jpg');"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="feedpost-photo-card card"><a href="" data-toggle="modal" data-target="#feedpost-view">
+                          <div class="feedpost-block">
+                            <div class="feedpost-thumbnail">
+                              <div class="feedpost-responsive">
+                                <div class="feedpost-sizer">
+                                  <div class="feedpost-image" style="background-image: url('../images/album/album-cover-2.jpg');"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="feedpost-photo-card card"><a href="" data-toggle="modal" data-target="#feedpost-view">
+                          <div class="feedpost-block">
+                            <div class="feedpost-thumbnail">
+                              <div class="feedpost-responsive">
+                                <div class="feedpost-sizer">
+                                  <div class="feedpost-image" style="background-image: url('../images/album/album-cover-3.jpg');"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="feedpost-photo-card card"><a href="" data-toggle="modal" data-target="#feedpost-view">
+                          <div class="feedpost-block">
+                            <div class="feedpost-thumbnail">
+                              <div class="feedpost-responsive">
+                                <div class="feedpost-sizer">
+                                  <div class="feedpost-image" style="background-image: url('../images/album/album-cover-4.jpg');"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="feedpost-photo-card card"><a href="" data-toggle="modal" data-target="#feedpost-view">
+                          <div class="feedpost-block">
+                            <div class="feedpost-thumbnail">
+                              <div class="feedpost-responsive">
+                                <div class="feedpost-sizer">
+                                  <div class="feedpost-image" style="background-image: url('../images/album/album-cover-5.jpg');"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="feedpost-photo-card card"><a href="" data-toggle="modal" data-target="#feedpost-view">
+                          <div class="feedpost-block">
+                            <div class="feedpost-thumbnail">
+                              <div class="feedpost-responsive">
+                                <div class="feedpost-sizer">
+                                  <div class="feedpost-image" style="background-image: url('../images/album/album-cover-1.jpg');"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="feedpost-photo-card card"><a href="" data-toggle="modal" data-target="#feedpost-view">
+                          <div class="feedpost-block">
+                            <div class="feedpost-thumbnail">
+                              <div class="feedpost-responsive">
+                                <div class="feedpost-sizer">
+                                  <div class="feedpost-image" style="background-image: url('../images/album/album-cover-2.jpg');"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="feedpost-photo-card card"><a href="" data-toggle="modal" data-target="#feedpost-view">
+                          <div class="feedpost-block">
+                            <div class="feedpost-thumbnail">
+                              <div class="feedpost-responsive">
+                                <div class="feedpost-sizer">
+                                  <div class="feedpost-image" style="background-image: url('../images/album/album-cover-3.jpg');"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="feedpost-photo-card card"><a href="" data-toggle="modal" data-target="#feedpost-view">
+                          <div class="feedpost-block">
+                            <div class="feedpost-thumbnail">
+                              <div class="feedpost-responsive">
+                                <div class="feedpost-sizer">
+                                  <div class="feedpost-image" style="background-image: url('../images/album/album-cover-4.jpg');"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="feedpost-photo-card card"><a href="" data-toggle="modal" data-target="#feedpost-view">
+                          <div class="feedpost-block">
+                            <div class="feedpost-thumbnail">
+                              <div class="feedpost-responsive">
+                                <div class="feedpost-sizer">
+                                  <div class="feedpost-image" style="background-image: url('../images/album/album-cover-5.jpg');"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                      <div class="col-6 col-md-4 col-lg-3">
+                        <div class="feedpost-photo-card card"><a href="" data-toggle="modal" data-target="#feedpost-view">
+                          <div class="feedpost-block">
+                            <div class="feedpost-thumbnail">
+                              <div class="feedpost-responsive">
+                                <div class="feedpost-sizer">
+                                  <div class="feedpost-image" style="background-image: url('../images/album/album-cover-1.jpg');"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          </a> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.My Profile --> 
+            </div>
+            <!-- /.card-body --> 
+          </div>
+          <!-- /.nav-tabs-custom --> 
+        </div>
+        <!-- /.相片牆 --> 
+        
+        <!-- Right Col -->
+        <div class="col-lg-3"> 
+          <!-- 新增帖文按鈕 -->
+          <div class="section-group">
+            <button type="button" class="btn btn-block btn-primary" value="新增帖文" data-toggle="modal" data-target="#create-post"><i class="fa fa-plus fa-fw fa-sm mr-1" aria-hidden="true"></i> 新增帖文 </button>
+          </div>
+          <!-- ./新增帖文按鈕 --> 
+          <!-- 廣告 -->
+          <div class="ad section-group">
+            <div class="row">
+              <div class="col-12"><a href=""> <img src="../images/ads/ad-cranium-300x250.jpg" alt="Advertisement"> </a> </div>
+            </div>
+          </div>
+          <!-- ./廣告 --> 
+        </div>
+        <!-- ./right col --> 
+        
+      </div>
+      <!-- /.row --> 
+      
+      <!-- Create Post -->
+      <div id="create-feedpost" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="create-feedpost-title">新增帖文</div>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+            </div>
+            <div class="modal-body">
+              <div class="feedpost-user"><img class="user-logo" src="../images/user-logo.jpg" alt="user-icon"></div>
+              <input class="form-control" type="text" placeholder="今天想分享甚麼？">
+            </div>
+            <div class="modal-footer justify-content-between">
+              <div class="add-media">
+                <button type="button" class="btn create-post-btn" data-dismiss="modal" title="新增相片"><i class="fa fa-image"></i></button>
+                <button type="button" class="btn create-post-btn" data-dismiss="modal" title="新增影片"><i class="fa fa-video"></i></button>
+              </div>
+              <button type="button" class="btn btn-primary">發佈</button>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal --> 
+      
+      <!-- View Post -->
+      <div id="feedpost-view" class="modal fade">
+        <div class="modal-dialog feedpost-ensize">
+          <div class="modal-content">
+            <div class="col-8">
+              <div class="feedpost-main-content"> <img src="../images/banner/banner-10.jpg"> </div>
+            </div>
+            <div class="col-4">
+              <div class="feedpost-sub-content">
+                <div class="feedpost-head">
+                  <div class="feedpost-user mr-2"><a href=""> <img class="user-logo mr-2" src="../images/guest-logo.jpg" alt="user-icon"></a> <span class="feedpost-username"> <a href=""> 陳小明 </a></span> <span class="publish-time">32分前</span> </div>
+                  <div class="feedpost-more"> <i class="fa fa-ellipsis-h"></i>
+                    <div class="feedpost-menus"> <a href="">
+                      <li class="bookmark"> <i class="far fa-bookmark mr-1"></i> 收藏 </li>
+                      </a> <a href="">
+                      <li class="report"> <i class="far fa-flag mr-1"></i> 檢舉 </li>
+                      </a> <a href="">
+                      <li class="delete"> <i class="far fa-trash-alt mr-1"></i> 刪除帖文 </li>
+                      </a> </div>
+                  </div>
+                </div>
+                <div class="feedpost-scroll">
+                  <div class="feedpost-content">
+                    <p>文字連圖片內容。</p>
+                  </div>
+                  <div class="feedpost-bottom">
+                    <ul class="feedpost-action">
+                      <a href="">
+                      <li class="like"> <i class="far fa-thumbs-up mr-1"></i> 給讚 </li>
+                      </a> <a href="">
+                      <li class="share right"> <i class="fa fa-share mr-1"></i> 分享 </li>
+                      </a>
+                    </ul>
+                    <div class="feedpost-comment">
+                      <div class="feedpost-comment-list">
+                        <div class="comment">
+                          <div class="comment-left mr-2"><a href=""> <img class="user-logo" src="../images/guest-logo.jpg" alt="user-icon"> </a></div>
+                          <div class="comment-right"> <span class="feedpost-user"> <a href=""> 陳小明 </a></span> <span class="comment-content"> 好正喔! </span> <span class="publish-time"> 32分前 </span></div>
+                        </div>
+                        <div class="comment">
+                          <div class="comment-left mr-2"><a href=""> <img class="user-logo" src="../images/user-logo.jpg" alt="user-icon"> </a></div>
+                          <div class="comment-right"> <span class="feedpost-user"> <a href=""> Wong Szeto </a></span> <span class="comment-content"> 一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒 </span> <span class="publish-time"> 1天前 17:27 </span></div>
+                        </div>
+                        <div class="comment">
+                          <div class="comment-left mr-2"><a href=""> <img class="user-logo" src="../images/user-logo.jpg" alt="user-icon"> </a></div>
+                          <div class="comment-right"> <span class="feedpost-user"> <a href=""> Wong Szeto </a></span> <span class="comment-content"> 一級棒一 </span> <span class="publish-time"> 5天前 17:27 </span></div>
+                        </div>
+                        <div class="comment">
+                          <div class="comment-left mr-2"><a href=""> <img class="user-logo" src="../images/guest-logo.jpg" alt="user-icon"> </a></div>
+                          <div class="comment-right"> <span class="feedpost-user"> <a href=""> 陳小明 </a></span> <span class="comment-content"> 好正喔! </span> <span class="publish-time"> 2021-03-19 17:27 </span></div>
+                        </div>
+                        <div class="comment">
+                          <div class="comment-left mr-2"><a href=""> <img class="user-logo" src="../images/user-logo.jpg" alt="user-icon"> </a></div>
+                          <div class="comment-right"> <span class="feedpost-user"> <a href=""> Wong Szeto </a></span> <span class="comment-content"> 一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒 </span> <span class="publish-time"> 2021-03-19 17:27 </span> </div>
+                        </div>
+                        <div class="comment">
+                          <div class="comment-left mr-2"><a href=""> <img class="user-logo" src="../images/user-logo.jpg" alt="user-icon"> </a></div>
+                          <div class="comment-right"> <span class="feedpost-user"> <a href=""> Wong Szeto </a></span> <span class="comment-content"> 一級棒一 </span> <span class="publish-time"> 2021-03-19 17:27 </span></div>
+                        </div>
+                        <div class="comment">
+                          <div class="comment-left mr-2"><a href=""> <img class="user-logo" src="../images/guest-logo.jpg" alt="user-icon"> </a></div>
+                          <div class="comment-right"> <span class="feedpost-user"> <a href=""> 陳小明 </a></span> <span class="comment-content"> 好正喔! </span> <span class="publish-time"> 2021-03-19 17:27 </span></div>
+                        </div>
+                        <div class="comment">
+                          <div class="comment-left mr-2"><a href=""> <img class="user-logo" src="../images/user-logo.jpg" alt="user-icon"> </a></div>
+                          <div class="comment-right"> <span class="feedpost-user"> <a href=""> Wong Szeto </a></span> <span class="comment-content"> 一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒一級棒 </span> <span class="publish-time"> 2021-03-19 17:27 </span></div>
+                        </div>
+                        <div class="comment">
+                          <div class="comment-left mr-2"><a href=""> <img class="user-logo" src="../images/user-logo.jpg" alt="user-icon"> </a></div>
+                          <div class="comment-right"> <span class="feedpost-user"> <a href=""> Wong Szeto </a></span> <span class="comment-content"> 一級棒一 </span> <span class="publish-time"> 2021-03-19 17:27 </span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <input class="form-control" type="text" placeholder="發表你的回應...">
+              </div>
+            </div>
+          </div>
+          <!-- /.modal-content --> 
+        </div>
+        <!-- /.modal-dialog --> 
+      </div>
+      <!-- /.modal --> 
+      
+    </div>
+  </section>
+</div>
+<!-- /.Container --> 
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-nav container">
+    <dl>
+      <dt> 關於我們 </dt>
+      <dd> <a href="../pages/about.html" title="關於我們"> 關於我們 </a> </dd>
+      <dd> <a href="../pages/terms.html" title="服務條款"> 服務條款 </a> </dd>
+      <dd> <a href="../pages/privacy.html" title="隱私條款"> 隱私條款 </a> </dd>
+      <dd> <a href="../pages/copyright.html" title="著作權條款"> 著作權條款 </a> </dd>
+      <dd> <a href="../pages/contact.html" title="聯絡我們"> 聯絡我們 </a> </dd>
+    </dl>
+    <dl>
+      <dt> 業務合作 </dt>
+      <dd> <a href="../pages/advertising.html" title="廣告合作"> 廣告合作 </a> </dd>
+      <dd> <a href="../pages/cooperate.html" title="商務合作"> 商務合作 </a> </dd>
+    </dl>
+    <dl>
+      <dt> 意見回饋 </dt>
+      <dd> <a href="mailto:info@soonnet.org?subject=意見回饋&body=請提出您的意見：" target="_blank" title="提出意見"> 提出意見 </a> </dd>
+      <dd> <a href="../event/event-provision.html" target="_blank" title="提出活動資訊"> 提出活動資訊 </a> </dd>
+    </dl>
+    <dl>
+      <dt> 外部連結 </dt>
+      <dd> <a href="http://twrunner.soonnet.org/road_run/index.html" target="_blank" title="最強市民飆5K"> 最強市民飆5K </a> </dd>
+    </dl>
+    <dl>
+      <dt> 社交媒體 </dt>
+      <dd> <a href="https://www.facebook.com/soonnet/" target="_blank" title="Facebook"> Facebook </a> </dd>
+      <dd> <a href="https://www.instagram.com/soonnettv/" target="_blank" title="Instagram"> Instagram </a> </dd>
+      <dd> <a href="https://www.youtube.com/soonnettv" target="_blank" title="YouTube"> YouTube </a> </dd>
+    </dl>
+  </div>
+  <div class="footer-bottom">
+    <div class="copyright"> <span>本網站部份資訊由用戶提供，如侵犯您的版權，請<a href="../pages/contact.html">與我們聯繫</a>。</span> <span>Copyright &copy; 2020 尋寶網 SOONNET.org. All Rights Reserved.</span> </div>
+  </div>
+</footer>
+<!-- ./Footer --> 
+
+<!-- Script --> 
+<script src="../js/jquery-3.4.1.min.js"></script> 
+<!-- Bootstrap 4 --> 
+<script src="../js/bootstrap.bundle.min.js"></script> 
+<script src="../js/main.js"></script> 
+<script src="../js/m-main.js"></script>
+</body>
+</html>

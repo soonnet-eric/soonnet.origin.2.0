@@ -7,7 +7,7 @@
 <meta content="yes" name="apple-mobile-web-app-capable">
 <meta content="black" name="apple-mobile-web-app-status-bar-style">
 <meta content="telephone=no" name="format-detection">
-<title> 尋寶網｜體育賽事中最直接的感動 </title>
+<title> 尋寶網 </title>
 <!-- SEO -->
 <meta name="keywords" content="">
 <meta name="description" content="">
@@ -22,6 +22,7 @@
 <link rel="stylesheet" href="./css/adminlte/adminlte.css">
 <link rel="stylesheet" href="./css/desktop/normalize.css">
 <link rel="stylesheet" href="./css/desktop/main.css">
+<link rel="stylesheet" href="./css/mobile/m-main.css">
 <!-- External CSS -->
 <link rel="stylesheet" href="./css/font-awesome/all.min.css">
 <!-- Favicon -->
@@ -40,15 +41,9 @@
       <!-- header menu -->
       <nav class="header-nav-wrap">
         <ul class="header-menu">
-          <li class="header-menu-item"> <a href="https://www.soonnet.org/Car/Car.aspx" class="header-menu-link"> 重機 </a> </li>
-          <li class="header-menu-item"> <a href="https://www.soonnet.org/Marathon/Marathon.aspx" class="header-menu-link"> 路跑 </a> </li>
-          <li class="header-menu-item"> <a href="https://www.soonnet.org/Bicycle/Bicycle.aspx" class="header-menu-link"> 單車 </a> </li>
-          <li class="header-menu-item"> <a href="https://www.soonnet.org/Sport/Sport.aspx" class="header-menu-link"> 運動 </a> </li>
-          <li class="header-menu-item"> <a href="https://www.soonnet.org/Gallery/Gallery.aspx" class="header-menu-link"> 攝影 </a> </li>
-          <li class="header-menu-item"> <a href="https://www.soonnet.org/Photo/Photo.aspx" class="header-menu-link"> 圖庫 </a> </li>
+          <li class="header-menu-item"> <a href="./album/album.html" class="header-menu-link"> 相簿 </a> </li>
           <li class="header-menu-item"> <a href="./event/eventlist.html" class="header-menu-link"> 活動 </a> </li>
           <li class="header-menu-item"> <a href="./topic/articlelist.html" class="header-menu-link"> 話題 </a> </li>
-          <li class="header-menu-item"> <a href="https://www.soonnet.org/Daily/Daily.aspx" class="header-menu-link"> 新聞 </a> </li>
           <li class="header-menu-item"> <a href="./video/video.html" class="header-menu-link"> 影音 </a> </li>
         </ul>
       </nav>
@@ -82,6 +77,91 @@
 </header>
 <!-- /.目錄 --> 
 
+<!-- 目錄 (流動版) -->
+<header id="m-header">
+  <div class="m-header-flex">
+    <div class="m-header-left"> <a href="javascript:void(0);" onclick="menuToggle()"><i class="fa fa-bars"></i></a>
+      <div class="m-header-logo"> <a href="./index.html" title="尋寶網"> <img src="./images/soonnet-logo-text.svg" alt="尋寶網"> </a></div>
+    </div>
+    <div class="m-header-right"> <a href="javascript:void(0);" onclick="searchToggle()"><i class="fa fa-search fa-fw"></i></a> </div>
+  </div>
+  
+  <!-- NAVIGATOR -->
+  <nav id="m-header-nav">
+    <div class="m-header-menu p-4"> 
+      <!-- Profile Panel -->
+      <section class="m-profile">
+        <div class="m-profile-panel">
+          <div class="m-profile-left">
+            <div class="m-profile-user">
+              <button type="button" class="profile-button"><img class="user-logo" src="./images/guest-logo.jpg"></button>
+              <div class="user-info ml-2">
+                <div class="user-name">未登入</div>
+                <span class="view-profile"><a href="./member/profile.html">查看我的個人檔案</a></span></div>
+            </div>
+          </div>
+          <div class="m-profile-right">
+            <div class="menu-operate-btn"><i class="fa fa-cloud-upload-alt"></i> <i class="fa fa-bell"></i></div>
+          </div>
+        </div>
+      </section>
+      <!-- /.Profile Panel --> 
+      
+      <!-- Menu -->
+      <div class="m-menu">
+        <div class="m-menu-panel-wrapper my-3">
+          <div class="menu-panel"> <span class="menu-wrap"><a href="./album/album.html" target="_self"> <img class="menu-icon" src="./images/m-menu/album.png" alt="相簿">
+            <div class="menu-text">相簿</div>
+            </a></span> <span class="menu-wrap"><a href="./event/event.html" target="_self"> <img class="menu-icon" src="./images/m-menu/event.png" alt="活動">
+            <div class="menu-text">活動列表</div>
+            </a></span> <span class="menu-wrap"><a href="./topic/article.html" target="_self"> <img class="menu-icon" src="./images/m-menu/topic.png" alt="話題">
+            <div class="menu-text">話題</div>
+            </a></span> <span class="menu-wrap"><a href="./video/video.html" target="_self"> <img class="menu-icon" src="./images/m-menu/soonnettv.png" alt="影音">
+            <div class="menu-text">影音</div>
+            </a></span> <span class="menu-wrap"><a href="./video/programme.html" target="_self"> <img class="menu-icon" src="./images/m-menu/programme.png" alt="我們的節目">
+            <div class="menu-text">我們的節目</div>
+            </a></span> </div>
+        </div>
+        <div class="m-menu-panel-wrapper">
+          <div class="menu-row mb-2"> <span class="menu-header"> 活動網頁 </span> </div>
+          <div class="menu-panel"> <span class="menu-wrap"><a href="http://twrunner.soonnet.org/road_run/index.html" target="_self"> <img class="menu-icon" src="./images/m-menu/twrunner.png" alt="最強市民飆5K">
+            <div class="menu-text">最強市民飆5K</div>
+            </a></span> <span class="menu-wrap"><a href="http://tperunner.soonnet.org/road_run/index.html" target="_self"> <img class="menu-icon" src="./images/m-menu/tperunner.png" alt="5K最速RUN">
+            <div class="menu-text">5K最速RUN<br>
+              (已停辦)</div>
+            </a></span></div>
+        </div>
+      </div>
+      <!-- /.Menu --> 
+      
+      <!-- Footer -->
+      <div class="m-menu-footer">
+        <div class="m-menu-footer-wrapper mt-3 mb-2"> <span class="menu-footer-item"><a href="./footer/about.html"> 關於我們 </a></span> <span class="menu-footer-item"><a href="./footer/about.html"> 聯絡我們 </a></span> <span class="menu-footer-item"><a href="./footer/advertising.html"> 廣告合作 </a></span> <span class="menu-footer-item"><a href="./footer/cooperate.html"> 商務合作 </a></span> <span class="menu-footer-item"><a href="./footer/terms.html"> 服務條款 </a></span> <span class="menu-footer-item"><a href="./footer/privacy.html"> 隱私條款 </a></span> <span class="menu-footer-item"><a href="./footer/copyright.html"> 著作權條款 </a></span> </div>
+        <div class="m-footer-nav">
+          <div class="m-social-wrapper mb-2"> <span class="social-btn"><a class="m-social-icon facebook fab fa-facebook-f fa-fw" href="https://www.facebook.com/soonnet/" target="_blank"> </a></span> <span class="social-btn"><a class="m-social-icon instagram fab fa-instagram fa-fw" href="https://www.instagram.com/soonnettv/" target="_blank"> </a></span> <span class="social-btn"><a class="m-social-icon youtube fab fa-youtube fa-fw" href="https://www.youtube.com/soonnettv" target="_blank"> </a></span> </div>
+          <div class="m-copyright"> 尋寶網 SOONNET.org 版權所有 © 2021 </div>
+        </div>
+        <!-- /.Footer --> 
+        
+      </div>
+    </div>
+  </nav>
+  <!-- /.NAVIGATOR --> 
+  
+  <!-- Search Panel -->
+  <nav id="m-search-panel">
+    <div class="m-search">
+      <div class="m-search-dialog">
+        <label><i class="fa fa-search fa-fw"></i></label>
+        <input type="text" id="search-term" placeholder="搜尋">
+      </div>
+      <a class="close-btn" href="javascript:void(0);" onclick="searchToggle()"> <i class="fa fa-times fa-fw"></i> </a> </div>
+  </nav>
+  <!-- /.Search Panel --> 
+  
+</header>
+<!-- /.目錄 (流動版) --> 
+
 <!-- 社交平台按鈕 -->
 <div id="social-block"> 
   <!-- Facebook -->
@@ -94,7 +174,7 @@
 <!-- /.社交平台按鈕 --> 
 
 <!-- 輪播 Banner -->
-<div id="banner" class="carousel slide show-neighbors" data-ride="carousel" data-interval="3000">
+<div id="banner" class="carousel slide show-neighbors" data-ride="carousel" data-interval="5000">
   <ol class="carousel-indicators">
     <li data-target="#banner" data-slide-to="0" class="active"></li>
     <li data-target="#banner" data-slide-to="1"></li>
@@ -142,13 +222,337 @@
   <a class="carousel-control-prev" href="#banner" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#banner" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
 <!-- /.輪播 Banner --> 
 
+<!-- 流動版介面 (less than 768px) -->
+<div class="mobile">
+  <section class="m-video section-block">
+    <div class="section-title"> 精選影片 </div>
+    <div class="m-wrap-list">
+      <ul class="m-list-wrapper">
+        <li class="m-list-item" onclick="location.href='./video/videowatch.html';"> <a class="items-center" title="【路跑開箱】太久沒訓練，一下就跑12K! 結果就...台灣精工城市路跑賽 - 2019 SEIKO SUPER RUNNER | EP-1">
+          <div class="m-thumbnail">
+            <div class="m-responsive">
+              <div class="m-sizer">
+                <div class="m-image" style="background-image: url('images/video/latest-1.jpg');"></div>
+              </div>
+            </div>
+            <div class="video-duration"> <span>36:28</span> </div>
+          </div>
+          <div class="video-info"> <span class="video-title"> 【路跑開箱】太久沒訓練，一下就跑12K! 結果就...台灣精工城市路跑賽 - 2019 SEIKO SUPER RUNNER | EP-1 </span> </div>
+          </a> </li>
+        <li class="m-list-item" onclick="location.href='./video/videowatch.html';"> <a class="items-center" title="重機考照一次上手！ 小豬黃沐妍熱血駕訓全紀實(上) 《玩車最原創》小豬 -東森愛玩車">
+          <div class="m-thumbnail">
+            <div class="m-responsive">
+              <div class="m-sizer">
+                <div class="m-image" style="background-image: url('./images/video/latest-2.jpg');"></div>
+              </div>
+            </div>
+            <div class="video-duration"> <span>36:28</span> </div>
+          </div>
+          <div class="video-info"> <span class="video-title"> 重機考照一次上手！ 小豬黃沐妍熱血駕訓全紀實(上) 《玩車最原創》小豬 -東森愛玩車 </span> </div>
+          </a> </li>
+        <li class="m-list-item" onclick="location.href='./video/videowatch.html';"> <a class="items-center" title="2020寶山橘子嘉年華舞動活力路跑 【賽事報導】">
+          <div class="m-thumbnail">
+            <div class="m-responsive">
+              <div class="m-sizer">
+                <div class="m-image" style="background-image: url('./images/video/latest-3.jpg');"></div>
+              </div>
+            </div>
+            <div class="video-duration"> <span>01:02:45</span> </div>
+          </div>
+          <div class="video-info"> <span class="video-title"> 2020寶山橘子嘉年華舞動活力路跑 【賽事報導】 </span> </div>
+          </a> </li>
+        <li class="m-list-item" onclick="location.href='./video/videowatch.html';"> <a class="items-center" title="【路跑開箱】太久沒訓練，一下就跑12K! 結果就...台灣精工城市路跑賽 - 2019 SEIKO SUPER RUNNER | EP-1">
+          <div class="m-thumbnail">
+            <div class="m-responsive">
+              <div class="m-sizer">
+                <div class="m-image" style="background-image: url('./images/video/latest-4.jpg');"></div>
+              </div>
+            </div>
+            <div class="video-duration"> <span>03:00</span> </div>
+          </div>
+          <div class="video-info"> <span class="video-title"> 【路跑開箱】太久沒訓練，一下就跑12K! 結果就...台灣精工城市路跑賽 - 2019 SEIKO SUPER RUNNER | EP-1 </span> </div>
+          </a> </li>
+        <li class="m-list-item" onclick="location.href='./video/videowatch.html';"> <a class="items-center" title="【路跑開箱】太久沒訓練，一下就跑12K! 結果就...台灣精工城市路跑賽 - 2019 SEIKO SUPER RUNNER | EP-1">
+          <div class="m-thumbnail">
+            <div class="m-responsive">
+              <div class="m-sizer">
+                <div class="m-image" style="background-image: url('images/video/latest-1.jpg');"></div>
+              </div>
+            </div>
+            <div class="video-duration"> <span>36:28</span> </div>
+          </div>
+          <div class="video-info"> <span class="video-title"> 【路跑開箱】太久沒訓練，一下就跑12K! 結果就...台灣精工城市路跑賽 - 2019 SEIKO SUPER RUNNER | EP-1 </span> </div>
+          </a> </li>
+        <li class="m-list-item" onclick="location.href='./video/videowatch.html';"> <a class="items-center" title="重機考照一次上手！ 小豬黃沐妍熱血駕訓全紀實(上) 《玩車最原創》小豬 -東森愛玩車">
+          <div class="m-thumbnail">
+            <div class="m-responsive">
+              <div class="m-sizer">
+                <div class="m-image" style="background-image: url('./images/video/latest-2.jpg');"></div>
+              </div>
+            </div>
+            <div class="video-duration"> <span>36:28</span> </div>
+          </div>
+          <div class="video-info"> <span class="video-title"> 重機考照一次上手！ 小豬黃沐妍熱血駕訓全紀實(上) 《玩車最原創》小豬 -東森愛玩車 </span> </div>
+          </a> </li>
+      </ul>
+    </div>
+    <a href="./video/video.html" class="more-btn"> 更多 </a> </section>
+  <section class="m-album section-block">
+    <div class="section-title"> 本週熱門相簿 </div>
+    <div class="m-wrap-list">
+      <ul class="m-list-wrapper">
+        <li class="m-list-item" onclick="location.href='./album/albumview-photostream.html';"> <a class="items-center" title="2020.05.27 北宜. 財茂彎午後雨中練習追焦">
+          <div class="m-thumbnail">
+            <div class="m-responsive">
+              <div class="album-sizer">
+                <div class="m-image" style="background-image: url('images/album/hot/album-cover-1.jpg');"></div>
+              </div>
+            </div>
+            <div class="album-photo-count"> <span>1346</span> </div>
+          </div>
+          <div class="album-info"> <span class="album-title">2020.05.27 北宜. 財茂彎午後雨中練習追焦</span> </div>
+          </a> </li>
+        <li class="m-list-item" onclick="location.href='./album/albumview-photostream.html';"> <a class="items-center" title="2020年5月26日 阿波羅晨騎團(二)大青蛙">
+          <div class="m-thumbnail">
+            <div class="m-responsive">
+              <div class="album-sizer">
+                <div class="m-image" style="background-image: url('images/album/hot/album-cover-2.jpg');"></div>
+              </div>
+            </div>
+            <div class="album-photo-count"> <span>325</span> </div>
+          </div>
+          <div class="album-info"> <span class="album-title">2020年5月26日 阿波羅晨騎團(二)大青蛙</span> </div>
+          </a> </li>
+        <li class="m-list-item" onclick="location.href='./album/albumview-photostream.html';"> <a class="items-center" title="0607 老鏡隨手拍">
+          <div class="m-thumbnail">
+            <div class="m-responsive">
+              <div class="album-sizer">
+                <div class="m-image" style="background-image: url('images/album/hot/album-cover-3.jpg');"></div>
+              </div>
+            </div>
+            <div class="album-photo-count"> <span>14</span> </div>
+          </div>
+          <div class="album-info"> <span class="album-title">0607 老鏡隨手拍</span> </div>
+          </a> </li>
+        <li class="m-list-item" onclick="location.href='./album/albumview-photostream.html';"> <a class="items-center" title="2020.04.25-萬里-翡翠灣-衝浪（一）">
+          <div class="m-thumbnail">
+            <div class="m-responsive">
+              <div class="album-sizer">
+                <div class="m-image" style="background-image: url('images/album/hot/album-cover-4.jpg');"></div>
+              </div>
+            </div>
+            <div class="album-photo-count"> <span>999</span> </div>
+          </div>
+          <div class="album-info"> <span class="album-title">2020.04.25-萬里-翡翠灣-衝浪（一）</span> </div>
+          </a> </li>
+        <li class="m-list-item" onclick="location.href='./album/albumview-photostream.html';"> <a class="items-center" title="2020.05.27 北宜. 財茂彎午後雨中練習追焦">
+          <div class="m-thumbnail">
+            <div class="m-responsive">
+              <div class="album-sizer">
+                <div class="m-image" style="background-image: url('images/album/hot/album-cover-1.jpg');"></div>
+              </div>
+            </div>
+            <div class="album-photo-count"> <span>1346</span> </div>
+          </div>
+          <div class="album-info"> <span class="album-title">2020.05.27 北宜. 財茂彎午後雨中練習追焦</span> </div>
+          </a> </li>
+        <li class="m-list-item" onclick="location.href='./album/albumview-photostream.html';"> <a class="items-center" title="2020年5月26日 阿波羅晨騎團(二)大青蛙">
+          <div class="m-thumbnail">
+            <div class="m-responsive">
+              <div class="album-sizer">
+                <div class="m-image" style="background-image: url('images/album/hot/album-cover-2.jpg');"></div>
+              </div>
+            </div>
+            <div class="album-photo-count"> <span>325</span> </div>
+          </div>
+          <div class="album-info"> <span class="album-title">2020年5月26日 阿波羅晨騎團(二)大青蛙</span> </div>
+          </a> </li>
+        <li class="m-list-item" onclick="location.href='./album/albumview-photostream.html';"> <a class="items-center" title="0607 老鏡隨手拍">
+          <div class="m-thumbnail">
+            <div class="m-responsive">
+              <div class="album-sizer">
+                <div class="m-image" style="background-image: url('images/album/hot/album-cover-3.jpg');"></div>
+              </div>
+            </div>
+            <div class="album-photo-count"> <span>14</span> </div>
+          </div>
+          <div class="album-info"> <span class="album-title">0607 老鏡隨手拍</span> </div>
+          </a> </li>
+        <li class="m-list-item" onclick="location.href='./album/albumview-photostream.html';"> <a class="items-center" title="2020.04.25-萬里-翡翠灣-衝浪（一）">
+          <div class="m-thumbnail">
+            <div class="m-responsive">
+              <div class="album-sizer">
+                <div class="m-image" style="background-image: url('images/album/hot/album-cover-4.jpg');"></div>
+              </div>
+            </div>
+            <div class="album-photo-count"> <span>999</span> </div>
+          </div>
+          <div class="album-info"> <span class="album-title">2020.04.25-萬里-翡翠灣-衝浪（一）</span> </div>
+          </a> </li>
+        <li class="m-list-item" onclick="location.href='./album/albumview-photostream.html';"> <a class="items-center" title="2020.05.27 北宜. 財茂彎午後雨中練習追焦">
+          <div class="m-thumbnail">
+            <div class="m-responsive">
+              <div class="album-sizer">
+                <div class="m-image" style="background-image: url('images/album/hot/album-cover-1.jpg');"></div>
+              </div>
+            </div>
+            <div class="album-photo-count"> <span>1346</span> </div>
+          </div>
+          <div class="album-info"> <span class="album-title">2020.05.27 北宜. 財茂彎午後雨中練習追焦</span> </div>
+          </a> </li>
+        <li class="m-list-item" onclick="location.href='./album/albumview-photostream.html';"> <a class="items-center" title="2020年5月26日 阿波羅晨騎團(二)大青蛙">
+          <div class="m-thumbnail">
+            <div class="m-responsive">
+              <div class="album-sizer">
+                <div class="m-image" style="background-image: url('images/album/hot/album-cover-2.jpg');"></div>
+              </div>
+            </div>
+            <div class="album-photo-count"> <span>325</span> </div>
+          </div>
+          <div class="album-info"> <span class="album-title">2020年5月26日 阿波羅晨騎團(二)大青蛙</span> </div>
+          </a> </li>
+      </ul>
+    </div>
+    <a href="./album/album.html" class="more-btn"> 更多 </a> </section>
+  <section class="m-event section-block">
+    <div class="section-title"> 近期拍攝活動 </div>
+    <div class="row">
+      <ul class="nearday-event-list">
+        <li onclick="location.href='./event/eventview.html';">
+          <div class="event-info"><span class="event-date mr-2">03/28</span> </div>
+          <div class="event-title"> 第45回洞爺湖馬拉松 </div>
+        </li>
+        <li onclick="location.href='./event/eventview.html';">
+          <div class="event-info"><span class="event-date mr-2">05/20</span> </div>
+          <div class="event-title"> 冷泉獅頭山超馬 </div>
+        </li>
+        <li onclick="location.href='./event/eventview.html';">
+          <div class="event-info"><span class="event-date mr-2">05/20</span> </div>
+          <div class="event-title"> 2020 悠遊曾南-第三屆八百壯士超馬系列 </div>
+        </li>
+        <li onclick="location.href='./event/eventview.html';">
+          <div class="event-info"><span class="event-date mr-2">11/28</span> </div>
+          <div class="event-title"> 2020 溪頭路跑 </div>
+        </li>
+        <li onclick="location.href='./event/eventview.html';">
+          <div class="event-info"><span class="event-date mr-2">12/31</span> </div>
+          <div class="event-title"> 啟動聖火傳遞，慶祝『創立60週年慶』 第一屆 議長盃全國公益馬拉松 </div>
+        </li>
+      </ul>
+    </div>
+    <a href="./event/event.html" class="more-btn"> 更多 </a> </section>
+  <section class="m-article section-block">
+    <div class="section-title"> 熱門新聞 </div>
+    <ul class="m-article-list">
+      <li class="m-list-item" onclick="location.href='./topic/articleview.html';"> <a class="flex" title="淡蘭深度遊 古道行忘卻煩憂">
+        <div class="m-thumbnail">
+          <div class="m-responsive">
+            <div class="m-sizer">
+              <div class="m-image" style="background-image: url('./images/topic/article-1/article-1-1.jpg');"></div>
+            </div>
+          </div>
+        </div>
+        <div class="article-info"> <span class="article-title"> 淡蘭深度遊 古道行忘卻煩憂 </span> </div>
+        </a> </li>
+      <li class="m-list-item" onclick="location.href='./topic/articleview.html';"> <a class="flex" title="淡蘭深度遊 古道行忘卻煩憂">
+        <div class="m-thumbnail">
+          <div class="m-responsive">
+            <div class="m-sizer">
+              <div class="m-image" style="background-image: url('./images/topic/article-2/article-2-1.jpg');"></div>
+            </div>
+          </div>
+        </div>
+        <div class="article-info"> <span class="article-title"> 美國男子疫情下挑戰100英里超馬 為一線醫護人員籌款 </span> </div>
+        </a> </li>
+      <li class="m-list-item" onclick="location.href='./topic/articleview.html';"> <a class="flex" title="淡蘭深度遊 古道行忘卻煩憂">
+        <div class="m-thumbnail">
+          <div class="m-responsive">
+            <div class="m-sizer">
+              <div class="m-image" style="background-image: url('./images/topic/article-3/article-3-1.jpg');"></div>
+            </div>
+          </div>
+        </div>
+        <div class="article-info"> <span class="article-title"> 運動過量的症狀，出現這些症狀趕緊停止運動 </span> </div>
+        </a> </li>
+    </ul>
+    <a href="./topic/article.html" class="more-btn"> 更多 </a> </section>
+  <!-- Footer -->
+  <div class="m-footer">
+    <div class="m-footer-wrapper mt-3 mb-2">
+      <div class="m-footer-logo"> <a href="./index.html" title="尋寶網"> <img src="./images/soonnet-logo-sign.svg" alt="尋寶網"> </a></div>
+      <span class="menu-footer-item"><a href="./footer/about.html"> 關於我們 </a></span> <span class="menu-footer-item"><a href="./footer/about.html"> 聯絡我們 </a></span> <span class="menu-footer-item"><a href="./footer/advertising.html"> 廣告合作 </a></span> <span class="menu-footer-item"><a href="./footer/cooperate.html"> 商務合作 </a></span> <span class="menu-footer-item"><a href="./footer/terms.html"> 服務條款 </a></span> <span class="menu-footer-item"><a href="./footer/privacy.html"> 隱私條款 </a></span> <span class="menu-footer-item"><a href="./footer/copyright.html"> 著作權條款 </a></span> </div>
+    <div class="m-footer-nav">
+      <div class="m-social-wrapper mb-2"> <span class="social-btn"><a class="m-social-icon facebook fab fa-facebook-f fa-fw" href="https://www.facebook.com/soonnet/" target="_blank"> </a></span> <span class="social-btn"><a class="m-social-icon instagram fab fa-instagram fa-fw" href="https://www.instagram.com/soonnettv/" target="_blank"> </a></span> <span class="social-btn"><a class="m-social-icon youtube fab fa-youtube fa-fw" href="https://www.youtube.com/soonnettv" target="_blank"> </a></span> </div>
+      <div class="m-copyright"> 尋寶網 SOONNET.org 版權所有 © 2021 </div>
+    </div>
+  </div>
+  <!-- /.Footer --> 
+</div>
+<!-- /.流動版介面 --> 
+
 <!-- Container -->
-<div id="home" class="container mt-5">
+<div id="home" class="container">
   <section>
     <div class="row">
       <div class="col-lg-9 pr-lg-4">
+        <div class="hot-video section-group">
+          <h2 class="section-title"> 精選影片 <a href="video/video.html" class="section-more"> 更多 </a> </h2>
+          <div class="row">
+            <div class="col-12 col-md-4">
+              <div class="video-card card"><a href="video/videowatch.html">
+                <div class="video-block">
+                  <div class="video-thumbnail">
+                    <div class="video-responsive">
+                      <div class="video-sizer">
+                        <div class="video-image" style="background-image: url('images/video/latest-1.jpg');"></div>
+                      </div>
+                    </div>
+                    <div class="video-duration"> <span>36:28</span> </div>
+                  </div>
+                </div>
+                <div class="video-info p-3">
+                  <div class="video-title mb-2" title="【路跑開箱】太久沒訓練，一下就跑12K! 結果就...台灣精工城市路跑賽 - 2019 SEIKO SUPER RUNNER | EP-1">【路跑開箱】太久沒訓練，一下就跑12K! 結果就...台灣精工城市路跑賽 - 2019 SEIKO SUPER RUNNER | EP-1</div>
+                  <span class="video-user">Soonnet TV</span> </div>
+                </a> </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="video-card card"><a href="video/videowatch.html">
+                <div class="video-block">
+                  <div class="video-thumbnail">
+                    <div class="video-responsive">
+                      <div class="video-sizer">
+                        <div class="video-image" style="background-image: url('images/video/latest-2.jpg');"></div>
+                      </div>
+                    </div>
+                    <div class="video-duration"> <span>01:02:45</span> </div>
+                  </div>
+                </div>
+                <div class="video-info p-3">
+                  <div class="video-title mb-2" title="重機考照一次上手！ 小豬黃沐妍熱血駕訓全紀實(上) 《玩車最原創》小豬 -東森愛玩車">重機考照一次上手！ 小豬黃沐妍熱血駕訓全紀實(上) 《玩車最原創》小豬 -東森愛玩車</div>
+                  <span class="video-user">Soonnet TV</span> </div>
+                </a> </div>
+            </div>
+            <div class="col-12 col-md-4">
+              <div class="video-card card"><a href="video/videowatch.html">
+                <div class="video-block">
+                  <div class="video-thumbnail">
+                    <div class="video-responsive">
+                      <div class="video-sizer">
+                        <div class="video-image" style="background-image: url('images/video/latest-3.jpg');"></div>
+                      </div>
+                    </div>
+                    <div class="video-duration"> <span>03:00</span> </div>
+                  </div>
+                </div>
+                <div class="video-info p-3">
+                  <div class="video-title mb-2" title="2020寶山橘子嘉年華舞動活力路跑 【賽事報導】">2020寶山橘子嘉年華舞動活力路跑 【賽事報導】</div>
+                  <span class="video-user">Soonnet TV</span> </div>
+                </a> </div>
+            </div>
+          </div>
+        </div>
         <div class="hot-album section-group">
-          <h2 class="section-title"> 熱門相簿 <a href="album/album.html" class="section-more"> 更多 </a> </h2>
+          <h2 class="section-title"> 熱門相簿 <a href="video/video.html" class="section-more"> 更多 </a> </h2>
           <div class="row">
             <div class="col-6 col-md-3">
               <div class="album-card card"><a href="album/albumview.html">
@@ -220,63 +624,7 @@
             </div>
           </div>
         </div>
-        <div class="hot-video section-group">
-          <h2 class="section-title"> 熱門 TV <a href="video/video.html" class="section-more"> 更多 </a> </h2>
-          <div class="row">
-            <div class="col-12 col-md-4">
-              <div class="video-card card"><a href="video/videowatch.html">
-                <div class="video-block">
-                  <div class="video-thumbnail">
-                    <div class="video-responsive">
-                      <div class="video-sizer">
-                        <div class="video-image" style="background-image: url('images/video/latest-1.jpg');"></div>
-                      </div>
-                    </div>
-                    <div class="video-duration"> <span>36:28</span> </div>
-                  </div>
-                </div>
-                <div class="video-info p-3">
-                  <div class="video-title mb-2" title="【路跑開箱】太久沒訓練，一下就跑12K! 結果就...台灣精工城市路跑賽 - 2019 SEIKO SUPER RUNNER | EP-1">【路跑開箱】太久沒訓練，一下就跑12K! 結果就...台灣精工城市路跑賽 - 2019 SEIKO SUPER RUNNER | EP-1</div>
-                  <span class="video-user">Soonnet TV</span> </div>
-                </a> </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="video-card card"><a href="video/videowatch.html">
-                <div class="video-block">
-                  <div class="video-thumbnail">
-                    <div class="video-responsive">
-                      <div class="video-sizer">
-                        <div class="video-image" style="background-image: url('images/video/latest-2.jpg');"></div>
-                      </div>
-                    </div>
-                    <div class="video-duration"> <span>01:02:45</span> </div>
-                  </div>
-                </div>
-                <div class="video-info p-3">
-                  <div class="video-title mb-2" title="重機考照一次上手！ 小豬黃沐妍熱血駕訓全紀實(上) 《玩車最原創》小豬 -東森愛玩車">重機考照一次上手！ 小豬黃沐妍熱血駕訓全紀實(上) 《玩車最原創》小豬 -東森愛玩車</div>
-                  <span class="video-user">Soonnet TV</span> </div>
-                </a> </div>
-            </div>
-            <div class="col-12 col-md-4">
-              <div class="video-card card"><a href="video/videowatch.html">
-                <div class="video-block">
-                  <div class="video-thumbnail">
-                    <div class="video-responsive">
-                      <div class="video-sizer">
-                        <div class="video-image" style="background-image: url('images/video/latest-3.jpg');"></div>
-                      </div>
-                    </div>
-                    <div class="video-duration"> <span>03:00</span> </div>
-                  </div>
-                </div>
-                <div class="video-info p-3">
-                  <div class="video-title mb-2" title="2020寶山橘子嘉年華舞動活力路跑 【賽事報導】">2020寶山橘子嘉年華舞動活力路跑 【賽事報導】</div>
-                  <span class="video-user">Soonnet TV</span> </div>
-                </a> </div>
-            </div>
-          </div>
-        </div>
-        <div class="hot-topic section-group">
+        <div class="hot-article section-group">
           <h2 class="section-title"> 熱門話題 <a href="topic/articlelist.html" class="section-more"> 更多 </a> </h2>
           <div class="row">
             <div class="col-12 col-md-4">
@@ -292,7 +640,7 @@
                 </div>
                 <div class="article-info p-3">
                   <div class="article-title mb-2" title="淡蘭深度遊 古道行忘卻煩憂"> 淡蘭深度遊 古道行忘卻煩憂 </div>
-                  <span class="article-category">活動</span> </div>
+                  <span class="article-category">活動</span> <span class="article-upload-date">43分前</span> </div>
                 </a> </div>
             </div>
             <div class="col-12 col-md-4">
@@ -308,7 +656,7 @@
                 </div>
                 <div class="article-info p-3">
                   <div class="article-title mb-2" title="美國男子疫情下挑戰100英里超馬 為一線醫護人員籌款">美國男子疫情下挑戰100英里超馬 為一線醫護人員籌款</div>
-                  <span class="article-category">活動</span> </div>
+                  <span class="article-category">活動</span> <span class="article-upload-date">2天前</span> </div>
                 </a> </div>
             </div>
             <div class="col-12 col-md-4">
@@ -324,13 +672,45 @@
                 </div>
                 <div class="article-info p-3">
                   <div class="article-title mb-2" title="運動過量的症狀，出現這些症狀趕緊停止運動"> 運動過量的症狀，出現這些症狀趕緊停止運動 </div>
-                  <span class="article-category">活動</span> </div>
+                  <span class="article-category">活動</span> <span class="article-upload-date">2天前</span> </div>
                 </a> </div>
             </div>
           </div>
         </div>
       </div>
       <div class="col-lg-3"> 
+        <!-- 活動 -->
+        <div class="hot-event section-group">
+          <h2 class="section-title"> 近期拍攝活動 <a href="video/video.html" class="section-more"> 更多 </a> </h2>
+          <div class="row">
+            <div class="col-12">
+              <ul class="nearday-event-list card p-3">
+                <li onclick="location.href='./event/eventview.html';">
+                  <div class="event-title my-1"> <a title="第45回洞爺湖馬拉松"> 第45回洞爺湖馬拉松 </a> </div>
+                  <div class="event-info"><span class="event-date mr-4">2020/5/20</span> <span class="event-region">臺南縣</span></div>
+                </li>
+                <li onclick="location.href='./event/eventview.html';">
+                  <div class="event-title my-1"> <a title="冷泉獅頭山超馬"> 冷泉獅頭山超馬 </a> </div>
+                  <div class="event-info"><span class="event-date mr-4">2020/5/20</span> <span class="event-region">臺南縣</span></div>
+                </li>
+                <li onclick="location.href='./event/eventview.html';">
+                  <div class="event-title my-1"> <a title="2020 悠遊曾南-第三屆八百壯士超馬系列"> 2020 悠遊曾南-第三屆八百壯士超馬系列 </a> </div>
+                  <div class="event-info"><span class="event-date mr-4">2020/5/20</span> <span class="event-region">臺南縣</span></div>
+                </li>
+                <li onclick="location.href='./event/eventview.html';">
+                  <div class="event-title my-1"> <a title="2020 溪頭路跑"> 2020 溪頭路跑 </a> </div>
+                  <div class="event-info"><span class="event-date mr-4">2020/5/20</span> <span class="event-region">臺南縣</span></div>
+                </li>
+                <li onclick="location.href='./event/eventview.html';">
+                  <div class="event-title my-1"> <a title="啟動聖火傳遞，慶祝『創立60週年慶』 第一屆 議長盃全國公益馬拉松"> 啟動聖火傳遞，慶祝『創立60週年慶』 第一屆 議長盃全國公益馬拉松 </a> </div>
+                  <div class="event-info"><span class="event-date mr-4">2020/5/20</span> <span class="event-region">臺南縣</span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- ./活動 --> 
+        
         <!-- 廣告 -->
         <div class="ad section-group">
           <div class="row">
@@ -386,9 +766,11 @@
   </div>
 </footer>
 <!-- ./Footer --> 
+
 <!-- Script --> 
 <script src="./js/jquery-3.4.1.min.js"></script> 
 <script src="./js/main.js"></script> 
+<script src="./js/m-main.js"></script> 
 <script src="./js/bootstrap.bundle.min.js"></script> 
 <!-- Page Script --> 
 <script type="text/javascript">
