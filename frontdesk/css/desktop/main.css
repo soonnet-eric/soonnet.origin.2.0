@@ -3267,3 +3267,138 @@ label {
   background-color: #fff;
   font-size: 0.875rem;
 }
+
+/*--- social page upload btn effect ---*/
+.an-btn button:hover{cursor: pointer}
+.an-btn button {
+
+  position: relative;
+  overflow: hidden;
+}
+
+/*button:before (attr data-hover)*/
+.an-btn button:hover:before{opacity: 1; transform: translate(0,0);}
+.an-btn button:before{
+  content: attr(data-hover);
+  position: absolute;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translate(-100%,0);
+  transition: all .3s ease-in-out;
+}
+/*button div (button text before hover)*/
+.an-btn button:hover i{opacity: 0; transform: translate(100%,0)}
+.an-btn button i{
+  font-style:normal;
+  text-transform: uppercase;
+  transition: all .3s ease-in-out;
+}
+
+.btn-st-1{
+  height:35px;
+  border-radius: 5px;
+  padding: 5px 15px;
+  border: 0;
+  background:#F2F2F2;
+  display: inline-block;
+  visibility: hidden;
+}
+.btn-st-1:hover{ 
+  background:#FFF;
+  font-weight: 900;
+}
+.btn-c1{
+  color: #5ED435; 
+  font-size: 16px;
+}
+.btn-c1 span{
+  color: #000;
+  font-style: normal; 
+  font-size: 14px;
+}
+.btn-c2{
+  color: #D41518;
+  font-size: 16px;
+}
+.btn-c2 span{
+  color: #000;
+  font-style: normal;
+  font-size: 14px;
+}
+
+.btn-st-1 {
+  color: #FFFFFF;
+  text-align: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.btn-st-1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn-st-1 span:after {
+  content: '上傳';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn-st-1:hover span {
+  padding-right: 25px;
+}
+
+.btn-st-1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* --- End social page upload btn effect ---*/
+/* --- social page search bar effect ---*/
+.respon_width{
+  flex: 0 0 100%;
+  width: 100%;
+}
+.search-container{
+  background: #f4f6f8;
+  height: 35px;
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.8s;
+  inset -4px -4px 6px 0 rgba(255,255,255,.2),
+  inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.search-container:hover > .search-input{
+  width: 100%;
+}
+
+.search-container .search-input{
+  background: transparent;
+  border: none;
+  outline:none;
+  width: 0px;
+  font-weight: 200;
+  font-size: 16px;
+  transition: 0.8s;
+
+}
+
+.search-container .search-btn .fas{
+  color: #dcdee1;
+}
+
+
+.search-container:hover{
+  animation: hoverShake 0.15s linear 3;
+}
+/* --- End social page search bar effect ---*/

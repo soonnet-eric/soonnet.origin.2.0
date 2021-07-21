@@ -31,6 +31,54 @@
 </head>
 <body>
 
+<!-- 目錄 -->
+<header class="header">
+  <div class="header-nav"> 
+    <!-- header left -->
+    <div class="header-left"> 
+      <!-- header logo -->
+      <h1 class="header-logo"> <a href="/" title="尋寶網"> <img src="../images/desktop/soonnet-logo.svg" alt="尋寶網"> </a></h1>
+      <!-- /.header-logo --> 
+      
+      <!-- header menu -->
+      <nav class="header-nav-wrap">
+        <ul class="header-menu">
+          <li class="header-menu-item current"> <a href="../album/album.html" class="header-menu-link"> 相簿 </a> </li>
+          <li class="header-menu-item"> <a href="../event/eventlist.html" class="header-menu-link"> 活動 </a> </li>
+          <li class="header-menu-item"> <a href="../topic/articlelist.html" class="header-menu-link"> 話題 </a> </li>
+          <li class="header-menu-item"> <a href="../video/video.html" class="header-menu-link"> 影音 </a> </li>
+        </ul>
+      </nav>
+      <!-- /.header menu --> 
+      <!-- mobile menu --> 
+      <a class="header-menu-toggle"><span></span></a> 
+      <!-- /.mobile menu --> 
+    </div>
+    <!-- /.header left --> 
+    
+    <!-- header right -->
+    <div class="header-right"> 
+      
+      <!-- Search bar -->
+      <div class="search">
+        <form action="" method="GET">
+          <input type="text" name="word" placeholder="搜尋" autocomplete="off" spellcheck="true" id="search-keywords">
+          <button type="submit" class="search-icon"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+      <!-- /.Search bar -->
+      
+      <ul class="user-menu">
+        <li class="header-menu-item"> <a href="" class="upload fa fa-cloud-upload-alt" title="上傳"> </a> </li>
+        <li class="header-menu-item"> <a href="" class="user" title="登入"> <img class="user-logo" src="../images/guest-logo.jpg" alt="登入"> </a> </li>
+      </ul>
+    </div>
+    <!-- /.header right --> 
+  </div>
+  <!-- /.header-inner --> 
+</header>
+<!-- /.目錄 --> 
+
 <!-- 目錄 (流動版) -->
 <header id="m-header">
   <div class="m-header-flex">
@@ -64,17 +112,15 @@
       <!-- Menu -->
       <div class="m-menu">
         <div class="m-menu-panel-wrapper my-3">
-          <div class="menu-panel"> <span class="menu-wrap"><a href="./album/album.html" target="_self"> <img class="menu-icon" src="../images/m-menu/album.png" alt="相簿">
+          <div class="menu-panel"> <span class="menu-wrap"><a href="../album/album.html" target="_self"> <img class="menu-icon" src="../images/m-menu/album.png" alt="相簿">
             <div class="menu-text">相簿</div>
-            </a></span> <span class="menu-wrap"><a href="./social/feed.html" target="_self"> <img class="menu-icon" src="../images/m-menu/feed.png" alt="相簿">
-            <div class="menu-text">社群動態</div>
-            </a></span> <span class="menu-wrap"><a href="./event/event.html" target="_self"> <img class="menu-icon" src="../images/m-menu/event.png" alt="活動">
+            </a></span> <span class="menu-wrap"><a href="../event/event.html" target="_self"> <img class="menu-icon" src="../images/m-menu/event.png" alt="活動">
             <div class="menu-text">活動列表</div>
-            </a></span> <span class="menu-wrap"><a href="./topic/article.html" target="_self"> <img class="menu-icon" src="../images/m-menu/topic.png" alt="話題">
+            </a></span> <span class="menu-wrap"><a href="../topic/article.html" target="_self"> <img class="menu-icon" src="../images/m-menu/topic.png" alt="話題">
             <div class="menu-text">話題</div>
-            </a></span> <span class="menu-wrap"><a href="./video/video.html" target="_self"> <img class="menu-icon" src="../images/m-menu/soonnettv.png" alt="影音">
+            </a></span> <span class="menu-wrap"><a href="../video/video.html" target="_self"> <img class="menu-icon" src="../images/m-menu/soonnettv.png" alt="影音">
             <div class="menu-text">影音</div>
-            </a></span> <span class="menu-wrap"><a href="./video/programme.html" target="_self"> <img class="menu-icon" src="../images/m-menu/programme.png" alt="我們的節目">
+            </a></span> <span class="menu-wrap"><a href="../video/programme.html" target="_self"> <img class="menu-icon" src="../images/m-menu/programme.png" alt="我們的節目">
             <div class="menu-text">我們的節目</div>
             </a></span> </div>
         </div>
@@ -92,7 +138,7 @@
       
       <!-- Footer -->
       <div class="m-menu-footer">
-        <div class="m-menu-footer-wrapper mt-3 mb-2"> <span class="menu-footer-item"><a href="../footer/about.html"> 關於我們 </a></span> <span class="menu-footer-item"><a href="./footer/about.html"> 聯絡我們 </a></span> <span class="menu-footer-item"><a href="../footer/advertising.html"> 廣告合作 </a></span> <span class="menu-footer-item"><a href="./footer/cooperate.html"> 商務合作 </a></span> <span class="menu-footer-item"><a href="../footer/terms.html"> 服務條款 </a></span> <span class="menu-footer-item"><a href="./footer/privacy.html"> 隱私條款 </a></span> <span class="menu-footer-item"><a href="../footer/copyright.html"> 著作權條款 </a></span> </div>
+        <div class="m-menu-footer-wrapper mt-3 mb-2"> <span class="menu-footer-item"><a href="./footer/about.html"> 關於我們 </a></span> <span class="menu-footer-item"><a href="./footer/about.html"> 聯絡我們 </a></span> <span class="menu-footer-item"><a href="./footer/advertising.html"> 廣告合作 </a></span> <span class="menu-footer-item"><a href="./footer/cooperate.html"> 商務合作 </a></span> <span class="menu-footer-item"><a href="./footer/terms.html"> 服務條款 </a></span> <span class="menu-footer-item"><a href="./footer/privacy.html"> 隱私條款 </a></span> <span class="menu-footer-item"><a href="./footer/copyright.html"> 著作權條款 </a></span> </div>
         <div class="m-footer-nav">
           <div class="m-social-wrapper mb-2"> <span class="social-btn"><a class="m-social-icon facebook fab fa-facebook-f fa-fw" href="https://www.facebook.com/soonnet/" target="_blank"> </a></span> <span class="social-btn"><a class="m-social-icon instagram fab fa-instagram fa-fw" href="https://www.instagram.com/soonnettv/" target="_blank"> </a></span> <span class="social-btn"><a class="m-social-icon youtube fab fa-youtube fa-fw" href="https://www.youtube.com/soonnettv" target="_blank"> </a></span> </div>
           <div class="m-copyright"> 尋寶網 SOONNET.org 版權所有 © 2021 </div>
@@ -117,60 +163,6 @@
   
 </header>
 <!-- /.目錄 (流動版) --> 
-
-<!-- 目錄 -->
-<header class="header">
-  <div class="header-nav"> 
-    <!-- header left -->
-    <div class="header-left"> 
-      <!-- header logo -->
-      <h1 class="header-logo"> <a href="/" title="尋寶網"> <img src="../images/desktop/soonnet-logo.svg" alt="尋寶網"> </a></h1>
-      <!-- /.header-logo --> 
-      
-      <!-- header menu -->
-      <nav class="header-nav-wrap">
-        <ul class="header-menu">
-          <li class="header-menu-item"> <a href="https://www.soonnet.org/Car/Car.aspx" class="header-menu-link"> 重機 </a> </li>
-          <li class="header-menu-item"> <a href="https://www.soonnet.org/Marathon/Marathon.aspx" class="header-menu-link"> 路跑 </a> </li>
-          <li class="header-menu-item"> <a href="https://www.soonnet.org/Bicycle/Bicycle.aspx" class="header-menu-link"> 單車 </a> </li>
-          <li class="header-menu-item"> <a href="https://www.soonnet.org/Sport/Sport.aspx" class="header-menu-link"> 運動 </a> </li>
-          <li class="header-menu-item"> <a href="https://www.soonnet.org/Gallery/Gallery.aspx" class="header-menu-link"> 攝影 </a> </li>
-          <li class="header-menu-item"> <a href="https://www.soonnet.org/Photo/Photo.aspx" class="header-menu-link"> 圖庫 </a> </li>
-          <li class="header-menu-item"> <a href="../event/eventlist.html" class="header-menu-link"> 活動 </a> </li>
-          <li class="header-menu-item"> <a href="../topic/articlelist.html" class="header-menu-link"> 話題 </a> </li>
-          <li class="header-menu-item"> <a href="https://www.soonnet.org/Daily/Daily.aspx" class="header-menu-link"> 新聞 </a> </li>
-          <li class="header-menu-item"> <a href="../video/video.html" class="header-menu-link"> 影音 </a> </li>
-        </ul>
-      </nav>
-      <!-- /.header menu --> 
-      <!-- mobile menu --> 
-      <a class="header-menu-toggle"><span></span></a> 
-      <!-- /.mobile menu --> 
-    </div>
-    <!-- /.header left --> 
-    
-    <!-- header right -->
-    <div class="header-right"> 
-      
-      <!-- Search bar -->
-      <div class="search">
-        <form action="" method="GET">
-          <input type="text" name="word" placeholder="搜尋" autocomplete="off" spellcheck="true" id="search-keywords">
-          <button type="submit" class="search-icon"><i class="fas fa-search"></i></button>
-        </form>
-      </div>
-      <!-- /.Search bar -->
-      
-      <ul class="user-menu">
-        <li class="header-menu-item"> <a href="" class="upload fa fa-cloud-upload-alt" title="上傳"> </a> </li>
-        <li class="header-menu-item"> <a href="" class="user" title="登入"> <img class="user-logo" src="../images/guest-logo.jpg" alt="登入"> </a> </li>
-      </ul>
-    </div>
-    <!-- /.header right --> 
-  </div>
-  <!-- /.header-inner --> 
-</header>
-<!-- /.目錄 --> 
 
 <!-- 社交平台按鈕 -->
 <div id="social-block"> 
